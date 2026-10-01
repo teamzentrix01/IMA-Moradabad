@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+
+# Serve existing files and directories normally.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Let React Router handle all client-side routes on refresh.
+RewriteRule ^ index.html [L]
