@@ -49,7 +49,6 @@ export default function President_Message() {
               {/* Quick Info Cards */}
               <div className="mt-6 space-y-3 max-w-sm mx-auto">
                 <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-green-500 transition-all">
-                  <p className="text-sm font-semibold text-gray-800">Role</p>
                   <p className="text-xs text-gray-700 font-medium">President, IMA Moradabad</p>
                   <p className="text-[11px] text-gray-500 mt-0.5">Session: 2026-27</p>
                 </div>

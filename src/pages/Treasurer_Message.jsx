@@ -27,7 +27,7 @@ export default function Treasurer_Message() {
 
     return (
         <>
-            <Banner title=" TRESURER MESSAGE" />
+            <Banner title="TREASURER MESSAGE" />
             <div className="bg-gray-50 py-10 sm:py-16 px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto">
                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start">
@@ -49,7 +49,6 @@ export default function Treasurer_Message() {
                             {/* Quick Info Cards */}
                             <div className="mt-6 space-y-3 max-w-sm mx-auto">
                                 <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-green-500 transition-all">
-                                    <p className="text-sm font-semibold text-gray-800">Role</p>
                                     <p className="text-xs text-gray-700 font-medium">Honorary Treasurer, IMA Moradabad</p>
                                     <p className="text-[11px] text-gray-500 mt-0.5">Session: 2026-27</p>
                                 </div>

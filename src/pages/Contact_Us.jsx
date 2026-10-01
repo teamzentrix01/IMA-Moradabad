@@ -25,18 +25,19 @@ export default function Contact_Us() {
 
       <div className="min-h-screen" style={{ backgroundColor: '#F5F5F5' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-center mb-8 sm:mb-12 lg:mb-16 px-4" style={{ color: '#0B0B42' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-10 px-4 font-libre" style={{ color: '#0B0B42' }}>
             Contact Us
           </h1>
 
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
             {/* Left Side - Form */}
             <div data-aos="fade-right" data-aos-duration="800" className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg order-2 lg:order-1 border border-slate-100">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4" style={{ color: '#0B0B42' }}>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-4 font-libre" style={{ color: '#0B0B42' }}>
                 Send us a message
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8">
-Do you have an query?              </p>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 font-playfair tracking-wide">
+                Do you have an query?
+              </p>
 
               {/* FormSubmit.co Integration */}
               <form 

@@ -41,9 +41,9 @@ export default function Past_Events() {
             <div className="min-h-screen py-8 md:py-16 px-4" style={{ backgroundColor: '#F5F5F5' }}>
 
                 <div className="max-w-4xl mx-auto">
-                    <div className="mb-12">
-                        <h1 className="text-4xl font-bold text-slate-900 mb-3">Past Events</h1>
-                        <p className="text-lg text-slate-600">Relive the moments of IMA Moradabad's impactful healthcare initiatives and community service programs!</p>
+                    <div className="mb-10 sm:mb-12">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 font-libre">Past Events</h1>
+                        <p className="text-base sm:text-lg text-slate-600 font-playfair tracking-wide">Relive the moments of IMA Moradabad's impactful healthcare initiatives and community service programs!</p>
                     </div>
 
                     {events.map((event, index) => (

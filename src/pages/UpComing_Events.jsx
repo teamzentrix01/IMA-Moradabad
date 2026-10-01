@@ -51,10 +51,10 @@ export default function UpComing_Events() {
                             <Calendar className="w-4 h-4" />
                             <span>Mark Your Calendar</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 font-libre">
                             Upcoming Events
                         </h1>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto font-playfair tracking-wide">
                             Join IMA Moradabad's upcoming healthcare initiatives and community programs!
                         </p>
                     </div>

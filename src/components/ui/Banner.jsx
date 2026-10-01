@@ -12,14 +12,14 @@ export default function Banner(props) {
                         <span className="font-semibold text-xs sm:text-sm tracking-wide">Celebrating Excellence</span>
                     </div>
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold mb-3 sm:mb-4 tracking-normal font-libre">
                     OUR <span className="text-yellow-300 drop-shadow-sm">{props.title}</span>
                 </h1>
-                <p className="text-sm sm:text-lg md:text-xl max-w-2xl mx-auto mb-2 opacity-95 font-medium">
+                <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-2 opacity-95 font-medium font-playfair tracking-wide">
                     Indian Medical Association, Moradabad - 244001
                 </p>
                 {props.tagline && (
-                    <p className="text-xs sm:text-base max-w-xl mx-auto opacity-85 mt-2">
+                    <p className="text-xs sm:text-sm md:text-base max-w-xl mx-auto opacity-90 mt-2 font-playfair italic">
                         {props.tagline}
                     </p>
                 )}

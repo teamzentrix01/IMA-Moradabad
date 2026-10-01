@@ -86,13 +86,13 @@ export default function Registration() {
                             <span className="font-semibold">Celebrating Excellence</span>
                         </div>
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold mb-4 font-libre tracking-normal">
                         <span className="text-yellow-300">BLOOD DONATION REGISTRATION</span>
                     </h1>
-                    <p className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 opacity-90">
+                    <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-4 opacity-95 font-medium font-playfair tracking-wide">
                         Indian Medical Association, Moradabad - 244001
                     </p>
-                    <p className="text-lg max-w-2xl mx-auto opacity-80">
+                    <p className="text-sm max-w-2xl mx-auto opacity-80 font-playfair">
 
                     </p>
                 </div>
@@ -106,10 +106,10 @@ export default function Registration() {
                             <Heart className="w-4 h-4" />
                             <span>Be a Life Saver</span>
                         </div>
-                        <h1 className="text-4xl font-bold text-gray-900 mb-3">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 font-libre">
                             Register for Blood Donation Camp
                         </h1>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-base md:text-lg text-gray-600 font-playfair tracking-wide">
                             Join IMA Moradabad's mission to save lives through blood donation
                         </p>
                     </div>

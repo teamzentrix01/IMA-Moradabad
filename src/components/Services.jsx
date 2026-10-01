@@ -33,12 +33,12 @@ export default function ServicesSection() {
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <div className="inline-block mb-4">
-                        <span className="text-5xl md:text-6xl font-semibold text-teal-600 bg-teal-50 px-4 py-2 rounded-full">
+                    <div className="inline-block mb-3">
+                        <span className="text-xs sm:text-sm font-semibold text-teal-700 bg-teal-100/80 px-4 py-1.5 rounded-full">
                             What We Offer
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-medium text-gray-900 mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 font-libre">
                         Services & <span className="text-teal-600">Initiatives</span>
                     </h2>
                 </div>

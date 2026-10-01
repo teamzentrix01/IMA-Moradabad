@@ -37,10 +37,10 @@ export default function RequestBlood() {
                 <div className="inline-block p-4 bg-red-100 rounded-full mb-4">
                     <Heart className="w-12 h-12 text-red-600 fill-red-600" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 uppercase">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 uppercase font-libre">
                     Request <span className="text-red-600">Blood</span>
                 </h1>
-                <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto font-playfair tracking-wide">
                     In urgent need of blood? Fill out the form below and we'll connect you with donors.
                     Every request is treated with priority to save precious lives.
                 </p>

@@ -102,20 +102,20 @@ export default function Join() {
             <UserPlus className="w-5 h-5" />
             <span className="font-semibold">Join Our Community</span>
           </div>
-          <h1 className="text-5xl md:text-6xl text-gray-900 mb-6 font-medium">
-            Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 font-medium">IMA Moradabad</span>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-gray-900 mb-4 font-bold font-libre">
+            Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600 font-bold">IMA Moradabad</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto mb-4 font-playfair tracking-wide">
             Become part of India's premier medical association serving Moradabad, Uttar Pradesh since decades. Connect, learn, and grow with fellow medical professionals.
           </p>
-          <p className="text-gray-500">
+          <p className="text-gray-500 font-playfair">
             <span className="font-semibold">IMA Moradabad Branch</span> • Uttar Pradesh
           </p>
         </div>
 
         {/* Benefits Section */}
         <div className="mb-20">
-          <h2 className="text-4xl text-gray-900 text-center mb-12 font-medium">
+          <h2 className="text-2xl sm:text-3xl text-gray-900 text-center mb-10 font-bold font-libre">
             Why Join IMA?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

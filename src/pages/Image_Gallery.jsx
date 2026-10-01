@@ -104,9 +104,9 @@ export default function Image_Gallery() {
 
         {/* Gallery Grid */}
         <section className="max-w-7xl mx-auto px-6 py-16">
-          <div className="mb-12">
-            <h1 className="text-4xl font-bold text-slate-900 mb-3">Image Gallery</h1>
-            <p className="text-lg text-slate-600">Every picture tells a story</p>
+          <div className="mb-10 sm:mb-12">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 font-libre">Image Gallery</h1>
+            <p className="text-base sm:text-lg text-slate-600 font-playfair tracking-wide">Every picture tells a story</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryItems.map((item) => (

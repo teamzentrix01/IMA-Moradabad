@@ -196,12 +196,12 @@ export default function BloodCamps() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 tracking-normal font-libre">
                             Blood Donation Camps
                         </h1>
 
                         {/* Description */}
-                        <p className="text-sm sm:text-base md:text-lg text-red-100 max-w-2xl mx-auto mb-5 sm:mb-6 leading-relaxed px-2">
+                        <p className="text-sm sm:text-base md:text-lg text-red-100 max-w-2xl mx-auto mb-5 sm:mb-6 leading-relaxed px-2 font-playfair tracking-wide">
                             Serving the community since 1952, organizing regular
                             blood donation camps across Moradabad to save lives.
                         </p>

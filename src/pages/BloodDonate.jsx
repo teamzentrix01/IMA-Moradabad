@@ -96,11 +96,12 @@ const BloodDonate = () => {
                 {/* Title */}
                 <h1
                     className="
-            text-3xl
-            sm:text-4xl
-            md:text-[42px]
+            text-2xl
+            sm:text-3xl
+            md:text-[38px]
             font-bold
-            tracking-tight
+            font-libre
+            tracking-normal
             text-gray-900
             mb-3
         "
@@ -116,6 +117,8 @@ const BloodDonate = () => {
             sm:text-base
             text-gray-600
             leading-relaxed
+            font-playfair
+            tracking-wide
             max-w-2xl
             mx-auto
         "

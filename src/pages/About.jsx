@@ -56,7 +56,7 @@ export default function About() {
     HERO / BANNER SECTION
 ========================================================= */}
 
-      <div className="relative bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 text-white py-12 sm:py-14 md:py-16 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 text-white overflow-hidden">
 
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -75,7 +75,7 @@ export default function About() {
         <div className="absolute -bottom-28 -right-28 w-72 h-72 bg-emerald-300/10 rounded-full blur-3xl" />
 
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-6xl mx-auto py-14 px-4 sm:px-6 lg:px-8">
 
           <div
             className="text-center"
@@ -110,11 +110,12 @@ export default function About() {
             {/* Title */}
             <h1
               className="
-                    text-3xl
-                    sm:text-4xl
-                    md:text-5xl
+                    text-2xl
+                    sm:text-3xl
+                    md:text-4xl
                     font-bold
-                    tracking-tight
+                    font-libre
+                    tracking-normal
                     mb-3
                 "
             >
@@ -132,6 +133,8 @@ export default function About() {
                     max-w-2xl
                     mx-auto
                     leading-relaxed
+                    font-playfair
+                    tracking-wide
                     mb-6
                 "
             >

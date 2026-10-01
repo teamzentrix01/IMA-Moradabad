@@ -63,17 +63,17 @@ export default function ThankYou() {
                     </div>
 
                     {/* Main Heading */}
-                    <h1 className={`text-3xl md:text-5xl font-bold text-gray-900 mb-4 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+                    <h1 className={`text-2xl md:text-4xl font-bold font-libre text-gray-900 mb-4 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                         Thank You!
                     </h1>
 
                     {/* Subheading */}
-                    <h2 className={`text-xl md:text-2xl font-semibold text-red-600 mb-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+                    <h2 className={`text-lg md:text-xl font-semibold font-libre text-red-600 mb-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                         Your Message Has Been Received
                     </h2>
 
                     {/* Description */}
-                    <p className={`text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+                    <p className={`text-gray-600 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto font-playfair tracking-wide transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                         Thank you for reaching out to <span className="font-semibold text-gray-900">IMA Moradabad</span>.
                         We have successfully received your submission and our team will get back to you within
                         <span className="font-semibold text-red-600"> 24 hours</span>.

@@ -59,9 +59,9 @@ const Video_Gallery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
           {/* Hero Section */}
-          <div className="mb-12">
-            <h1 className="text-4xl font-bold text-slate-900 mb-3">Video Gallery</h1>
-            <p className="text-lg text-slate-600">Explore IMA Moradabad's activities, events, and healthcare initiatives</p>
+          <div className="mb-10 sm:mb-12">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 font-libre">Video Gallery</h1>
+            <p className="text-base sm:text-lg text-slate-600 font-playfair tracking-wide">Explore IMA Moradabad's activities, events, and healthcare initiatives</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">

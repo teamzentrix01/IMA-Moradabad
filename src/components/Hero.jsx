@@ -185,14 +185,16 @@ export default function HeroSlider() {
                   {/* Title */}
                   <h1
                     className="
-                      text-2xl
-                      sm:text-3xl
-                      md:text-4xl
-                      lg:text-5xl
+                      text-xl
+                      sm:text-2xl
+                      md:text-3xl
+                      lg:text-4xl
                       font-bold
                       text-white
                       mb-2 sm:mb-3
                       leading-tight
+                      font-libre
+                      tracking-normal
                       animate-in
                       fade-in
                       slide-in-from-bottom-8
@@ -210,12 +212,13 @@ export default function HeroSlider() {
                       text-xs
                       sm:text-sm
                       md:text-base
-                      lg:text-lg
-                      text-white/90
+                      text-white/95
                       mb-4 md:mb-5
                       leading-relaxed
                       max-w-xl
                       mx-auto lg:mx-0
+                      font-playfair
+                      tracking-wide
                       animate-in
                       fade-in
                       slide-in-from-bottom-8

@@ -48,10 +48,10 @@ export default function Events() {
                                     <span className="font-semibold">Caring Beyond Clinics</span>
                                   </div>
                     </div>
-                    <h2 className="text-3xl md:text-6xl font-medium text-gray-900 mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 font-libre">
                         Events & <span className="text-teal-600">Activities</span>
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto font-playfair tracking-wide">
                         Join our vibrant community through various events and educational programs
                     </p>
                 </div>

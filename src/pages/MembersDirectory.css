@@ -2,8 +2,8 @@
 .members-directory__container { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
 .members-directory__hero { background: linear-gradient(135deg, #123f75, #126f91); padding: 4.5rem 0 4rem; color: white; }
 .members-directory__eyebrow { margin: 0 0 .8rem; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; opacity: .8; }
-.members-directory h1 { margin: 0; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; }
-.members-directory__subtitle { margin: 1rem 0 0; font-size: 1.05rem; opacity: .9; }
+.members-directory h1 { margin: 0; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.2; font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; }
+.members-directory__subtitle { margin: 1rem 0 0; font-size: 1rem; opacity: .95; font-family: 'Playfair Display', Georgia, serif; }
 .members-directory__content { padding: 2.5rem 0 4rem; }
 .members-directory__toolbar { display: grid; grid-template-columns: 1fr auto; gap: .65rem 1rem; align-items: end; margin-bottom: 1.5rem; }
 .members-directory__search-label { grid-column: 1 / -1; font-weight: 700; font-size: .9rem; }

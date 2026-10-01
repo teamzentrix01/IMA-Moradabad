@@ -125,9 +125,9 @@ const News_Gallery = () => {
             <div className="bg-white">
                 {/* MAIN CONTENT */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-                    <div className="mb-12">
-                        <h1 className="text-4xl font-bold text-slate-900 mb-3">News Gallery</h1>
-                        <p className="text-base sm:text-lg text-slate-600">Discover the latest news, milestones, and stories that showcase our dedication</p>
+                    <div className="mb-10 sm:mb-12">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 font-libre">News Gallery</h1>
+                        <p className="text-base sm:text-lg text-slate-600 font-playfair tracking-wide">Discover the latest news, milestones, and stories that showcase our dedication</p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">

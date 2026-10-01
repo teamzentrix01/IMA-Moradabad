@@ -50,10 +50,10 @@ export default function Helping_hand() {
                             Our Commitment
                         </span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-medium text-gray-900 mb-6">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-libre">
                         Helping <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">Hands</span>
                     </h2>
-                    <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-4">
+                    <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed mb-4 font-playfair tracking-wide">
                         At <span className="font-bold text-emerald-600">IMA Moradabad</span>, we believe that healthcare is not only about treatment but also about <span className="italic font-semibold text-teal-700">support, compassion, and service</span>. We extend our helping hands through:
                     </p>
                 </div>
@@ -84,22 +84,22 @@ export default function Helping_hand() {
                 </div>
 
                 {/* Taglines Section */}
-                <div data-aos="fade-up" className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-10 shadow-2xl">
-                    <div className="flex items-center justify-center gap-2 mb-6">
-                        <Sparkles className="w-6 h-6 text-yellow-300 fill-yellow-300" />
-                        <Sparkles className="w-5 h-5 text-yellow-200 fill-yellow-200" />
-                        <Sparkles className="w-5 h-5 text-yellow-200 fill-yellow-200" />
-                        <Sparkles className="w-5 h-5 text-yellow-200 fill-yellow-200" />
-                        <Sparkles className="w-5 h-5 text-yellow-200 fill-yellow-200" />
-                        <Sparkles className="w-5 h-5 text-yellow-200 fill-yellow-200" />
+                <div data-aos="fade-up" className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-5 sm:p-6 md:p-8 shadow-xl max-w-5xl mx-auto">
+                    <div className="flex items-center justify-center gap-1.5 sm:gap-2 mb-4 sm:mb-5">
+                        <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300 fill-yellow-300" />
+                        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-yellow-200" />
+                        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-yellow-200" />
+                        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-yellow-200" />
+                        <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-200 fill-yellow-200" />
+                        <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-300 fill-yellow-300" />
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
                         {taglines.map((tagline, index) => (
                             <div 
                                 key={index}
-                                className="text-center bg-gradient-to-r from-emerald-500 to-teal-600  bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300"
+                                className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-3.5 sm:p-4 md:p-5 border border-white/20 hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
                             >
-                                <p className="text-white font-semibold text-lg italic">
+                                <p className="text-white font-semibold text-sm sm:text-base italic font-playfair">
                                     "{tagline}"
                                 </p>
                             </div>
@@ -108,9 +108,9 @@ export default function Helping_hand() {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="text-center mt-12">
-                    <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold px-10 py-4 rounded-full hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 inline-flex items-center gap-3">
-                        <Heart className="w-5 h-5" />
+                <div className="text-center mt-6 sm:mt-8">
+                    <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 cursor-pointer">
+                        <Heart className="w-4 h-4" />
                         Join Our Mission
                     </button>
                 </div>

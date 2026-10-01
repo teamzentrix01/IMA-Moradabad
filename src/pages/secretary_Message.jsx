@@ -49,7 +49,6 @@ export default function Secretary_Message() {
               {/* Quick Info Cards */}
               <div className="mt-6 space-y-3 max-w-sm mx-auto">
                 <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-green-500 transition-all">
-                  <p className="text-sm font-semibold text-gray-800">Role</p>
                   <p className="text-xs text-gray-700 font-medium">Honorary Secretary, IMA Moradabad</p>
                   <p className="text-[11px] text-gray-500 mt-0.5">Session: 2026-27</p>
                 </div>
@@ -67,17 +66,7 @@ export default function Secretary_Message() {
                     A 82, Gandhi Nagar, Prince Road,<br />
                     Near Shama Hotel, Moradabad
                   </p>
-                  <div className="mt-2 pt-2 border-t border-gray-100 space-y-1 text-[11px]">
-                    <p className="text-gray-700">
-                      <span className="font-semibold text-gray-800">Ph:</span> <a href="tel:9258834664" className="hover:text-pink-600">9258834664</a>, <a href="tel:9105060815" className="hover:text-pink-600">9105060815</a>
-                    </p>
-                    <p className="text-gray-700">
-                      <span className="font-semibold text-gray-800">Timing:</span> 10:00 AM to 5:00 PM
-                    </p>
-                    <p className="text-red-500 font-medium">
-                      Sunday Closed
-                    </p>
-                  </div>
+
                 </div>
               </div>
             </div>
