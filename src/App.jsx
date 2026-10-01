@@ -16,6 +16,7 @@ import UpComing_Events from './pages/UpComing_Events';
 import Past_Events from './pages/Past_Events';
 import Achievements from './pages/Achievements';
 import MembersDirectory from './pages/MembersDirectory';
+import Treasurer_Message from './pages/Treasurer_Message';
 
 
 
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path: 'about', element: <About /> },
       { path: 'secretarymessage', element: <Secretary_Message /> },
       { path: 'presidentmessage', element: <President_Message /> },
+      { path: 'treasurer-message', element: <Treasurer_Message /> },
       { path: 'imagegallery', element: <Image_Gallery /> },
       { path: 'videogallery', element: <Video_Gallery /> },
       { path: 'newsgallery', element: <News_Gallery /> },

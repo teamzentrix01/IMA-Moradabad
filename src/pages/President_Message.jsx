@@ -48,13 +48,24 @@ export default function President_Message() {
 
               {/* Quick Info Cards */}
               <div className="mt-6 space-y-3 max-w-sm mx-auto">
-                <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-blue-500 transition-all">
-                  <p className="text-sm font-semibold text-gray-800">Experience</p>
-                  <p className="text-xs text-gray-600">30+ Years in Medical Practice</p>
-                </div>
                 <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-green-500 transition-all">
-                  <p className="text-sm font-semibold text-gray-800">Leadership</p>
-                  <p className="text-xs text-gray-600">President, IMA Moradabad Branch</p>
+                  <p className="text-sm font-semibold text-gray-800">Role</p>
+                  <p className="text-xs text-gray-700 font-medium">President, IMA Moradabad</p>
+                  <p className="text-[11px] text-gray-500 mt-0.5">Session: 2026-27</p>
+                </div>
+
+                <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-purple-500 transition-all">
+                  <p className="text-sm font-semibold text-gray-800">Qualifications</p>
+                  <p className="text-xs text-gray-700 font-medium">MBBS, MD (Psychiatry)</p>
+                </div>
+
+                <div className="bg-white p-4 rounded-xl shadow hover:shadow-md cursor-pointer border-l-4 border-rose-500 transition-all">
+                  <p className="text-sm font-semibold text-gray-800">Clinic / Hospital</p>
+                  <p className="text-xs font-semibold text-gray-800 mt-0.5">Adwik Health Center</p>
+                  <p className="text-[11px] text-gray-600 leading-relaxed mt-0.5">
+                    Z 39-40, Ashiyana Phase 2,<br />
+                    Moradabad
+                  </p>
                 </div>
               </div>
             </div>
@@ -115,9 +126,10 @@ export default function President_Message() {
 
               <div className="mt-8 sm:mt-12 bg-gray-100/80 p-5 sm:p-6 rounded-2xl border border-gray-200">
                 <p className="font-semibold text-gray-800">With warm regards,</p>
-                <p className="text-gray-800 font-bold mt-1 text-base sm:text-lg">Dr. Anat Rana</p>
-                <p className="text-gray-600 text-xs sm:text-sm">President, Indian Medical Association</p>
-                <p className="text-gray-600 text-xs sm:text-sm">Moradabad Branch, Uttar Pradesh - 244001</p>
+                <p className="text-gray-800 font-bold mt-1 text-base sm:text-lg">Dr. Anant Rana</p>
+                <p className="text-pink-600 text-xs sm:text-sm font-semibold">MBBS, MD (Psychiatry)</p>
+                <p className="text-gray-700 text-xs sm:text-sm font-medium">President, IMA Moradabad (2026-27)</p>
+                <p className="text-gray-600 text-xs sm:text-sm">Uttar Pradesh - 244001</p>
               </div>
             </div>
           </div>
