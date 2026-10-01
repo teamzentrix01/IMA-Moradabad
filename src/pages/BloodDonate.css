@@ -1,105 +1,18 @@
+/* Scoped styles for BloodDonate page */
 .blood-donate-page {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 480px;
-  grid-template-rows: auto auto auto;
-  column-gap: 2rem;
-  align-items: start;
   min-height: 100vh;
-  background: #f9fafb;
+  background-color: #fafafa;
 }
 
-.blood-donate-content,
-.blood-donate-register,
-.blood-donate-register-inner {
-  display: contents;
+/* Custom smooth scrollbar if needed */
+.blood-donate-scroll::-webkit-scrollbar {
+  width: 5px;
 }
-
-.blood-donate-hero { grid-column: 1; grid-row: 1; width: auto; }
-.blood-donate-eligibility { grid-column: 1; grid-row: 2; width: auto; }
-.blood-donate-form-heading { grid-column: 2; grid-row: 1; width: 480px; }
-.blood-donate-form {
-  grid-column: 2;
-  grid-row: 2;
-  width: 480px;
-  position: sticky;
-  top: 112px;
-  max-height: calc(100vh - 128px);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-width: thin;
-  scrollbar-color: #ef476f #ffe4eb;
+.blood-donate-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 999px;
 }
-.blood-donate-form::-webkit-scrollbar { width: 6px; }
-.blood-donate-form::-webkit-scrollbar-track { background: #ffe4eb; border-radius: 999px; }
-.blood-donate-form::-webkit-scrollbar-thumb { background: #ef476f; border-radius: 999px; }
-.blood-donate-steps { grid-column: 1; grid-row: 3; width: auto; }
-
-@media (min-width: 992px) {
-  .blood-donate-page {
-    grid-template-columns: minmax(0, 1fr) 480px;
-  }
-  .blood-donate-hero {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    padding: 4.5rem 2rem 4rem;
-    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 48%, #fff0f3 100%);
-    border-bottom: 1px solid #fee2e2;
-  }
-  .blood-donate-eligibility,
-  .blood-donate-steps {
-    grid-column: 1;
-  }
-  .blood-donate-eligibility { grid-row: 2; }
-  .blood-donate-form-heading {
-    display: none;
-  }
-  .blood-donate-form {
-    display: block;
-    grid-column: 2;
-    grid-row: 2;
-    width: 480px;
-    position: sticky;
-    top: 112px;
-    max-height: calc(100vh - 128px);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    padding: 1.5rem 1.35rem;
-    border-radius: 1.25rem;
-    box-shadow: 0 18px 45px rgba(190, 24, 93, .14);
-  }
-  .blood-donate-register > .absolute { display: none; }
-  .blood-donate-eligibility .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .blood-donate-eligibility > div { max-width: none; padding-left: 0; padding-right: 0; }
-  .blood-donate-eligibility h2 { font-size: clamp(2rem, 3vw, 3rem); }
-  .blood-donate-steps { grid-row: 3; }
-}
-
-@media (max-width: 991px) {
-  .blood-donate-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: none;
-    gap: 0;
-    align-items: start;
-  }
-  .blood-donate-hero { display: none; }
-  .blood-donate-form-heading,
-  .blood-donate-form,
-  .blood-donate-eligibility,
-  .blood-donate-steps { grid-column: 1; width: auto; }
-  .blood-donate-form-heading { grid-row: auto; order: 1; }
-  .blood-donate-form {
-    grid-row: auto;
-    order: 2;
-    position: static;
-    max-height: none;
-    overflow: visible;
-    overscroll-behavior: auto;
-  }
-  .blood-donate-eligibility { grid-row: auto; order: 3; }
-  .blood-donate-steps { grid-row: auto; order: 4; }
-  .blood-donate-eligibility > div { padding-left: 1rem; padding-right: 1rem; }
+.blood-donate-scroll::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 999px;
 }

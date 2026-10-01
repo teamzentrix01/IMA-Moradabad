@@ -1,347 +1,372 @@
-import React from 'react';
-import { MessageCircle, Eye } from 'lucide-react';
-import { Heart, Award, Sparkles, Users } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { 
+    X, 
+    ChevronLeft, 
+    ChevronRight, 
+    Calendar, 
+    Eye, 
+    Sparkles, 
+    Maximize2, 
+    Newspaper, 
+    User,
+    ArrowUpRight
+} from 'lucide-react';
 import Banner from '../components/ui/Banner';
 
 const News_Gallery = () => {
-    const featuredArticles = [
+    const [selectedCategory, setSelectedCategory] = useState('ALL');
+    const [activeNewsIndex, setActiveNewsIndex] = useState(null);
+
+    const newsArticles = [
         {
             id: 1,
-            title: "IMA Moradabad Leads Initiative for Universal Healthcare Access in Uttar Pradesh",
-            excerpt: "In a landmark initiative this month, IMA Moradabad has partnered with government bodies and healthcare organizations to ensure accessible medical services for all citizens across Moradabad district and surrounding regions.",
+            title: "IMA Moradabad Leads Initiative for Universal Healthcare Access in UP",
+            excerpt: "In a landmark initiative, IMA Moradabad has partnered with government health bodies and leading multi-specialty hospitals to ensure accessible emergency medical services across Moradabad district and Western UP.",
+            fullStory: "The initiative includes setting up mobile rural diagnostic clinics, subsidizing critical surgeries, and streamlining inter-hospital bed availability during emergencies. Over 500 member physicians have volunteered their services for weekly free rural consultation blocks.",
             author: "Dr. Rajesh Kumar",
-            date: "20 October 2025",
+            role: "President, IMA Moradabad",
+            date: "20 Oct 2025",
+            category: "HEALTHCARE",
             image: "/news-1.jpg",
-            large: true
-        }
-    ];
-
-    const sideArticles = [
+            views: "2.4K",
+            featured: true
+        },
         {
             id: 2,
-            category: "HEALTHCARE",
-            title: "Medical professionals unite for community health programs across Moradabad region",
+            title: "Medical Professionals Unite for Community Health Programs Across Moradabad",
+            excerpt: "Over 200 doctors gathered at IMA Bhawan to formulate an integrated public health outreach program for communicable diseases.",
+            fullStory: "The multi-phase campaign targets seasonal epidemic control, dengue surveillance, clean water advocacy, and early screening for diabetic retinopathy in peri-urban slums around Moradabad.",
             author: "Dr. Priya Sharma",
-            date: "18 October 2025",
+            role: "Vice President",
+            date: "18 Oct 2025",
+            category: "COMMUNITY",
             image: "/news-2.jpg",
-            dark: true
+            views: "1.8K"
         },
         {
             id: 3,
-            quote: "Together we stand committed to providing quality healthcare to every citizen of Moradabad, ensuring no one is left behind in accessing medical services",
-            author: "Dr. Amit Verma, IMA Secretary",
+            title: "Executive Message on Healthcare Dignity & Ethical Practice",
+            excerpt: "'Together we stand committed to providing ethical, compassionate healthcare to every citizen of Moradabad without discrimination.'",
+            fullStory: "Addressing the general body, office bearers highlighted the necessity of legal defense protocols, violence prevention in hospitals, and upholding medical ethics in clinical trials.",
+            author: "Dr. Amit Verma",
+            role: "IMA Honorary Secretary",
+            date: "12 Oct 2025",
+            category: "EDITORIAL",
             image: "/news-3.jpg",
-            isQuote: true
-        }
-    ];
-
-    const recentArticles = [
+            views: "980"
+        },
         {
             id: 4,
-            title: "Annual medical conference brings together 500+ doctors in Moradabad for knowledge exchange",
+            title: "Annual Medical Conference Brings 500+ Doctors for Knowledge Exchange",
+            excerpt: "Keynote lectures on interventional cardiology, robotic surgery, and AI in diagnostic pathology were delivered by leading faculty.",
+            fullStory: "Delegates from across the country participated in 14 specialized CME symposiums, debating clinical protocols, new oncology medications, and pediatric life support standards.",
             author: "Dr. Sunita Gupta",
+            role: "Academic Coordinator",
+            date: "05 Oct 2025",
+            category: "CONFERENCE",
             image: "/news-4.jpg",
-            category: null,
-            comments: 0,
-            views: 563,
-            large: true,
-            dark: true
+            views: "3.1K",
+            featured: true
         },
         {
             id: 5,
-            title: "Free health camp conducted in rural areas serves 1000+ patients",
+            title: "Free Rural Health Camp Serves 1000+ Underprivileged Patients",
+            excerpt: "Free general medicine, pediatric, and gynecological examinations along with free medication distribution were held in rural blocks.",
+            fullStory: "A total of 1,124 patients were screened. Blood sugar, ECG, and hemoglobin tests were provided completely free of charge under IMA sponsorship.",
+            author: "Dr. CP Singh",
+            role: "President-Elect",
+            date: "28 Sep 2025",
             category: "COMMUNITY",
             image: "/news-5.jpg",
-            comments: 0,
-            views: 563
+            views: "1.5K"
         },
         {
             id: 6,
-            title: "IMA Moradabad launches COVID vaccination awareness drive",
+            title: "IMA Moradabad Launches Vaccination & Preventive Immunization Drive",
+            excerpt: "Focusing on pediatric immunization and adult flu vaccination ahead of winter, specialized clinics were deployed.",
+            fullStory: "Over 800 children received crucial booster shots while awareness seminars on cervical cancer vaccination were conducted in local Moradabad colleges.",
+            author: "Dr. Sudeep Kaur",
+            role: "Secretary",
+            date: "21 Sep 2025",
             category: "PUBLIC HEALTH",
             image: "/news-6.jpg",
-            comments: 0,
-            views: 242
+            views: "1.2K"
         },
         {
             id: 7,
-            title: "Blood donation camp organized at IMA headquarters saves multiple lives",
+            title: "Mega Blood Donation Camp at IMA Headquarters Collects 250+ Units",
+            excerpt: "A landmark voluntary donation drive coordinated with district government blood banks to prevent critical shortages.",
+            fullStory: "Doctors, youth volunteers, and local citizens participated in large numbers. Donors received certified health recognition cards and honorary badges.",
+            author: "Dr. Manoj Saxena",
+            role: "Blood Bank Incharge",
+            date: "15 Sep 2025",
             category: "SOCIAL SERVICE",
             image: "/news-7.jpg",
-            comments: 0,
-            views: 433
+            views: "2.1K"
         },
         {
             id: 8,
-            title: "Medical education workshop for young doctors held successfully",
+            title: "Continuing Medical Education Workshop for Resident & Young Doctors",
+            excerpt: "Hands-on emergency trauma resuscitation and ultrasound-guided procedures demonstrated by senior consultants.",
+            fullStory: "Young resident doctors from across Western UP medical colleges practiced emergency airway management, CPR, and trauma triage in state-of-the-art simulation labs.",
+            author: "Dr. Arvind Pathak",
+            role: "CME Director",
+            date: "01 Sep 2025",
             category: "EDUCATION",
             image: "/news-8.jpg",
-            comments: 0,
-            views: 276
+            views: "1.7K"
         }
     ];
 
-    const bottomArticles = [
-        {
-            id: 9,
-            category: "PUBLIC HEALTH",
-            title: "IMA Moradabad Spearheads Preventive Healthcare Initiative Across District",
-            excerpt: "In collaboration with local hospitals and healthcare centers, IMA Moradabad has launched a comprehensive preventive healthcare program targeting diabetes and hypertension screening",
-            author: "Dr. Vikram Singh",
-            comments: 0,
-            views: "1.62K",
-            image: "/news-9.jpg"
-        },
-        {
-            id: 10,
-            category: "MEDICAL CONFERENCE",
-            title: "State-level CME program attracts medical professionals from across Uttar Pradesh",
-            excerpt: "On behalf of the medical community and healthcare professionals across Moradabad, IMA organized a successful Continuing Medical Education program focusing on latest medical advancements",
-            author: "Dr. Neha Agarwal",
-            comments: 0,
-            views: 438,
-            image: "/news-10.jpg"
-        },
-        {
-            id: 11,
-            category: "COMMUNITY HEALTH",
-            title: "IMA Moradabad provides free medical consultations to underprivileged communities in UP",
-            image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-            large: true
-        }
-    ];
+    const categories = ['ALL', 'HEALTHCARE', 'COMMUNITY', 'CONFERENCE', 'PUBLIC HEALTH', 'SOCIAL SERVICE', 'EDUCATION'];
 
-    const smallArticles = [
-        { id: 12, category: "HEALTHCARE", title: "New medical facility inaugurated", image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=150&fit=crop" },
-        { id: 13, category: "AWARDS", title: "IMA honors senior doctors", image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=200&h=150&fit=crop" },
-        { id: 14, category: "NEWS", title: "Health awareness campaign", image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=200&h=150&fit=crop" },
-        { id: 15, category: "COMMUNITY", title: "Medical outreach program", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=200&h=150&fit=crop" },
-        { id: 16, category: "EVENTS", title: "World Health Day celebration", image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=200&h=150&fit=crop" }
-    ];
+    const filteredNews = selectedCategory === 'ALL'
+        ? newsArticles
+        : newsArticles.filter(item => item.category === selectedCategory);
+
+    // Keyboard navigation in lightbox
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (activeNewsIndex === null) return;
+            if (e.key === 'Escape') setActiveNewsIndex(null);
+            if (e.key === 'ArrowRight') nextNews();
+            if (e.key === 'ArrowLeft') prevNews();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [activeNewsIndex, filteredNews.length]);
+
+    const openLightbox = (index) => {
+        setActiveNewsIndex(index);
+    };
+
+    const closeLightbox = () => {
+        setActiveNewsIndex(null);
+    };
+
+    const nextNews = () => {
+        setActiveNewsIndex((prev) => (prev + 1) % filteredNews.length);
+    };
+
+    const prevNews = () => {
+        setActiveNewsIndex((prev) => (prev - 1 + filteredNews.length) % filteredNews.length);
+    };
+
+    const activeNews = activeNewsIndex !== null ? filteredNews[activeNewsIndex] : null;
 
     return (
         <>
             <Banner title="NEWS GALLERY" />
-            <div className="bg-white">
-                {/* MAIN CONTENT */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-                    <div className="mb-10 sm:mb-12">
-                        <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2 font-libre">News Gallery</h1>
-                        <p className="text-base sm:text-lg text-slate-600 font-playfair tracking-wide">Discover the latest news, milestones, and stories that showcase our dedication</p>
+
+            <div className="min-h-screen bg-slate-50/70 py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
+                    
+                    {/* Header */}
+                    <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+                        <span className="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-50 border border-rose-200/60 px-3.5 py-1 rounded-full inline-flex items-center gap-1.5 shadow-xs">
+                            <Newspaper className="w-3.5 h-3.5 text-rose-600" />
+                            Press & Media Coverage
+                        </span>
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mt-2.5 mb-2 font-libre">
+                            News & Press Gallery
+                        </h1>
+                        <p className="text-xs sm:text-sm text-slate-600 font-playfair tracking-wide max-w-xl mx-auto">
+                            Explore media reports, press releases, and milestones of Indian Medical Association Moradabad in a sleek Pinterest layout. Click any news photo to view details in full popup.
+                        </p>
+
+                        {/* Filter Tabs */}
+                        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-6">
+                            {categories.map((cat) => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setSelectedCategory(cat)}
+                                    className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                                        selectedCategory === cat
+                                            ? 'bg-rose-700 text-white shadow-sm scale-105'
+                                            : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80 hover:text-slate-900'
+                                    }`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
-                        {/* Main Featured Article */}
-                        <div data-aos="fade-right" data-aos-duration="800" className="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg">
-                            <div className="relative h-64 sm:h-80 lg:h-full">
-                                <img
-                                    src={featuredArticles[0].image}
-                                    alt={featuredArticles[0].title}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8 text-white">
-                                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold mb-2 sm:mb-3 leading-tight">
-                                        {featuredArticles[0].title}
-                                    </h2>
-                                    <p className="text-sm sm:text-base text-gray-200 mb-3 sm:mb-4 leading-relaxed line-clamp-3">
-                                        {featuredArticles[0].excerpt}
-                                    </p>
-                                    <div className="flex items-center gap-3">
+                    {/* Pinterest Masonry Grid for News */}
+                    <div className="masonry-grid">
+                        {filteredNews.map((item, index) => (
+                            <div
+                                key={item.id}
+                                className="masonry-item group"
+                                onClick={() => openLightbox(index)}
+                            >
+                                <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200/80 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                                    
+                                    {/* Compressed Image container */}
+                                    <div className="relative overflow-hidden bg-slate-100">
                                         <img
-                                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
-                                            alt={featuredArticles[0].author}
-                                            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
+                                            src={item.image}
+                                            alt={item.title}
+                                            loading="lazy"
+                                            className="w-full h-auto object-cover max-h-[340px] transition-transform duration-500 ease-out group-hover:scale-105"
                                         />
-                                        <div>
-                                            <p className="text-sm sm:text-base font-medium">{featuredArticles[0].author}</p>
-                                            <p className="text-xs sm:text-sm text-gray-300">{featuredArticles[0].date}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        {/* Side Articles */}
-                        <div data-aos="fade-left" data-aos-duration="800" className="space-y-4 sm:space-y-6">
-                            {sideArticles.map((article) => (
-                                <div key={article.id} className="relative h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-md">
-                                    <img
-                                        src={article.image}
-                                        alt={article.title || article.quote}
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                                        {article.isQuote ? (
-                                            <>
-                                                <p className="text-base sm:text-lg font-serif italic mb-2 sm:mb-3 leading-relaxed line-clamp-3">
-                                                    "{article.quote}"
-                                                </p>
-                                                <p className="text-xs sm:text-sm font-medium">{article.author}</p>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <span className="text-xs font-semibold uppercase tracking-wider mb-2 inline-block">
-                                                    {article.category}
-                                                </span>
-                                                <h3 className="text-base sm:text-lg font-serif font-bold mb-2 leading-tight line-clamp-2">
-                                                    {article.title}
-                                                </h3>
-                                                <div className="flex items-center gap-2 text-xs sm:text-sm">
-                                                    <p className="font-medium">{article.author}</p>
-                                                    <span>•</span>
-                                                    <p className="text-gray-300">{article.date}</p>
-                                                </div>
-                                            </>
+                                        {/* Hover Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                                            <div className="w-10 h-10 rounded-full bg-white/95 text-rose-700 flex items-center justify-center shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                                                <Maximize2 className="w-4 h-4" />
+                                            </div>
+                                        </div>
+
+                                        {/* Category Badge */}
+                                        <div className="absolute top-2.5 left-2.5">
+                                            <span className="bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-white/20">
+                                                {item.category}
+                                            </span>
+                                        </div>
+
+                                        {item.featured && (
+                                            <div className="absolute top-2.5 right-2.5 bg-rose-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-xs">
+                                                Top Story
+                                            </div>
                                         )}
                                     </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
 
-                    {/* Recently Added Section */}
-                    <div className="mb-12 sm:mb-16">
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
-                            <h2 className="text-xl sm:text-2xl font-serif font-bold">Recently Added</h2>
-                            <div className="flex flex-wrap gap-2 sm:gap-4 text-xs sm:text-sm">
-                                {/* <button className="font-semibold text-gray-900 border-b-2 border-gray-900 pb-1">ALL</button>
-                                <button className="text-gray-500 hover:text-gray-900">TRENDING</button>
-                                <button className="text-gray-500 hover:text-gray-900 hidden sm:inline">INTERNATIONAL</button>
-                                <button className="text-gray-500 hover:text-gray-900">POLITICS</button>
-                                <button className="text-gray-500 hover:text-gray-900">BUSINESS</button> */}
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                            {recentArticles.map((article, index) => (
-                                <div
-                                    key={article.id}
-                                    data-aos="fade-up"
-                                    data-aos-delay={(index % 3) * 120}
-                                    className={`${index === 0 ? 'sm:col-span-2 sm:row-span-2' : ''} rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300`}
-                                >
-                                    <div className="relative h-48 sm:h-64 lg:h-full group cursor-pointer">
-                                        <img
-                                            src={article.image}
-                                            alt={article.title}
-                                            className="w-full h-full object-cover"
-                                        />
-                                        <div className={`absolute inset-0 ${article.dark ? 'bg-gradient-to-t from-black/80 via-black/40 to-transparent' : 'bg-black/20 group-hover:bg-black/40'} transition-all duration-300`} />
-                                        <div className={`absolute ${index === 0 ? 'bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8' : 'bottom-4 left-4 right-4'} text-white`}>
-                                            {article.category && (
-                                                <span className="text-xs font-semibold uppercase tracking-wider mb-2 inline-block text-blue-400">
-                                                    {article.category}
-                                                </span>
-                                            )}
-                                            <h3 className={`${index === 0 ? 'text-xl sm:text-2xl lg:text-3xl' : 'text-base sm:text-lg lg:text-xl'} font-serif font-bold mb-2 sm:mb-3 leading-tight line-clamp-3`}>
-                                                {article.title}
-                                            </h3>
-                                            {index === 0 && (
-                                                <div className="flex items-center gap-2 text-xs sm:text-sm mb-2">
-                                                    <p className="font-medium">{article.author}</p>
-                                                </div>
-                                            )}
-                                            {article.comments !== undefined && (
-                                                <div className="flex items-center gap-4 text-xs sm:text-sm">
-                                                    <span className="flex items-center gap-1">
-                                                        <MessageCircle size={12} className="sm:w-4 sm:h-4" />
-                                                        {article.comments}
-                                                    </span>
-                                                    <span className="flex items-center gap-1">
-                                                        <Eye size={12} className="sm:w-4 sm:h-4" />
-                                                        {article.views}
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Bottom Articles Grid */}
-                    {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-                        {bottomArticles.map((article, index) => (
-                            <div key={article.id} className={`${index === 2 ? 'lg:row-span-2' : ''}`}>
-                                {index < 2 ? (
-                                    <div className="border-b pb-6">
-                                        <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-2 inline-block">
-                                            {article.category}
-                                        </span>
-                                        <h3 className="text-lg sm:text-xl font-serif font-bold mb-2 leading-tight hover:text-blue-600 cursor-pointer line-clamp-2">
-                                            {article.title}
-                                        </h3>
-                                        <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
-                                            {article.excerpt}
-                                        </p>
-                                        <div className="flex items-center justify-between">
-                                            <div className="flex items-center gap-2">
-                                                <img
-                                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
-                                                    alt={article.author}
-                                                    className="w-6 h-6 sm:w-8 sm:h-8 rounded-full"
-                                                />
-                                                <span className="text-xs sm:text-sm font-medium">{article.author}</span>
-                                            </div>
-                                            <div className="flex items-center gap-3 text-xs sm:text-sm text-gray-500">
-                                                <span className="flex items-center gap-1">
-                                                    <MessageCircle size={12} className="sm:w-4 sm:h-4" />
-                                                    {article.comments}
-                                                </span>
-                                                <span className="flex items-center gap-1">
-                                                    <Eye size={12} className="sm:w-4 sm:h-4" />
-                                                    {article.views}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className="relative h-48 sm:h-64 lg:h-full group cursor-pointer">
-                                        <img
-                                            src={article.image}
-                                            alt={article.title}
-                                            className="w-full h-full object-cover"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                        <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 text-white">
-                                            <span className="text-xs font-semibold uppercase tracking-wider mb-2 inline-block text-blue-400">
-                                                {article.category}
+                                    {/* News Details Footer */}
+                                    <div className="p-4 sm:p-5">
+                                        <div className="flex items-center justify-between text-[11px] text-slate-400 mb-2 font-medium">
+                                            <span className="flex items-center gap-1 text-slate-500">
+                                                <Calendar className="w-3 h-3 text-rose-600" />
+                                                {item.date}
                                             </span>
-                                            <h3 className="text-lg sm:text-xl lg:text-2xl font-serif font-bold leading-tight line-clamp-3">
-                                                {article.title}
-                                            </h3>
+                                            <span className="flex items-center gap-1">
+                                                <Eye className="w-3 h-3" />
+                                                {item.views}
+                                            </span>
+                                        </div>
+
+                                        <h3 className="text-sm font-bold text-slate-900 font-libre group-hover:text-rose-700 transition-colors leading-snug line-clamp-2">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="text-xs text-slate-600 font-playfair line-clamp-3 mt-1.5 leading-relaxed">
+                                            {item.excerpt}
+                                        </p>
+
+                                        <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between text-[11px]">
+                                            <span className="font-semibold text-slate-700 truncate max-w-[170px]">{item.author}</span>
+                                            <span className="text-rose-600 font-semibold inline-flex items-center gap-0.5 group-hover:translate-x-0.5 transition-transform">
+                                                Read More <ArrowUpRight className="w-3 h-3" />
+                                            </span>
                                         </div>
                                     </div>
-                                )}
-                            </div>
-                        ))}
-                    </div> */}
-
-                    {/* Small Articles Carousel */}
-                    {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-                        {smallArticles.map((article) => (
-                            <div key={article.id} className="cursor-pointer group">
-                                <div className="relative h-24 sm:h-28 lg:h-32 mb-2 overflow-hidden rounded">
-                                    <img
-                                        src={article.image}
-                                        alt={article.title}
-                                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                    />
                                 </div>
-                                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 mb-1 inline-block">
-                                    {article.category}
-                                </span>
-                                <h4 className="text-xs sm:text-sm font-serif font-bold leading-tight group-hover:text-blue-600 line-clamp-2">
-                                    {article.title}
-                                </h4>
                             </div>
                         ))}
-                    </div> */}
+                    </div>
+
+                    {filteredNews.length === 0 && (
+                        <div className="text-center py-16 bg-white rounded-2xl border border-slate-200">
+                            <p className="text-sm text-slate-500">No news articles found in this category.</p>
+                        </div>
+                    )}
                 </div>
             </div>
+
+            {/* =========================================================
+                POPUP LIGHTBOX MODAL FOR NEWS
+            ========================================================= */}
+            {activeNews && (
+                <div 
+                    className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 transition-all duration-300 animate-in fade-in"
+                    onClick={closeLightbox}
+                >
+                    {/* Close Button */}
+                    <button
+                        onClick={closeLightbox}
+                        className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-200 cursor-pointer"
+                        title="Close (Esc)"
+                    >
+                        <X className="w-5 h-5" />
+                    </button>
+
+                    {/* Prev Arrow */}
+                    <button
+                        onClick={(e) => { e.stopPropagation(); prevNews(); }}
+                        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-50 w-11 h-11 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-200 cursor-pointer"
+                        title="Previous News (←)"
+                    >
+                        <ChevronLeft className="w-6 h-6" />
+                    </button>
+
+                    {/* Next Arrow */}
+                    <button
+                        onClick={(e) => { e.stopPropagation(); nextNews(); }}
+                        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-50 w-11 h-11 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center backdrop-blur-sm transition-all duration-200 cursor-pointer"
+                        title="Next News (→)"
+                    >
+                        <ChevronRight className="w-6 h-6" />
+                    </button>
+
+                    {/* Modal Content Box */}
+                    <div 
+                        className="relative max-w-4xl w-full max-h-[90vh] bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col md:flex-row"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* News Image Display */}
+                        <div className="relative flex-1 bg-black/70 flex items-center justify-center min-h-[280px] max-h-[50vh] md:max-h-[85vh] overflow-hidden">
+                            <img
+                                src={activeNews.image}
+                                alt={activeNews.title}
+                                className="w-full h-full max-h-[80vh] object-contain"
+                            />
+                        </div>
+
+                        {/* News Story Panel */}
+                        <div className="w-full md:w-96 p-5 sm:p-6 bg-slate-900 text-white flex flex-col justify-between border-t md:border-t-0 md:border-l border-white/10 overflow-y-auto max-h-[40vh] md:max-h-[85vh]">
+                            <div>
+                                <div className="flex items-center justify-between mb-3">
+                                    <span className="text-[11px] font-bold uppercase tracking-wider text-rose-400 bg-rose-950/80 px-2.5 py-0.5 rounded-full border border-rose-800/60">
+                                        {activeNews.category}
+                                    </span>
+                                    <span className="text-xs text-slate-400 flex items-center gap-1">
+                                        <Calendar className="w-3 h-3" />
+                                        {activeNews.date}
+                                    </span>
+                                </div>
+
+                                <h2 className="text-base sm:text-lg font-bold font-libre mb-2.5 text-white leading-snug">
+                                    {activeNews.title}
+                                </h2>
+
+                                <div className="space-y-2 text-xs sm:text-[13px] text-slate-300 font-playfair leading-relaxed">
+                                    <p className="font-semibold text-rose-200">
+                                        {activeNews.excerpt}
+                                    </p>
+                                    <p className="text-slate-300/90 pt-1">
+                                        {activeNews.fullStory}
+                                    </p>
+                                </div>
+
+                                <div className="mt-4 pt-3 border-t border-white/10 flex items-center gap-2.5">
+                                    <div className="w-8 h-8 rounded-full bg-rose-900/60 border border-rose-700/50 flex items-center justify-center text-rose-300 text-xs font-bold">
+                                        <User className="w-4 h-4" />
+                                    </div>
+                                    <div>
+                                        <p className="text-xs font-semibold text-white">{activeNews.author}</p>
+                                        <p className="text-[11px] text-slate-400">{activeNews.role}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+                                <span>{activeNewsIndex + 1} of {filteredNews.length} articles</span>
+                                <span className="text-slate-500 text-[11px]">Use ← → keys</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     );
 };

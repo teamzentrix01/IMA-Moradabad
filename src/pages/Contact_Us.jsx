@@ -1,227 +1,301 @@
 import React, { useState } from 'react';
-import { Phone, MessageCircle, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
+import { 
+    Phone, 
+    MessageCircle, 
+    Mail, 
+    Facebook, 
+    Instagram, 
+    Youtube, 
+    MapPin, 
+    Clock, 
+    Send, 
+    CheckCircle2,
+    Shield
+} from 'lucide-react';
 import Banner from '../components/ui/Banner';
 
 export default function Contact_Us() {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    countryCode: '+91',
-    contactNumber: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        countryCode: '+91',
+        contactNumber: '',
+        message: ''
     });
-  };
 
-  return (
-    <>
-      <Banner title="CONTACT US" />
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-      <div className="min-h-screen" style={{ backgroundColor: '#F5F5F5' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-10 px-4 font-libre" style={{ color: '#0B0B42' }}>
-            Contact Us
-          </h1>
+    return (
+        <>
+            <Banner title="CONTACT US" />
 
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
-            {/* Left Side - Form */}
-            <div data-aos="fade-right" data-aos-duration="800" className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg order-2 lg:order-1 border border-slate-100">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-3 sm:mb-4 font-libre" style={{ color: '#0B0B42' }}>
-                Send us a message
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 font-playfair tracking-wide">
-                Do you have an query?
-              </p>
+            <div className="min-h-screen bg-slate-50/70 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto">
+                    
+                    {/* Header */}
+                    <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+                        <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/60 px-3 py-1 rounded-full inline-flex items-center gap-1.5 shadow-xs mb-2.5">
+                            <Phone className="w-3.5 h-3.5" />
+                            Get In Touch
+                        </span>
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 font-libre">
+                            Contact IMA Moradabad
+                        </h1>
+                        <p className="text-xs sm:text-sm text-slate-600 font-playfair tracking-wide leading-relaxed">
+                            Have an inquiry regarding membership, events, health camps, or administrative support? Reach out to our dedicated team.
+                        </p>
+                    </div>
 
-              {/* FormSubmit.co Integration */}
-              <form 
-                action="https://formsubmit.co/imamoradabad@gmail.com" 
-                method="POST" 
-                className="space-y-5 sm:space-y-6"
-              >
-                {/* FormSubmit Configuration - Hidden Fields */}
-                <input type="hidden" name="_subject" value="New Contact Form Submission from IMA Moradabad!" />
-                <input type="hidden" name="_captcha" value="true" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://your-website.com/thankyou" />
-                {/* Replace above URL with your actual thank you page URL, or remove it to use FormSubmit's default */}
-                
-                {/* Name Fields */}
-                <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
-                  <div>
-                    <label className="block text-sm sm:text-base font-semibold mb-2" style={{ color: '#0B0B42' }}>
-                      First Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="First_Name"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      placeholder="Enter your first name"
-                      className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm sm:text-base font-semibold mb-2" style={{ color: '#0B0B42' }}>
-                      Last Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="Last_Name"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      placeholder="Enter your last name"
-                      className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all"
-                      required
-                    />
-                  </div>
+                    <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                        
+                        {/* Left Side - Compact Professional Form (7 cols) */}
+                        <div 
+                            data-aos="fade-right" 
+                            data-aos-duration="600" 
+                            className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-slate-200/80"
+                        >
+                            <div className="border-b border-slate-100 pb-3.5 mb-4">
+                                <h2 className="text-base sm:text-lg font-bold font-libre text-slate-900">
+                                    Send us a Message
+                                </h2>
+                                <p className="text-xs text-slate-500 font-playfair mt-0.5">
+                                    Fill out this quick form and our office team will respond within 24 hours.
+                                </p>
+                            </div>
+
+                            {/* FormSubmit.co Integration */}
+                            <form 
+                                action="https://formsubmit.co/imamoradabad@gmail.com" 
+                                method="POST" 
+                                className="space-y-3.5"
+                            >
+                                {/* Hidden Config */}
+                                <input type="hidden" name="_subject" value="New Contact Form Submission - IMA Moradabad" />
+                                <input type="hidden" name="_captcha" value="true" />
+                                <input type="hidden" name="_template" value="table" />
+                                <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou" />
+
+                                {/* Name Fields - 2 cols */}
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                            First Name <span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="First_Name"
+                                            value={formData.firstName}
+                                            onChange={handleChange}
+                                            placeholder="First Name"
+                                            className="w-full h-9 px-3 text-xs sm:text-sm rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                            Last Name <span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="Last_Name"
+                                            value={formData.lastName}
+                                            onChange={handleChange}
+                                            placeholder="Last Name"
+                                            className="w-full h-9 px-3 text-xs sm:text-sm rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Email & Phone in 2 cols */}
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                            Email Address <span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            placeholder="name@domain.com"
+                                            className="w-full h-9 px-3 text-xs sm:text-sm rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                            Contact Number <span className="text-red-500">*</span>
+                                        </label>
+                                        <div className="flex gap-1.5">
+                                            <select
+                                                name="Country_Code"
+                                                value={formData.countryCode}
+                                                onChange={handleChange}
+                                                className="w-20 h-9 px-2 text-xs rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 cursor-pointer"
+                                            >
+                                                <option value="+91">+91 (IN)</option>
+                                                <option value="+1">+1 (US)</option>
+                                                <option value="+44">+44 (UK)</option>
+                                                <option value="+971">+971 (UAE)</option>
+                                            </select>
+                                            <input
+                                                type="tel"
+                                                name="Contact_Number"
+                                                value={formData.contactNumber}
+                                                onChange={handleChange}
+                                                placeholder="Mobile Number"
+                                                pattern="[0-9]{10}"
+                                                className="flex-1 h-9 px-3 text-xs sm:text-sm rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Message Field - Compact height */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Your Query / Message <span className="text-red-500">*</span>
+                                    </label>
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        placeholder="Write your message or inquiry here..."
+                                        rows="3"
+                                        className="w-full p-2.5 text-xs sm:text-sm rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400 resize-none"
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                {/* Submit Button */}
+                                <div className="pt-1">
+                                    <button
+                                        type="submit"
+                                        className="w-full sm:w-auto px-6 py-2.5 bg-blue-700 hover:bg-blue-800 text-white font-semibold rounded-lg shadow-sm hover:shadow-md transition-all text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer"
+                                    >
+                                        <Send className="w-3.5 h-3.5" />
+                                        <span>Send Message</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        {/* Right Side - Compact Contact Information Panel (5 cols) */}
+                        <div 
+                            data-aos="fade-left" 
+                            data-aos-duration="600" 
+                            className="lg:col-span-5 rounded-2xl p-5 sm:p-6 text-white shadow-md border border-slate-800" 
+                            style={{ backgroundColor: '#102A43' }}
+                        >
+                            <h2 className="text-base sm:text-lg font-bold font-libre mb-1 text-white">
+                                Head Office & Help Desk
+                            </h2>
+                            <p className="text-xs text-slate-300 font-playfair mb-4 leading-relaxed">
+                                Feel free to connect directly through our official channels.
+                            </p>
+
+                            <div className="space-y-2.5 mb-5 text-xs">
+                                {/* Address Box */}
+                                <div className="flex items-start gap-3 p-3 rounded-xl bg-white/10 border border-white/10">
+                                    <MapPin className="w-4 h-4 mt-0.5 text-rose-300 flex-shrink-0" />
+                                    <div>
+                                        <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Address</p>
+                                        <p className="text-xs text-white font-medium mt-0.5 leading-snug">
+                                            IMA Bhawan, Opposite SSP Office, Kachehri Parisar, Moradabad - 244001, UP
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Phone Box */}
+                                <a 
+                                    href="tel:+917500470200" 
+                                    className="flex items-center gap-3 p-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors"
+                                >
+                                    <Phone className="w-4 h-4 text-emerald-300 flex-shrink-0" />
+                                    <div>
+                                        <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Helpline Number</p>
+                                        <p className="text-xs sm:text-sm font-bold text-white">+91 7500470200</p>
+                                    </div>
+                                </a>
+
+                                {/* WhatsApp Box */}
+                                <a 
+                                    href="https://wa.me/917500470200" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="flex items-center gap-3 p-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors"
+                                >
+                                    <MessageCircle className="w-4 h-4 text-green-300 flex-shrink-0" />
+                                    <div>
+                                        <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">WhatsApp / SMS</p>
+                                        <p className="text-xs sm:text-sm font-bold text-white">+91 7500470200</p>
+                                    </div>
+                                </a>
+
+                                {/* Email Box */}
+                                <a 
+                                    href="mailto:imamoradabad@gmail.com" 
+                                    className="flex items-center gap-3 p-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/10 transition-colors"
+                                >
+                                    <Mail className="w-4 h-4 text-cyan-300 flex-shrink-0" />
+                                    <div>
+                                        <p className="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Email ID</p>
+                                        <p className="text-xs sm:text-sm font-bold text-white break-all">imamoradabad@gmail.com</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            {/* Working Hours & Socials */}
+                            <div className="border-t border-white/15 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                                <div>
+                                    <p className="text-[10px] text-slate-400 uppercase font-semibold">Office Hours</p>
+                                    <p className="text-[11px] text-slate-200 mt-0.5">Mon - Sat: 10:00 AM - 5:00 PM</p>
+                                </div>
+
+                                <div className="flex gap-2">
+                                    <a 
+                                        href="https://www.facebook.com/moradabadima" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-105"
+                                        title="Facebook"
+                                    >
+                                        <Facebook className="w-3.5 h-3.5" />
+                                    </a>
+                                    <a 
+                                        href="https://www.instagram.com/imamoradabad/" 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-105"
+                                        title="Instagram"
+                                    >
+                                        <Instagram className="w-3.5 h-3.5" />
+                                    </a>
+                                    <a 
+                                        href="https://www.youtube.com/@imamoradabad" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all hover:scale-105"
+                                        title="YouTube"
+                                    >
+                                        <Youtube className="w-3.5 h-3.5" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-
-                {/* Email Field */}
-                <div>
-                  <label className="block text-sm sm:text-base font-semibold mb-2" style={{ color: '#0B0B42' }}>
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all"
-                    required
-                  />
-                </div>
-
-                {/* Contact Details */}
-                <div>
-                  <label className="block text-sm sm:text-base font-semibold mb-2" style={{ color: '#0B0B42' }}>
-                    Contact Details <span className="text-red-500">*</span>
-                  </label>
-                  <div className="flex gap-2 sm:gap-3">
-                    <select
-                      name="Country_Code"
-                      value={formData.countryCode}
-                      onChange={handleChange}
-                      className="px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all"
-                    >
-                      <option value="+971">+971</option>
-                      <option value="+1">+1</option>
-                      <option value="+91">+91</option>
-                      <option value="+44">+44</option>
-                    </select>
-                    <input
-                      type="tel"
-                      name="Contact_Number"
-                      value={formData.contactNumber}
-                      onChange={handleChange}
-                      placeholder="Enter your contact number"
-                      pattern="[0-9]{10}"
-                      className="flex-1 px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base transition-all"
-                      required
-                    />
-                  </div>
-                </div>
-
-                {/* Message Field */}
-                <div>
-                  <label className="block text-sm sm:text-base font-semibold mb-2" style={{ color: '#0B0B42' }}>
-                    Message <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Enter your message"
-                    rows="5"
-                    className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-sm sm:text-base transition-all"
-                    required
-                  ></textarea>
-                </div>
-
-                {/* Submit Button */}
-                <div className="flex justify-center sm:justify-end pt-2">
-                  <button
-                    type="submit"
-                    className="w-full sm:w-auto px-8 sm:px-10 lg:px-12 py-3.5 sm:py-4 rounded-full text-white font-semibold hover:opacity-90 transition-all text-sm sm:text-base lg:text-lg"
-                    style={{ backgroundColor: '#0B0B42' }}
-                  >
-                    Send a Message
-                  </button>
-                </div>
-              </form>
             </div>
-
-            {/* Right Side - Contact Info */}
-            <div data-aos="fade-left" data-aos-duration="800" className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white order-1 lg:order-2 h-fit lg:sticky lg:top-8 shadow-xl" style={{ backgroundColor: '#1A3A52' }}>
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 sm:mb-8 leading-relaxed">
-                Hi! We are always here<br />to help you.
-              </h2>
-
-              <div className="space-y-4 sm:space-y-5 mb-8 sm:mb-10">
-                <a href="tel:+917500470200" className="flex items-center gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl hover:bg-opacity-20 transition-all" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
-                  <Phone className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-xs sm:text-sm opacity-80 mb-1">Hotline:</p>
-                    <p className="font-semibold text-sm sm:text-base lg:text-lg">+91 7500470200</p>
-                  </div>
-                </a>
-
-                <a href="https://wa.me/917500470200" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl hover:bg-opacity-20 transition-all" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
-                  <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-xs sm:text-sm opacity-80 mb-1">SMS / Whatsapp</p>
-                    <p className="font-semibold text-sm sm:text-base lg:text-lg">+91 7500470200</p>
-                  </div>
-                </a>
-
-                <a href="mailto:imamoradabad@gmail.com" className="flex items-center gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl hover:bg-opacity-20 transition-all" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
-                  <Mail className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-xs sm:text-sm opacity-80 mb-1">Email:</p>
-                    <p className="font-semibold text-sm sm:text-base lg:text-lg break-all">imamoradabad@gmail.com</p>
-                  </div>
-                </a>
-              </div>
-
-              <div className="border-t border-white border-opacity-20 pt-6 sm:pt-8">
-                <p className="text-sm sm:text-base mb-4 sm:mb-5 opacity-90 font-medium">Connect with us</p>
-                <div className="flex gap-3 sm:gap-4 flex-wrap">
-                  <a 
-                    href="https://www.facebook.com/moradabadima" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-opacity-10 hover:bg-opacity-25 flex items-center justify-center transition-all hover:scale-110"
-                  >
-                    <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                  <a 
-                    href="https://www.instagram.com/imamoradabad/" 
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-opacity-10 hover:bg-opacity-25 flex items-center justify-center transition-all hover:scale-110"
-                  >
-                    <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                  <a 
-                    href="https://www.youtube.com/@imamoradabad" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-opacity-10 hover:bg-opacity-25 flex items-center justify-center transition-all hover:scale-110"
-                  >
-                    <Youtube className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+        </>
+    );
 }
