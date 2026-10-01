@@ -52,83 +52,304 @@ export default function About() {
   return (
     <div className="bg-gradient-to-b from-white via-emerald-50/30 to-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }}></div>
+      {/* =========================================================
+    HERO / BANNER SECTION
+========================================================= */}
+
+      <div className="relative bg-gradient-to-br from-emerald-600 via-teal-600 to-emerald-700 text-white py-12 sm:py-14 md:py-16 overflow-hidden">
+
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
+              backgroundSize: "32px 32px"
+            }}
+          />
         </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6">
-              <Stethoscope className="w-5 h-5" />
-              <span className="font-semibold">Since 1928</span>
+
+        {/* Decorative Blur */}
+        <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-28 -right-28 w-72 h-72 bg-emerald-300/10 rounded-full blur-3xl" />
+
+
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div
+            className="text-center"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+
+            {/* Badge */}
+            <div
+              className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-white/15
+                    backdrop-blur-md
+                    border border-white/20
+                    px-4
+                    py-2
+                    rounded-full
+                    mb-4
+                    shadow-sm
+                "
+            >
+              <Stethoscope className="w-4 h-4 sm:w-5 sm:h-5" />
+
+              <span className="text-xs sm:text-sm font-semibold tracking-wide">
+                Since 1928
+              </span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">About IMA Moradabad</h1>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto mb-8">
-              India's largest and most trusted medical association serving Moradabad, Uttar Pradesh - 244001
+
+
+            {/* Title */}
+            <h1
+              className="
+                    text-3xl
+                    sm:text-4xl
+                    md:text-5xl
+                    font-bold
+                    tracking-tight
+                    mb-3
+                "
+            >
+              About IMA Moradabad
+            </h1>
+
+
+            {/* Description */}
+            <p
+              className="
+                    text-sm
+                    sm:text-base
+                    md:text-lg
+                    text-emerald-100
+                    max-w-2xl
+                    mx-auto
+                    leading-relaxed
+                    mb-6
+                "
+            >
+              India's largest and most trusted medical association
+              serving Moradabad, Uttar Pradesh - 244001
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+
+
+            {/* Tabs */}
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3">
+
+              {/* Overview */}
               <button
-                onClick={() => setActiveTab('overview')}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  activeTab === 'overview'
-                    ? 'bg-white text-emerald-600'
-                    : 'bg-white/20 text-white hover:bg-white/30'
-                }`}
+                onClick={() => setActiveTab("overview")}
+                className={`
+                        px-5
+                        py-2
+                        sm:px-6
+                        sm:py-2.5
+                        rounded-full
+                        text-sm
+                        sm:text-base
+                        font-semibold
+                        transition-all
+                        duration-300
+                        ${activeTab === "overview"
+                    ? "bg-white text-emerald-600 shadow-lg"
+                    : "bg-white/15 text-white border border-white/20 hover:bg-white/25"
+                  }
+                    `}
               >
                 Overview
               </button>
+
+
+              {/* Objectives */}
               <button
-                onClick={() => setActiveTab('objectives')}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  activeTab === 'objectives'
-                    ? 'bg-white text-emerald-600'
-                    : 'bg-white/20 text-white hover:bg-white/30'
-                }`}
+                onClick={() => setActiveTab("objectives")}
+                className={`
+                        px-5
+                        py-2
+                        sm:px-6
+                        sm:py-2.5
+                        rounded-full
+                        text-sm
+                        sm:text-base
+                        font-semibold
+                        transition-all
+                        duration-300
+                        ${activeTab === "objectives"
+                    ? "bg-white text-emerald-600 shadow-lg"
+                    : "bg-white/15 text-white border border-white/20 hover:bg-white/25"
+                  }
+                    `}
               >
                 Objectives
               </button>
+
+
+              {/* Services */}
               <button
-                onClick={() => setActiveTab('services')}
-                className={`px-6 py-3 rounded-full font-semibold transition-all ${
-                  activeTab === 'services'
-                    ? 'bg-white text-emerald-600'
-                    : 'bg-white/20 text-white hover:bg-white/30'
-                }`}
+                onClick={() => setActiveTab("services")}
+                className={`
+                        px-5
+                        py-2
+                        sm:px-6
+                        sm:py-2.5
+                        rounded-full
+                        text-sm
+                        sm:text-base
+                        font-semibold
+                        transition-all
+                        duration-300
+                        ${activeTab === "services"
+                    ? "bg-white text-emerald-600 shadow-lg"
+                    : "bg-white/15 text-white border border-white/20 hover:bg-white/25"
+                  }
+                    `}
               >
                 Services
               </button>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
 
-      {/* Stats Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+
+
+      {/* =========================================================
+    COMPACT STATS SECTION
+========================================================= */}
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-12 relative z-10">
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+
           {stats.map((stat, index) => {
+
             const Icon = stat.icon;
+
             return (
-              <div 
-                key={index} 
+
+              <div
+                key={index}
                 data-aos="fade-up"
                 data-aos-delay={(index + 1) * 100}
-                className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center hover:scale-105 transition-transform border border-emerald-50"
-              >
-                <Icon className="w-8 sm:w-10 h-8 sm:h-10 text-emerald-600 mx-auto mb-2 sm:mb-3" />
-                <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
-                  <AnimatedCounter target={stat.target} suffix={stat.suffix} duration={2000} />
-                </div>
-                <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+                data-aos-duration="600"
+                className="
+                        group
+                        bg-white
+                        rounded-xl
+                        sm:rounded-2xl
+                        shadow-lg
+                        hover:shadow-xl
+                        border
+                        border-emerald-50
+                        px-3
+                        py-4
+                        sm:px-4
+                        sm:py-5
+                        md:px-5
+                        md:py-5
+                        text-center
 
+                        transition-all
+                        duration-300
+                        ease-out
+
+                        hover:-translate-y-1.5
+                    "
+              >
+
+                {/* Icon */}
+                <div
+                  className="
+                            w-9
+                            h-9
+                            sm:w-10
+                            sm:h-10
+                            mx-auto
+                            mb-2
+                            rounded-full
+                            bg-emerald-50
+                            flex
+                            items-center
+                            justify-center
+
+                            transition-all
+                            duration-300
+
+                            group-hover:bg-emerald-600
+                            group-hover:scale-110
+                        "
+                >
+                  <Icon
+                    className="
+                                w-5
+                                h-5
+                                sm:w-5.5
+                                sm:h-5.5
+                                text-emerald-600
+
+                                transition-colors
+                                duration-300
+
+                                group-hover:text-white
+                            "
+                  />
+                </div>
+
+
+                {/* Counter */}
+                <div
+                  className="
+                            text-xl
+                            sm:text-2xl
+                            md:text-2xl
+                            font-bold
+                            text-gray-900
+                            leading-tight
+                            mb-1
+                        "
+                >
+                  <AnimatedCounter
+                    target={stat.target}
+                    suffix={stat.suffix}
+                    duration={2000}
+                  />
+                </div>
+
+
+                {/* Label */}
+                <div
+                  className="
+                            text-[11px]
+                            sm:text-xs
+                            md:text-sm
+                            text-gray-500
+                            font-medium
+                            leading-tight
+                        "
+                >
+                  {stat.label}
+                </div>
+
+              </div>
+
+            );
+
+          })}
+
+        </div>
+
+      </div>
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         {/* Overview Tab */}

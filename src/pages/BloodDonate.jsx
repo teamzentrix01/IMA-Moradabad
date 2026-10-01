@@ -46,31 +46,134 @@ const eligibilityCriteria = [
 const BloodDonate = () => {
     return (
         <div className="blood-donate-page">
-            <div className="blood-donate-hero max-w-4xl mx-auto text-center mb-12 pt-11">
-                <div className="inline-block p-4 bg-red-100 rounded-full mb-4">
-                    <Heart className="w-12 h-12 text-red-600 fill-red-600" />
+            <div
+                className="
+        blood-donate-hero
+        max-w-3xl
+        mx-auto
+        text-center
+        mb-8
+        sm:mb-10
+        pt-6
+        sm:pt-8
+        px-4
+        py-10
+    "
+            >
+                {/* Heart Icon */}
+                <div
+                    className="
+            inline-flex
+            items-center
+            justify-center
+            w-14
+            h-14
+            sm:w-16
+            sm:h-16
+            bg-red-50
+            border
+            border-red-100
+            rounded-full
+            mb-3
+            sm:mb-4
+            shadow-sm
+        "
+                >
+                    <Heart
+                        className="
+                w-7
+                h-7
+                sm:w-8
+                sm:h-8
+                text-red-600
+                fill-red-600
+                
+            "
+                    />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+
+
+                {/* Title */}
+                <h1
+                    className="
+            text-3xl
+            sm:text-4xl
+            md:text-[42px]
+            font-bold
+            tracking-tight
+            text-gray-900
+            mb-3
+        "
+                >
                     DONATE <span className="text-red-600">BLOOD</span>
                 </h1>
-                <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                    Join IMA Moradabad's blood donation initiative. Register as a donor and help save lives in our community.
-                    Every donation brings hope to patients in need across Moradabad, UP.
+
+
+                {/* Description */}
+                <p
+                    className="
+            text-sm
+            sm:text-base
+            text-gray-600
+            leading-relaxed
+            max-w-2xl
+            mx-auto
+        "
+                >
+                    Join IMA Moradabad's blood donation initiative. Register as a
+                    donor and help save lives in our community. Every donation
+                    brings hope to patients in need across Moradabad, UP.
                 </p>
-                <div className="flex justify-center items-center gap-6 mt-6 text-sm text-gray-700">
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>Quick Response</span>
+
+
+                {/* Highlights */}
+                <div
+                    className="
+            flex
+            flex-wrap
+            justify-center
+            items-center
+            gap-x-5
+            gap-y-2
+            sm:gap-x-6
+            mt-5
+            text-xs
+            sm:text-sm
+            text-gray-600
+        "
+                >
+
+                    {/* Quick Response */}
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+
+                        <span className="font-medium">
+                            Quick Response
+                        </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>Verified Donors</span>
+
+
+                    {/* Verified Donors */}
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+
+                        <span className="font-medium">
+                            Verified Donors
+                        </span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>24/7 Support</span>
+
+
+                    {/* 24/7 Support */}
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+
+                        <span className="font-medium">
+                            24/7 Support
+                        </span>
                     </div>
+
                 </div>
+
             </div>
             <div className="blood-donate-content min-h-screen bg-gray-50 font-sans">
 
@@ -83,8 +186,8 @@ const BloodDonate = () => {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {eligibilityCriteria.map((item, index) => (
-                                <div 
-                                    key={index} 
+                                <div
+                                    key={index}
                                     data-aos="fade-up"
                                     data-aos-delay={(index + 1) * 100}
                                     className="bg-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-[1.02] duration-300"

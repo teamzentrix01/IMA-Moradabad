@@ -36,8 +36,7 @@ export default function Contact_Us() {
                 Send us a message
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8">
-                Do you have a question? A complaint? Or need any help to choose the right product from Zalomi. Feel free to contact us
-              </p>
+Do you have an query?              </p>
 
               {/* FormSubmit.co Integration */}
               <form 
