@@ -8,8 +8,8 @@ export default function Welcome() {
 
   const navigate = useNavigate();
 
-  const handleNavigation =() =>{
-    navigate('/About');   
+  const handleNavigation = () => {
+    navigate('/About');
   }
   return (
     <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 px-4">
@@ -35,20 +35,20 @@ export default function Welcome() {
               <ClipboardPen className="w-4 h-4" />
               <span className="font-semibold">Our Story</span>
             </div>
-            
+
             <div className="text-sm sm:text-base text-slate-700 space-y-3 sm:space-y-4 leading-relaxed">
               <p>
                 The <strong>Indian Medical Association (IMA), Moradabad</strong> is the local branch of the national IMA, serving as a representative body for doctors in the region while also engaging in community health activities.
               </p>
-              
+
               <p>
                 Our office, IMA Bhawan, is located opposite the SSP Office in Kachehri Parisar, Moradabad. The branch has an elected team of office-bearers, with Dr. C. P. Singh as the President-Elect (2025-26) and Dr. Sudeep Kaur as the Secretary.
               </p>
-              
+
               <p>
                 We organize various social and healthcare initiatives, including free OPD camps, awareness campaigns for cancer prevention and vaccination, and cultural programmes on special occasions like Doctors' Day.
               </p>
-              
+
               <p>
                 Through these efforts, IMA Moradabad plays a dual role of safeguarding the rights of medical professionals while actively contributing to public health in the city.
               </p>
