@@ -55,12 +55,12 @@ export default function Navbar() {
           path: '/about'
         },
         {
-          name: 'Secretary Message',
-          path: '/secretarymessage'
-        },
-        {
           name: 'President Message',
           path: '/presidentmessage'
+        },
+        {
+          name: 'Secretary Message',
+          path: '/secretarymessage'
         },
         {
           name: 'Treasurer Message',

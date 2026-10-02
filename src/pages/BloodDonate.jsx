@@ -64,6 +64,55 @@ const preDonationTips = [
 ];
 
 const BloodDonate = () => {
+    const [phone, setPhone] = React.useState('');
+    const [phoneError, setPhoneError] = React.useState('');
+
+    const handlePhoneChange = (e) => {
+        let value = e.target.value.replace(/\D/g, ''); // keep only numbers
+        if (value.length > 10) {
+            value = value.slice(0, 10);
+        }
+
+        if (value.length > 0) {
+            const firstDigit = value[0];
+            if (!['6', '7', '8', '9'].includes(firstDigit)) {
+                alert('Phone number must start with 6, 7, 8, or 9!');
+                setPhoneError('Phone number must start with 6, 7, 8, or 9');
+                return;
+            }
+        }
+
+        setPhone(value);
+
+        if (value.length === 10) {
+            setPhoneError('');
+        } else if (value.length > 0) {
+            setPhoneError('Phone number must be exactly 10 digits');
+        } else {
+            setPhoneError('');
+        }
+    };
+
+    const handlePhoneBlur = (e) => {
+        const val = e.target.value;
+        if (val && val.length < 10) {
+            alert('Phone number must be exactly 10 digits!');
+        }
+    };
+
+    const handleFormSubmit = (e) => {
+        if (!phone || phone.length < 10) {
+            e.preventDefault();
+            alert('Please enter a valid 10-digit phone number!');
+            return;
+        }
+        if (!['6', '7', '8', '9'].includes(phone[0])) {
+            e.preventDefault();
+            alert('Phone number must start with 6, 7, 8, or 9!');
+            return;
+        }
+    };
+
     return (
         <div className="blood-donate-page font-sans">
             {/* =========================================================
@@ -212,6 +261,7 @@ const BloodDonate = () => {
                             <form
                                 action="https://formsubmit.co/imamoradabad@gmail.com"
                                 method="POST"
+                                onSubmit={handleFormSubmit}
                                 className="space-y-4"
                             >
                                 {/* FormSubmit Configuration Hidden Fields */}
@@ -256,14 +306,26 @@ const BloodDonate = () => {
                                                     type="tel"
                                                     id="phone"
                                                     name="Phone_Number"
+                                                    value={phone}
+                                                    onChange={handlePhoneChange}
+                                                    onBlur={handlePhoneBlur}
+                                                    maxLength={10}
                                                     required
-                                                    placeholder="+91 98765 43210"
-                                                    pattern="[0-9]{10}"
-                                                    title="Please enter a valid 10-digit mobile number"
-                                                    className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                                    placeholder="10-digit mobile number"
+                                                    className={`w-full h-9 pl-8 pr-3 text-xs sm:text-sm border rounded-lg bg-slate-50/50 focus:bg-white transition-all outline-hidden text-slate-800 placeholder:text-slate-400 ${
+                                                        phoneError 
+                                                            ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30' 
+                                                            : 'border-slate-200 focus:border-red-500 focus:ring-1 focus:ring-red-500/30'
+                                                    }`}
                                                 />
                                                 <Phone className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
                                             </div>
+                                            {phoneError && (
+                                                <p className="text-[11px] text-red-600 mt-1 flex items-center gap-1">
+                                                    <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                                                    {phoneError}
+                                                </p>
+                                            )}
                                         </div>
 
                                         {/* Email Address */}

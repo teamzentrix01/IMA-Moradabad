@@ -37,6 +37,26 @@ export default function Registration() {
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
+        if (name === 'phone') {
+            let val = value.replace(/\D/g, '');
+            if (val.length > 10) val = val.slice(0, 10);
+            if (val.length > 0) {
+                const firstDigit = val[0];
+                if (!['6', '7', '8', '9'].includes(firstDigit)) {
+                    alert('Phone number must start with 6, 7, 8, or 9!');
+                    setErrors(prev => ({ ...prev, phone: 'Phone number must start with 6, 7, 8, or 9' }));
+                    return;
+                }
+            }
+            setFormData(prev => ({ ...prev, phone: val }));
+            if (val.length === 10) {
+                setErrors(prev => ({ ...prev, phone: '' }));
+            } else if (val.length > 0) {
+                setErrors(prev => ({ ...prev, phone: 'Phone must be exactly 10 digits' }));
+            }
+            return;
+        }
+
         setFormData(prev => ({
             ...prev,
             [name]: type === 'checkbox' ? checked : value
@@ -47,14 +67,28 @@ export default function Registration() {
         }
     };
 
+    const handlePhoneBlur = (e) => {
+        const val = e.target.value;
+        if (val && val.length < 10) {
+            alert('Phone number must be exactly 10 digits!');
+        }
+    };
+
     const validateForm = () => {
         const newErrors = {};
 
         if (!formData.fullName.trim()) newErrors.fullName = 'Full name is required';
         if (!formData.email.trim()) newErrors.email = 'Email is required';
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email format';
-        if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
-        else if (!/^\d{10}$/.test(formData.phone)) newErrors.phone = 'Phone must be 10 digits';
+        if (!formData.phone.trim()) {
+            newErrors.phone = 'Phone number is required';
+        } else if (formData.phone.length < 10) {
+            alert('Phone number must be exactly 10 digits!');
+            newErrors.phone = 'Phone must be 10 digits';
+        } else if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+            alert('Phone number must start with 6, 7, 8, or 9!');
+            newErrors.phone = 'Phone must start with 6, 7, 8, or 9';
+        }
         if (!formData.age) newErrors.age = 'Age is required';
         else if (formData.age < 18 || formData.age > 65) newErrors.age = 'Age must be between 18 and 65';
         if (!formData.gender) newErrors.gender = 'Gender is required';
@@ -189,6 +223,8 @@ export default function Registration() {
                                             name="phone"
                                             value={formData.phone}
                                             onChange={handleChange}
+                                            onBlur={handlePhoneBlur}
+                                            maxLength={10}
                                             required
                                             className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
                                             placeholder="10-digit mobile number"

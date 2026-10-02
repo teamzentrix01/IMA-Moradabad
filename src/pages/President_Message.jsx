@@ -9,19 +9,19 @@ export default function President_Message() {
   const sections = {
     vision: {
       title: 'Our Vision',
-      content: 'To establish IMA Moradabad as a leading medical association that champions excellence in healthcare delivery, promotes ethical medical practices, and ensures accessible quality healthcare for every citizen of Moradabad and surrounding regions. We envision a healthcare ecosystem where medical professionals collaborate seamlessly to advance medical science, enhance patient care standards, and contribute meaningfully to public health initiatives across Uttar Pradesh.'
+      content: 'To establish IMA Moradabad as a premier medical association championing clinical excellence, ethical practices, and accessible quality healthcare for every citizen of Moradabad and Western Uttar Pradesh. We envision a collaborative healthcare ecosystem where dedicated medical professionals advance scientific progress, raise patient care benchmarks, and actively spearhead sustainable public health initiatives across our region.'
     },
     mission: {
       title: 'Our Mission',
-      content: 'Our mission is to unite medical practitioners of Moradabad under one platform, fostering professional development through continuous medical education, research opportunities, and knowledge sharing. We are committed to advocating for healthcare policies that benefit both medical professionals and patients, while maintaining the highest standards of medical ethics. IMA Moradabad strives to bridge the gap between healthcare providers and the community through health awareness programs, free medical camps, and emergency response initiatives.'
+      content: 'Our mission is to unite medical practitioners under a collaborative platform, fostering continuous medical education, research opportunities, and professional advancement. We actively advocate for progressive health policies, preserve the highest medical ethics, and bridge community healthcare gaps through routine health awareness camps, preventive screenings, and rapid emergency medical response networks.'
     },
     values: {
       title: 'Our Values',
-      content: 'Integrity, compassion, and professional excellence form the cornerstone of IMA Moradabad. We believe in evidence-based medicine, ethical practice, and patient-centered care. Our values emphasize continuous learning, mutual respect among medical professionals, and service to humanity above all. We are committed to transparency in healthcare delivery, accountability in medical practice, and fostering a culture of innovation that keeps pace with global medical advancements while respecting local healthcare needs and cultural sensitivities.'
+      content: 'Integrity, compassion, and professional excellence form the core pillars of IMA Moradabad. We are devoted to evidence-based clinical care, transparent medical practices, and patient-centered service. Our organization champions continuous learning, mutual professional respect, and service to humanity, while advancing medical innovation attuned to local healthcare needs.'
     },
     future: {
       title: 'Looking Ahead',
-      content: 'As we look towards the future, IMA Moradabad is dedicated to expanding our healthcare infrastructure, establishing state-of-the-art medical facilities, and creating robust networks for medical emergencies. We plan to launch comprehensive health screening programs, digital health initiatives, and telemedicine services to reach underserved areas. Our focus includes strengthening doctor-patient relationships, combating medical misinformation, and preparing the next generation of healthcare professionals through mentorship programs. We are committed to making Moradabad a healthcare hub in Western Uttar Pradesh by collaborating with government bodies, educational institutions, and international medical organizations. Our upcoming initiatives include specialized training workshops, research collaborations, and community health outreach programs that will transform healthcare accessibility and quality in our region. Together, we will build a healthier Moradabad where every individual has access to compassionate, affordable, and world-class medical care.'
+      content: 'Looking ahead, IMA Moradabad is focused on modernizing regional healthcare infrastructure, expanding digital health initiatives, and establishing specialized community health outreach programs. By strengthening doctor-patient bonds, mentoring young practitioners, and forging partnerships with leading medical bodies, we are dedicated to transforming Moradabad into an exemplary healthcare hub.'
     }
   };
 

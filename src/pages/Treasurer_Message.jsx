@@ -9,19 +9,19 @@ export default function Treasurer_Message() {
     const sections = {
         vision: {
             title: 'Our Vision',
-            content: 'As  Treasurer  of IMA Moradabad, I envision an organization that serves as the backbone of medical excellence in our city. Our vision is to create a unified platform where every medical professional feels empowered, supported, and connected. We aim to build a healthcare community that prioritizes continuous learning, embraces technological advancement, and remains steadfast in its commitment to serve the people of Moradabad with compassion and clinical excellence.'
+            content: 'As Treasurer of IMA Moradabad, my vision is to establish strong fiscal discipline, absolute transparency, and sustainable resource management that powers our association’s ambitious healthcare endeavors. We envision a financially robust branch capable of funding cutting-edge community outreach, modern infrastructure upgrades, and vital emergency patient relief programs across Moradabad.'
         },
         mission: {
             title: 'Our Mission',
-            content: 'My mission as  Treasurer  is to strengthen the organizational framework of IMA Moradabad by facilitating seamless communication among our members, coordinating impactful medical programs, and ensuring efficient execution of our association\'s objectives. We are committed to organizing regular CME programs, workshops, and health camps that benefit both our medical community and the general public. I strive to maintain transparency in all our operations while fostering a spirit of collaboration and mutual respect among healthcare providers across Moradabad.'
+            content: 'My mission is to safeguard and strategically allocate the association’s assets with complete fiduciary accountability. We ensure that every rupee contributed by our esteemed members directly bolsters continuous medical education, subsidized healthcare camps, disaster preparedness initiatives, and the long-term organizational viability of our local branch.'
         },
         values: {
             title: 'Our Values',
-            content: 'The core values that guide my role as  Treasurer  include dedication to professional development, unwavering commitment to medical ethics, and service-oriented leadership. I believe in open communication, accountability, and creating opportunities for every member to contribute meaningfully to our association. We uphold the principles of inclusivity, ensuring that whether you are a senior practitioner or a young doctor, your voice matters in shaping the future of healthcare in Moradabad. Together, we maintain the dignity of our noble profession while adapting to changing healthcare landscapes.'
+            content: 'Fiscal integrity, institutional accountability, and prudent stewardship are the core tenets that define our treasury. We uphold complete clarity in accounting practices, maintain open communication with the executive committee, and ensure that association resources are utilized with maximum efficiency and ethical compliance.'
         },
         future: {
             title: 'Looking Ahead',
-            content: 'Looking forward, my focus is on digitizing IMA Moradabad\'s operations to enhance member engagement and streamline administrative processes. We are planning to establish better coordination with hospitals, diagnostic centers, and healthcare institutions across the city. Our upcoming initiatives include specialized training programs for young doctors, medical research collaborations, and community health awareness campaigns targeting preventive healthcare. I am committed to strengthening our emergency response network, building strategic partnerships with medical colleges, and creating platforms for interdisciplinary medical discussions. Together, we will elevate IMA Moradabad to new heights of professional excellence and community service.'
+            content: 'Looking ahead, we are introducing streamlined digital financial systems, instant digital receipts, and real-time ledger reporting for seamless member transactions. We are committed to establishing a dedicated community emergency health corpus that enables IMA Moradabad to swiftly mobilize vital medical assistance in times of urgent local need.'
         }
     };
 

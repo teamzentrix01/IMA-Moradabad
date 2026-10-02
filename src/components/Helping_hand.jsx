@@ -13,6 +13,7 @@ export default function Helping_hand() {
             description: "Coordinating urgent response in times of accidents, outbreaks, or disasters."
         },
         {
+
             icon: Users,
             title: "Community Support",
             description: "Organizing free health camps, blood donation drives, and wellness programs for underprivileged sections of society."
@@ -63,7 +64,7 @@ export default function Helping_hand() {
                     {services.map((service, index) => {
                         const Icon = service.icon;
                         return (
-                            <div 
+                            <div
                                 key={index}
                                 data-aos="zoom-in-up"
                                 data-aos-delay={(index % 3) * 150}
@@ -95,7 +96,7 @@ export default function Helping_hand() {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
                         {taglines.map((tagline, index) => (
-                            <div 
+                            <div
                                 key={index}
                                 className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-3.5 sm:p-4 md:p-5 border border-white/20 hover:bg-white/20 transition-all duration-300 flex items-center justify-center"
                             >

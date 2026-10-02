@@ -24,6 +24,60 @@ export default function Contact_Us() {
         message: ''
     });
 
+    const [contactError, setContactError] = useState('');
+
+    const handleContactNumberChange = (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 10) {
+            value = value.slice(0, 10);
+        }
+
+        if (formData.countryCode === '+91' && value.length > 0) {
+            const firstDigit = value[0];
+            if (!['6', '7', '8', '9'].includes(firstDigit)) {
+                alert('Phone number must start with 6, 7, 8, or 9!');
+                setContactError('Phone number must start with 6, 7, 8, or 9');
+                return;
+            }
+        }
+
+        setFormData(prev => ({
+            ...prev,
+            contactNumber: value
+        }));
+
+        if (value.length === 10) {
+            setContactError('');
+        } else if (value.length > 0) {
+            setContactError('Phone number must be exactly 10 digits');
+        } else {
+            setContactError('');
+        }
+    };
+
+    const handleContactNumberBlur = (e) => {
+        const val = e.target.value;
+        if (formData.countryCode === '+91' && val && val.length < 10) {
+            alert('Phone number must be exactly 10 digits!');
+        }
+    };
+
+    const handleSubmit = (e) => {
+        const phone = formData.contactNumber;
+        if (formData.countryCode === '+91') {
+            if (!phone || phone.length < 10) {
+                e.preventDefault();
+                alert('Please enter a valid 10-digit phone number!');
+                return;
+            }
+            if (!['6', '7', '8', '9'].includes(phone[0])) {
+                e.preventDefault();
+                alert('Phone number must start with 6, 7, 8, or 9!');
+                return;
+            }
+        }
+    };
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -73,6 +127,7 @@ export default function Contact_Us() {
                             <form 
                                 action="https://formsubmit.co/imamoradabad@gmail.com" 
                                 method="POST" 
+                                onSubmit={handleSubmit}
                                 className="space-y-3.5"
                             >
                                 {/* Hidden Config */}
@@ -150,13 +205,23 @@ export default function Contact_Us() {
                                                 type="tel"
                                                 name="Contact_Number"
                                                 value={formData.contactNumber}
-                                                onChange={handleChange}
+                                                onChange={handleContactNumberChange}
+                                                onBlur={handleContactNumberBlur}
+                                                maxLength={10}
                                                 placeholder="Mobile Number"
-                                                pattern="[0-9]{10}"
-                                                className="flex-1 h-9 px-3 text-xs sm:text-sm rounded-lg border border-slate-200 bg-slate-50/50 focus:bg-white focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                                className={`flex-1 h-9 px-3 text-xs sm:text-sm rounded-lg border bg-slate-50/50 focus:bg-white transition-all outline-hidden text-slate-800 placeholder:text-slate-400 ${
+                                                    contactError
+                                                        ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30'
+                                                        : 'border-slate-200 focus:border-blue-600 focus:ring-1 focus:ring-blue-600/30'
+                                                }`}
                                                 required
                                             />
                                         </div>
+                                        {contactError && (
+                                            <p className="text-[11px] text-red-600 mt-1">
+                                                {contactError}
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
 

@@ -9,19 +9,19 @@ export default function Secretary_Message() {
   const sections = {
     vision: {
       title: 'Our Vision',
-      content: 'As Secretary of IMA Moradabad, I envision an organization that serves as the backbone of medical excellence in our city. Our vision is to create a unified platform where every medical professional feels empowered, supported, and connected. We aim to build a healthcare community that prioritizes continuous learning, embraces technological advancement, and remains steadfast in its commitment to serve the people of Moradabad with compassion and clinical excellence.'
+      content: 'As Secretary of IMA Moradabad, I envision an association that stands as the bedrock of medical excellence in our city. Our vision is to cultivate an empowered and cohesive platform where clinicians collaborate seamlessly, adopt modern healthcare practices, and deliver compassionate, patient-centered care to every resident across Moradabad and adjacent regions.'
     },
     mission: {
       title: 'Our Mission',
-      content: 'My mission as Secretary is to strengthen the organizational framework of IMA Moradabad by facilitating seamless communication among our members, coordinating impactful medical programs, and ensuring efficient execution of our association\'s objectives. We are committed to organizing regular CME programs, workshops, and health camps that benefit both our medical community and the general public. I strive to maintain transparency in all our operations while fostering a spirit of collaboration and mutual respect among healthcare providers across Moradabad.'
+      content: 'My mission is to strengthen our organizational framework through transparent administration, regular medical workshops, and impactful public health programs. We are committed to fostering active communication among doctors, organizing accredited CME sessions, and executing community health drives that address regional healthcare priorities with clinical excellence.'
     },
     values: {
       title: 'Our Values',
-      content: 'The core values that guide my role as Secretary include dedication to professional development, unwavering commitment to medical ethics, and service-oriented leadership. I believe in open communication, accountability, and creating opportunities for every member to contribute meaningfully to our association. We uphold the principles of inclusivity, ensuring that whether you are a senior practitioner or a young doctor, your voice matters in shaping the future of healthcare in Moradabad. Together, we maintain the dignity of our noble profession while adapting to changing healthcare landscapes.'
+      content: 'Our core guiding values center on medical ethics, transparent leadership, and proactive service to both the profession and community. We believe in democratic engagement, professional dignity, and equal opportunity for every practitioner—from emerging young doctors to seasoned consultants—to contribute meaningfully to our collective medical mission.'
     },
     future: {
       title: 'Looking Ahead',
-      content: 'Looking forward, my focus is on digitizing IMA Moradabad\'s operations to enhance member engagement and streamline administrative processes. We are planning to establish better coordination with hospitals, diagnostic centers, and healthcare institutions across the city. Our upcoming initiatives include specialized training programs for young doctors, medical research collaborations, and community health awareness campaigns targeting preventive healthcare. I am committed to strengthening our emergency response network, building strategic partnerships with medical colleges, and creating platforms for interdisciplinary medical discussions. Together, we will elevate IMA Moradabad to new heights of professional excellence and community service.'
+      content: 'Looking ahead, my focus is on digitalizing our administrative operations, expediting member support, and building stronger tie-ups with regional medical institutions. We are rolling out structured skill training for young clinicians, expanding our emergency doctor registry, and launching preventive health initiatives to elevate healthcare standards across Moradabad.'
     }
   };
 

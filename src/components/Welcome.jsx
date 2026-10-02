@@ -42,7 +42,7 @@ export default function Welcome() {
               </p>
 
               <p>
-                Our office, IMA Bhawan, is located opposite the SSP Office in Kachehri Parisar, Moradabad. The branch has an elected team of office-bearers, with Dr. C. P. Singh as the President-Elect (2025-26) and Dr. Sudeep Kaur as the Secretary.
+                Our office, IMA Bhawan, is located opposite the SSP Office in Kachehri Parisar, Moradabad. The branch has an elected team of office-bearers, with Dr. Anat Rana as the President-Elect (2025-26) and Dr. Dishanter Goel as the Secretary.
               </p>
 
               <p>

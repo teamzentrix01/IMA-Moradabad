@@ -1,5 +1,21 @@
 import { useState } from 'react';
-import { Heart, AlertCircle, MapPin, Phone, User, Calendar, Droplet } from 'lucide-react';
+import { 
+    Heart, 
+    AlertCircle, 
+    MapPin, 
+    Phone, 
+    User, 
+    Mail,
+    Calendar, 
+    Droplets, 
+    ShieldCheck, 
+    Clock, 
+    CheckCircle2, 
+    Send,
+    Hospital,
+    FileText
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function RequestBlood() {
     const [formData, setFormData] = useState({
@@ -18,6 +34,62 @@ export default function RequestBlood() {
         additionalInfo: ''
     });
 
+    const [phoneError, setPhoneError] = useState('');
+
+    const validatePhoneNumber = (value) => {
+        if (!value) {
+            setPhoneError('');
+            return true;
+        }
+        if (!['6', '7', '8', '9'].includes(value[0])) {
+            alert('Phone number must start with 6, 7, 8, or 9!');
+            setPhoneError('Phone number must start with 6, 7, 8, or 9');
+            return false;
+        }
+        if (value.length < 10) {
+            setPhoneError('Phone number must be exactly 10 digits');
+            return false;
+        }
+        setPhoneError('');
+        return true;
+    };
+
+    const handlePhoneChange = (e) => {
+        let value = e.target.value.replace(/\D/g, ''); // keep only numbers
+        if (value.length > 10) {
+            value = value.slice(0, 10); // max 10 digits
+        }
+
+        if (value.length > 0) {
+            const firstDigit = value[0];
+            if (!['6', '7', '8', '9'].includes(firstDigit)) {
+                alert('Phone number must start with 6, 7, 8, or 9!');
+                setPhoneError('Phone number must start with 6, 7, 8, or 9');
+                return;
+            }
+        }
+
+        setFormData(prev => ({
+            ...prev,
+            phone: value
+        }));
+
+        if (value.length === 10) {
+            setPhoneError('');
+        } else if (value.length > 0) {
+            setPhoneError('Phone number must be exactly 10 digits');
+        } else {
+            setPhoneError('');
+        }
+    };
+
+    const handlePhoneBlur = (e) => {
+        const val = e.target.value;
+        if (val && val.length < 10) {
+            alert('Phone number must be exactly 10 digits!');
+        }
+    };
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -26,343 +98,441 @@ export default function RequestBlood() {
     };
 
     const handleSubmit = (e) => {
-        // Don't prevent default - let FormSubmit handle the submission
-        // Form will automatically submit to FormSubmit.co
+        const phone = formData.phone;
+        if (!phone || phone.length < 10) {
+            e.preventDefault();
+            alert('Please enter a valid 10-digit phone number!');
+            return;
+        }
+        if (!['6', '7', '8', '9'].includes(phone[0])) {
+            e.preventDefault();
+            alert('Phone number must start with 6, 7, 8, or 9!');
+            return;
+        }
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-red-50 to-pink-50 py-12 px-4">
+        <div className="min-h-screen bg-gradient-to-b from-rose-50/70 via-white to-slate-50 py-8 sm:py-12 px-4 sm:px-6 font-sans">
             {/* Header Section */}
-            <div className="max-w-4xl mx-auto text-center mb-12">
-                <div className="inline-block p-4 bg-red-100 rounded-full mb-4">
-                    <Heart className="w-12 h-12 text-red-600 fill-red-600" />
+            <div className="max-w-3xl mx-auto text-center mb-8">
+                <div className="inline-flex items-center gap-1.5 bg-red-100/80 border border-red-200 text-red-700 px-3.5 py-1 rounded-full text-xs font-semibold mb-3 shadow-xs">
+                    <Heart className="w-3.5 h-3.5 fill-red-600 text-red-600 animate-pulse" />
+                    <span>Emergency Blood Request Support</span>
                 </div>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 uppercase font-libre">
-                    Request <span className="text-red-600">Blood</span>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight font-libre mb-2">
+                    REQUEST <span className="text-red-600">BLOOD</span> DONORS
                 </h1>
-                <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto font-playfair tracking-wide">
-                    In urgent need of blood? Fill out the form below and we'll connect you with donors.
-                    Every request is treated with priority to save precious lives.
+                <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto font-playfair leading-relaxed">
+                    Submit the patient details below. IMA Moradabad connects emergency requests with verified voluntary blood donors and local blood banks.
                 </p>
-                <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 mt-6 text-sm text-gray-700">
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>Quick Response</span>
+
+                {/* Highlights Strip */}
+                <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-4 text-xs text-slate-600">
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                        <span className="font-medium text-slate-700">Rapid Coordination</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>Verified Donors</span>
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                        <span className="font-medium text-slate-700">Verified Donors</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>24/7 Support</span>
+                    <div className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                        <span className="font-medium text-slate-700">24/7 Priority Support</span>
                     </div>
                 </div>
             </div>
 
-            {/* Main Form Card */}
-            <div data-aos="fade-up" data-aos-duration="800" className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-red-50">
-                <form
-                    action="https://formsubmit.co/imamoradabad@gmail.com"
-                    method="POST"
-                    onSubmit={handleSubmit}
-                >
-                    {/* FormSubmit Configuration */}
-                    <input type="hidden" name="_subject" value="URGENT: Blood Request - IMA Moradabad" />
-                    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_captcha" value="true" />
-                    <input type="hidden" name="_cc" value="emergency@imamoradabad.com" />
-
-                    {/* Patient Information */}
-                    <div className="mb-8">
-                        <div className="flex items-center gap-2 mb-6">
-                            <User className="w-5 h-5 text-red-600" />
-                            <h2 className="text-2xl font-bold text-gray-900">Patient Information</h2>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Patient Full Name <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="patientName"
-                                    value={formData.patientName}
-                                    onChange={handleChange}
-                                    placeholder="Enter patient's full name"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Contact Person Name <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="contactName"
-                                    value={formData.contactName}
-                                    onChange={handleChange}
-                                    placeholder="Your full name"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Email Address <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    placeholder="your@email.com"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Phone Number <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    placeholder="10-digit mobile number"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Blood Requirements */}
-                    <div className="mb-8">
-                        <div className="flex items-center gap-2 mb-6">
-                            <Droplet className="w-5 h-5 text-red-600" />
-                            <h2 className="text-2xl font-bold text-gray-900">Blood Requirements</h2>
-                        </div>
-
-                        <div className="grid md:grid-cols-3 gap-6 mb-6">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Blood Type Required <span className="text-red-500">*</span>
-                                </label>
-                                <select
-                                    name="bloodType"
-                                    value={formData.bloodType}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                >
-                                    <option value="">Select blood type</option>
-                                    <option value="A+">A+</option>
-                                    <option value="A-">A-</option>
-                                    <option value="B+">B+</option>
-                                    <option value="B-">B-</option>
-                                    <option value="AB+">AB+</option>
-                                    <option value="AB-">AB-</option>
-                                    <option value="O+">O+</option>
-                                    <option value="O-">O-</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Units Needed <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="number"
-                                    name="unitsNeeded"
-                                    value={formData.unitsNeeded}
-                                    onChange={handleChange}
-                                    placeholder="e.g., 2"
-                                    min="1"
-                                    max="10"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Urgency Level <span className="text-red-500">*</span>
-                                </label>
-                                <select
-                                    name="urgency"
-                                    value={formData.urgency}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                >
-                                    <option value="">Select urgency</option>
-                                    <option value="critical">Critical (Within 24 hours)</option>
-                                    <option value="urgent">Urgent (1-3 days)</option>
-                                    <option value="normal">Normal (Within a week)</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Required Date <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="date"
-                                    name="requiredDate"
-                                    value={formData.requiredDate}
-                                    onChange={handleChange}
-                                    min={new Date().toISOString().split('T')[0]}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Medical Reason <span className="text-red-500">*</span>
-                                </label>
-                                <select
-                                    name="medicalReason"
-                                    value={formData.medicalReason}
-                                    onChange={handleChange}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                >
-                                    <option value="">Select reason</option>
-                                    <option value="surgery">Surgery</option>
-                                    <option value="accident">Accident/Trauma</option>
-                                    <option value="anemia">Anemia</option>
-                                    <option value="cancer">Cancer Treatment</option>
-                                    <option value="childbirth">Childbirth Complications</option>
-                                    <option value="thalassemia">Thalassemia</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Hospital Location */}
-                    <div className="mb-8">
-                        <div className="flex items-center gap-2 mb-6">
-                            <MapPin className="w-5 h-5 text-red-600" />
-                            <h2 className="text-2xl font-bold text-gray-900">Hospital Location</h2>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Hospital Name <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="hospital"
-                                    value={formData.hospital}
-                                    onChange={handleChange}
-                                    placeholder="Enter hospital name"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    City <span className="text-red-500">*</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    name="city"
-                                    value={formData.city}
-                                    onChange={handleChange}
-                                    placeholder="Moradabad"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition"
-                                    required
-                                />
-                            </div>
-                        </div>
-
+            {/* Main Form Container */}
+            <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-2xl shadow-md border border-slate-200/90 p-5 sm:p-7 md:p-8">
+                    {/* Header Strip inside Card */}
+                    <div className="flex flex-wrap items-center justify-between pb-4 mb-5 border-b border-slate-100 gap-2">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                Additional Information
-                            </label>
-                            <textarea
-                                name="additionalInfo"
-                                value={formData.additionalInfo}
-                                onChange={handleChange}
-                                placeholder="Any additional details that might help donors (hospital address, ward number, visiting hours, etc.)"
-                                rows="4"
-                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition resize-none"
-                            ></textarea>
-                        </div>
-                    </div>
-
-                    {/* Emergency Notice */}
-                    <div className="mb-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg flex items-start gap-3">
-                        <AlertCircle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                            <h3 className="font-semibold text-yellow-900 mb-1">Emergency Contact</h3>
-                            <p className="text-sm text-yellow-800">
-                                For critical emergencies, please call our 24/7 helpline: <a href="tel:+917500470200" className="font-bold hover:underline">+91 7500470200</a>
+                            <h2 className="text-base sm:text-lg font-bold text-slate-900 font-libre flex items-center gap-2">
+                                <Droplets className="w-5 h-5 text-red-600" />
+                                Patient & Requirement Details
+                            </h2>
+                            <p className="text-xs text-slate-500 font-playfair">
+                                Fields marked with <span className="text-red-500 font-bold">*</span> are mandatory for fast verification.
                             </p>
                         </div>
+                        <span className="text-[11px] font-semibold bg-rose-50 text-rose-700 border border-rose-200/60 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <Clock className="w-3 h-3 text-rose-600" /> High Priority Channel
+                        </span>
                     </div>
 
-                    {/* Privacy Notice */}
-                    <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                        <div className="flex items-start gap-3">
-                            <div className="flex-shrink-0 mt-0.5">
-                                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 className="font-semibold text-blue-900 mb-1">Privacy & Security</h3>
-                                <p className="text-sm text-blue-800">
-                                    Your information is kept strictly confidential and will only be shared with verified donors. All data is encrypted and HIPAA compliant.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Submit Button */}
-                    <button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-4 rounded-lg transition duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                    <form
+                        action="https://formsubmit.co/imamoradabad@gmail.com"
+                        method="POST"
+                        onSubmit={handleSubmit}
+                        className="space-y-5"
                     >
-                        <Heart className="w-5 h-5" />
-                        Submit Blood Request
-                    </button>
+                        {/* FormSubmit Configuration */}
+                        <input type="hidden" name="_subject" value="URGENT: Blood Request - IMA Moradabad" />
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou" />
+                        <input type="hidden" name="_template" value="table" />
+                        <input type="hidden" name="_captcha" value="true" />
+                        <input type="hidden" name="_cc" value="emergency@imamoradabad.com" />
 
-                    <p className="text-center text-sm text-gray-600 mt-4">
-                        Takes less than 2 minutes • We'll contact you within 2-4 hours for critical cases
+                        {/* SECTION 1: PATIENT & CONTACT INFO */}
+                        <div>
+                            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+                                1. Patient & Attendant Information
+                            </p>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {/* Patient Full Name */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Patient Full Name <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="text"
+                                            name="patientName"
+                                            value={formData.patientName}
+                                            onChange={handleChange}
+                                            placeholder="e.g. Ramesh Chandra"
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                        <User className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+
+                                {/* Contact Person Name */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Attendant / Contact Person <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="text"
+                                            name="contactName"
+                                            value={formData.contactName}
+                                            onChange={handleChange}
+                                            placeholder="Your full name"
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                        <User className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+
+                                {/* Phone Number */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Emergency Phone Number <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handlePhoneChange}
+                                            onBlur={handlePhoneBlur}
+                                            maxLength={10}
+                                            placeholder="Enter 10-digit mobile number"
+                                            className={`w-full h-9 pl-8 pr-3 text-xs sm:text-sm border rounded-lg bg-slate-50/50 focus:bg-white transition-all outline-hidden text-slate-800 placeholder:text-slate-400 ${
+                                                phoneError 
+                                                    ? 'border-red-500 focus:border-red-500 focus:ring-1 focus:ring-red-500/30' 
+                                                    : 'border-slate-200 focus:border-red-500 focus:ring-1 focus:ring-red-500/30'
+                                            }`}
+                                            required
+                                        />
+                                        <Phone className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                    {phoneError && (
+                                        <p className="text-[11px] text-red-600 mt-1 flex items-center gap-1">
+                                            <AlertCircle className="w-3 h-3 flex-shrink-0" />
+                                            {phoneError}
+                                        </p>
+                                    )}
+                                </div>
+
+                                {/* Email Address */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Email Address <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            placeholder="contact@domain.com"
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                        <Mail className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* SECTION 2: BLOOD REQUIREMENTS */}
+                        <div className="pt-1">
+                            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+                                2. Requirement Specifications
+                            </p>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                {/* Blood Type */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Blood Group Needed <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <select
+                                            name="bloodType"
+                                            value={formData.bloodType}
+                                            onChange={handleChange}
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 cursor-pointer"
+                                            required
+                                        >
+                                            <option value="">Select blood group</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                        </select>
+                                        <Droplets className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-red-500" />
+                                    </div>
+                                </div>
+
+                                {/* Units Needed */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Units (Pints) Needed <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="number"
+                                            name="unitsNeeded"
+                                            value={formData.unitsNeeded}
+                                            onChange={handleChange}
+                                            placeholder="e.g. 2"
+                                            min="1"
+                                            max="10"
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                        <Heart className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+
+                                {/* Urgency Level */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Urgency Level <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <select
+                                            name="urgency"
+                                            value={formData.urgency}
+                                            onChange={handleChange}
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 cursor-pointer"
+                                            required
+                                        >
+                                            <option value="">Select urgency</option>
+                                            <option value="critical">Critical (Within 24 hours)</option>
+                                            <option value="urgent">Urgent (1-3 days)</option>
+                                            <option value="normal">Planned (Within a week)</option>
+                                        </select>
+                                        <Clock className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-rose-500" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                                {/* Required Date */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Required By Date <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="date"
+                                            name="requiredDate"
+                                            value={formData.requiredDate}
+                                            onChange={handleChange}
+                                            min={new Date().toISOString().split('T')[0]}
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 cursor-pointer"
+                                            required
+                                        />
+                                        <Calendar className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+
+                                {/* Medical Reason */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Medical Purpose <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <select
+                                            name="medicalReason"
+                                            value={formData.medicalReason}
+                                            onChange={handleChange}
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 cursor-pointer"
+                                            required
+                                        >
+                                            <option value="">Select clinical reason</option>
+                                            <option value="surgery">Emergency Surgery</option>
+                                            <option value="accident">Accident / Trauma</option>
+                                            <option value="anemia">Severe Anemia</option>
+                                            <option value="cancer">Oncology / Cancer Care</option>
+                                            <option value="childbirth">Maternity / Childbirth</option>
+                                            <option value="thalassemia">Thalassemia / Dialysis</option>
+                                            <option value="other">Other Medical Cause</option>
+                                        </select>
+                                        <FileText className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* SECTION 3: HOSPITAL & LOCATION */}
+                        <div className="pt-1">
+                            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+                                3. Hospital & Location Details
+                            </p>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                {/* Hospital Name */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        Hospital / Nursing Home Name <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="text"
+                                            name="hospital"
+                                            value={formData.hospital}
+                                            onChange={handleChange}
+                                            placeholder="e.g. Apex Hospital, Moradabad"
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                        <Hospital className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+
+                                {/* City / Area */}
+                                <div>
+                                    <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                        City / Area <span className="text-red-500">*</span>
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="text"
+                                            name="city"
+                                            value={formData.city}
+                                            onChange={handleChange}
+                                            placeholder="Moradabad"
+                                            className="w-full h-9 pl-8 pr-3 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400"
+                                            required
+                                        />
+                                        <MapPin className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate-400" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Additional Instructions */}
+                            <div className="mt-3">
+                                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                                    Ward / Bed No. & Instructions <span className="text-slate-400 font-normal">(Optional)</span>
+                                </label>
+                                <textarea
+                                    name="additionalInfo"
+                                    value={formData.additionalInfo}
+                                    onChange={handleChange}
+                                    placeholder="Enter ward details, hospital address, blood bank file no., or specific donor instructions..."
+                                    rows="2"
+                                    className="w-full p-2.5 text-xs sm:text-sm border border-slate-200 rounded-lg bg-slate-50/50 focus:bg-white focus:border-red-500 focus:ring-1 focus:ring-red-500/30 transition-all outline-hidden text-slate-800 placeholder:text-slate-400 resize-none"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        {/* Emergency Contact & Notice Strip */}
+                        <div className="p-3 bg-amber-50/70 border border-amber-200/80 rounded-xl flex items-center justify-between flex-wrap gap-2 text-xs">
+                            <div className="flex items-center gap-2 text-amber-900">
+                                <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0" />
+                                <span>Immediate life-threatening situation? Call 24/7 Helpline:</span>
+                            </div>
+                            <a 
+                                href="tel:+917500470200" 
+                                className="font-bold text-red-700 hover:text-red-800 bg-white border border-amber-200 px-2.5 py-1 rounded-md text-xs shadow-2xs hover:shadow-xs transition-all inline-flex items-center gap-1"
+                            >
+                                <Phone className="w-3 h-3 text-red-600" /> +91 7500470200
+                            </a>
+                        </div>
+
+                        {/* Submit Button */}
+                        <div className="pt-1">
+                            <button
+                                type="submit"
+                                className="w-full h-10 sm:h-11 bg-gradient-to-r from-red-600 via-red-600 to-rose-600 hover:from-red-700 hover:to-rose-700 text-white font-semibold text-xs sm:text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+                            >
+                                <Send className="w-4 h-4" />
+                                <span>Submit Urgent Blood Request</span>
+                            </button>
+                        </div>
+
+                        {/* Trust Footer */}
+                        <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-500 border-t border-slate-100">
+                            <span className="flex items-center gap-1">
+                                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Confidential Patient Data
+                            </span>
+                            <span className="flex items-center gap-1">
+                                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Verified Donor Network
+                            </span>
+                            <span className="flex items-center gap-1">
+                                <Clock className="w-3.5 h-3.5 text-emerald-600" /> 2-4 Hr Turnaround
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+                {/* 3 Steps Flow */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-8">
+                    <div className="bg-white/90 rounded-xl p-4 border border-slate-200/80 shadow-2xs text-center">
+                        <div className="w-7 h-7 rounded-full bg-red-100 text-red-600 font-bold text-xs flex items-center justify-center mx-auto mb-2">
+                            1
+                        </div>
+                        <h3 className="font-semibold text-xs text-slate-900 mb-0.5">Submit Request</h3>
+                        <p className="text-[11px] text-slate-500 font-playfair">Patient and hospital verification details</p>
+                    </div>
+                    <div className="bg-white/90 rounded-xl p-4 border border-slate-200/80 shadow-2xs text-center">
+                        <div className="w-7 h-7 rounded-full bg-red-100 text-red-600 font-bold text-xs flex items-center justify-center mx-auto mb-2">
+                            2
+                        </div>
+                        <h3 className="font-semibold text-xs text-slate-900 mb-0.5">Donor Match</h3>
+                        <p className="text-[11px] text-slate-500 font-playfair">Coordinating with available local donors</p>
+                    </div>
+                    <div className="bg-white/90 rounded-xl p-4 border border-slate-200/80 shadow-2xs text-center">
+                        <div className="w-7 h-7 rounded-full bg-red-100 text-red-600 font-bold text-xs flex items-center justify-center mx-auto mb-2">
+                            3
+                        </div>
+                        <h3 className="font-semibold text-xs text-slate-900 mb-0.5">Save Lives</h3>
+                        <p className="text-[11px] text-slate-500 font-playfair">Prompt delivery & assistance at hospital</p>
+                    </div>
+                </div>
+
+                {/* Switch to Donate Link */}
+                <div className="mt-6 text-center">
+                    <p className="text-xs text-slate-600">
+                        Want to volunteer and save lives as a donor instead?{' '}
+                        <Link to="/donateblood" className="text-red-600 font-semibold hover:underline">
+                            Register as a Blood Donor here →
+                        </Link>
                     </p>
-                </form>
-
-                {/* Process Steps */}
-                <div className="grid md:grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200">
-                    <div className="text-center">
-                        <div className="inline-block p-3 bg-red-100 rounded-full mb-3">
-                            <span className="text-2xl font-bold text-red-600">1</span>
-                        </div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Submit Request</h3>
-                        <p className="text-sm text-gray-600">Fill out the form with patient details</p>
-                    </div>
-                    <div className="text-center">
-                        <div className="inline-block p-3 bg-red-100 rounded-full mb-3">
-                            <span className="text-2xl font-bold text-red-600">2</span>
-                        </div>
-                        <h3 className="font-semibold text-gray-900 mb-2">We'll Match Donors</h3>
-                        <p className="text-sm text-gray-600">We'll find compatible donors from our database</p>
-                    </div>
-                    <div className="text-center">
-                        <div className="inline-block p-3 bg-red-100 rounded-full mb-3">
-                            <span className="text-2xl font-bold text-red-600">3</span>
-                        </div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Save Lives</h3>
-                        <p className="text-sm text-gray-600">Blood donation helps save up to 3 lives</p>
-                    </div>
                 </div>
             </div>
         </div>
