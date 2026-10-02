@@ -114,8 +114,8 @@ const BloodDonate = () => {
                     {/* LEFT COLUMN: IMPACT, 3-STEP FLOW & EMERGENCY HELPLINE (5 cols) */}
                     <div className="lg:col-span-5 space-y-4 sm:space-y-5">
                         
-                        {/* Why Donate Card */}
-                        <div className="bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-slate-100">
+                        {/* Why Donate Card - Hidden on mobile view */}
+                        <div className="hidden lg:block bg-white rounded-2xl p-5 sm:p-6 shadow-sm border border-slate-100">
                             <div className="flex items-center gap-2 mb-3">
                                 <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center text-red-600">
                                     <Droplets className="w-4 h-4" />
@@ -138,8 +138,8 @@ const BloodDonate = () => {
                             </ul>
                         </div>
 
-                        {/* 3 Simple Steps */}
-                        <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-5 sm:p-6 shadow-md">
+                        {/* 3 Simple Steps - Hidden on mobile view */}
+                        <div className="hidden lg:block bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-5 sm:p-6 shadow-md">
                             <h3 className="text-sm font-bold uppercase tracking-wider text-rose-300 mb-3 flex items-center gap-2">
                                 <Clock className="w-4 h-4" /> How It Works
                             </h3>
@@ -168,8 +168,8 @@ const BloodDonate = () => {
                             </div>
                         </div>
 
-                        {/* Emergency Blood Requirement Box */}
-                        <div className="bg-rose-50/70 border border-rose-200/80 rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-3">
+                        {/* Emergency Blood Requirement Box (Desktop view) */}
+                        <div className="hidden lg:flex bg-rose-50/70 border border-rose-200/80 rounded-2xl p-4 sm:p-5 items-center justify-between gap-3">
                             <div>
                                 <p className="text-xs font-bold text-rose-900 flex items-center gap-1.5">
                                     <AlertCircle className="w-3.5 h-3.5 text-rose-600" /> Need Blood Urgently?
@@ -189,7 +189,7 @@ const BloodDonate = () => {
                     </div>
 
                     {/* RIGHT COLUMN: COMPACT, PROFESSIONAL REGISTRATION FORM (7 cols) */}
-                    <div className="lg:col-span-7">
+                    <div className="lg:col-span-7 space-y-4">
                         <div className="bg-white rounded-2xl shadow-md border border-slate-200/80 p-5 sm:p-7 md:p-8">
                             
                             {/* Form Header */}
@@ -436,6 +436,24 @@ const BloodDonate = () => {
                                     </span>
                                 </div>
                             </form>
+                        </div>
+
+                        {/* Emergency Blood Requirement Box (Mobile view - shown after form) */}
+                        <div className="lg:hidden bg-rose-50/70 border border-rose-200/80 rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-3">
+                            <div>
+                                <p className="text-xs font-bold text-rose-900 flex items-center gap-1.5">
+                                    <AlertCircle className="w-3.5 h-3.5 text-rose-600" /> Need Blood Urgently?
+                                </p>
+                                <p className="text-[11px] text-rose-700 mt-0.5 font-playfair">
+                                    Request verified donors immediately through our emergency channel.
+                                </p>
+                            </div>
+                            <Link 
+                                to="/requestblood"
+                                className="inline-flex items-center gap-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs hover:shadow-sm whitespace-nowrap transition-all"
+                            >
+                                Request Blood <ArrowRight className="w-3 h-3" />
+                            </Link>
                         </div>
                     </div>
 
