@@ -12,16 +12,18 @@ import {
 import Banner from '../components/ui/Banner';
 
 const Video_Gallery = () => {
+    const [selectedYear, setSelectedYear] = useState('ALL');
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const videos = [
         {
             id: 1,
-            title: "IMA Moradabad Health Camp 2024",
+            title: "IMA Moradabad Health Camp 2025",
             embedUrl: "https://www.youtube.com/embed/4SwOZwuNtEw",
             videoId: "4SwOZwuNtEw",
             category: "HEALTH CAMP",
-            date: "2024",
+            date: "2025",
+            year: "2025",
             description: "Community health camp organized by IMA Moradabad for preventive healthcare, free vital check-ups, and medicine distribution."
         },
         {
@@ -30,7 +32,8 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
             videoId: "NUobEk-aV9I",
             category: "CONFERENCE",
-            date: "2024",
+            date: "2025",
+            year: "2025",
             description: "Key highlights from IMA Moradabad's annual medical conference featuring renowned healthcare professionals and keynote addresses."
         },
         {
@@ -39,25 +42,28 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/xq6UEqixQFo",
             videoId: "xq6UEqixQFo",
             category: "BLOOD DRIVE",
-            date: "2024",
+            date: "2025",
+            year: "2025",
             description: "Successful voluntary blood donation camp conducted by IMA Moradabad saving multiple critical lives across the community."
         },
         {
             id: 4,
-            title: "COVID-19 Vaccination Awareness",
+            title: "COVID-19 Vaccination & Flu Awareness",
             embedUrl: "https://www.youtube.com/embed/d5dp03lniB0",
             videoId: "d5dp03lniB0",
             category: "AWARENESS",
-            date: "2024",
+            date: "2026",
+            year: "2026",
             description: "IMA Moradabad's vaccination drive and comprehensive public health awareness campaign across Moradabad and Western UP."
         },
         {
             id: 5,
-            title: "World Health Day 2024 Celebration",
+            title: "World Health Day 2026 Celebration",
             embedUrl: "https://www.youtube.com/embed/F3FUBrhgvLI",
             videoId: "F3FUBrhgvLI",
             category: "CELEBRATION",
-            date: "2024",
+            date: "2026",
+            year: "2026",
             description: "World Health Day celebrations with free medical consultations, walkathons, and public health screening programs."
         },
         {
@@ -66,28 +72,47 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
             videoId: "-nz179qIZJI",
             category: "CME WORKSHOP",
-            date: "2024",
+            date: "2026",
+            year: "2026",
             description: "Continuing Medical Education workshop on latest medical technologies, emergency trauma protocols, and surgical advancements."
         },
         {
             id: 7,
-            title: "Rural Healthcare Outreach",
+            title: "Rural Healthcare Outreach Mission",
             embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
             videoId: "-nz179qIZJI",
             category: "OUTREACH",
-            date: "2024",
+            date: "2027",
+            year: "2027",
             description: "IMA Moradabad's mobile healthcare mission providing specialist consultations and diagnostics in rural Uttar Pradesh villages."
         },
         {
             id: 8,
-            title: "Medical Ethics Conference",
+            title: "Medical Ethics & Jurisprudence Conference",
             embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
             videoId: "NUobEk-aV9I",
             category: "SEMINAR",
-            date: "2024",
+            date: "2027",
+            year: "2027",
             description: "Symposium on medical jurisprudence, ethical patient care standards, and doctor-patient trust building for Moradabad physicians."
         }
     ];
+
+    // Helper to extract 4 digit year from date string
+    const getYearFromDate = (dateStr) => {
+        const match = dateStr?.match(/\b(20\d{2})\b/);
+        return match ? match[1] : '';
+    };
+
+    const distinctYears = Array.from(
+        new Set(videos.map(item => getYearFromDate(item.date)).filter(Boolean))
+    ).sort();
+
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026', '2027'])).sort()];
+
+    const filteredVideos = selectedYear === 'ALL'
+        ? videos
+        : videos.filter(video => getYearFromDate(video.date) === selectedYear);
 
     // Close on Escape key
     useEffect(() => {
@@ -113,7 +138,7 @@ const Video_Gallery = () => {
                 <div className="max-w-7xl mx-auto">
 
                     {/* Section Header */}
-                    <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+                    <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
                         <span className="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-50 border border-rose-200/60 px-3.5 py-1 rounded-full inline-flex items-center gap-1.5 shadow-xs">
                             <VideoIcon className="w-3.5 h-3.5 text-rose-600" />
                             Video Archives
@@ -124,11 +149,29 @@ const Video_Gallery = () => {
                         <p className="text-xs sm:text-sm text-slate-600 font-playfair tracking-wide max-w-xl mx-auto">
                             Watch recorded sessions, health drives, awareness talks, and celebrations of IMA Moradabad. Click any card to play in high-definition popup player.
                         </p>
+
+                        {/* Year Filter Tabs */}
+                        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider self-center mr-1">Year:</span>
+                            {years.map((yr) => (
+                                <button
+                                    key={yr}
+                                    onClick={() => setSelectedYear(yr)}
+                                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs ${
+                                        selectedYear === yr
+                                            ? 'bg-rose-600 text-white shadow-md scale-105 ring-2 ring-rose-500/30'
+                                            : 'bg-white text-slate-700 hover:bg-rose-50 border border-slate-200 hover:border-rose-300'
+                                    }`}
+                                >
+                                    {yr === 'ALL' ? 'All Years' : yr}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Videos Grid - Pinterest / Sleek Card Layout */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-                        {videos.map((video, index) => (
+                        {filteredVideos.map((video, index) => (
                             <div
                                 key={video.id}
                                 data-aos="fade-up"

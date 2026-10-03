@@ -15,6 +15,7 @@ import Banner from '../components/ui/Banner';
 
 const News_Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('ALL');
+    const [selectedYear, setSelectedYear] = useState('ALL');
     const [activeNewsIndex, setActiveNewsIndex] = useState(null);
 
     const newsArticles = [
@@ -26,6 +27,7 @@ const News_Gallery = () => {
             author: "Dr. Rajesh Kumar",
             role: "President, IMA Moradabad",
             date: "20 Oct 2025",
+            year: "2025",
             category: "HEALTHCARE",
             image: "/news-1.jpg",
             views: "2.4K",
@@ -39,6 +41,7 @@ const News_Gallery = () => {
             author: "Dr. Priya Sharma",
             role: "Vice President",
             date: "18 Oct 2025",
+            year: "2025",
             category: "COMMUNITY",
             image: "/news-2.jpg",
             views: "1.8K"
@@ -51,6 +54,7 @@ const News_Gallery = () => {
             author: "Dr. Amit Verma",
             role: "IMA Honorary Secretary",
             date: "12 Oct 2025",
+            year: "2025",
             category: "EDITORIAL",
             image: "/news-3.jpg",
             views: "980"
@@ -63,6 +67,7 @@ const News_Gallery = () => {
             author: "Dr. Sunita Gupta",
             role: "Academic Coordinator",
             date: "05 Oct 2025",
+            year: "2026",
             category: "CONFERENCE",
             image: "/news-4.jpg",
             views: "3.1K",
@@ -76,6 +81,7 @@ const News_Gallery = () => {
             author: "Dr. CP Singh",
             role: "President-Elect",
             date: "28 Sep 2025",
+            year: "2026",
             category: "COMMUNITY",
             image: "/news-5.jpg",
             views: "1.5K"
@@ -88,6 +94,7 @@ const News_Gallery = () => {
             author: "Dr. Sudeep Kaur",
             role: "Secretary",
             date: "21 Sep 2025",
+            year: "2026",
             category: "PUBLIC HEALTH",
             image: "/news-6.jpg",
             views: "1.2K"
@@ -100,6 +107,7 @@ const News_Gallery = () => {
             author: "Dr. Manoj Saxena",
             role: "Blood Bank Incharge",
             date: "15 Sep 2025",
+            year: "2027",
             category: "SOCIAL SERVICE",
             image: "/news-7.jpg",
             views: "2.1K"
@@ -112,17 +120,32 @@ const News_Gallery = () => {
             author: "Dr. Arvind Pathak",
             role: "CME Director",
             date: "01 Sep 2025",
+            year: "2027",
             category: "EDUCATION",
             image: "/news-8.jpg",
             views: "1.7K"
         }
     ];
 
+    // Helper to get year from date string (e.g. "20 Oct 2025" -> "2025")
+    const getYearFromDate = (dateStr) => {
+        const match = dateStr?.match(/\b(20\d{2})\b/);
+        return match ? match[1] : '';
+    };
+
+    const distinctYears = Array.from(
+        new Set(newsArticles.map(item => getYearFromDate(item.date)).filter(Boolean))
+    ).sort();
+
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026', '2027'])).sort()];
     const categories = ['ALL', 'HEALTHCARE', 'COMMUNITY', 'CONFERENCE', 'PUBLIC HEALTH', 'SOCIAL SERVICE', 'EDUCATION'];
 
-    const filteredNews = selectedCategory === 'ALL'
-        ? newsArticles
-        : newsArticles.filter(item => item.category === selectedCategory);
+    const filteredNews = newsArticles.filter(item => {
+        const itemYear = getYearFromDate(item.date);
+        const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;
+        const matchesYear = selectedYear === 'ALL' || itemYear === selectedYear;
+        return matchesCategory && matchesYear;
+    });
 
     // Keyboard navigation in lightbox
     useEffect(() => {
@@ -174,15 +197,33 @@ const News_Gallery = () => {
                             Explore media reports, press releases, and milestones of Indian Medical Association Moradabad in a sleek Pinterest layout. Click any news photo to view details in full popup.
                         </p>
 
-                        {/* Filter Tabs */}
-                        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-6">
+                        {/* Year Filter Tabs */}
+                        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider self-center mr-1">Year:</span>
+                            {years.map((yr) => (
+                                <button
+                                    key={yr}
+                                    onClick={() => setSelectedYear(yr)}
+                                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs ${
+                                        selectedYear === yr
+                                            ? 'bg-rose-700 text-white shadow-md scale-105 ring-2 ring-rose-700/30'
+                                            : 'bg-white text-slate-700 hover:bg-rose-50 border border-slate-200 hover:border-rose-300'
+                                    }`}
+                                >
+                                    {yr === 'ALL' ? 'All Years' : yr}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Category Filter Tabs */}
+                        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-3.5">
                             {categories.map((cat) => (
                                 <button
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
-                                    className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                                    className={`px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold transition-all duration-200 cursor-pointer ${
                                         selectedCategory === cat
-                                            ? 'bg-rose-700 text-white shadow-sm scale-105'
+                                            ? 'bg-slate-900 text-white shadow-sm'
                                             : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80 hover:text-slate-900'
                                     }`}
                                 >

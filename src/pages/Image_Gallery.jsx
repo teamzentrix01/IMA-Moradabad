@@ -15,6 +15,7 @@ import Banner from '../components/ui/Banner';
 
 export default function Image_Gallery() {
     const [selectedCategory, setSelectedCategory] = useState('ALL');
+    const [selectedYear, setSelectedYear] = useState('ALL');
     const [activeImageIndex, setActiveImageIndex] = useState(null);
 
     const galleryItems = [
@@ -114,11 +115,27 @@ export default function Image_Gallery() {
         }
     ];
 
+    // Helper to get year from item.date (e.g. "15 Jan 2025" -> "2025")
+    const getYearFromDate = (dateStr) => {
+        const match = dateStr?.match(/\b(20\d{2})\b/);
+        return match ? match[1] : '';
+    };
+
+    // Extract all distinct years from the gallery items dynamically, sorted
+    const distinctYears = Array.from(
+        new Set(galleryItems.map(item => getYearFromDate(item.date)).filter(Boolean))
+    ).sort();
+
+    // Year options including 2025, 2026, 2027
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026', '2027'])).sort()];
     const categories = ['ALL', 'MEDICAL CAMP', 'COMMUNITY', 'EVENTS', 'EDUCATION', 'AWARENESS'];
 
-    const filteredItems = selectedCategory === 'ALL' 
-        ? galleryItems 
-        : galleryItems.filter(item => item.category === selectedCategory);
+    const filteredItems = galleryItems.filter(item => {
+        const itemYear = getYearFromDate(item.date);
+        const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;
+        const matchesYear = selectedYear === 'ALL' || itemYear === selectedYear;
+        return matchesCategory && matchesYear;
+    });
 
     // Keyboard navigation in lightbox modal
     useEffect(() => {
@@ -170,15 +187,33 @@ export default function Image_Gallery() {
                             A curated Pinterest-style showcase of IMA Moradabad's medical camps, conventions, health drives, and celebrations. Click any photo to view in high definition.
                         </p>
 
-                        {/* Filter Tabs */}
-                        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-6">
+                        {/* Year Filter Tabs */}
+                        <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
+                            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider self-center mr-1">Year:</span>
+                            {years.map((yr) => (
+                                <button
+                                    key={yr}
+                                    onClick={() => setSelectedYear(yr)}
+                                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs ${
+                                        selectedYear === yr
+                                            ? 'bg-teal-700 text-white shadow-md scale-105 ring-2 ring-teal-700/30'
+                                            : 'bg-white text-slate-700 hover:bg-teal-50 border border-slate-200 hover:border-teal-300'
+                                    }`}
+                                >
+                                    {yr === 'ALL' ? 'All Years' : yr}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Category Filter Tabs */}
+                        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-3.5">
                             {categories.map((cat) => (
                                 <button
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
-                                    className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                                    className={`px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold transition-all duration-200 cursor-pointer ${
                                         selectedCategory === cat
-                                            ? 'bg-teal-700 text-white shadow-sm scale-105'
+                                            ? 'bg-slate-900 text-white shadow-sm'
                                             : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80 hover:text-slate-900'
                                     }`}
                                 >

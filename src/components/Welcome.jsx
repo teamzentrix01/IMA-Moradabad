@@ -23,26 +23,26 @@ export default function Welcome() {
         </div>
 
         {/* Content Section */}
-        <div className="grid md:grid-cols-2 gap-5 lg:gap-7 items-stretch bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-slate-100">
+        <div className="max-w-3xl mx-auto grid md:grid-cols-2 items-stretch bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-slate-100">
           {/* Left Side - Image */}
-          <div data-aos="fade-right" data-aos-duration="900" className="relative overflow-hidden w-full h-64 sm:h-72 md:h-full min-h-full">
+          <div data-aos="fade-right" data-aos-duration="900" className="relative w-full h-56 md:h-auto min-h-full">
             <img src="/welcome-ima.jpg" alt="IMA Moradabad Bhawan" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
           </div>
 
           {/* Right Side - Content */}
-          <div data-aos="fade-left" data-aos-duration="900" className="p-4 sm:p-5 md:p-6 lg:p-7">
-            <div className="inline-flex items-center space-x-1.5 bg-emerald-100/80 text-emerald-800 px-3 py-1 rounded-full mb-2.5 text-xs">
+          <div data-aos="fade-left" data-aos-duration="900" className="p-4 sm:p-5 flex flex-col justify-center">
+            <div className="inline-flex items-center space-x-1.5 bg-emerald-100/80 text-emerald-800 px-2.5 py-0.5 rounded-full mb-2 text-xs w-fit">
               <ClipboardPen className="w-3.5 h-3.5" />
               <span className="font-semibold">Our Story</span>
             </div>
 
-            <div className="text-xs sm:text-[13px] md:text-sm text-slate-700 space-y-2 sm:space-y-2.5 leading-relaxed font-playfair tracking-wide">
+            <div className="text-xs text-slate-700 space-y-1.5 sm:space-y-2 leading-relaxed font-playfair tracking-wide">
               <p>
                 The <strong>Indian Medical Association (IMA), Moradabad</strong> is the local branch of the national IMA, serving as a representative body for doctors in the region while also engaging in community health activities.
               </p>
 
               <p>
-                Our office, IMA Bhawan, is located opposite the SSP Office in Kachehri Parisar, Moradabad. The branch has an elected team of office-bearers, with Dr. Anat Rana as the President-Elect (2025-26) and Dr. Dishanter Goel as the Secretary.
+                Our office, IMA Bhawan, is located opposite the SSP Office in Kachehri Parisar, Moradabad. The branch has an elected team of office-bearers, with Dr. Anat Rana as the President-Elect (2026-27) and Dr. Dishanter Goel as the Secretary.
               </p>
 
               <p>
@@ -55,8 +55,8 @@ export default function Welcome() {
             </div>
 
             {/* CTA Button */}
-            <div className="mt-4 sm:mt-5">
-              <button onClick={handleNavigation} className="w-full sm:w-auto cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm rounded-lg sm:rounded-full transition-all duration-300 shadow-md hover:shadow-lg active:scale-95">
+            <div className="mt-3 sm:mt-4">
+              <button onClick={handleNavigation} className="w-full sm:w-auto cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-1.5 sm:py-2 text-xs rounded-lg sm:rounded-full transition-all duration-300 shadow-md hover:shadow-lg active:scale-95">
                 Learn More About Us
               </button>
             </div>
