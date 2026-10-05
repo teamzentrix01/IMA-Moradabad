@@ -82,8 +82,8 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
             videoId: "-nz179qIZJI",
             category: "OUTREACH",
-            date: "2027",
-            year: "2027",
+            date: "2026",
+            year: "2026",
             description: "IMA Moradabad's mobile healthcare mission providing specialist consultations and diagnostics in rural Uttar Pradesh villages."
         },
         {
@@ -92,8 +92,8 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
             videoId: "NUobEk-aV9I",
             category: "SEMINAR",
-            date: "2027",
-            year: "2027",
+            date: "2026",
+            year: "2026",
             description: "Symposium on medical jurisprudence, ethical patient care standards, and doctor-patient trust building for Moradabad physicians."
         }
     ];
@@ -108,7 +108,7 @@ const Video_Gallery = () => {
         new Set(videos.map(item => getYearFromDate(item.date)).filter(Boolean))
     ).sort();
 
-    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026', '2027'])).sort()];
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026'])).sort()];
 
     const filteredVideos = selectedYear === 'ALL'
         ? videos

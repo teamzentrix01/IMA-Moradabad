@@ -20,7 +20,11 @@ const RootLayout = () => {
   }, []);
 
   useEffect(() => {
-    AOS.refresh();
+    // Refresh AOS animations on route transitions
+    const timer = setTimeout(() => {
+      AOS.refreshHard();
+    }, 100);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (

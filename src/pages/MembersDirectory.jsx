@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 import membersData from '../data/membersData';
 import './MembersDirectory.css';
 
+import { matchesMember } from '../utils/searchUtils';
+
 const MEMBERS_PER_PAGE = 25;
 
 export default function MembersDirectory() {
@@ -9,11 +11,8 @@ export default function MembersDirectory() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredMembers = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    if (!normalizedQuery) return membersData;
-    return membersData.filter(({ name, membership }) =>
-      `${name} ${membership}`.toLowerCase().includes(normalizedQuery),
-    );
+    if (!query.trim()) return membersData;
+    return membersData.filter((member) => matchesMember(member, query));
   }, [query]);
 
   useEffect(() => {

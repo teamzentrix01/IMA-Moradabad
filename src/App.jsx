@@ -1,41 +1,52 @@
 
+import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // MAIN LAYOUT
-
 import RootLayout from './RootLayout';
 
+// Lightweight, instant fallback loading spinner
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex flex-col items-center justify-center space-y-4">
+    <div className="w-10 h-10 border-4 border-emerald-200 border-t-emerald-600 rounded-full animate-spin"></div>
+    <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Loading...</span>
+  </div>
+);
 
-
-// PAGES
-import About from './pages/About';
+// Eager load Home for instant First Contentful Paint
 import Home from './pages/Home';
-import Secretary_Message from './pages/secretary_Message';
-import President_Message from './pages/President_Message';
-import UpComing_Events from './pages/UpComing_Events';
-import Past_Events from './pages/Past_Events';
-import Achievements from './pages/Achievements';
-import MembersDirectory from './pages/MembersDirectory';
-import Treasurer_Message from './pages/Treasurer_Message';
 
+// Lazy load all remaining pages to reduce initial bundle size & blocking time
+const About = lazy(() => import('./pages/About'));
+const Secretary_Message = lazy(() => import('./pages/secretary_Message'));
+const President_Message = lazy(() => import('./pages/President_Message'));
+const Treasurer_Message = lazy(() => import('./pages/Treasurer_Message'));
+const UpComing_Events = lazy(() => import('./pages/UpComing_Events'));
+const Past_Events = lazy(() => import('./pages/Past_Events'));
+const Achievements = lazy(() => import('./pages/Achievements'));
+const MembersDirectory = lazy(() => import('./pages/MembersDirectory'));
+const Image_Gallery = lazy(() => import('./pages/Image_Gallery'));
+const Video_Gallery = lazy(() => import('./pages/Video_Gallery'));
+const News_Gallery = lazy(() => import('./pages/News_Gallery'));
+const Contact_Us = lazy(() => import('./pages/Contact_Us'));
+const RequestBlood = lazy(() => import('./pages/RequestBlood'));
+const BloodCamps = lazy(() => import('./pages/BloodCamps'));
+const Blood_Donate = lazy(() => import('./pages/BloodDonate'));
+const CME = lazy(() => import('./pages/CME'));
+const Conference = lazy(() => import('./pages/Conference'));
+const ThankYou = lazy(() => import('./pages/thankyou'));
+const Registration = lazy(() => import('./pages/Registration'));
+const BloodDonate = lazy(() => import('./pages/BloodDonate'));
+const Nominate = lazy(() => import('./pages/Nominate'));
+const JoinIMA = lazy(() => import('./pages/JoinIMA'));
+const NewIMA = lazy(() => import('./pages/NewIMA'));
 
-
-//Sub_PAGES 
-
-import Image_Gallery from './pages/Image_Gallery'
-import Video_Gallery from './pages/Video_Gallery';
-import News_Gallery from './pages/News_Gallery';
-import Contact_Us from './pages/Contact_Us';
-import RequestBlood from './pages/RequestBlood';
-import BloodCamps from './pages/BloodCamps';
-import Blood_Donate from './pages/BloodDonate';
-import CME from './pages/CME';
-import Conference from './pages/Conference';
-import ThankYou from './pages/thankyou';
-import Registration from './pages/Registration';
-import BloodDonate from './pages/BloodDonate';
-
-
+// Helper to wrap lazy components in Suspense
+const withSuspense = (Component) => (
+  <Suspense fallback={<PageLoader />}>
+    <Component />
+  </Suspense>
+);
 
 const router = createBrowserRouter([
   {
@@ -44,31 +55,31 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'home', element: <Home /> },
-      { path: 'about', element: <About /> },
-      { path: 'secretarymessage', element: <Secretary_Message /> },
-      { path: 'presidentmessage', element: <President_Message /> },
-      { path: 'treasurer-message', element: <Treasurer_Message /> },
-      { path: 'imagegallery', element: <Image_Gallery /> },
-      { path: 'videogallery', element: <Video_Gallery /> },
-      { path: 'newsgallery', element: <News_Gallery /> },
-      { path: 'blooddonate', element: <Blood_Donate /> },
-      { path: 'contactus', element: <Contact_Us /> },
-      { path: 'upComingevents', element: <UpComing_Events /> },
-      { path: 'bloodcamps', element: <BloodCamps /> },
-      { path: 'requestblood', element: <RequestBlood /> },
-      { path: 'blooddonate', element: <Blood_Donate /> },
-      { path: 'pastevents', element: <Past_Events /> },
-      { path: 'achievements', element: <Achievements /> },
-      { path: 'members-directory', element: <MembersDirectory /> },
-      { path: 'cme', element: <CME /> },
-      { path: 'conference', element: <Conference /> },
-      { path: 'thankyou', element: <ThankYou /> },
-      { path: "registration", element: <Registration /> },
-      { path: 'blooddonate', element: <BloodDonate /> }
+      { path: 'about', element: withSuspense(About) },
+      { path: 'secretarymessage', element: withSuspense(Secretary_Message) },
+      { path: 'presidentmessage', element: withSuspense(President_Message) },
+      { path: 'treasurer-message', element: withSuspense(Treasurer_Message) },
+      { path: 'imagegallery', element: withSuspense(Image_Gallery) },
+      { path: 'videogallery', element: withSuspense(Video_Gallery) },
+      { path: 'newsgallery', element: withSuspense(News_Gallery) },
+      { path: 'blooddonate', element: withSuspense(Blood_Donate) },
+      { path: 'contactus', element: withSuspense(Contact_Us) },
+      { path: 'upComingevents', element: withSuspense(UpComing_Events) },
+      { path: 'bloodcamps', element: withSuspense(BloodCamps) },
+      { path: 'requestblood', element: withSuspense(RequestBlood) },
+      { path: 'pastevents', element: withSuspense(Past_Events) },
+      { path: 'achievements', element: withSuspense(Achievements) },
+      { path: 'nominate', element: withSuspense(Nominate) },
+      { path: 'join-ima', element: withSuspense(JoinIMA) },
+      { path: 'new-ima', element: withSuspense(NewIMA) },
+      { path: 'members-directory', element: withSuspense(MembersDirectory) },
+      { path: 'cme', element: withSuspense(CME) },
+      { path: 'conference', element: withSuspense(Conference) },
+      { path: 'thankyou', element: withSuspense(ThankYou) },
+      { path: 'registration', element: withSuspense(Registration) }
     ]
-
   }
-])
+]);
 
 
 

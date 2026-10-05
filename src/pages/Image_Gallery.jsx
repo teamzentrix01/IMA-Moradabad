@@ -45,7 +45,7 @@ export default function Image_Gallery() {
             category: 'COMMUNITY',
             title: 'Vaccination Drive 2025',
             description: 'Protecting the local community and underprivileged families through timely immunization and booster doses.',
-            date: '12 Feb 2025',
+            date: '12 Apr 2025',
             aspect: 'aspect-[4/5]'
         },
         {
@@ -72,7 +72,7 @@ export default function Image_Gallery() {
             category: 'COMMUNITY',
             title: 'Girls Day Health Initiative',
             description: 'Free pediatric and gynecological consultations alongside nutritional supplements distribution for 1500+ daughters.',
-            date: '24 Sep 2025',
+            date: '15 Jan 2026',
             hasVideo: true,
             featured: true,
             aspect: 'aspect-[4/3]'
@@ -83,16 +83,16 @@ export default function Image_Gallery() {
             category: 'EDUCATION',
             title: 'Medical Training Workshops',
             description: 'Advanced hands-on surgical and diagnostic workshops enhancing clinical skills for upcoming doctors.',
-            date: '05 Oct 2025',
+            date: '10 Feb 2026',
             aspect: 'aspect-[16/10]'
         },
         {
             id: 8,
             image: '/gallery-9.jpg',
             category: 'SEMINARS',
-            title: 'Healthcare Symposium 2025',
+            title: 'Healthcare Symposium 2026',
             description: 'Eminent medical professors delivering keynote sessions on modern clinical interventions and digital health.',
-            date: '18 Nov 2025',
+            date: '22 Mar 2026',
             aspect: 'aspect-[4/5]'
         },
         {
@@ -101,7 +101,7 @@ export default function Image_Gallery() {
             category: 'EVENTS',
             title: 'Community Blood Donation',
             description: 'Voluntary donors step forward in record numbers to bolster Moradabad blood banks for trauma and emergency patients.',
-            date: '08 Dec 2025',
+            date: '14 May 2026',
             aspect: 'aspect-square'
         },
         {
@@ -110,7 +110,7 @@ export default function Image_Gallery() {
             category: 'INSPIRATION',
             title: 'Excellence In Healthcare',
             description: 'Upholding highest medical ethics, patient dignity, and comprehensive care standards across all hospitals in Moradabad.',
-            date: '28 Dec 2025',
+            date: '18 Jun 2026',
             aspect: 'aspect-[4/3]'
         }
     ];
@@ -126,8 +126,8 @@ export default function Image_Gallery() {
         new Set(galleryItems.map(item => getYearFromDate(item.date)).filter(Boolean))
     ).sort();
 
-    // Year options including 2025, 2026, 2027
-    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026', '2027'])).sort()];
+    // Year options including 2025, 2026
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026'])).sort()];
     const categories = ['ALL', 'MEDICAL CAMP', 'COMMUNITY', 'EVENTS', 'EDUCATION', 'AWARENESS'];
 
     const filteredItems = galleryItems.filter(item => {

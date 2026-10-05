@@ -1,6 +1,8 @@
-import { Heart, AlertOctagon, Users, Shield, Globe, Sparkles } from 'lucide-react';
+import { Heart, AlertOctagon, Users, Shield, Globe, Sparkles, Stethoscope } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Helping_hand() {
+    const navigate = useNavigate();
     const services = [
         {
             icon: Heart,
@@ -27,6 +29,11 @@ export default function Helping_hand() {
             icon: Globe,
             title: "Social Responsibility",
             description: "Extending medical expertise during natural calamities, epidemics, and public health crises."
+        },
+        {
+            icon: Stethoscope,
+            title: "Health Awareness & Prevention",
+            description: "Conducting public seminars, preventive screenings, and health literacy campaigns across schools, colleges, and rural blocks."
         }
     ];
 
@@ -110,7 +117,10 @@ export default function Helping_hand() {
 
                 {/* Bottom CTA */}
                 <div className="text-center mt-6 sm:mt-8">
-                    <button className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 cursor-pointer">
+                    <button 
+                        onClick={() => navigate('/upComingevents')}
+                        className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 cursor-pointer"
+                    >
                         <Heart className="w-4 h-4" />
                         Join Our Mission
                     </button>

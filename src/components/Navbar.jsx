@@ -9,7 +9,8 @@ import {
   Award,
   Users,
   CalendarArrowUp,
-  Home
+  Home,
+  Sparkles
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -94,7 +95,17 @@ export default function Navbar() {
       name: 'Achievements',
       icon: Award,
       path: '/achievements',
-      hasDropdown: false
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: 'Awards & Honors',
+          path: '/achievements'
+        },
+        {
+          name: 'Nominate for Award',
+          path: '/nominate'
+        }
+      ]
     },
 
     {
@@ -140,9 +151,9 @@ export default function Navbar() {
     },
 
     {
-      name: 'UpComing Events',
-      icon: CalendarArrowUp,
-      path: '/upComingevents',
+      name: 'New Building',
+      icon: Sparkles,
+      path: '/new-ima',
       hasDropdown: false
     },
 
@@ -279,8 +290,9 @@ export default function Navbar() {
               className="
                 bg-red-500
                 text-white
-                px-8
-                py-4
+                px-5
+                py-2.5
+                text-sm
                 rounded-full
                 font-semibold
                 transition-all

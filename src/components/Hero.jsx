@@ -24,7 +24,7 @@ export default function HeroSlider() {
       cta: "Learn More",
       ctaLink: "/about",
       ctaSecondary: "Join IMA",
-      ctaSecondaryLink: "/contactus",
+      ctaSecondaryLink: "/join-ima",
       gradient: "from-emerald-600 to-teal-600",
       icon: Heart,
       image: "/ima-hero-image-1.jpg"
@@ -76,7 +76,7 @@ export default function HeroSlider() {
       cta: "View Awards",
       ctaLink: "/achievements",
       ctaSecondary: "Nominate",
-      ctaSecondaryLink: "/contactus",
+      ctaSecondaryLink: "/nominate",
       gradient: "from-amber-600 to-orange-600",
       icon: Award,
       image: "/ima-hero-image-1.jpg"

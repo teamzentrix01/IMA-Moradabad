@@ -66,7 +66,7 @@ const News_Gallery = () => {
             fullStory: "Delegates from across the country participated in 14 specialized CME symposiums, debating clinical protocols, new oncology medications, and pediatric life support standards.",
             author: "Dr. Sunita Gupta",
             role: "Academic Coordinator",
-            date: "05 Oct 2025",
+            date: "05 Feb 2026",
             year: "2026",
             category: "CONFERENCE",
             image: "/news-4.jpg",
@@ -80,7 +80,7 @@ const News_Gallery = () => {
             fullStory: "A total of 1,124 patients were screened. Blood sugar, ECG, and hemoglobin tests were provided completely free of charge under IMA sponsorship.",
             author: "Dr. CP Singh",
             role: "President-Elect",
-            date: "28 Sep 2025",
+            date: "18 Mar 2026",
             year: "2026",
             category: "COMMUNITY",
             image: "/news-5.jpg",
@@ -93,7 +93,7 @@ const News_Gallery = () => {
             fullStory: "Over 800 children received crucial booster shots while awareness seminars on cervical cancer vaccination were conducted in local Moradabad colleges.",
             author: "Dr. Sudeep Kaur",
             role: "Secretary",
-            date: "21 Sep 2025",
+            date: "22 Apr 2026",
             year: "2026",
             category: "PUBLIC HEALTH",
             image: "/news-6.jpg",
@@ -106,8 +106,8 @@ const News_Gallery = () => {
             fullStory: "Doctors, youth volunteers, and local citizens participated in large numbers. Donors received certified health recognition cards and honorary badges.",
             author: "Dr. Manoj Saxena",
             role: "Blood Bank Incharge",
-            date: "15 Sep 2025",
-            year: "2027",
+            date: "15 May 2026",
+            year: "2026",
             category: "SOCIAL SERVICE",
             image: "/news-7.jpg",
             views: "2.1K"
@@ -119,8 +119,8 @@ const News_Gallery = () => {
             fullStory: "Young resident doctors from across Western UP medical colleges practiced emergency airway management, CPR, and trauma triage in state-of-the-art simulation labs.",
             author: "Dr. Arvind Pathak",
             role: "CME Director",
-            date: "01 Sep 2025",
-            year: "2027",
+            date: "10 Jun 2026",
+            year: "2026",
             category: "EDUCATION",
             image: "/news-8.jpg",
             views: "1.7K"
@@ -137,7 +137,7 @@ const News_Gallery = () => {
         new Set(newsArticles.map(item => getYearFromDate(item.date)).filter(Boolean))
     ).sort();
 
-    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026', '2027'])).sort()];
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026'])).sort()];
     const categories = ['ALL', 'HEALTHCARE', 'COMMUNITY', 'CONFERENCE', 'PUBLIC HEALTH', 'SOCIAL SERVICE', 'EDUCATION'];
 
     const filteredNews = newsArticles.filter(item => {

@@ -40,7 +40,7 @@ export default function President_Message() {
                 onMouseLeave={() => setImageHover(false)}
               >
                 <img
-                  src="file_0000000014848208836ddf30894e8069 (1).png"
+                  src="/file_0000000014848208836ddf30894e8069 (1).png"
                   alt="President of IMA Moradabad"
                   className="w-full h-full object-cover"
                 />

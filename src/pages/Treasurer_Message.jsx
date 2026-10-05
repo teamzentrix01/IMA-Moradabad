@@ -40,7 +40,7 @@ export default function Treasurer_Message() {
                                 onMouseLeave={() => setImageHover(false)}
                             >
                                 <img
-                                    src="file_0000000063b08208b822b0557b714332.png"
+                                    src="/file_0000000063b08208b822b0557b714332.png"
                                     alt="Treasurer  of IMA Moradabad"
                                     className="w-full h-full object-cover"
                                 />
