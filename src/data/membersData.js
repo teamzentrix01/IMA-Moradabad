@@ -11,7 +11,7 @@ const membersData = [
   },
   {
     "id": 3,
-    "name": "Dr. Aakarshbajaj",
+    "name": "Dr. Aakarsh bajaj",
     "membership": "UP/16789/93/389/275876/2021-22/CL"
   },
   {
@@ -26,7 +26,7 @@ const membersData = [
   },
   {
     "id": 6,
-    "name": "Dr. Abhinavbanerjee",
+    "name": "Dr. Abhinav Banerjee",
     "membership": "UP/17352/93/398/288338/2022-23/CL"
   },
   {
@@ -36,7 +36,7 @@ const membersData = [
   },
   {
     "id": 8,
-    "name": "Dr. Absarahmad",
+    "name": "Dr. Absar Ahmad",
     "membership": "UP/9200/93/179/149166/2009-10/L"
   },
   {
@@ -46,7 +46,7 @@ const membersData = [
   },
   {
     "id": 10,
-    "name": "Dr. Adityagupta",
+    "name": "Dr. Aditya Gupta",
     "membership": "UP/11752/93/280/189508/2013-14/CL"
   },
   {
@@ -56,32 +56,32 @@ const membersData = [
   },
   {
     "id": 12,
-    "name": "Dr. Ahmedshamim",
+    "name": "Dr. Ahmed Shamim",
     "membership": "UP/16784/93/384/275871/2021-22/CL"
   },
   {
     "id": 13,
-    "name": "Dr. Ajaiveersinghnarwal",
+    "name": "Dr. Ajaiveer Singh Narwal",
     "membership": "UP/12180/93/300/195622/2014-15/L"
   },
   {
     "id": 14,
-    "name": "Dr. Ajayagarwal",
+    "name": "Dr. Ajay Agarwal",
     "membership": "UP/9205/93/184/149172/2009-10/CL"
   },
   {
     "id": 15,
-    "name": "Dr. Ajayarora",
+    "name": "Dr. Ajay Arora",
     "membership": "UP/5184/93/68/86029/2001-02/CL"
   },
   {
     "id": 16,
-    "name": "Dr. Ajayjaion",
+    "name": "Dr. Ajay Jain",
     "membership": "UP/8277/93/137/140824/2008-09/L"
   },
   {
     "id": 17,
-    "name": "Dr. Ajaykumarjain",
+    "name": "Dr. Ajay Kumar Jain",
     "membership": "UP/9195/93/174/149161/2009-10/L"
   },
   {
@@ -91,22 +91,22 @@ const membersData = [
   },
   {
     "id": 19,
-    "name": "Dr. Akashagarwal",
+    "name": "Dr. Akash Agarwal",
     "membership": "UP/9921/93/211/160133/2011-12/L"
   },
   {
     "id": 20,
-    "name": "Dr. Akhilagarwal",
+    "name": "Dr. Akhil Agarwal",
     "membership": "UP/8532/93/155/143984/2009-10/L"
   },
   {
     "id": 21,
-    "name": "Dr. Akhilchandrasrivastava",
+    "name": "Dr. Akhil Chandra Srivastava",
     "membership": "UP/3293/93/13/52896/1996-97/L"
   },
   {
     "id": 22,
-    "name": "Dr. Akritiagarwal",
+    "name": "Dr. Akriti Agarwal",
     "membership": "UP/16779/93/379/275866/2021-22/CL"
   },
   {
@@ -121,7 +121,7 @@ const membersData = [
   },
   {
     "id": 25,
-    "name": "Dr. Alokagarwal",
+    "name": "Dr. Alok Agarwal",
     "membership": "UP/11748/93/276/189502/2013-14/CL"
   },
   {
@@ -131,22 +131,22 @@ const membersData = [
   },
   {
     "id": 27,
-    "name": "Dr. Ambrinsheikh",
+    "name": "Dr. Ambrin Sheikh",
     "membership": "UP/12539/93/316/204672/2015-16/CL"
   },
   {
     "id": 28,
-    "name": "Dr. Ameersingh",
+    "name": "Dr. Ameer Singh",
     "membership": "UP/6023/93/80/101944/2003-04/CL"
   },
   {
     "id": 29,
-    "name": "Dr. Amitahluwalia",
+    "name": "Dr. Amit Aluwalia",
     "membership": "UP/7978/93/109/137703/2008-09/CL"
   },
   {
     "id": 30,
-    "name": "Dr. Amitgoyal",
+    "name": "Dr. Amit goyal",
     "membership": "UP/14773/93/351/247479/2018-19/CL"
   },
   {
@@ -156,22 +156,22 @@ const membersData = [
   },
   {
     "id": 32,
-    "name": "Dr. Amitkumar",
+    "name": "Dr. Amit Kumar",
     "membership": "UP/11046/93/236/183769/2013-14/L"
   },
   {
     "id": 33,
-    "name": "Dr. Amitramanandmishra",
+    "name": "Dr. Amit Ramanand Mishra",
     "membership": "UP/18373/93/410/304269/2023-24/L"
   },
   {
     "id": 34,
-    "name": "Dr. Amitrastogi",
+    "name": "Dr. Amit rastogi",
     "membership": "UP/16409/93/377/269634/2021-22/CL"
   },
   {
     "id": 35,
-    "name": "Dr. Amitsingh",
+    "name": "Dr. Amit singh",
     "membership": "UP/8531/93/154/143983/2009-10/L"
   },
   {
@@ -181,7 +181,7 @@ const membersData = [
   },
   {
     "id": 37,
-    "name": "Dr. Amolchandra",
+    "name": "Dr. Amol Chandra",
     "membership": "UP/12959/93/322/213164/2016-17/L"
   },
   {
@@ -191,52 +191,52 @@ const membersData = [
   },
   {
     "id": 39,
-    "name": "Dr. Anantrana",
+    "name": "Dr. Anant Rana",
     "membership": "UP/1167/93/43/118603/2005-06/CL"
   },
   {
     "id": 40,
-    "name": "Dr. Anasfahim",
+    "name": "Dr. Anas Fahim",
     "membership": "UP/8137/93/129/140182/2008-09/L"
   },
   {
     "id": 41,
-    "name": "Dr. Anilkumarmahesh",
+    "name": "Dr. Anil Kumar Mahesh",
     "membership": "UP/8638/93/168/144867/2009-10/L"
   },
   {
     "id": 42,
-    "name": "Dr. Anilkumarsingh",
+    "name": "Dr. Anil kumar singh",
     "membership": "UP/7981/93/112/137706/2008-09/CL"
   },
   {
     "id": 43,
-    "name": "Dr. Anilsachdeva",
+    "name": "Dr. Anil Sachdeva",
     "membership": "UP/4513/93/57/71904/1999-00/CL"
   },
   {
     "id": 44,
-    "name": "Dr. Anitarastogi",
+    "name": "Dr. Anita Rastogi",
     "membership": "UP/5912/93/72/100399/2003-04/CL"
   },
   {
     "id": 45,
-    "name": "Dr. Anjalishekhar",
+    "name": "Dr. Anjali Shekhar",
     "membership": "UP/7974/93/105/137699/2008-09/L"
   },
   {
     "id": 46,
-    "name": "Dr. Anjanaagarwal",
+    "name": "Dr. Anjana Agarwal",
     "membership": "UP/3546/93/30/58357/1996-97/CL"
   },
   {
     "id": 47,
-    "name": "Dr. Anjulikapoor",
+    "name": "Dr. Anjuli Kapoor",
     "membership": "UP/9701/93/201/157804/2011-12/L"
   },
   {
     "id": 48,
-    "name": "Dr. Ankakumar",
+    "name": "Dr. Anka Kumar",
     "membership": "UP/10616/93/232/176002/2012-13/CL"
   },
   {
@@ -246,187 +246,187 @@ const membersData = [
   },
   {
     "id": 50,
-    "name": "Dr. Ankurgoel",
+    "name": "Dr. Ankur Goel",
     "membership": "UP/8128/93/120/140153/2008-09/CL"
   },
   {
     "id": 51,
-    "name": "Dr. Anupamabansal",
+    "name": "Dr. Anupam Bansal",
     "membership": "UP/11055/93/245/183778/2013-14/CL"
   },
   {
     "id": 52,
-    "name": "Dr. Anuragagarwal",
+    "name": "Dr. Anurag Agarwal",
     "membership": "UP/8282/93/142/140829/2008-09/CL"
   },
   {
     "id": 53,
-    "name": "Dr. Anuragdubey",
+    "name": "Dr. Anurag Dubey",
     "membership": "UP/13709/93/338/225215/2017-18/L"
   },
   {
     "id": 54,
-    "name": "Dr. Anuragkhanna",
+    "name": "Dr. Anurag Khanna",
     "membership": "UP/4403/93/53/70392/1999-00/CL"
   },
   {
     "id": 55,
-    "name": "Dr. Anuragkumar",
+    "name": "Dr. Anurag Kumar",
     "membership": "UP/11738/93/266/189491/2013-14/L"
   },
   {
     "id": 56,
-    "name": "Dr. Anuragmehrotra",
+    "name": "Dr. Anurag Mehrotra",
     "membership": "UP/9692/93/192/157795/2011-12/CL"
   },
   {
     "id": 57,
-    "name": "Dr. Anuragrastogi",
+    "name": "Dr. Anurag Rastogi",
     "membership": "UP/12470/93/304/203216/2015-16/L"
   },
   {
     "id": 58,
-    "name": "Dr. Anuragvarshney",
+    "name": "Dr. Anurag Varshney",
     "membership": "UP/10257/93/219/167487/2012-13/CL"
   },
   {
     "id": 59,
-    "name": "Dr. Arawatpushkarna",
+    "name": "Dr. Arawat Pushkarna",
     "membership": "UP/17786/93/403/296770/2023-24/L"
   },
   {
     "id": 60,
-    "name": "Dr. Archanaagarwal",
+    "name": "Dr. Archana Agarwal",
     "membership": "UP/10355/93/224/170525/2012-13/CL"
   },
   {
     "id": 61,
-    "name": "Dr. Archanaagrawal",
+    "name": "Dr. Archana Agrawal",
     "membership": "UP/7885/93/104/133917/2007-08/L"
   },
   {
     "id": 62,
-    "name": "Dr. Archanagoel",
+    "name": "Dr. Archana Goel",
     "membership": "UP/11237/93/251/186422/2013-14/CL"
   },
   {
     "id": 63,
-    "name": "Dr. Archanasingh",
+    "name": "Dr. Archana Singh",
     "membership": "UP/12163/93/283/195589/2014-15/CL"
   },
   {
     "id": 64,
-    "name": "Dr. Archanatandon",
+    "name": "Dr. Archana Tandon",
     "membership": "UP/10256/93/218/167486/2012-13/CL"
   },
   {
     "id": 65,
-    "name": "Dr. Arihantkumarjain",
+    "name": "Dr. Arihant Kumar Jain",
     "membership": "UP/8139/93/131/140184/2008-09/L"
   },
   {
     "id": 66,
-    "name": "Dr. Arjitagarwal",
+    "name": "Dr. Arjit Agarwal",
     "membership": "UP/12479/93/312/203227/2015-16/CL"
   },
   {
     "id": 67,
-    "name": "Dr. Arpitbansal",
+    "name": "Dr. Arpit Bansal",
     "membership": "UP/18382/93/419/304278/2023-24/CL"
   },
   {
     "id": 68,
-    "name": "Dr. Arpitkumar",
+    "name": "Dr. Arpit Kumar",
     "membership": "UP/10616/93/232/176002/2012-13/CL"
   },
   {
     "id": 69,
-    "name": "Dr. Arpitverma",
+    "name": "Dr. Arpit Verma",
     "membership": "UP/7975/93/106/137700/2008-09/CL"
   },
   {
     "id": 70,
-    "name": "Dr. Arshiparvez",
+    "name": "Dr. Arshi Parvez",
     "membership": "UP/14199/93/343/232548/2017-18/CL"
   },
   {
     "id": 71,
-    "name": "Dr. Arunkumarchugh",
+    "name": "Dr. Arun Kumar Chugh",
     "membership": "UP/9693/93/193/157796/2011-12/CL"
   },
   {
     "id": 72,
-    "name": "Dr. Arunkumargupta",
+    "name": "Dr. Arun Kumar Gupta",
     "membership": "UP/18372/93/409/304268/2023-24/L"
   },
   {
     "id": 73,
-    "name": "Dr. Arvindkumargupta",
+    "name": "Dr. Arvind Kumar Gupta",
     "membership": "UP/4398/93/48/70387/1999-00/L"
   },
   {
     "id": 74,
-    "name": "Dr. Arvindkumarverma",
+    "name": "Dr. Arvind Kumar Verma",
     "membership": "UP/12179/93/299/195621/2014-15/L"
   },
   {
     "id": 75,
-    "name": "Dr. Arvindsarankothiwal",
+    "name": "Dr. Arvind Saran Kothiwal",
     "membership": "UP/8570/93/159/144651/2009-10/L"
   },
   {
     "id": 76,
-    "name": "Dr. Ashikhurana",
+    "name": "Dr. Ashi Khurana",
     "membership": "UP/4513/93/57/71904/1999-00/CL"
   },
   {
     "id": 77,
-    "name": "Dr. Ashokkumar",
+    "name": "Dr. Ashok Kumar",
     "membership": "UP/3263/93/20/52903/1996-97/L"
   },
   {
     "id": 78,
-    "name": "Dr. Ashokkumarsingh",
+    "name": "Dr. Ashok Kumar Singh",
     "membership": "UP/14774/93/352/247480/2018-19/L"
   },
   {
     "id": 79,
-    "name": "Dr. Ashutoshagarwal",
+    "name": "Dr. Ashutosh Agarwal",
     "membership": "UP/14201/93/345/232550/2017-18/CL"
   },
   {
     "id": 80,
-    "name": "Dr. Atinsharma",
+    "name": "Dr. Atin Sharma",
     "membership": "UP/7977/93/108/137702/2008-09/CL"
   },
   {
     "id": 81,
-    "name": "Dr. Atulnath",
+    "name": "Dr. Atul Nath",
     "membership": "UP/9699/93/199/157802/2011-12/CL"
   },
   {
     "id": 82,
-    "name": "Dr. Avinashkhanna",
+    "name": "Dr. Avinash Khanna",
     "membership": "UP/8133/93/125/140178/2008-09/L"
   },
   {
     "id": 83,
-    "name": "Dr. Azeemiqbal",
+    "name": "Dr. Azeem Iqbal",
     "membership": "UP/13566/93/336/222723/2017-18/L"
   },
   {
     "id": 84,
-    "name": "Dr. Babitagupta",
+    "name": "Dr. Babita Gupta",
     "membership": "UP/8123/93/115/140144/2008-09/CL"
   },
   {
     "id": 85,
-    "name": "Dr. Bhagatramrana",
+    "name": "Dr. Bhagat Ram Rana",
     "membership": "UP/9696/93/196/157799/2011-12/L"
   },
   {
     "id": 86,
-    "name": "Dr. Bhanurastogi",
+    "name": "Dr. Bhanu Rastogi",
     "membership": "UP/6951/93/100/115700/2005-06/CL"
   },
   {
@@ -441,32 +441,32 @@ const membersData = [
   },
   {
     "id": 89,
-    "name": "Dr. Bhuvneshwarkumardutt",
+    "name": "Dr. Bhuvneshwar Kumar Dutt",
     "membership": "UP/3260/93/17/52900/1996-97/L"
   },
   {
     "id": 90,
-    "name": "Dr. Brijkishortyagi",
+    "name": "Dr. Brijkishor Tyagi",
     "membership": "UP/9208/93/187/149177/2009-10/L"
   },
   {
     "id": 91,
-    "name": "Dr. Brijpalsinghlochab",
+    "name": "Dr. Brij pal Singh Lochab",
     "membership": "UP/5910/93/36/100397/2003-04/L"
   },
   {
     "id": 92,
-    "name": "Dr. Brijpalsinghlochab",
+    "name": "Dr. Brij pal Singh Lochab",
     "membership": "UP/11247/93/261/186432/2013-14/L"
   },
   {
     "id": 93,
-    "name": "Dr. Brijeshkumargupta",
+    "name": "Dr. Brijesh kumar Gupta",
     "membership": "UP/12178/93/298/195619/2014-15/L"
   },
   {
     "id": 94,
-    "name": "Dr. Brijeshsinghchauhan",
+    "name": "Dr. Brijesh singh Chauhan",
     "membership": "UP/10356/93/225/170526/2012-13/CL"
   },
   {
@@ -476,57 +476,57 @@ const membersData = [
   },
   {
     "id": 96,
-    "name": "Dr. Chanchalgupta",
+    "name": "Dr. Chanchal Gupta",
     "membership": "UP/9206/93/185/149173/2009-10/CL"
   },
   {
     "id": 97,
-    "name": "Dr. Chandrashekhar",
+    "name": "Dr. Chandra Shekhar",
     "membership": "UP/9211/93/190/149181/2009-10/CL"
   },
   {
     "id": 98,
-    "name": "Dr. D.P.Manchanda",
+    "name": "Dr. D.P. Manchanda",
     "membership": "UP/6612/93/91/108247/2004-05/L"
   },
   {
     "id": 99,
-    "name": "Dr. Deepakrastogi",
+    "name": "Dr. Deepak Rastogi",
     "membership": "UP/8528/93/151/143973/2009-10/L"
   },
   {
     "id": 100,
-    "name": "Dr. Deepaksah",
+    "name": "Dr. Deepak Sah",
     "membership": "UP/8134/93/126/140179/2008-09/L"
   },
   {
     "id": 101,
-    "name": "Dr. Deepaligoyal",
+    "name": "Dr. Deepali Goyal",
     "membership": "UP/14201/93/345/232550/2017-18/CL"
   },
   {
     "id": 102,
-    "name": "Dr. Deepanshugupta",
+    "name": "Dr. Deepanshu Gupta",
     "membership": "UP/11747/93/275/189501/2013-14/CL"
   },
   {
     "id": 103,
-    "name": "Dr. Deeptivarshney",
+    "name": "Dr. Deepthi Varshney",
     "membership": "UP/16357/93/371/269202/2021-22/CL"
   },
   {
     "id": 104,
-    "name": "Dr. Devvratsingh",
+    "name": "Dr. Devvrat Singh",
     "membership": "UP/15607/93/364/259106/2019-20/L"
   },
   {
     "id": 105,
-    "name": "Dr. Devendrakumargujrati",
+    "name": "Dr. Devendra Kumar Gujrati",
     "membership": "UP/10614/93/230/175998/2012-13/L"
   },
   {
     "id": 106,
-    "name": "Dr. Devendrakumarkanchan",
+    "name": "Dr. Devendra Kumar Kanchan",
     "membership": "UP/4510/93/54/71901/1999-00/L"
   },
   {
@@ -536,17 +536,17 @@ const membersData = [
   },
   {
     "id": 108,
-    "name": "Dr. Dhirendrasinghahlawat",
+    "name": "Dr. Dhirendra Singh Ahlawat",
     "membership": "UP/6026/93/83/101947/2003-04/CL"
   },
   {
     "id": 109,
-    "name": "Dr. Dhruvagarwal",
+    "name": "Dr. Dhruv Agarwal",
     "membership": "UP/9399/93/191/153272/2010-11/CL"
   },
   {
     "id": 110,
-    "name": "Dr. Dineshmohan",
+    "name": "Dr. Dinesh Mohan",
     "membership": "UP/12628/93/317/207313/2015-16/L"
   },
   {
@@ -556,107 +556,107 @@ const membersData = [
   },
   {
     "id": 112,
-    "name": "Dr. Dishantergoel",
+    "name": "Dr. Dishanter Goel",
     "membership": "UP/11234/93/248/186419/2013-14/CL"
   },
   {
     "id": 113,
-    "name": "Dr. Divyagoel",
+    "name": "Dr. Divya Goel",
     "membership": "UP/8128/93/120/140153/2008-09/CL"
   },
   {
     "id": 114,
-    "name": "Dr. Eramparveen",
+    "name": "Dr. Eram Parveen",
     "membership": "UP/9702/93/202/157805/2011-12/L"
   },
   {
     "id": 115,
-    "name": "Dr. Faiyazahmad",
+    "name": "Dr. Faiyaz Ahmad",
     "membership": "UP/12473/93/307/203219/2015-16/L"
   },
   {
     "id": 116,
-    "name": "Dr. Fariaashraf",
+    "name": "Dr. Faria Ashraf",
     "membership": "UP/18377/93/414/304273/2023-24/CL"
   },
   {
     "id": 117,
-    "name": "Dr. Arooqyasmeen",
+    "name": "Dr. Arooq Yasmeen",
     "membership": "UP/16784/93/384/275871/2021-22/CL"
   },
   {
     "id": 118,
-    "name": "Dr. Fatmakhatoon",
+    "name": "Dr. Fatma Khatoon",
     "membership": "UP/8281/93/141/140828/2008-09/CL"
   },
   {
     "id": 119,
-    "name": "Dr. Gariamasingh",
+    "name": "Dr. Garia ma Singh",
     "membership": "UP/6610/93/89/108244/2004-05/CL"
   },
   {
     "id": 120,
-    "name": "Dr. Garimagarg",
+    "name": "Dr. Garima Garg",
     "membership": "UP/12166/93/286/195593/2014-15/CL"
   },
   {
     "id": 121,
-    "name": "Dr. Garimamishragupta",
+    "name": "Dr. Garima Mishra Gupta",
     "membership": "UP/11747/93/275/189501/2013-14/CL"
   },
   {
     "id": 122,
-    "name": "Dr. Gauravagarwal",
+    "name": "Dr. Gaurav Agarwal",
     "membership": "UP/11057/93/247/183780/2013-14/CL"
   },
   {
     "id": 123,
-    "name": "Dr. Gauravkumar",
+    "name": "Dr. Gaurav Kumar",
     "membership": "UP/8575/93/164/144656/2009-10/CL"
   },
   {
     "id": 124,
-    "name": "Dr. Gauravkumargupta",
+    "name": "Dr. Gaurav Kumar Gupta",
     "membership": "UP/15602/93/359/259101/2019-20/CL"
   },
   {
     "id": 125,
-    "name": "Dr. Gauravtyagi",
+    "name": "Dr. Gaurav Tyagi",
     "membership": "UP/11054/93/244/183777/2013-14/CL"
   },
   {
     "id": 126,
-    "name": "Dr. Geeteshmanik",
+    "name": "Dr. Geetesh Manik",
     "membership": "UP/14775/93/353/247481/2018-19/L"
   },
   {
     "id": 127,
-    "name": "Dr. Esumiehrotra",
+    "name": "Dr. Gesumi Mehrotra",
     "membership": "UP/17352/93/398/288338/2022-23/CL"
   },
   {
     "id": 128,
-    "name": "Dr. Girdhargopalgupta",
+    "name": "Dr. Girdhari Gopal Gupta",
     "membership": "UP/11239/93/253/186424/2013-14/CL"
   },
   {
     "id": 129,
-    "name": "Dr. Girishagarwal",
+    "name": "Dr. Girish Agarwal",
     "membership": "UP/8279/93/139/140826/2008-09/CL"
   },
   {
     "id": 130,
-    "name": "Dr. Girjeshjain",
+    "name": "Dr. Girjesh Jain",
     "membership": "UP/11238/93/252/186423/2013-14/CL"
   },
   {
     "id": 131,
-    "name": "Dr. Gopeshmehrotra",
+    "name": "Dr. Gopesh Mehrotra",
     "membership": "UP/11051/93/241/183774/2013-14/CL"
   },
   {
     "id": 132,
-    "name": "Dr. Gorikasinghal",
+    "name": "Dr. Gorika Singhal",
     "membership": "UP/18384/93/421/304280/2023-24/CL"
   },
   {
@@ -666,7 +666,7 @@ const membersData = [
   },
   {
     "id": 134,
-    "name": "Dr. Gurpreetsingh",
+    "name": "Dr. Gurpreet Singh",
     "membership": "UP/18380/93/417/304276/2023-24/CL"
   },
   {
@@ -676,12 +676,12 @@ const membersData = [
   },
   {
     "id": 136,
-    "name": "Dr. Harigupta",
+    "name": "Dr. Hari Gupta",
     "membership": "UP/11235/93/249/186420/2013-14/CL"
   },
   {
     "id": 137,
-    "name": "Dr. Harpreetsingh",
+    "name": "Dr. Harpreet Singh",
     "membership": "UP/11722/93/262/189325/2013-14/L"
   },
   {
@@ -691,7 +691,7 @@ const membersData = [
   },
   {
     "id": 139,
-    "name": "Dr. Hilalwarsi",
+    "name": "Dr. Hilal Warsi",
     "membership": "UP/12957/93/320/213160/2016-17/L"
   },
   {
@@ -701,17 +701,17 @@ const membersData = [
   },
   {
     "id": 141,
-    "name": "Dr. Himanshuchaturvedi",
+    "name": "Dr. Himanshu Chaturvedi",
     "membership": "UP/8573/93/162/144654/2009-10/L"
   },
   {
     "id": 142,
-    "name": "Dr. Himanshugupta",
+    "name": "Dr. Himanshu Gupta",
     "membership": "UP/11744/93/272/189498/2013-14/L"
   },
   {
     "id": 143,
-    "name": "Dr. Hudaahmad",
+    "name": "Dr. Huda Ahmad",
     "membership": "UP/13560/93/330/222711/2017-18/L"
   },
   {
@@ -726,52 +726,52 @@ const membersData = [
   },
   {
     "id": 146,
-    "name": "Dr. Inderjeetsingh",
+    "name": "Dr. Inderjeet Singh",
     "membership": "UP/9204/93/183/149171/2009-10/CL"
   },
   {
     "id": 147,
-    "name": "Dr. Irfanahmad",
+    "name": "Dr. Irfan Ahmad",
     "membership": "UP/17349/93/395/288335/2022-23/L"
   },
   {
     "id": 148,
-    "name": "Dr. Irshadmohd.",
+    "name": "Dr. Irshad Mohd.",
     "membership": "UP/9197/93/176/149163/2009-10/L"
   },
   {
     "id": 149,
-    "name": "Dr. Ishmiddha",
+    "name": "Dr. Ish Middha",
     "membership": "UP/18374/93/411/304270/2023-24/L"
   },
   {
     "id": 150,
-    "name": "Dr. Jagmohanmahajan",
+    "name": "Dr. Jagmohan Mahajan",
     "membership": "UP/3265/93/22/52905/1996-97/CL"
   },
   {
     "id": 151,
-    "name": "Dr. Jagdishchandraarora",
+    "name": "Dr. Jagdish Chandra Arora",
     "membership": "UP/3261/93/18/52901/1996-97/L"
   },
   {
     "id": 152,
-    "name": "Dr. Jagdishsarangupta",
+    "name": "Dr. Jagdish Saran Gupta",
     "membership": "UP/6738/93/97/112128/2004-05/L"
   },
   {
     "id": 153,
-    "name": "Dr. Jaiprakashtandon",
+    "name": "Dr. Jaiprakash Tandon",
     "membership": "UP/10256/93/218/167486/2012-13/CL"
   },
   {
     "id": 154,
-    "name": "Dr. Jitendrakumar",
+    "name": "Dr. Jitendra Kumar",
     "membership": "UP/4399/93/49/70388/1999-00/L"
   },
   {
     "id": 155,
-    "name": "Dr. Itendrasharma",
+    "name": "Dr. Itendra Sharma",
     "membership": "UP/8530/93/153/143979/2009-10/L"
   },
   {
@@ -781,22 +781,22 @@ const membersData = [
   },
   {
     "id": 157,
-    "name": "Dr. Jyotiarora",
+    "name": "Dr. Jyoti Arora",
     "membership": "UP/5184/93/68/86029/2001-02/CL"
   },
   {
     "id": 158,
-    "name": "Dr. Jyotirastogi",
+    "name": "Dr. Jyoti Rastogi",
     "membership": "UP/6951/93/100/115700/2005-06/CL"
   },
   {
     "id": 159,
-    "name": "Dr. Jyotiyadav",
+    "name": "Dr. Jyoti Yadav",
     "membership": "UP/16790/93/390/275877/2021-22/CL"
   },
   {
     "id": 160,
-    "name": "Dr. Yotikagupta",
+    "name": "Dr. Jyotika Gupta",
     "membership": "UP/404/93/5/12483/1990-91/CL"
   },
   {
@@ -806,12 +806,12 @@ const membersData = [
   },
   {
     "id": 162,
-    "name": "Dr. Kailashchandrakochhar",
+    "name": "Dr. Kailash Chandra Kochhar",
     "membership": "UP/6024/93/81/101945/2003-04/CL"
   },
   {
     "id": 163,
-    "name": "Dr. Kajligupta",
+    "name": "Dr. Kajli Gupta",
     "membership": "UP/5185/93/69/86030/2001-02/CL"
   },
   {
@@ -821,52 +821,52 @@ const membersData = [
   },
   {
     "id": 165,
-    "name": "Dr. Kamleshmahajan",
+    "name": "Dr. Kamlesh Mahajan",
     "membership": "UP/3265/93/22/52905/1996-97/CL"
   },
   {
     "id": 166,
-    "name": "Dr. Kartikayagupta",
+    "name": "Dr. Kartikaya Gupta",
     "membership": "UP/13708/93/337/225214/2017-18/CL"
   },
   {
     "id": 167,
-    "name": "Dr. Kartikeyakumar",
+    "name": "Dr. Kartikeya Kumar",
     "membership": "UP/6610/93/89/108244/2004-05/CL"
   },
   {
     "id": 168,
-    "name": "Dr. Kashifmohammad",
+    "name": "Dr. Kashif Mohammad",
     "membership": "UP/15608/93/365/259107/2019-20/L"
   },
   {
     "id": 169,
-    "name": "Dr. Kirangautam",
+    "name": "Dr. Kiran Gautam",
     "membership": "UP/13556/93/326/222702/2017-18/CL"
   },
   {
     "id": 170,
-    "name": "Dr. Kishanpalvarshney",
+    "name": "Dr. Kishanpal Varshney",
     "membership": "UP/11055/93/245/183778/2013-14/CL"
   },
   {
     "id": 171,
-    "name": "Dr. Kshitirana",
+    "name": "Dr. Kshitij Rana",
     "membership": "UP/1167/93/43/118603/2005-06/CL"
   },
   {
     "id": 172,
-    "name": "Dr. Kumkummehrotra",
+    "name": "Dr. Kumkum Mehrotra",
     "membership": "UP/11051/93/241/183774/2013-14/CL"
   },
   {
     "id": 173,
-    "name": "Dr. Kushayadavgoel",
+    "name": "Dr. Kusha Yadav Goel",
     "membership": "UP/16354/93/368/269199/2021-22/CL"
   },
   {
     "id": 174,
-    "name": "Dr. Alitkumardhar",
+    "name": "Dr. Alit Kumar Dhar",
     "membership": "UP/6614/93/93/108250/2004-05/CL"
   },
   {
@@ -876,22 +876,22 @@ const membersData = [
   },
   {
     "id": 176,
-    "name": "Dr. Leenachauhan",
+    "name": "Dr. Leena Chauhan",
     "membership": "UP/7981/93/112/137706/2008-09/CL"
   },
   {
     "id": 177,
-    "name": "Dr. Leenamehrotra",
+    "name": "Dr. Leena Mehrotra",
     "membership": "UP/12167/93/287/195595/2014-15/CL"
   },
   {
     "id": 178,
-    "name": "Dr. Lovleshsingh",
+    "name": "Dr. Lovlesh Singh",
     "membership": "UP/14243/93/348/232786/2017-18/L"
   },
   {
     "id": 179,
-    "name": "Dr. Madhuagarwal",
+    "name": "Dr. Madhu Agarwal",
     "membership": "UP/3262/93/19/52902/1996-97/CL"
   },
   {
@@ -901,7 +901,7 @@ const membersData = [
   },
   {
     "id": 181,
-    "name": "Dr. Madhushekhar",
+    "name": "Dr. Madhu Shekhar",
     "membership": "UP/6676/93/38/110955/2004-05/L"
   },
   {
@@ -911,12 +911,12 @@ const membersData = [
   },
   {
     "id": 183,
-    "name": "Dr. Madhulikabatra",
+    "name": "Dr. Madhulika Batra",
     "membership": "UP/8535/93/158/143989/2009-10/CL"
   },
   {
     "id": 184,
-    "name": "Dr. Maganmehrotra",
+    "name": "Dr. Magan Mehrotra",
     "membership": "UP/12167/93/287/195595/2014-15/CL"
   },
   {
@@ -926,12 +926,12 @@ const membersData = [
   },
   {
     "id": 186,
-    "name": "Dr. Malasharma",
+    "name": "Dr. Mala Sharma",
     "membership": "UP/12165/93/285/195591/2014-15/CL"
   },
   {
     "id": 187,
-    "name": "Dr. Mamtaagarwal",
+    "name": "Dr. Mamta Agarwal",
     "membership": "UP/14202/93/346/232551/2017-18/CL"
   },
   {
@@ -946,22 +946,22 @@ const membersData = [
   },
   {
     "id": 190,
-    "name": "Dr. Maneesahjain",
+    "name": "Dr. Maneesha Jain",
     "membership": "UP/10617/93/233/176003/2012-13/CL"
   },
   {
     "id": 191,
-    "name": "Dr. Aninderkaur",
+    "name": "Dr. Maninder Kaur",
     "membership": "UP/18380/93/417/304276/2023-24/CL"
   },
   {
     "id": 192,
-    "name": "Dr. Manishkapoor",
+    "name": "Dr. Manish Kapoor",
     "membership": "UP/6607/93/86/108238/2004-05/L"
   },
   {
     "id": 193,
-    "name": "Dr. Manishkumarsingh",
+    "name": "Dr. Manish Kumar Singh",
     "membership": "UP/18383/93/420/304279/2023-24/CL"
   },
   {
@@ -971,72 +971,72 @@ const membersData = [
   },
   {
     "id": 195,
-    "name": "Dr. Manjeshrathi",
+    "name": "Dr. Manjesh Rathi",
     "membership": "UP/13558/93/328/222709/2017-18/CL"
   },
   {
     "id": 196,
-    "name": "Dr. Manmeetkaur",
+    "name": "Dr. Manmeet Kaur",
     "membership": "UP/9204/93/183/149171/2009-10/CL"
   },
   {
     "id": 197,
-    "name": "Dr. Manoharlalshridhar",
+    "name": "Dr. Manoharlal Shridhar",
     "membership": "UP/9207/93/186/149174/2009-10/CL"
   },
   {
     "id": 198,
-    "name": "Dr. Manojarora",
+    "name": "Dr. Manoj Arora",
     "membership": "UP/8527/93/150/143972/2009-10/L"
   },
   {
     "id": 199,
-    "name": "Dr. Manojkumaragarwal",
+    "name": "Dr. Manoj Kumar Agarwal",
     "membership": "UP/8274/93/134/140821/2008-09/L"
   },
   {
     "id": 200,
-    "name": "Dr. Manzoorahmed",
+    "name": "Dr. Manzoor Ahmed",
     "membership": "UP/12539/93/316/204672/2015-16/CL"
   },
   {
     "id": 201,
-    "name": "Dr. Mayankmohanagarwal",
+    "name": "Dr. Mayank Mohan Agarwal",
     "membership": "UP/4397/93/47/70386/1999-00/L"
   },
   {
     "id": 202,
-    "name": "Dr. Mazharali",
+    "name": "Dr. Mazhar Ali",
     "membership": "UP/8534/93/157/143988/2009-10/CL"
   },
   {
     "id": 203,
-    "name": "Dr. Minakshikochhar",
+    "name": "Dr. Minakshi Kochhar",
     "membership": "UP/6024/93/81/101945/2003-04/CL"
   },
   {
     "id": 204,
-    "name": "Dr. Mohakagarwal",
+    "name": "Dr. Mohak Agarwal",
     "membership": "UP/17790/93/407/296774/2023-24/CL"
   },
   {
     "id": 205,
-    "name": "Dr. Mohammadaquibashfaq",
+    "name": "Dr. Mohammad Aquib Bashfaq",
     "membership": "UP/17789/93/406/296773/2023-24/L"
   },
   {
     "id": 206,
-    "name": "Dr. Mohammedtariqueali",
+    "name": "Dr. Mohammed Tarique Ali",
     "membership": "UP/9199/93/178/149165/2009-10/L"
   },
   {
     "id": 207,
-    "name": "Dr. Mohdfarookh",
+    "name": "Dr. Mohd. Farooqh",
     "membership": "UP/18379/93/416/304275/2023-24/CL"
   },
   {
     "id": 208,
-    "name": "Dr. Mohdshaigan",
+    "name": "Dr. Mohd. Shaigan",
     "membership": "UP/16353/93/367/269198/2021-22/CL"
   },
   {
@@ -1046,7 +1046,7 @@ const membersData = [
   },
   {
     "id": 210,
-    "name": "Dr. Mohd.Asadkhan",
+    "name": "Dr. Mohd. Asadkhan",
     "membership": "UP/7080/93/102/118604/2005-06/CL"
   },
   {
@@ -1066,22 +1066,22 @@ const membersData = [
   },
   {
     "id": 214,
-    "name": "Dr. Mohittandon",
+    "name": "Dr. Mohit Tandon",
     "membership": "UP/8132/93/124/140176/2008-09/L"
   },
   {
     "id": 215,
-    "name": "Dr. Monaagarwal",
+    "name": "Dr. Mona Agarwal",
     "membership": "UP/3449/93/28/56986/1996-97/CL"
   },
   {
     "id": 216,
-    "name": "Dr. Monikasrivastava",
+    "name": "Dr. Monika Srivastava",
     "membership": "UP/14773/93/351/247479/2018-19/CL"
   },
   {
     "id": 217,
-    "name": "Dr. Monisjaleel",
+    "name": "Dr. Monis Jaleel",
     "membership": "UP/12162/93/282/195588/2014-15/CL"
   },
   {
@@ -1091,87 +1091,87 @@ const membersData = [
   },
   {
     "id": 219,
-    "name": "Dr. Mukeshagarwal",
+    "name": "Dr. Mukesh Agarwal",
     "membership": "UP/9914/93/204/160126/2011-12/CL"
   },
   {
     "id": 220,
-    "name": "Dr. Mukeshkumar",
+    "name": "Dr. Mukesh Kumar",
     "membership": "UP/10166/93/215/166065/2012-13/L"
   },
   {
     "id": 221,
-    "name": "Dr. Mukeshraizada",
+    "name": "Dr. Mukesh Raizada",
     "membership": "UP/12169/93/289/195600/2014-15/L"
   },
   {
     "id": 222,
-    "name": "Dr. Muneetagarwal",
+    "name": "Dr. Muneet Agarwal",
     "membership": "UP/13565/93/335/222722/2017-18/L"
   },
   {
     "id": 223,
-    "name": "Dr. Najmulhuda",
+    "name": "Dr. Najmul Huda",
     "membership": "UP/8127/93/119/140152/2008-09/CL"
   },
   {
     "id": 224,
-    "name": "Dr. Namratashekhar",
+    "name": "Dr. Namrata Shekhar",
     "membership": "UP/9211/93/190/149181/2009-10/CL"
   },
   {
     "id": 225,
-    "name": "Dr. Narendrakumar",
+    "name": "Dr. Narendra Kumar",
     "membership": "UP/11750/93/278/189505/2013-14/CL"
   },
   {
     "id": 226,
-    "name": "Dr. Narendrakumarchhabra",
+    "name": "Dr. Narendra Kumar Chhabra",
     "membership": "UP/10293/93/220/168407/2012-13/L"
   },
   {
     "id": 227,
-    "name": "Dr. Nareshchandagrawal",
+    "name": "Dr. Naresh Chandra Agrawal",
     "membership": "UP/6606/93/40/108236/2004-05/L"
   },
   {
     "id": 228,
-    "name": "Dr. Naveenkumar",
+    "name": "Dr. Naveen Kumar",
     "membership": "UP/8415/93/144/143266/2009-10/L"
   },
   {
     "id": 229,
-    "name": "Dr. Navinkumar",
+    "name": "Dr. Navin Kumar",
     "membership": "UP/12163/93/283/195589/2014-15/CL"
   },
   {
     "id": 230,
-    "name": "Dr. Navneetkuwarmadan",
+    "name": "Dr. Navneet Kuwar Madan",
     "membership": "UP/8125/93/117/140149/2008-09/CL"
   },
   {
     "id": 231,
-    "name": "Dr. Neenukapoor",
+    "name": "Dr. Neenu Kapoor",
     "membership": "UP/8280/93/140/140827/2008-09/CL"
   },
   {
     "id": 232,
-    "name": "Dr. Neerajgupta",
+    "name": "Dr. Neeraj Gupta",
     "membership": "UP/8123/93/115/140144/2008-09/CL"
   },
   {
     "id": 233,
-    "name": "Dr. Neerajkumaragarwal",
+    "name": "Dr. Neeraj Kumar Agarwal",
     "membership": "UP/8417/93/146/143270/2009-10/CL"
   },
   {
     "id": 234,
-    "name": "Dr. Neeturastogi",
+    "name": "Dr. Neetu Rastogi",
     "membership": "UP/9209/93/188/149178/2009-10/CL"
   },
   {
     "id": 235,
-    "name": "Dr. Neetuverma",
+    "name": "Dr. Neetu Verma",
     "membership": "UP/15211/93/358/256573/2019-20/CL"
   },
   {
@@ -1181,47 +1181,47 @@ const membersData = [
   },
   {
     "id": 237,
-    "name": "Dr. Nidhigoyal",
+    "name": "Dr. Nidhi Goyal",
     "membership": "UP/7980/93/111/137705/2008-09/CL"
   },
   {
     "id": 238,
-    "name": "Dr. Nidhipagiasinghal",
+    "name": "Dr. Nidhi Pagia Singhal",
     "membership": "UP/16791/93/391/275878/2021-22/CL"
   },
   {
     "id": 239,
-    "name": "Dr. Nidhithakur",
+    "name": "Dr. Nidhi Thakur",
     "membership": "UP/7979/93/110/137704/2008-09/CL"
   },
   {
     "id": 240,
-    "name": "Dr. Nikitajain",
+    "name": "Dr. Nikita Jain",
     "membership": "UP/16778/93/378/275865/2021-22/CL"
   },
   {
     "id": 241,
-    "name": "Dr. Nimishgupta",
+    "name": "Dr. Nimish Gupta",
     "membership": "UP/12476/93/303/203222/2015-16/L"
   },
   {
     "id": 242,
-    "name": "Dr. Nishatanjum",
+    "name": "Dr. Nishat Anjum",
     "membership": "UP/13174/93/324/214249/2016-17/CL"
   },
   {
     "id": 243,
-    "name": "Dr. Nishiagarwal",
+    "name": "Dr. Nishi Agarwal",
     "membership": "UP/8533/93/156/143987/2009-10/CL"
   },
   {
     "id": 244,
-    "name": "Dr. Nitainkumarbatra",
+    "name": "Dr. Nitain Kumar Batra",
     "membership": "UP/8535/93/158/143989/2009-10/CL"
   },
   {
     "id": 245,
-    "name": "Dr. Nitinkumar",
+    "name": "Dr. Nitin Kumar",
     "membership": "UP/6949/93/41/115698/2005-06/L"
   },
   {
@@ -1231,12 +1231,12 @@ const membersData = [
   },
   {
     "id": 247,
-    "name": "Dr. Nituvarshney",
+    "name": "Dr. Nitu Varshney",
     "membership": "UP/10257/93/219/167487/2012-13/CL"
   },
   {
     "id": 248,
-    "name": "Dr. Nupurgupta",
+    "name": "Dr. Nupur Gupta",
     "membership": "UP/11235/93/249/186420/2013-14/CL"
   },
   {
@@ -1246,222 +1246,222 @@ const membersData = [
   },
   {
     "id": 250,
-    "name": "Dr. Nutankhare",
+    "name": "Dr. Nutan Khare",
     "membership": "UP/8577/93/166/144658/2009-10/CL"
   },
   {
     "id": 251,
-    "name": "Dr. Padamjagupta",
+    "name": "Dr. Padam Jagupta",
     "membership": "UP/4402/93/52/70391/1999-00/CL"
   },
   {
     "id": 252,
-    "name": "Dr. Pallavagarwal",
+    "name": "Dr. Pallav Agarwal",
     "membership": "UP/3548/93/32/58359/1996-97/CL"
   },
   {
     "id": 253,
-    "name": "Dr. Pallaviahluwalia",
+    "name": "Dr. Pallavi Ahluwalia",
     "membership": "UP/7978/93/109/137703/2008-09/CL"
   },
   {
     "id": 254,
-    "name": "Dr. Pankajbundela",
+    "name": "Dr. Pankaj Bundela",
     "membership": "UP/14435/93/349/235599/2017-18/L"
   },
   {
     "id": 255,
-    "name": "Dr. Pankajgupta",
+    "name": "Dr. Pankaj Gupta",
     "membership": "UP/9198/93/177/149164/2009-10/L"
   },
   {
     "id": 256,
-    "name": "Dr. Pankajgupta",
+    "name": "Dr. Pankaj Gupta",
     "membership": "UP/15209/93/356/256571/2019-20/L"
   },
   {
     "id": 257,
-    "name": "Dr. Pankajkumar",
+    "name": "Dr. Pankaj Kumar",
     "membership": "UP/849/93/8/23024/1991-92/L"
   },
   {
     "id": 258,
-    "name": "Dr. Paragagarwal",
+    "name": "Dr. Parag Agarwal",
     "membership": "UP/9698/93/198/157801/2011-12/L"
   },
   {
     "id": 259,
-    "name": "Dr. Parulkhanna",
+    "name": "Dr. Parul Khanna",
     "membership": "UP/17152/93/393/282809/2021-22/CL"
   },
   {
     "id": 260,
-    "name": "Dr. Pashalatif",
+    "name": "Dr. Pasha Latif",
     "membership": "UP/8281/93/141/140828/2008-09/CL"
   },
   {
     "id": 261,
-    "name": "Dr. Awankumarsaini",
+    "name": "Dr. Pankaj Kumar Saini",
     "membership": "UP/16787/93/387/275874/2021-22/L"
   },
   {
     "id": 262,
-    "name": "Dr. Payaljain",
+    "name": "Dr. Payal Jain",
     "membership": "UP/13555/93/325/222701/2017-18/CL"
   },
   {
     "id": 263,
-    "name": "Dr. Payalpuri",
+    "name": "Dr. Payal Puri",
     "membership": "UP/8124/93/116/140147/2008-09/CL"
   },
   {
     "id": 264,
-    "name": "Dr. Piyushjain",
+    "name": "Dr. Piyush Jain",
     "membership": "UP/4511/93/55/71902/1999-00/CL"
   },
   {
     "id": 265,
-    "name": "Dr. Poojatandon",
+    "name": "Dr. Pooja Tandon",
     "membership": "UP/9692/93/192/157795/2011-12/CL"
   },
   {
     "id": 266,
-    "name": "Dr. Poonamrani",
+    "name": "Dr. Poonam Rani",
     "membership": "UP/16356/93/370/269201/2021-22/CL"
   },
   {
     "id": 267,
-    "name": "Dr. Poonamsingh",
+    "name": "Dr. Poonam Singh",
     "membership": "UP/9203/93/182/149170/2009-10/CL"
   },
   {
     "id": 268,
-    "name": "Dr. Poornimagupta",
+    "name": "Dr. Poornima Gupta",
     "membership": "UP/11236/93/250/186421/2013-14/CL"
   },
   {
     "id": 269,
-    "name": "Dr. Prabhatkumar",
+    "name": "Dr. Prabhat Kumar",
     "membership": "UP/4506/93/62/71897/1999-00/L"
   },
   {
     "id": 270,
-    "name": "Dr. Pradeepagarwal",
+    "name": "Dr. Pradeep Agarwal",
     "membership": "UP/8533/93/156/143987/2009-10/CL"
   },
   {
     "id": 271,
-    "name": "Dr. Pradeepkumar",
+    "name": "Dr. Pradeep Kumar",
     "membership": "UP/16356/93/370/269201/2021-22/CL"
   },
   {
     "id": 272,
-    "name": "Dr. Pradeepkumarshukla",
+    "name": "Dr. Pradeep Kumar Shukla",
     "membership": "UP/5913/93/73/100400/2003-04/CL"
   },
   {
     "id": 273,
-    "name": "Dr. Pradeeplohia",
+    "name": "Dr. Pradeep Lohia",
     "membership": "UP/10165/93/214/166064/2012-13/L"
   },
   {
     "id": 274,
-    "name": "Dr. Pragatigupta",
+    "name": "Dr. Pragati Gupta",
     "membership": "UP/11239/93/253/186424/2013-14/CL"
   },
   {
     "id": 275,
-    "name": "Dr. Prahladkishankapoor",
+    "name": "Dr. Prahladkishan Kapoor",
     "membership": "UP/3259/93/16/52899/1996-97/L"
   },
   {
     "id": 276,
-    "name": "Dr. Pramilagupta",
+    "name": "Dr. Pramila Gupta",
     "membership": "UP/11752/93/280/189508/2013-14/CL"
   },
   {
     "id": 277,
-    "name": "Dr. Pramodk.Pandey",
+    "name": "Dr. Pramod Kumar Pandey",
     "membership": "UP/3287/93/10/52893/1996-97/CL"
   },
   {
     "id": 278,
-    "name": "Dr. Pramodkumaragarwal",
+    "name": "Dr. Pramod Kumar Agarwal",
     "membership": "UP/3262/93/19/52902/1996-97/CL"
   },
   {
     "id": 279,
-    "name": "Dr. Pramodkumargupta",
+    "name": "Dr. Pramod Kumar Gupta",
     "membership": "UP/6739/93/98/112129/2004-05/L"
   },
   {
     "id": 280,
-    "name": "Dr. Pramodkumartyagi",
+    "name": "Dr. Pramod Kumar Tyagi",
     "membership": "UP/12174/93/294/195614/2014-15/L"
   },
   {
     "id": 281,
-    "name": "Dr. Praptisingh",
+    "name": "Dr. Prapti Singh",
     "membership": "UP/10164/93/213/166063/2012-13/L"
   },
   {
     "id": 282,
-    "name": "Dr. Praroopgupta",
+    "name": "Dr. Praroop Gupta",
     "membership": "UP/18384/93/421/304280/2023-24/CL"
   },
   {
     "id": 283,
-    "name": "Dr. Prashantkumarpandey",
+    "name": "Dr. Prashant Kumar Pandey",
     "membership": "UP/16359/93/373/269204/2021-22/L"
   },
   {
     "id": 284,
-    "name": "Dr. Pratapmanvendratyagi",
+    "name": "Dr. Pratap Manvendra Tyagi",
     "membership": "UP/7021/93/42/117511/2005-06/L"
   },
   {
     "id": 285,
-    "name": "Dr. Prateekgarg",
+    "name": "Dr. Prateek Garg",
     "membership": "UP/13557/93/327/222708/2017-18/CL"
   },
   {
     "id": 286,
-    "name": "Dr. Pratibharoy",
+    "name": "Dr. Pratibha Roy",
     "membership": "UP/18381/93/418/304277/2023-24/CL"
   },
   {
     "id": 287,
-    "name": "Dr. Prawinkumar Jain",
+    "name": "Dr. Prawin Kumar Jain",
     "membership": "UP/12173/93/293/195611/2014-15/L"
   },
   {
     "id": 288,
-    "name": "Dr. Rdeepkumargupta",
+    "name": "Dr. Radeep Kumar Gupta",
     "membership": "UP/9206/93/185/149173/2009-10/CL"
   },
   {
     "id": 289,
-    "name": "Dr. Preenagaubabajaj",
+    "name": "Dr. Preenagau Papa Bajaj",
     "membership": "UP/16789/93/389/275876/2021-22/CL"
   },
   {
     "id": 290,
-    "name": "Dr. Preetigupta",
+    "name": "Dr. Preeti Gupta",
     "membership": "UP/8576/93/165/144657/2009-10/CL"
   },
   {
     "id": 291,
-    "name": "Dr. Premkumarkhanna",
+    "name": "Dr. Prem Kumar Khanna",
     "membership": "UP/12164/93/284/195590/2014-15/CL"
   },
   {
     "id": 292,
-    "name": "Dr. Premlatashridhar",
+    "name": "Dr. Premlata Shridhar",
     "membership": "UP/9207/93/186/149174/2009-10/CL"
   },
   {
     "id": 293,
-    "name": "Dr. Pritambala",
+    "name": "Dr. Pritam Bala",
     "membership": "UP/11742/93/270/189496/2013-14/L"
   },
   {
@@ -1471,12 +1471,12 @@ const membersData = [
   },
   {
     "id": 295,
-    "name": "Dr. Puriashish",
+    "name": "Dr. Puri Ashish",
     "membership": "UP/8124/93/116/140147/2008-09/CL"
   },
   {
     "id": 296,
-    "name": "Dr. Pushpendrakumar",
+    "name": "Dr. Pushpendra Kumar",
     "membership": "UP/9196/93/175/149162/2009-10/L"
   },
   {
@@ -1486,7 +1486,7 @@ const membersData = [
   },
   {
     "id": 298,
-    "name": "Dr. R.C.Sharma",
+    "name": "Dr. R.C. Sharma",
     "membership": "UP/7283/93/45/122028/2005-06/L"
   },
   {
@@ -1496,22 +1496,22 @@ const membersData = [
   },
   {
     "id": 300,
-    "name": "Dr. Raeesakhter",
+    "name": "Dr. Raees Akhter",
     "membership": "UP/15210/93/357/256572/2019-20/L"
   },
   {
     "id": 301,
-    "name": "Dr. Raghuprakash",
+    "name": "Dr. Raghu Prakash",
     "membership": "UP/13564/93/334/222721/2017-18/L"
   },
   {
     "id": 302,
-    "name": "Dr. Rahulchaudhary",
+    "name": "Dr. Rahul Chaudhary",
     "membership": "UP/16790/93/390/275877/2021-22/CL"
   },
   {
     "id": 303,
-    "name": "Dr. Rahulgupta",
+    "name": "Dr. Rahul Gupta",
     "membership": "UP/11236/93/250/186421/2013-14/CL"
   },
   {
@@ -1526,7 +1526,7 @@ const membersData = [
   },
   {
     "id": 306,
-    "name": "Dr. Rajatagarwal",
+    "name": "Dr. Rajat Agarwal",
     "membership": "UP/7883/93/35/133915/2007-08/L"
   },
   {
@@ -1536,37 +1536,37 @@ const membersData = [
   },
   {
     "id": 308,
-    "name": "Dr. Rajeevkumarsharma",
+    "name": "Dr. Rajeev Kumar Sharma",
     "membership": "UP/11047/93/237/183770/2013-14/L"
   },
   {
     "id": 309,
-    "name": "Dr. Rajeevkumarsingh",
+    "name": "Dr. Rajeev Kumar Singh",
     "membership": "UP/13556/93/326/222702/2017-18/CL"
   },
   {
     "id": 310,
-    "name": "Dr. Rajendrasingh",
+    "name": "Dr. Rajendra Singh",
     "membership": "UP/10167/93/216/166066/2012-13/L"
   },
   {
     "id": 311,
-    "name": "Dr. Rajeshkumarsingh",
+    "name": "Dr. Rajesh Kumar Singh",
     "membership": "UP/9203/93/182/149170/2009-10/CL"
   },
   {
     "id": 312,
-    "name": "Dr. Rajeshrastogi",
+    "name": "Dr. Rajesh Rastogi",
     "membership": "UP/5912/93/72/100399/2003-04/CL"
   },
   {
     "id": 313,
-    "name": "Dr. Rajivgupta",
+    "name": "Dr. Rajiv Gupta",
     "membership": "UP/16792/93/392/275879/2021-22/CL"
   },
   {
     "id": 314,
-    "name": "Dr. Rajshekhargupta",
+    "name": "Dr. Raj Shekhar Gupta",
     "membership": "UP/12166/93/286/195593/2014-15/CL"
   },
   {
@@ -1576,77 +1576,77 @@ const membersData = [
   },
   {
     "id": 316,
-    "name": "Dr. Rakeshchandraagarwal",
+    "name": "Dr. Rakesh Chandra Agarwal",
     "membership": "UP/10353/93/222/170522/2012-13/L"
   },
   {
     "id": 317,
-    "name": "Dr. Rakeshkhare",
+    "name": "Dr. Rakesh Khare",
     "membership": "UP/8577/93/166/144658/2009-10/CL"
   },
   {
     "id": 318,
-    "name": "Dr. Rakeshkumar",
+    "name": "Dr. Rakesh Kumar",
     "membership": "UP/8574/93/163/144655/2009-10/L"
   },
   {
     "id": 319,
-    "name": "Dr. Rakeshkumar",
+    "name": "Dr. Rakesh Kumar",
     "membership": "UP/8136/93/128/140181/2008-09/L"
   },
   {
     "id": 320,
-    "name": "Dr. Rakeshkumarbiswas",
+    "name": "Dr. Rakesh Kumar Biswas",
     "membership": "UP/18378/93/415/304274/2023-24/CL"
   },
   {
     "id": 321,
-    "name": "Dr. Rakeshkumarjain",
+    "name": "Dr. Rakesh Kumar Jain",
     "membership": "UP/6608/93/87/108240/2004-05/L"
   },
   {
     "id": 322,
-    "name": "Dr. Ramb.Singh",
+    "name": "Dr. Ram B. Singh",
     "membership": "UP/9695/93/195/157798/2011-12/L"
   },
   {
     "id": 323,
-    "name": "Dr. Rammohanagarwal",
+    "name": "Dr. Ram Mohan Agarwal",
     "membership": "UP/3266/93/23/52906/1996-97/CL"
   },
   {
     "id": 324,
-    "name": "Dr. Ranjnasingh",
+    "name": "Dr. Ranjan Singh",
     "membership": "UP/9210/93/189/149179/2009-10/CL"
   },
   {
     "id": 325,
-    "name": "Dr. Rashmilata",
+    "name": "Dr. Rashmi Lata",
     "membership": "UP/9699/93/199/157802/2011-12/CL"
   },
   {
     "id": 326,
-    "name": "Dr. Ravigangal",
+    "name": "Dr. Ravi Gangal",
     "membership": "UP/12003/93/281/65480/1998-99/CL"
   },
   {
     "id": 327,
-    "name": "Dr. Ravijain",
+    "name": "Dr. Ravi Jain",
     "membership": "UP/13555/93/325/222701/2017-18/CL"
   },
   {
     "id": 328,
-    "name": "Dr. Ravikumarsharma",
+    "name": "Dr. Ravi Kumar Sharma",
     "membership": "UP/12165/93/285/195591/2014-15/CL"
   },
   {
     "id": 329,
-    "name": "Dr. Rehananajam",
+    "name": "Dr. Rehana Najam",
     "membership": "UP/8127/93/119/140152/2008-09/CL"
   },
   {
     "id": 330,
-    "name": "Dr. Rekhaagarwal",
+    "name": "Dr. Rekha Agarwal",
     "membership": "UP/3266/93/23/52906/1996-97/CL"
   },
   {
@@ -1661,32 +1661,32 @@ const membersData = [
   },
   {
     "id": 333,
-    "name": "Dr. Renukatyagi",
+    "name": "Dr. Renuka Tyagi",
     "membership": "UP/11054/93/244/183777/2013-14/CL"
   },
   {
     "id": 334,
-    "name": "Dr. Richaagarwal",
+    "name": "Dr. Richa Agarwal",
     "membership": "UP/14203/93/347/232552/2017-18/CL"
   },
   {
     "id": 335,
-    "name": "Dr. Ichaagarwal",
+    "name": "Dr. Richa Agarwal",
     "membership": "UP/13557/93/327/222708/2017-18/CL"
   },
   {
     "id": 336,
-    "name": "Dr. Richaagrawal",
+    "name": "Dr. Richa Agarwal",
     "membership": "UP/8279/93/139/140826/2008-09/CL"
   },
   {
     "id": 337,
-    "name": "Dr. Richagangal",
+    "name": "Dr. Richa Gangal",
     "membership": "UP/12003/93/281/65480/1998-99/CL"
   },
   {
     "id": 338,
-    "name": "Dr. Richagarg",
+    "name": "Dr. Richa Garg",
     "membership": "UP/11751/93/279/189506/2013-14/CL"
   },
   {
@@ -1696,12 +1696,12 @@ const membersData = [
   },
   {
     "id": 340,
-    "name": "Dr. Ritakhanna",
+    "name": "Dr. Rita Khanna",
     "membership": "UP/12164/93/284/195590/2014-15/CL"
   },
   {
     "id": 341,
-    "name": "Dr. Ritikaagarwal",
+    "name": "Dr. Ritika Agarwal",
     "membership": "UP/8641/93/171/144870/2009-10/L"
   },
   {
@@ -1721,22 +1721,22 @@ const membersData = [
   },
   {
     "id": 345,
-    "name": "Dr. Rubychugh",
+    "name": "Dr. Ruby Chugh",
     "membership": "UP/9693/93/193/157796/2011-12/CL"
   },
   {
     "id": 346,
-    "name": "Dr. Ruhiagarwal",
+    "name": "Dr. Ruhi Agarwal",
     "membership": "UP/10615/93/231/176000/2012-13/CL"
   },
   {
     "id": 347,
-    "name": "Dr. Sabaasad",
+    "name": "Dr. Saba Asad",
     "membership": "UP/7080/93/102/118604/2005-06/CL"
   },
   {
     "id": 348,
-    "name": "Dr. Sachinagarwal",
+    "name": "Dr. Sachin Agarwal",
     "membership": "UP/9703/93/203/157806/2011-12/L"
   },
   {
@@ -1746,22 +1746,22 @@ const membersData = [
   },
   {
     "id": 350,
-    "name": "Dr. Sadhnagupta",
+    "name": "Dr. Sadhna Gupta",
     "membership": "UP/16792/93/392/275879/2021-22/CL"
   },
   {
     "id": 351,
-    "name": "Dr. Saleemakhatar",
+    "name": "Dr. Saleem Akhtar",
     "membership": "UP/11049/93/239/183772/2013-14/L"
   },
   {
     "id": 352,
-    "name": "Dr. Salmanhasan Khan",
+    "name": "Dr. Salman Hasan Khan",
     "membership": "UP/12304/93/302/199736/2014-15/L"
   },
   {
     "id": 353,
-    "name": "Dr. Samirgupta",
+    "name": "Dr. Samir Gupta",
     "membership": "UP/5185/93/69/86030/2001-02/CL"
   },
   {
@@ -1771,22 +1771,22 @@ const membersData = [
   },
   {
     "id": 355,
-    "name": "Dr. Sandeepjain",
+    "name": "Dr. Sandeep Jain",
     "membership": "UP/9694/93/194/157797/2011-12/CL"
   },
   {
     "id": 356,
-    "name": "Dr. Sandeepraj",
+    "name": "Dr. Sandeep Raj",
     "membership": "UP/5186/93/70/86031/2001-02/L"
   },
   {
     "id": 357,
-    "name": "Dr. Sangeetakapoor",
+    "name": "Dr. Sangeeta Kapoor",
     "membership": "UP/16785/93/385/275872/2021-22/L"
   },
   {
     "id": 358,
-    "name": "Dr. Ngitamadan",
+    "name": "Dr. Ngita Madan",
     "membership": "UP/8125/93/117/140149/2008-09/CL"
   },
   {
@@ -1796,32 +1796,32 @@ const membersData = [
   },
   {
     "id": 360,
-    "name": "Dr. Sanjaykumargupta",
+    "name": "Dr. Sanjay Kumar Gupta",
     "membership": "UP/8576/93/165/144657/2009-10/CL"
   },
   {
     "id": 361,
-    "name": "Dr. Sanjeevjain",
+    "name": "Dr. Sanjeev Jain",
     "membership": "UP/8639/93/169/144868/2009-10/L"
   },
   {
     "id": 362,
-    "name": "Dr. Sanjeevkumar",
+    "name": "Dr. Sanjeev Kumar",
     "membership": "UP/11743/93/271/189497/2013-14/L"
   },
   {
     "id": 363,
-    "name": "Dr. Sanjeevkumarsingh",
+    "name": "Dr. Sanjeev Kumar Singh",
     "membership": "UP/15211/93/358/256573/2019-20/CL"
   },
   {
     "id": 364,
-    "name": "Dr. Sanjeevvarshney",
+    "name": "Dr. Sanjeev Varshney",
     "membership": "UP/7982/93/113/137707/2008-09/CL"
   },
   {
     "id": 365,
-    "name": "Dr. Sanoberwasim",
+    "name": "Dr. Sanober Wasim",
     "membership": "UP/8130/93/122/140173/2008-09/CL"
   },
   {
@@ -1831,32 +1831,32 @@ const membersData = [
   },
   {
     "id": 367,
-    "name": "Dr. Sartazalam",
+    "name": "Dr. Sartaz Alam",
     "membership": "UP/16361/93/375/269206/2021-22/L"
   },
   {
     "id": 368,
-    "name": "Dr. Satishkumarraj",
+    "name": "Dr. Satish Kumar Raj",
     "membership": "UP/3289/93/11/52894/1996-97/CL"
   },
   {
     "id": 369,
-    "name": "Dr. Saurabhagarwal",
+    "name": "Dr. Saurabh Agarwal",
     "membership": "UP/9918/93/208/160130/2011-12/CL"
   },
   {
     "id": 370,
-    "name": "Dr. Saurabhjindal",
+    "name": "Dr. Saurabh Jindal",
     "membership": "UP/14202/93/346/232551/2017-18/CL"
   },
   {
     "id": 371,
-    "name": "Dr. Seemadev",
+    "name": "Dr. Seema Dev",
     "membership": "UP/8129/93/121/140171/2008-09/CL"
   },
   {
     "id": 372,
-    "name": "Dr. Seemamiddha",
+    "name": "Dr. Seema Middha",
     "membership": "UP/8122/93/114/140143/2008-09/CL"
   },
   {
@@ -1866,7 +1866,7 @@ const membersData = [
   },
   {
     "id": 374,
-    "name": "Dr. Shaifaligupta",
+    "name": "Dr. Shaifali Gupta",
     "membership": "UP/15602/93/359/259101/2019-20/CL"
   },
   {
@@ -1876,7 +1876,7 @@ const membersData = [
   },
   {
     "id": 376,
-    "name": "Dr. Shailjasingh",
+    "name": "Dr. Shailja Singh",
     "membership": "UP/8131/93/123/140174/2008-09/CL"
   },
   {
@@ -1891,7 +1891,7 @@ const membersData = [
   },
   {
     "id": 379,
-    "name": "Dr. Hantanudutt",
+    "name": "Dr. Hantanu Dutt",
     "membership": "UP/11736/93/264/189489/2013-14/L"
   },
   {
@@ -1901,117 +1901,117 @@ const membersData = [
   },
   {
     "id": 381,
-    "name": "Dr. Shariqarshad",
+    "name": "Dr. Shariq Arshad",
     "membership": "UP/11737/93/265/189490/2013-14/L"
   },
   {
     "id": 382,
-    "name": "Dr. Shashirastogi",
+    "name": "Dr. Shashi Rastogi",
     "membership": "UP/16409/93/377/269634/2021-22/CL"
   },
   {
     "id": 383,
-    "name": "Dr. Shaziakhwaja",
+    "name": "Dr. Shazi Khwaja",
     "membership": "UP/12162/93/282/195588/2014-15/CL"
   },
   {
     "id": 384,
-    "name": "Dr. Sheetalsingh",
+    "name": "Dr. Sheetal Singh",
     "membership": "UP/11750/93/278/189505/2013-14/CL"
   },
   {
     "id": 385,
-    "name": "Dr. Shefalisingh",
+    "name": "Dr. Shefali Singh",
     "membership": "UP/10356/93/225/170526/2012-13/CL"
   },
   {
     "id": 386,
-    "name": "Dr. Sheikhnizamuddinmustafa",
+    "name": "Dr. Sheikh Nizamuddin Mustafa",
     "membership": "UP/14199/93/343/232548/2017-18/CL"
   },
   {
     "id": 387,
-    "name": "Dr. Shilpaagarwal",
+    "name": "Dr. Shilpa Agarwal",
     "membership": "UP/11057/93/247/183780/2013-14/CL"
   },
   {
     "id": 388,
-    "name": "Dr. Shitaagarwal",
+    "name": "Dr. Shita Agarwal",
     "membership": "UP/11234/93/248/186419/2013-14/CL"
   },
   {
     "id": 389,
-    "name": "Dr. Shivambhardwaj",
+    "name": "Dr. Shivam Bhardwaj",
     "membership": "UP/16782/93/382/275869/2021-22/L"
   },
   {
     "id": 390,
-    "name": "Dr. Shivanigarg",
+    "name": "Dr. Shivani Garg",
     "membership": "UP/8578/93/167/144659/2009-10/CL"
   },
   {
     "id": 391,
-    "name": "Dr. Shivankmaheswari",
+    "name": "Dr. Shivank Maheswari",
     "membership": "UP/16779/93/379/275866/2021-22/CL"
   },
   {
     "id": 392,
-    "name": "Dr. Shrutikhanna",
+    "name": "Dr. Shruti Khanna",
     "membership": "UP/4403/93/53/70392/1999-00/CL"
   },
   {
     "id": 393,
-    "name": "Dr. Shubhangiagarawal",
+    "name": "Dr. Shubhangi Agarwal",
     "membership": "UP/8126/93/118/140151/2008-09/CL"
   },
   {
     "id": 394,
-    "name": "Dr. Shuaibmohammad",
+    "name": "Dr. Shuaib Mohammad",
     "membership": "UP/15604/93/361/259103/2019-20/CL"
   },
   {
     "id": 395,
-    "name": "Dr. Hubhamgarg",
+    "name": "Dr. Hubham Garg",
     "membership": "UP/12303/93/301/199735/2014-15/L"
   },
   {
     "id": 396,
-    "name": "Dr. Shubhendugupta",
+    "name": "Dr. Shubhendu Gupta",
     "membership": "UP/12960/93/323/213166/2016-17/CL"
   },
   {
     "id": 397,
-    "name": "Dr. Shubhraagarwal",
+    "name": "Dr. Shubhra Agarwal",
     "membership": "UP/12479/93/312/203227/2015-16/CL"
   },
   {
     "id": 398,
-    "name": "Dr. Shujauddinkhan",
+    "name": "Dr. Shujauddin Khan",
     "membership": "UP/9700/93/200/157803/2011-12/L"
   },
   {
     "id": 399,
-    "name": "Dr. Shwetachaturvedisharma",
+    "name": "Dr. Shweta Chaturvedi Sharma",
     "membership": "UP/7977/93/108/137702/2008-09/CL"
   },
   {
     "id": 400,
-    "name": "Dr. Shwetabhmalik",
+    "name": "Dr. Shweta Bhmalik",
     "membership": "UP/17781/93/399/296765/2023-24/CL"
   },
   {
     "id": 401,
-    "name": "Dr. Shyamolidutta",
+    "name": "Dr. Shyamoli Dutta",
     "membership": "UP/12471/93/305/203217/2015-16/L"
   },
   {
     "id": 402,
-    "name": "Dr. Siddharthdeshwal",
+    "name": "Dr. Siddharth Deshwal",
     "membership": "UP/18376/93/413/304272/2023-24/CL"
   },
   {
     "id": 403,
-    "name": "Dr. Siddharthmehrotra",
+    "name": "Dr. Siddharth Mehrotra",
     "membership": "UP/17152/93/393/282809/2021-22/CL"
   },
   {
@@ -2021,27 +2021,27 @@ const membersData = [
   },
   {
     "id": 405,
-    "name": "Dr. Snehaprakash",
+    "name": "Dr. Sneha Prakash",
     "membership": "UP/18376/93/413/304272/2023-24/CL"
   },
   {
     "id": 406,
-    "name": "Dr. Sohrabkhan",
+    "name": "Dr. Sohrab Khan",
     "membership": "UP/12958/93/321/213162/2016-17/L"
   },
   {
     "id": 407,
-    "name": "Dr. Somyachoudhary",
+    "name": "Dr. Somya Choudhary",
     "membership": "UP/17781/93/399/296765/2023-24/CL"
   },
   {
     "id": 408,
-    "name": "Dr. Sonalagarwal",
+    "name": "Dr. Sonal Agarwal",
     "membership": "UP/13708/93/337/225214/2017-18/CL"
   },
   {
     "id": 409,
-    "name": "Dr. Soubhagyamishra",
+    "name": "Dr. Soubhagya Mishra",
     "membership": "UP/14198/93/342/232547/2017-18/L"
   },
   {
@@ -2051,117 +2051,117 @@ const membersData = [
   },
   {
     "id": 411,
-    "name": "Dr. Subhashdev",
+    "name": "Dr. Subhash Dev",
     "membership": "UP/14776/93/354/247482/2018-19/L"
   },
   {
     "id": 412,
-    "name": "Dr. Subhashsingh",
+    "name": "Dr. Subhash Singh",
     "membership": "UP/7979/93/110/137704/2008-09/CL"
   },
   {
     "id": 413,
-    "name": "Dr. Sudeepkaur",
+    "name": "Dr. Sudeep Kaur",
     "membership": "UP/8575/93/164/144656/2009-10/CL"
   },
   {
     "id": 414,
-    "name": "Dr. Udhirkumarmiddha",
+    "name": "Dr. Udhir Kumar Middha",
     "membership": "UP/8122/93/114/140143/2008-09/CL"
   },
   {
     "id": 415,
-    "name": "Dr. Sudhirkumar Singh",
+    "name": "Dr. Sudhir Kumar Singh",
     "membership": "UP/10618/93/234/176004/2012-13/CL"
   },
   {
     "id": 416,
-    "name": "Dr. Sugandhachaudhry",
+    "name": "Dr. Sugandha Choudhry",
     "membership": "UP/15606/93/363/259105/2019-20/CL"
   },
   {
     "id": 417,
-    "name": "Dr. Sugandhasingh",
+    "name": "Dr. Sugandha Singh",
     "membership": "UP/9919/93/209/160131/2011-12/CL"
   },
   {
     "id": 418,
-    "name": "Dr. Sumanagarwal",
+    "name": "Dr. Suman Agarwal",
     "membership": "UP/9914/93/204/160126/2011-12/CL"
   },
   {
     "id": 419,
-    "name": "Dr. Sumitgupta",
+    "name": "Dr. Sumit Gupta",
     "membership": "UP/17783/93/400/296767/2023-24/CL"
   },
   {
     "id": 420,
-    "name": "Dr. Sumneshrastogi",
+    "name": "Dr. Sumnesh Rastogi",
     "membership": "UP/11048/93/238/183771/2013-14/L"
   },
   {
     "id": 421,
-    "name": "Dr. Suneelkumargupta",
+    "name": "Dr. Suneel Kumar Gupta",
     "membership": "UP/7980/93/111/137705/2008-09/CL"
   },
   {
     "id": 422,
-    "name": "Dr. Sunilgupta",
+    "name": "Dr. Sunil Gupta",
     "membership": "UP/11751/93/279/189506/2013-14/CL"
   },
   {
     "id": 423,
-    "name": "Dr. Sunilkumar",
+    "name": "Dr. Sunil Kumar",
     "membership": "UP/8525/93/148/143967/2009-10/L"
   },
   {
     "id": 424,
-    "name": "Dr. Sunilkumar",
+    "name": "Dr. Sunil Kumar",
     "membership": "UP/8529/93/152/143974/2009-10/L"
   },
   {
     "id": 425,
-    "name": "Dr. Sunilkumarkhatar",
+    "name": "Dr. Sunil Kumar Khatar",
     "membership": "UP/11739/93/267/189492/2013-14/L"
   },
   {
     "id": 426,
-    "name": "Dr. Sunilsharma",
+    "name": "Dr. Sunil Sharma",
     "membership": "UP/8138/93/130/140183/2008-09/L"
   },
   {
     "id": 427,
-    "name": "Dr. Sureshkatiyamoorthy",
+    "name": "Dr. Suresh Katiyamoorthy",
     "membership": "UP/3446/93/25/56983/1996-97/L"
   },
   {
     "id": 428,
-    "name": "Dr. Sushantshridhar",
+    "name": "Dr. Sushant Shridhar",
     "membership": "UP/11241/93/255/186426/2013-14/CL"
   },
   {
     "id": 429,
-    "name": "Dr. Sushmarathi",
+    "name": "Dr. Sushma Rathi",
     "membership": "UP/13558/93/328/222709/2017-18/CL"
   },
   {
     "id": 430,
-    "name": "Dr. Sushyantsingh",
+    "name": "Dr. Sushyant Singh",
     "membership": "UP/8131/93/123/140174/2008-09/CL"
   },
   {
     "id": 431,
-    "name": "Dr. Swechchabansal",
+    "name": "Dr. Swechcha Bansal",
     "membership": "UP/18382/93/419/304278/2023-24/CL"
   },
   {
     "id": 432,
-    "name": "Dr. Syedasmatali",
+    "name": "Dr. Syed Asmat Ali",
     "membership": "UP/14670/93/350/242669/2017-18/CL"
   },
   {
     "id": 433,
-    "name": "Dr. Syedniazhasan",
+    "name": "Dr. Syed Niaz Hasan",
     "membership": "UP/9916/93/206/160128/2011-12/L"
   },
   {
@@ -2171,17 +2171,17 @@ const membersData = [
   },
   {
     "id": 435,
-    "name": "Dr. Tariqahmad",
+    "name": "Dr. Tariq Ahmad",
     "membership": "UP/13174/93/324/214249/2016-17/CL"
   },
   {
     "id": 436,
-    "name": "Dr. Tarunagarwal",
+    "name": "Dr. Tarun Agarwal",
     "membership": "UP/3255/93/14/52897/1996-97/L"
   },
   {
     "id": 437,
-    "name": "Dr. Tejpalsingh",
+    "name": "Dr. Tej Pal Singh",
     "membership": "UP/9915/93/205/160127/2011-12/L"
   },
   {
@@ -2191,37 +2191,37 @@ const membersData = [
   },
   {
     "id": 439,
-    "name": "Dr. Tushargupta",
+    "name": "Dr. Tushar Gupta",
     "membership": "UP/16355/93/369/269200/2021-22/CL"
   },
   {
     "id": 440,
-    "name": "Dr. Udaivirsingh",
+    "name": "Dr. Udaivir Singh",
     "membership": "UP/4507/93/63/71898/1999-00/L"
   },
   {
     "id": 441,
-    "name": "Dr. Umarfarooque",
+    "name": "Dr. Umar Farooque",
     "membership": "UP/12474/93/308/203220/2015-16/L"
   },
   {
     "id": 442,
-    "name": "Dr. Umeshchandrarastogi",
+    "name": "Dr. Umesh Chandra Rastogi",
     "membership": "UP/6016/93/37/101937/2003-04/L"
   },
   {
     "id": 443,
-    "name": "Dr. V.S.Dixit",
+    "name": "Dr. V.S. Dixit",
     "membership": "UP/10610/93/226/175994/2012-13/L"
   },
   {
     "id": 444,
-    "name": "Dr. Vaibhavgupta",
+    "name": "Dr. Vaibhav Gupta",
     "membership": "UP/12477/93/310/203225/2015-16/L"
   },
   {
     "id": 445,
-    "name": "Dr. Vandanatiwari",
+    "name": "Dr. Vandana Tiwari",
     "membership": "UP/16355/93/369/269200/2021-22/CL"
   },
   {
@@ -2231,27 +2231,27 @@ const membersData = [
   },
   {
     "id": 447,
-    "name": "Dr. Vibhourjain",
+    "name": "Dr. Vibhour Jain",
     "membership": "UP/6025/93/82/101946/2003-04/CL"
   },
   {
     "id": 448,
-    "name": "Dr. Vidhiagarwal",
+    "name": "Dr. Vidhi Agarwal",
     "membership": "UP/11748/93/276/189502/2013-14/CL"
   },
   {
     "id": 449,
-    "name": "Dr. Vidushigupta",
+    "name": "Dr. Vidushi Gupta",
     "membership": "UP/7982/93/113/137707/2008-09/CL"
   },
   {
     "id": 450,
-    "name": "Dr. Vijaikumargoel",
+    "name": "Dr. Vijay Kumar Goel",
     "membership": "UP/11237/93/251/186422/2013-14/CL"
   },
   {
     "id": 451,
-    "name": "Dr. Vijayagarwal",
+    "name": "Dr. Vijay Agarwal",
     "membership": "UP/10355/93/224/170525/2012-13/CL"
   },
   {
@@ -2261,62 +2261,62 @@ const membersData = [
   },
   {
     "id": 453,
-    "name": "Dr. Vijendrasingh",
+    "name": "Dr. Vijendra Singh",
     "membership": "UP/15603/93/360/259102/2019-20/CL"
   },
   {
     "id": 454,
-    "name": "Dr. Vikasgupta",
+    "name": "Dr. Vikas Gupta",
     "membership": "UP/3545/93/29/58356/1996-97/L"
   },
   {
     "id": 455,
-    "name": "Dr. Vikramsinghal",
+    "name": "Dr. Vikram Singhal",
     "membership": "UP/14203/93/347/232552/2017-18/CL"
   },
   {
     "id": 456,
-    "name": "Dr. Vimitaagarwal",
+    "name": "Dr. Vimita Agarwal",
     "membership": "UP/9205/93/184/149172/2009-10/CL"
   },
   {
     "id": 457,
-    "name": "Dr. Vinamragupta",
+    "name": "Dr. Vinamra Gupta",
     "membership": "UP/17784/93/401/296768/2023-24/L"
   },
   {
     "id": 458,
-    "name": "Dr. Vinamrasinghal",
+    "name": "Dr. Vinamra Singhal",
     "membership": "UP/16791/93/391/275878/2021-22/CL"
   },
   {
     "id": 459,
-    "name": "Dr. Vinaykumar",
+    "name": "Dr. Vinay Kumar",
     "membership": "UP/9202/93/181/149169/2009-10/L"
   },
   {
     "id": 460,
-    "name": "Dr. Vinaykumargupta",
+    "name": "Dr. Vinay Kumar Gupta",
     "membership": "UP/3257/93/15/52898/1996-97/L"
   },
   {
     "id": 461,
-    "name": "Dr. Vinaymaheshwari",
+    "name": "Dr. Vinay Maheshwari",
     "membership": "UP/7976/93/107/137701/2008-09/L"
   },
   {
     "id": 462,
-    "name": "Dr. Vineetgarg",
+    "name": "Dr. Vineet Garg",
     "membership": "UP/8578/93/167/144659/2009-10/CL"
   },
   {
     "id": 463,
-    "name": "Dr. Vineetaagarwa;",
+    "name": "Dr. Vineeta Agarwal",
     "membership": "UP/8417/93/146/143270/2009-10/CL"
   },
   {
     "id": 464,
-    "name": "Dr. Vinitaagarwal",
+    "name": "Dr. Vinita Agarwal",
     "membership": "UP/8282/93/142/140829/2008-09/CL"
   },
   {
@@ -2331,22 +2331,22 @@ const membersData = [
   },
   {
     "id": 467,
-    "name": "Dr. Vishalrastogi",
+    "name": "Dr. Vishal Rastogi",
     "membership": "UP/9209/93/188/149178/2009-10/CL"
   },
   {
     "id": 468,
-    "name": "Dr. Vishnusaran",
+    "name": "Dr. Vishnu Saran",
     "membership": "UP/4400/93/50/70389/1999-00/L"
   },
   {
     "id": 469,
-    "name": "Dr. Vivekgoyal",
+    "name": "Dr. Vivek Goyal",
     "membership": "UP/10615/93/231/176000/2012-13/CL"
   },
   {
     "id": 470,
-    "name": "Dr. Wahabshadmakhan",
+    "name": "Dr. Wahab Shadma khan",
     "membership": "UP/13562/93/332/222716/2017-18/L"
   },
   {
@@ -2356,27 +2356,27 @@ const membersData = [
   },
   {
     "id": 472,
-    "name": "Dr. Yogendrapunja",
+    "name": "Dr. Yogendra Punja",
     "membership": "UP/10619/93/235/176005/2012-13/CL"
   },
   {
     "id": 473,
-    "name": "Dr. Yogeshchandragupta",
+    "name": "Dr. Yogesh Chandra Gupta",
     "membership": "UP/4402/93/52/70391/1999-00/CL"
   },
   {
     "id": 474,
-    "name": "Dr. Yogeshpandey",
+    "name": "Dr. Yogesh Pandey",
     "membership": "UP/11723/93/263/189326/2013-14/CL"
   },
   {
     "id": 475,
-    "name": "Dr. Yusufalityagi",
+    "name": "Dr. Yusufali Tyagi",
     "membership": "UP/16781/93/381/275868/2021-22/L"
   },
   {
     "id": 476,
-    "name": "Dr. Zaraansari",
+    "name": "Dr. Zara Ansari",
     "membership": "UP/18379/93/416/304275/2023-24/CL"
   }
 ];
