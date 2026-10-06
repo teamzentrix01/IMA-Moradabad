@@ -149,7 +149,7 @@ export default function Registration() {
                     </div>
 
                     {/* Registration Form Card */}
-                    <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10">
+                    <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-7 md:p-10">
                         <form
                             action="https://formsubmit.co/imamoradabad@gmail.com"
                             method="POST"

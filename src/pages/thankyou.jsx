@@ -25,7 +25,7 @@ export default function ThankYou() {
 
             <div className="max-w-2xl w-full relative z-10">
                 {/* Card Container */}
-                <div className={`bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 text-center border border-red-100 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <div className={`bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-5 sm:p-8 md:p-12 text-center border border-red-100 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
 
                     {/* Success Icon */}
                     <div className="flex justify-center mb-8">

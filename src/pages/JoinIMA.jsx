@@ -14,7 +14,9 @@ import {
   HelpCircle,
   Stethoscope,
   Send,
-  GraduationCap
+  GraduationCap,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Banner from '../components/ui/Banner';
@@ -22,6 +24,7 @@ import AnimatedCounter from '../components/ui/AnimatedCounter';
 
 export default function JoinIMA() {
   const navigate = useNavigate();
+  const [activeSlide, setActiveSlide] = useState(0);
 
   // Simple quick inquiry state
   const [formData, setFormData] = useState({
@@ -117,6 +120,153 @@ export default function JoinIMA() {
     setSubmitted(true);
   };
 
+  const renderFormCard = (isMobile = false) => (
+    <div 
+      data-aos={isMobile ? "fade-up" : "fade-left"} 
+      className={`bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-100/90 relative overflow-hidden ${isMobile ? 'my-6 shadow-emerald-500/5' : ''}`}
+    >
+      {/* Subtle top brand accent line */}
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-600" />
+
+      {/* Form Heading Section */}
+      <div className="text-center mb-5 sm:mb-6">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-3 py-0.5 rounded-full inline-block mb-2">
+          Fast Track Inquiry
+        </span>
+        <h3 className="text-lg sm:text-xl font-bold font-libre text-slate-900">
+          Apply or Request Membership Form
+        </h3>
+        <p className="text-slate-500 text-xs mt-1">
+          Fill in your details. Secretariat will send the official package.
+        </p>
+      </div>
+
+      {submitted ? (
+        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center text-emerald-900">
+          <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
+          <h4 className="text-base font-bold font-libre">Thank You, Doctor!</h4>
+          <p className="text-xs text-emerald-700 mt-1">
+            Your membership interest has been registered. The IMA Moradabad administrative desk will contact you via email/phone with guidelines.
+          </p>
+          <button
+            onClick={() => setSubmitted(false)}
+            className="mt-3.5 text-xs font-bold text-emerald-700 underline cursor-pointer"
+          >
+            Submit another inquiry
+          </button>
+        </div>
+      ) : (
+        <form onSubmit={handleFormSubmit} className="space-y-3.5">
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1">
+              Doctor's Full Name *
+            </label>
+            <input
+              type="text"
+              name="fullName"
+              required
+              placeholder="Dr. Rajesh Gupta"
+              value={formData.fullName}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 mb-1">
+                Mobile Number *
+              </label>
+              <input
+                type="tel"
+                name="mobile"
+                required
+                maxLength={10}
+                placeholder="10-digit mobile"
+                value={formData.mobile}
+                onChange={handleInputChange}
+                className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 mb-1">
+                Medical Council Reg.
+              </label>
+              <input
+                type="text"
+                name="regNumber"
+                placeholder="e.g. UP-MC-12345"
+                value={formData.regNumber}
+                onChange={handleInputChange}
+                className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1">
+              Email Address *
+            </label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="doctor@example.com"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 mb-1">
+                Primary Qualification
+              </label>
+              <input
+                type="text"
+                name="qualification"
+                placeholder="e.g. MBBS, MD, MS"
+                value={formData.qualification}
+                onChange={handleInputChange}
+                className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-semibold text-slate-700 mb-1">
+                Speciality / Designation
+              </label>
+              <input
+                type="text"
+                name="speciality"
+                placeholder="e.g. Physician, Surgeon"
+                value={formData.speciality}
+                onChange={handleInputChange}
+                className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
+              />
+            </div>
+          </div>
+
+          <div className="pt-2">
+            <button
+              type="submit"
+              className="w-full py-2.5 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-700 hover:to-teal-800 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer inline-flex items-center justify-center gap-2"
+            >
+              <Send className="w-3.5 h-3.5" />
+              <span>Submit Membership Request</span>
+            </button>
+          </div>
+
+          <p className="text-[10px] text-center text-slate-400 mt-2">
+            🔒 Your medical details are stored securely for IMA branch communications only.
+          </p>
+        </form>
+      )}
+    </div>
+  );
+
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Banner */}
@@ -126,8 +276,8 @@ export default function JoinIMA() {
       <section className="py-8 sm:py-10 px-4 sm:px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* LEFT COLUMN: Informative Content (Smoothly scrolls) */}
-          <div className="lg:col-span-7 space-y-10">
+          {/* LEFT COLUMN: Informative Content */}
+          <div className="lg:col-span-7 space-y-8 sm:space-y-10">
             
             {/* Intro Header */}
             <div>
@@ -143,6 +293,11 @@ export default function JoinIMA() {
               <p data-aos="fade-up" data-aos-delay="100" className="text-sm sm:text-base text-slate-600 leading-relaxed font-playfair">
                 The <strong>Indian Medical Association (IMA) Moradabad Branch</strong> invites all eligible modern medicine practitioners to join our unified voice. Protect your rights, empower your career, and serve the community together.
               </p>
+
+              {/* MOBILE ONLY: Form directly after paragraph */}
+              <div className="block lg:hidden">
+                {renderFormCard(true)}
+              </div>
 
               {/* Quick Stats Bar */}
               <div data-aos="zoom-in" data-aos-delay="150" className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
@@ -173,19 +328,88 @@ export default function JoinIMA() {
               </div>
             </div>
 
-            {/* Benefits Grid */}
+            {/* Why Join IMA Moradabad Cards */}
             <div>
-              <div data-aos="fade-up" className="mb-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-libre">
-                  Why Join <span className="text-emerald-700">IMA Moradabad</span>?
-                </h2>
-                <div className="w-12 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mt-2 rounded-full" />
-                <p className="text-slate-600 text-xs sm:text-sm mt-1.5">
-                  Unrivaled professional representation, lifelong security, and academic advantages.
-                </p>
+              <div data-aos="fade-up" className="flex items-end justify-between mb-4 sm:mb-6">
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 font-libre">
+                    Why Join <span className="text-emerald-700">IMA Moradabad</span>?
+                  </h2>
+                  <div className="w-12 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 mt-2 rounded-full" />
+                  <p className="text-slate-600 text-xs sm:text-sm mt-1.5">
+                    Unrivaled professional representation, lifelong security, and academic advantages.
+                  </p>
+                </div>
+
+                {/* Mobile Slider Arrow Controls */}
+                <div className="flex md:hidden items-center gap-1.5">
+                  <button
+                    onClick={() => setActiveSlide((prev) => (prev > 0 ? prev - 1 : benefits.length - 1))}
+                    aria-label="Previous slide"
+                    className="p-1.5 rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 shadow-xs"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={() => setActiveSlide((prev) => (prev < benefits.length - 1 ? prev + 1 : 0))}
+                    aria-label="Next slide"
+                    className="p-1.5 rounded-full bg-white border border-slate-200 text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 shadow-xs"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* MOBILE SLIDER VIEW */}
+              <div className="block md:hidden">
+                <div className="overflow-hidden rounded-2xl">
+                  <div 
+                    className="flex transition-transform duration-500 ease-out"
+                    style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+                  >
+                    {benefits.map((b, idx) => {
+                      const Icon = b.icon;
+                      return (
+                        <div key={idx} className="w-full flex-shrink-0 px-0.5">
+                          <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between min-h-[210px]">
+                            <div>
+                              <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${b.color} flex items-center justify-center text-white mb-4 shadow-sm`}>
+                                <Icon className="w-6 h-6" />
+                              </div>
+                              <h3 className="text-base font-bold text-slate-900 mb-2">
+                                {b.title}
+                              </h3>
+                              <p className="text-slate-600 text-xs leading-relaxed">
+                                {b.description}
+                              </p>
+                            </div>
+                            <div className="text-[10px] text-slate-400 font-semibold mt-3 text-right">
+                              {idx + 1} of {benefits.length}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Mobile Slider Dots Indicator */}
+                <div className="flex items-center justify-center gap-1.5 mt-3">
+                  {benefits.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveSlide(idx)}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        activeSlide === idx ? 'w-6 bg-emerald-600' : 'w-2 bg-slate-300'
+                      }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* DESKTOP & TABLET GRID VIEW */}
+              <div className="hidden md:grid md:grid-cols-2 gap-4">
                 {benefits.map((b, idx) => {
                   const Icon = b.icon;
                   return (
@@ -282,152 +506,9 @@ export default function JoinIMA() {
 
           </div>
 
-          {/* RIGHT COLUMN: Sticky Form Card */}
-          <div className="lg:col-span-5 lg:sticky lg:top-24 z-20">
-            <div 
-              data-aos="fade-left" 
-              className="bg-white rounded-3xl p-6 sm:p-7 shadow-xl border border-slate-100/90 relative overflow-hidden"
-            >
-              {/* Subtle top brand accent line */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-600" />
-
-              {/* Form Heading Section */}
-              <div className="text-center mb-6">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-3 py-0.5 rounded-full inline-block mb-2">
-                  Fast Track Inquiry
-                </span>
-                <h3 className="text-lg sm:text-xl font-bold font-libre text-slate-900">
-                  Apply or Request Membership Form
-                </h3>
-                <p className="text-slate-500 text-xs mt-1">
-                  Fill in your details. Secretariat will send the official package.
-                </p>
-              </div>
-
-              {submitted ? (
-                <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center text-emerald-900">
-                  <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto mb-2" />
-                  <h4 className="text-base font-bold font-libre">Thank You, Doctor!</h4>
-                  <p className="text-xs text-emerald-700 mt-1">
-                    Your membership interest has been registered. The IMA Moradabad administrative desk will contact you via email/phone with guidelines.
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-3.5 text-xs font-bold text-emerald-700 underline cursor-pointer"
-                  >
-                    Submit another inquiry
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleFormSubmit} className="space-y-3.5">
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Doctor's Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      name="fullName"
-                      required
-                      placeholder="Dr. Rajesh Gupta"
-                      value={formData.fullName}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Mobile Number *
-                      </label>
-                      <input
-                        type="tel"
-                        name="mobile"
-                        required
-                        maxLength={10}
-                        placeholder="10-digit mobile"
-                        value={formData.mobile}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Medical Council Reg.
-                      </label>
-                      <input
-                        type="text"
-                        name="regNumber"
-                        placeholder="e.g. UP-MC-12345"
-                        value={formData.regNumber}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-slate-700 mb-1">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      placeholder="doctor@example.com"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Primary Qualification
-                      </label>
-                      <input
-                        type="text"
-                        name="qualification"
-                        placeholder="e.g. MBBS, MD, MS"
-                        value={formData.qualification}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-semibold text-slate-700 mb-1">
-                        Speciality / Designation
-                      </label>
-                      <input
-                        type="text"
-                        name="speciality"
-                        placeholder="e.g. Physician, Surgeon"
-                        value={formData.speciality}
-                        onChange={handleInputChange}
-                        className="w-full px-3 py-2 text-xs sm:text-sm rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50/50"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      className="w-full py-2.5 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-700 hover:to-teal-800 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer inline-flex items-center justify-center gap-2"
-                    >
-                      <Send className="w-3.5 h-3.5" />
-                      <span>Submit Membership Request</span>
-                    </button>
-                  </div>
-
-                  <p className="text-[10px] text-center text-slate-400 mt-2">
-                    🔒 Your medical details are stored securely for IMA branch communications only.
-                  </p>
-                </form>
-              )}
-            </div>
+          {/* RIGHT COLUMN: Sticky Form Card on Desktop Only */}
+          <div className="hidden lg:block lg:col-span-5 lg:sticky lg:top-24 z-20">
+            {renderFormCard(false)}
           </div>
 
         </div>
@@ -435,3 +516,4 @@ export default function JoinIMA() {
     </div>
   );
 }
+

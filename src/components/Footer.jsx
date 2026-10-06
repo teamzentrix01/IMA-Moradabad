@@ -31,14 +31,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-900 text-gray-300">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-900 text-gray-300 overflow-hidden">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {/* About Section */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md flex-shrink-0">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md flex-shrink-0">
                 <img
                   src="/IMA_LOGO.png"
                   alt="IMA Moradabad Logo"

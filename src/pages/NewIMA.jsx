@@ -8,15 +8,15 @@ export default function NewIMA() {
     <div className="bg-slate-50 min-h-screen flex flex-col justify-between">
       <div>
         {/* Banner */}
-        <Banner 
-          title="NEW BUILDING" 
-          tagline="State-of-the-art infrastructure & medical complex for IMA Moradabad" 
+        <Banner
+          title="NEW BUILDING"
+          tagline="State-of-the-art infrastructure & medical complex for IMA Moradabad"
         />
 
         {/* Coming Soon Section - 40% Compressed & Compact */}
         <section className="py-8 sm:py-12 px-4 sm:px-6 max-w-2xl mx-auto text-center">
-          <div 
-            data-aos="zoom-in" 
+          <div
+            data-aos="zoom-in"
             className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-slate-100 relative overflow-hidden"
           >
             {/* Ambient decorative glows */}
