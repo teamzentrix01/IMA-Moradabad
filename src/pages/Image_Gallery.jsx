@@ -115,10 +115,12 @@ export default function Image_Gallery() {
         }
     ];
 
-    // Helper to get year from item.date (e.g. "15 Jan 2025" -> "2025")
+    // Map calendar years in the archive to IMA session labels.
     const getYearFromDate = (dateStr) => {
         const match = dateStr?.match(/\b(20\d{2})\b/);
-        return match ? match[1] : '';
+        if (!match) return '';
+        const year = Number(match[1]);
+        return `${year}/${String(year + 1).slice(-2)}`;
     };
 
     // Extract all distinct years from the gallery items dynamically, sorted
@@ -126,8 +128,7 @@ export default function Image_Gallery() {
         new Set(galleryItems.map(item => getYearFromDate(item.date)).filter(Boolean))
     ).sort();
 
-    // Year options including 2025, 2026
-    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026'])).sort()];
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025/26', '2026/27']))].sort((a, b) => a === 'ALL' ? -1 : b === 'ALL' ? 1 : a.localeCompare(b));
     const categories = ['ALL', 'MEDICAL CAMP', 'COMMUNITY', 'EVENTS', 'EDUCATION', 'AWARENESS'];
 
     const filteredItems = galleryItems.filter(item => {

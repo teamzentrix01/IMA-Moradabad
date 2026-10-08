@@ -98,17 +98,19 @@ const Video_Gallery = () => {
         }
     ];
 
-    // Helper to extract 4 digit year from date string
+    // Map calendar years in the archive to IMA session labels.
     const getYearFromDate = (dateStr) => {
         const match = dateStr?.match(/\b(20\d{2})\b/);
-        return match ? match[1] : '';
+        if (!match) return '';
+        const year = Number(match[1]);
+        return `${year}/${String(year + 1).slice(-2)}`;
     };
 
     const distinctYears = Array.from(
         new Set(videos.map(item => getYearFromDate(item.date)).filter(Boolean))
     ).sort();
 
-    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025', '2026'])).sort()];
+    const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025/26', '2026/27']))].sort((a, b) => a === 'ALL' ? -1 : b === 'ALL' ? 1 : a.localeCompare(b));
 
     const filteredVideos = selectedYear === 'ALL'
         ? videos
