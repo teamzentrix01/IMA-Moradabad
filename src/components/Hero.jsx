@@ -40,7 +40,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/upcomingevents",
       gradient: "from-rose-600 to-red-600",
       icon: Heart,
-      image: "/ima-hero-image-2.jpg"
+      image: "/ima-hero-image-1.jpg"
     },
     {
       title: "CME Programs & Events",
@@ -53,7 +53,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/contactus",
       gradient: "from-blue-600 to-indigo-600",
       icon: Calendar,
-      image: "/ima-hero-image-3.jpg"
+      image: "/ima-hero-image-1.jpg"
     },
     {
       title: "Young Doctors Forum",
@@ -66,7 +66,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/newsgallery",
       gradient: "from-purple-600 to-pink-600",
       icon: Users,
-      image: "/ima-hero-image-4.jpg"
+      image: "/ima-hero-image-1.jpg"
     },
     {
       title: "Awards & Recognition",

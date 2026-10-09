@@ -40,6 +40,8 @@ const BloodDonate = lazy(() => import('./pages/BloodDonate'));
 const Nominate = lazy(() => import('./pages/Nominate'));
 const JoinIMA = lazy(() => import('./pages/JoinIMA'));
 const NewIMA = lazy(() => import('./pages/NewIMA'));
+const BloodGroupDirectory = lazy(() => import('./pages/BloodGroupDirectory'));
+const BloodBanks = lazy(() => import('./pages/BloodBanks'));
 
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component) => (
@@ -73,6 +75,8 @@ const router = createBrowserRouter([
       { path: 'join-ima', element: withSuspense(JoinIMA) },
       { path: 'new-ima', element: withSuspense(NewIMA) },
       { path: 'members-directory', element: withSuspense(MembersDirectory) },
+      { path: 'about/blood-group', element: withSuspense(BloodGroupDirectory) },
+      { path: 'about/blood-banks', element: withSuspense(BloodBanks) },
       { path: 'cme', element: withSuspense(CME) },
       { path: 'conference', element: withSuspense(Conference) },
       { path: 'thankyou', element: withSuspense(ThankYou) },

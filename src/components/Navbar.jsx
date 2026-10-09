@@ -12,13 +12,18 @@ import {
   Home,
   Sparkles
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActiveItem = (item) => item.children
+    ? item.children.some((child) => location.pathname === child.path)
+    : location.pathname === item.path;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -56,20 +61,23 @@ export default function Navbar() {
           path: '/about'
         },
         {
-          name: 'President Message',
-          path: '/presidentmessage'
+          name: 'IMA Messages',
+          children: [
+            { name: 'President Message', path: '/presidentmessage' },
+            { name: 'Secretary Message', path: '/secretarymessage' },
+            { name: 'Treasurer Message', path: '/treasurer-message' }
+          ]
         },
         {
-          name: 'Secretary Message',
-          path: '/secretarymessage'
+          name: 'IMA Directories',
+          children: [
+            { name: "Member's Directory", path: '/members-directory' },
+            { name: 'Blood Group Directory', path: '/about/blood-group' }
+          ]
         },
         {
-          name: 'Treasurer Message',
-          path: '/treasurer-message'
-        },
-        {
-          name: "Member's Directory",
-          path: '/members-directory'
+          name: 'Blood Banks',
+          path: '/about/blood-banks'
         }
       ]
     },
@@ -136,16 +144,22 @@ export default function Navbar() {
       hasDropdown: true,
       dropdownItems: [
         {
-          name: 'Videos',
-          path: '/videogallery'
+          name: 'Videos', path: '/videogallery', children: [
+            { name: '2025/26', path: '/videogallery?year=2025%2F26' },
+            { name: '2026/27', path: '/videogallery?year=2026%2F27' }
+          ]
         },
         {
-          name: 'Gallery',
-          path: '/imagegallery'
+          name: 'Gallery', path: '/imagegallery', children: [
+            { name: '2025/26', path: '/imagegallery?year=2025%2F26' },
+            { name: '2026/27', path: '/imagegallery?year=2026%2F27' }
+          ]
         },
         {
-          name: 'News',
-          path: '/newsgallery'
+          name: 'News', path: '/newsgallery', children: [
+            { name: '2025/26', path: '/newsgallery?year=2025%2F26' },
+            { name: '2026/27', path: '/newsgallery?year=2026%2F27' }
+          ]
         }
       ]
     },
@@ -199,9 +213,9 @@ export default function Navbar() {
                     text-black
                     bg-white
                     hover:text-blue-600
+                    ${isActiveItem(item) ? 'text-blue-600' : ''}
                     font-medium
                     cursor-pointer
-                    hover:border-b-4
                     duration-200
                     ease-in-out
                     transition-all
@@ -244,32 +258,17 @@ export default function Navbar() {
                   >
                     <div className="py-2">
 
-                      {item.dropdownItems?.map(
-                        (subItem, subIndex) => (
-                          <button
-                            key={subIndex}
-                            onClick={() =>
-                              handleNavigation(subItem.path)
-                            }
-                            className="
-                              block
-                              w-full
-                              text-left
-                              px-4
-                              py-3
-                              text-gray-800
-                              hover:text-black
-                              hover:bg-gray-100
-                              transition-colors
-                              duration-200
-                              text-sm
-                              cursor-pointer
-                            "
-                          >
+                      {item.dropdownItems?.map((subItem, subIndex) => (
+                        <div key={subIndex} className="relative group/sub">
+                          <button onClick={() => subItem.path && handleNavigation(subItem.path)} className="block w-full text-left px-4 py-3 text-gray-800 hover:text-black hover:bg-gray-100 transition-colors duration-200 text-sm cursor-pointer flex items-center justify-between">
                             {subItem.name}
+                            {subItem.children && <ChevronDown size={14} className="-rotate-90" />}
                           </button>
-                        )
-                      )}
+                          {subItem.children && <div className="absolute left-full top-0 ml-1 w-52 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover/sub:opacity-100 group-hover/sub:visible transition-all duration-200 z-50 py-2">
+                            {subItem.children.map((child) => <button key={child.name} onClick={() => handleNavigation(child.path)} className="block w-full text-left px-4 py-3 text-sm text-gray-800 hover:bg-gray-100 hover:text-black">{child.name}</button>)}
+                          </div>}
+                        </div>
+                      ))}
 
                     </div>
                   </div>
@@ -498,13 +497,10 @@ export default function Navbar() {
 
                       {item.dropdownItems.map(
                         (subItem, idx) => (
+                          <div key={idx}>
                           <button
                             key={idx}
-                            onClick={() =>
-                              handleNavigation(
-                                subItem.path
-                              )
-                            }
+                            onClick={() => subItem.children ? toggleDropdown(subItem.name) : handleNavigation(subItem.path)}
                             className="
                               w-full
                               text-left
@@ -536,6 +532,8 @@ export default function Navbar() {
                             {subItem.name}
 
                           </button>
+                          {subItem.children && activeDropdown === subItem.name && <div className="ml-5 border-l border-slate-200 pl-2">{subItem.children.map(child => <button key={child.name} onClick={() => handleNavigation(child.path)} className="w-full text-left px-4 py-2 text-xs text-gray-600 hover:text-blue-700">{child.name}</button>)}</div>}
+                          </div>
                         )
                       )}
 

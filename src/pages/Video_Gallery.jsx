@@ -10,9 +10,11 @@ import {
     ExternalLink 
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
+import { useSearchParams } from 'react-router-dom';
 
 const Video_Gallery = () => {
     const [selectedYear, setSelectedYear] = useState('ALL');
+    const [searchParams] = useSearchParams();
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const videos = [
@@ -111,6 +113,10 @@ const Video_Gallery = () => {
     ).sort();
 
     const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025/26', '2026/27']))].sort((a, b) => a === 'ALL' ? -1 : b === 'ALL' ? 1 : a.localeCompare(b));
+
+    useEffect(() => {
+        setSelectedYear(searchParams.get('year') || 'ALL');
+    }, [searchParams]);
 
     const filteredVideos = selectedYear === 'ALL'
         ? videos

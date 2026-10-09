@@ -12,10 +12,12 @@ import {
     Eye
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
+import { useSearchParams } from 'react-router-dom';
 
 export default function Image_Gallery() {
     const [selectedCategory, setSelectedCategory] = useState('ALL');
     const [selectedYear, setSelectedYear] = useState('ALL');
+    const [searchParams] = useSearchParams();
     const [activeImageIndex, setActiveImageIndex] = useState(null);
 
     const galleryItems = [
@@ -130,6 +132,10 @@ export default function Image_Gallery() {
 
     const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025/26', '2026/27']))].sort((a, b) => a === 'ALL' ? -1 : b === 'ALL' ? 1 : a.localeCompare(b));
     const categories = ['ALL', 'MEDICAL CAMP', 'COMMUNITY', 'EVENTS', 'EDUCATION', 'AWARENESS'];
+
+    useEffect(() => {
+        setSelectedYear(searchParams.get('year') || 'ALL');
+    }, [searchParams]);
 
     const filteredItems = galleryItems.filter(item => {
         const itemYear = getYearFromDate(item.date);

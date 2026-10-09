@@ -5,6 +5,19 @@ import { Link } from 'react-router-dom';
 
 const events = [
     {
+        month: 'OCT',
+        day: '10',
+        year: '2026',
+        image: '/PUBLIC OUTREACH PROGRAM UPDATED.png',
+        title: 'Public Outreach Programme – Mental Health Initiative',
+        address: 'Schools across Moradabad: CL Gupta World School, PMS Public School, SS Children Academy, DPS, DPGS, Golden Gate and others',
+        time: '10 Oct — 25 Oct 2026',
+        description: '“Nurture the Mind – Shape the Future”. IMA Moradabad members will address students of classes 9th to 12th about teenage mental health, the judicious use of mobile phones and screens, and the harmful effects of substance use. This initiative is being conducted around World Mental Health Day as part of IMA Moradabad’s social responsibility programme.',
+        attendees: 'Students of Classes 9–12',
+        category: 'Public Outreach',
+        status: 'Programme Announced'
+    },
+    {
         month: 'NOV',
         day: '15',
         year: '2025',
@@ -51,7 +64,7 @@ export default function UpComing_Events() {
             <Banner title="UPCOMING EVENTS" />
 
             <div className="min-h-screen py-8 sm:py-12 px-4 bg-gradient-to-br from-slate-50 via-white to-slate-100">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-7xl mx-auto">
                     
                     {/* Header Section - Compressed & Balanced */}
                     <div className="text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
@@ -68,7 +81,7 @@ export default function UpComing_Events() {
                     </div>
 
                     {/* Events Grid - Compact, Professional Cards */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
                         {events.map((event, index) => (
                             <div
                                 key={index}

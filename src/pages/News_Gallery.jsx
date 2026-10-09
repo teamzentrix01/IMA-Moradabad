@@ -12,10 +12,12 @@ import {
     ArrowUpRight
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
+import { useSearchParams } from 'react-router-dom';
 
 const News_Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('ALL');
     const [selectedYear, setSelectedYear] = useState('ALL');
+    const [searchParams] = useSearchParams();
     const [activeNewsIndex, setActiveNewsIndex] = useState(null);
 
     const newsArticles = [
@@ -141,6 +143,10 @@ const News_Gallery = () => {
 
     const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025/26', '2026/27']))].sort((a, b) => a === 'ALL' ? -1 : b === 'ALL' ? 1 : a.localeCompare(b));
     const categories = ['ALL', 'HEALTHCARE', 'COMMUNITY', 'CONFERENCE', 'PUBLIC HEALTH', 'SOCIAL SERVICE', 'EDUCATION'];
+
+    useEffect(() => {
+        setSelectedYear(searchParams.get('year') || 'ALL');
+    }, [searchParams]);
 
     const filteredNews = newsArticles.filter(item => {
         const itemYear = getYearFromDate(item.date);
