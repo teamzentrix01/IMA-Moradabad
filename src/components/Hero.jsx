@@ -9,13 +9,14 @@ import {
   Users,
   ArrowRight
 } from 'lucide-react';
+import { getUpcomingEvents, formatEventDate } from '../data/events';
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const navigate = useNavigate();
 
-  const slides = [
+  const standardSlides = [
     {
       title: `Our Journey In Care`,
       subtitle: "Since 1928",
@@ -82,6 +83,20 @@ export default function HeroSlider() {
       image: "/ima-hero-image-1.jpg"
     }
   ];
+
+  const featuredEvent = getUpcomingEvents()[0];
+  const slides = featuredEvent ? [{
+    title: featuredEvent.title,
+    subtitle: featuredEvent.status,
+    description: `${formatEventDate(featuredEvent)} | ${featuredEvent.venue}. ${featuredEvent.shortDescription}`,
+    cta: 'Event Details',
+    ctaLink: '/upcomingevents',
+    ctaSecondary: 'Register',
+    ctaSecondaryLink: featuredEvent.registrationLink,
+    gradient: 'from-teal-700 to-emerald-700',
+    icon: Calendar,
+    image: featuredEvent.image
+  }, ...standardSlides] : standardSlides;
 
   useEffect(() => {
     if (!isAutoPlaying) return;

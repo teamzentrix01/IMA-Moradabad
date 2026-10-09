@@ -1,0 +1,12 @@
+import { Calendar, MapPin, Users, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { formatEventDate } from '../data/events';
+
+export default function EventCard({ event }) {
+  const date = new Date(`${event.startDate}T00:00:00+05:30`);
+  return <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 hover:-translate-y-1 flex flex-col justify-between">
+    <div><div className="relative overflow-hidden h-44 sm:h-48 bg-slate-900"><img src={event.image} alt={`${event.title} poster`} loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90" /><div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" /><span className="absolute top-3 left-3 bg-slate-900/80 text-white px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider">{event.category}</span><div className="absolute top-3 right-3 bg-white/95 rounded-xl px-2.5 py-1.5 text-center shadow-md min-w-[50px]"><div className="text-[10px] font-bold text-blue-700 uppercase">{date.toLocaleString('en-US', { month: 'short', timeZone: 'Asia/Kolkata' })}</div><div className="text-lg font-bold text-slate-900 leading-tight">{date.getDate()}</div></div><span className="absolute bottom-2.5 left-3 text-[11px] font-semibold text-emerald-300 bg-emerald-950/70 px-2 py-0.5 rounded-md">● {event.status}</span></div>
+      <div className="p-4 sm:p-5"><h3 className="text-sm sm:text-base font-bold text-slate-900 mb-2.5 font-libre leading-snug line-clamp-2">{event.title}</h3><div className="space-y-1.5 mb-3 text-xs text-slate-600"><div className="flex items-start gap-2"><MapPin className="w-3.5 h-3.5 text-red-500 shrink-0" />{event.venue}</div><div className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5 text-blue-500 shrink-0" />{formatEventDate(event)}</div><div className="flex items-center gap-2"><Users className="w-3.5 h-3.5 text-emerald-600 shrink-0" />{event.audience}</div></div><p className="text-xs text-slate-600 font-playfair line-clamp-3 leading-relaxed">{event.shortDescription}</p></div></div>
+    <div className="p-4 pt-0"><Link to={event.registrationLink} className="w-full py-2 px-4 rounded-lg bg-slate-100 hover:bg-blue-600 text-slate-700 hover:text-white font-semibold text-xs transition-all flex items-center justify-center gap-1.5">Inquire & Register <ArrowRight className="w-3.5 h-3.5" /></Link></div>
+  </article>;
+}
