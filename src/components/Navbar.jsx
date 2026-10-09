@@ -17,6 +17,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -39,6 +40,13 @@ export default function Navbar() {
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(
       activeDropdown === dropdown ? null : dropdown
+    );
+    setActiveSubDropdown(null);
+  };
+
+  const toggleSubDropdown = (subDropdown) => {
+    setActiveSubDropdown(
+      activeSubDropdown === subDropdown ? null : subDropdown
     );
   };
 
@@ -497,42 +505,62 @@ export default function Navbar() {
 
                       {item.dropdownItems.map(
                         (subItem, idx) => (
-                          <div key={idx}>
-                          <button
-                            key={idx}
-                            onClick={() => subItem.children ? toggleDropdown(subItem.name) : handleNavigation(subItem.path)}
-                            className="
-                              w-full
-                              text-left
-                              px-4
-                              py-2.5
-                              rounded-lg
-                              text-xs
-                              sm:text-sm
-                              font-medium
-                              text-gray-700
-                              hover:text-blue-700
-                              hover:bg-white
-                              transition-all
-                              flex
-                              items-center
-                              gap-2
-                            "
-                          >
-
-                            <span
+                          <div key={idx} className="rounded-lg overflow-hidden">
+                            <button
+                              onClick={() => subItem.children ? toggleSubDropdown(subItem.name) : handleNavigation(subItem.path)}
                               className="
-                                w-1.5
-                                h-1.5
-                                rounded-full
-                                bg-blue-500
+                                w-full
+                                text-left
+                                px-3.5
+                                py-2.5
+                                rounded-lg
+                                text-xs
+                                sm:text-sm
+                                font-medium
+                                text-gray-700
+                                hover:text-blue-700
+                                hover:bg-white
+                                transition-all
+                                flex
+                                items-center
+                                justify-between
                               "
-                            ></span>
+                            >
+                              <div className="flex items-center gap-2.5">
+                                <span
+                                  className="
+                                    w-1.5
+                                    h-1.5
+                                    rounded-full
+                                    bg-blue-500
+                                  "
+                                ></span>
+                                <span>{subItem.name}</span>
+                              </div>
 
-                            {subItem.name}
+                              {subItem.children && (
+                                <ChevronDown
+                                  className={`w-3.5 h-3.5 text-gray-400 transition-transform duration-200 ${
+                                    activeSubDropdown === subItem.name ? 'rotate-180 text-blue-600' : ''
+                                  }`}
+                                />
+                              )}
+                            </button>
 
-                          </button>
-                          {subItem.children && activeDropdown === subItem.name && <div className="ml-5 border-l border-slate-200 pl-2">{subItem.children.map(child => <button key={child.name} onClick={() => handleNavigation(child.path)} className="w-full text-left px-4 py-2 text-xs text-gray-600 hover:text-blue-700">{child.name}</button>)}</div>}
+                            {subItem.children && activeSubDropdown === subItem.name && (
+                              <div className="ml-5 my-1 border-l-2 border-blue-200 pl-2.5 space-y-1 bg-white/60 rounded-r-lg py-1.5">
+                                {subItem.children.map((child) => (
+                                  <button
+                                    key={child.name}
+                                    onClick={() => handleNavigation(child.path)}
+                                    className="w-full text-left px-3 py-1.5 text-xs text-gray-600 hover:text-blue-700 hover:font-medium flex items-center gap-2 transition-colors"
+                                  >
+                                    <span className="w-1 h-1 rounded-full bg-slate-400"></span>
+                                    <span>{child.name}</span>
+                                  </button>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         )
                       )}
