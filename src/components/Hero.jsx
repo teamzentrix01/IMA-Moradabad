@@ -134,7 +134,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <div className="relative min-h-[350px] sm:min-h-[380px] md:h-[420px] overflow-hidden bg-gray-900">
+    <div className="relative min-h-[460px] sm:min-h-[480px] md:min-h-[520px] lg:h-[540px] overflow-hidden bg-gray-900">
 
       {/* Slides */}
       {slides.map((slide, index) => {
@@ -384,58 +384,26 @@ export default function HeroSlider() {
                     delay-300
                   "
                 >
-                  <div className="relative w-full max-w-md">
+                  <div className="relative w-full max-w-sm sm:max-w-md flex justify-center">
                     {/* Main Image Card */}
                     <div
                       className="
-      relative
-      rounded-3xl
-      overflow-hidden
-      shadow-2xl
-      transform
-      hover:scale-105
-      transition-transform
-      duration-300
-    "
+                        relative
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-2xl
+                        transform
+                        hover:scale-105
+                        transition-transform
+                        duration-300
+                        bg-black/10
+                      "
                     >
                       <img
                         src={slide.image}
                         alt={slide.title}
-                        className="w-full h-[330px] object-cover"
+                        className="w-auto max-w-full max-h-[400px] lg:max-h-[440px] object-contain rounded-2xl block"
                       />
-
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-
-                      {/* Portrait / Icon Badge - Same Look */}
-                      <div className="absolute top-5 right-5 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-xl">
-                        <Icon className="w-8 h-8 text-gray-900" />
-                      </div>
-                    </div>
-
-                    {/* Decorative Elements */}
-                    <div className="absolute -top-4 -left-4 w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full" />
-
-                    <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full" />
-
-                    {/* Bottom Tag / Info Card - Same Look */}
-                    <div className="absolute -bottom-5 left-6 bg-white rounded-xl p-3 shadow-xl max-w-[230px]">
-                      <div className="flex items-center space-x-2.5">
-
-                        <div className="w-9 h-9 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-lg flex items-center justify-center">
-                          <Heart className="w-4 h-4 text-white" />
-                        </div>
-
-                        <div>
-                          <div className="text-xs font-semibold text-gray-900">
-                            IMA Moradabad
-                          </div>
-
-                          <div className="text-[10px] text-gray-600">
-                            Serving Since 1928
-                          </div>
-                        </div>
-
-                      </div>
                     </div>
                   </div>
                 </div>
