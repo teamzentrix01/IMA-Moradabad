@@ -45,7 +45,6 @@ export default function Welcome() {
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 font-libre leading-snug">
                 Dedicated to Healthcare Excellence & Community Welfare
               </h2>
-
               <div className="text-sm sm:text-[15px] text-slate-600 space-y-3 leading-relaxed">
                 <p>
                   The <strong className="text-slate-800 font-semibold">Indian Medical Association (IMA), Moradabad</strong> is the premier representative body of medical professionals in the brass city, working steadfastly to elevate local healthcare standards and public welfare.
@@ -55,7 +54,7 @@ export default function Welcome() {
                   Operating from <strong className="text-slate-800 font-semibold">IMA Bhawan</strong> (Opposite SSP Office, Kachehri Parisar), the branch organizes regular free OPD camps, specialized cancer awareness drives, voluntary blood donation camps, and academic CME programs.
                 </p>
                 <p>
-                  Led by elected office-bearers—including <span className="text-slate-800 font-medium">Dr. Anat Rana</span> (President-Elect 2026–27) and <span className="text-slate-800 font-medium">Dr. Dishanter Goel</span> (Secretary-Elect 2026–27)—IMA Moradabad champions both physician rights and community wellness.
+                  Led by elected office-bearers—including <span className="text-slate-800 font-medium">Dr. Anant Rana</span> (President-Elect 2026–27) and <span className="text-slate-800 font-medium">Dr. Dishanter Goel</span> (Secretary-Elect 2026–27)—IMA Moradabad champions both physician rights and community wellness.
                 </p>
               </div>
             </div>
