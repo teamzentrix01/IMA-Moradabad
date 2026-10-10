@@ -54,7 +54,7 @@ export default function Welcome() {
                   Operating from <strong className="text-slate-800 font-semibold">IMA Bhawan</strong> (Opposite SSP Office, Kachehri Parisar), the branch organizes regular free OPD camps, specialized cancer awareness drives, voluntary blood donation camps, and academic CME programs.
                 </p>
                 <p>
-                  Led by elected office-bearers—including <span className="text-slate-800 font-medium">Dr. Anant Rana</span> (President-Elect 2026–27) and <span className="text-slate-800 font-medium">Dr. Dishanter Goel</span> (Secretary-Elect 2026–27)—IMA Moradabad champions both physician rights and community wellness.
+                  Led by elected office bearers- with <span className="text-slate-800 font-medium">Dr. Anant Rana</span> as President and <span className="text-slate-800 font-medium">Dr. Dishanter Goel</span> as Secretary year 2026–27—IMA Moradabad champions both physician rights and community wellness.
                 </p>
               </div>
             </div>
