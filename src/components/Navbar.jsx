@@ -79,8 +79,7 @@ export default function Navbar() {
         {
           name: 'IMA Directories',
           children: [
-            { name: "Member's Directory", path: '/members-directory' },
-            { name: 'Blood Group Directory', path: '/about/blood-group' }
+            { name: "Member's Directory", path: '/members-directory' }
           ]
         },
         {
