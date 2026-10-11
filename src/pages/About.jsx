@@ -502,7 +502,7 @@ export default function About() {
 
                     <div className="text-slate-600 text-sm sm:text-[15px] space-y-3 leading-relaxed">
                       <p>
-                        On October 9, 2026, during a press conference at IMA Bhawan, Moradabad, <strong className="text-slate-900 font-semibold">Led by elected office bearers- with Dr. Anant Rana as President and Dr. Dishanter Goel as Secretary for the year 2026-27</strong>, announced that the association would conduct mental health awareness sessions in schools as part of its public outreach initiative.
+                        On October 9, 2026, during a press conference held at IMA Bhawan, Moradabad, <strong className="text-slate-900 font-semibold">the elected office bearers of IMA Moradabad for the year 2026–27— Dr. Anant Rana as President, and Dr. Dishanter Goel as Secretary</strong>, announced that the association would conduct mental health awareness sessions in schools as part of its public outreach initiative.
                       </p>
                       <p>
                         Beginning October 10, the initiative aims to educate schoolchildren about mental health, emotional and psychological changes, and the responsible use of mobile phones and social media.
