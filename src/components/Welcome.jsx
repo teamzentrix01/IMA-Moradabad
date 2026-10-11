@@ -16,7 +16,7 @@ export default function Welcome() {
       title: "Mental Health Awareness Campaign | IMA Moradabad",
       image: "/welcome-ima.jpg",
       paragraphs: [
-        <>Led by <strong className="text-slate-800 font-semibold">Dr. Anant Rana as President, and Dr. Dishanter Goel as Secretary (2026–27)</strong>, IMA Moradabad continues to champion physician rights and community wellness through meaningful public outreach initiatives.</>,
+        <>Led by <strong className="text-slate-800 font-semibold">elected office bearers- with Dr. Anant Rana as President and Dr. Dishanter Goel as Secretary for the year 2026-27</strong>, IMA Moradabad continues to champion physician rights and community wellness through meaningful public outreach initiatives.</>,
         <>As part of its <strong className="text-slate-800 font-semibold">15-day Mental Health Awareness Campaign</strong>, launched around World Mental Health Day on October 10, 2026, IMA Moradabad, in collaboration with the Moradabad Neurosciences Association and Mind Body Foundation, is committed to promoting mental well-being among schoolchildren and the wider community.</>,
         <>Through school visits, interactive sessions on emotional and mental changes, responsible mobile and social media use, and dedicated discussions on police personnel's mental health, the initiative aims to encourage awareness, understanding, and a healthier community.</>
       ]
@@ -27,7 +27,7 @@ export default function Welcome() {
       title: "IMA Moradabad Announces School-Based Mental Health Awareness Campaign",
       image: "/9ocotober.jpeg",
       paragraphs: [
-        <>On October 9, 2026, during a press conference at IMA Bhawan, Moradabad, <strong className="text-slate-800 font-semibold">Dr. Anant Rana (President) and Dr. Dishanter Goel (Secretary), IMA Moradabad (2026–27)</strong>, announced that the association would conduct mental health awareness sessions in schools as part of its public outreach initiative.</>,
+        <>On October 9, 2026, during a press conference at IMA Bhawan, Moradabad, <strong className="text-slate-800 font-semibold">elected office bearers- with Dr Anant Rana as President and Dr Dishanter Goel as Secretary for the year 2026-27</strong>, announced that the association would conduct mental health awareness sessions in schools as part of its public outreach initiative.</>,
         <>Beginning October 10, the initiative aims to educate schoolchildren about mental health, emotional and psychological changes, and the responsible use of mobile phones and social media.</>,
         <>In collaboration with the Moradabad Neurosciences Association and Mind Body Foundation, IMA Moradabad is taking this initiative forward to encourage early awareness, emotional well-being, and a healthier future for children.</>
       ]
