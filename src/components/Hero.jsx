@@ -22,7 +22,7 @@ export default function HeroSlider() {
       title: "Mental Health Awareness Campaign",
       subtitle: "15-Day Public Outreach | 2026–27",
       description:
-        "Led by Dr. Anant Rana (President) and Dr. Dishanter Goel (Secretary), IMA Moradabad champions youth mental wellness and community health across schools.",
+        "Led by elected office bearers- with Dr Anant Rana as President and Dr Dishanter Goel as Secretary for the year 2026-27, IMA Moradabad champions youth mental wellness and community health across schools.",
       cta: "Explore Campaign",
       ctaLink: "/imagegallery?year=2026%2F27",
       ctaSecondary: "Watch Videos",
