@@ -660,7 +660,6 @@ export default function About() {
                   </div>
                 </div>
               )}
-
               {/* Story 3 Details */}
               {selectedStoryId === 3 && (
                 <div className="grid md:grid-cols-12 gap-6 lg:gap-8 items-center animate-in fade-in duration-300">
