@@ -102,7 +102,7 @@ export default function Contact_Us() {
                             Contact IMA Moradabad
                         </h1>
                         <p className="text-xs sm:text-sm text-slate-600 font-playfair tracking-wide leading-relaxed">
-                            Have an inquiry regarding membership, events, health camps, or administrative support? Reach out to our dedicated team.
+                            Do you have an inquiry regarding membership, events, health camps, or administrative support? Reach out to our dedicated team.
                         </p>
                     </div>
 
