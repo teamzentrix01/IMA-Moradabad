@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Award, Users, BookOpen, Shield, TrendingUp, CheckCircle, ArrowRight, Stethoscope, Heart, Calendar, Video, FileText, Briefcase, Globe, Target, Sparkles, Building2, ChevronRight, CheckCircle2, ClipboardPen } from 'lucide-react';
+import { Award, Users, BookOpen, Shield, TrendingUp, CheckCircle, ArrowRight, Stethoscope, Heart, Calendar, Video, FileText, Briefcase, Globe, Target, Sparkles, Building2, ChevronRight, CheckCircle2, ClipboardPen, Play, X } from 'lucide-react';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import MembersDirectorySection from '../components/MembersDirectorySection';
 
@@ -8,11 +8,13 @@ export default function About() {
   const [activeTab, setActiveTab] = useState('overview');
   const [searchParams] = useSearchParams();
   const storyParam = searchParams.get('story');
-  const [selectedStoryId, setSelectedStoryId] = useState(storyParam === '2' ? 2 : 1);
+  const [selectedStoryId, setSelectedStoryId] = useState(storyParam ? parseInt(storyParam, 10) || 1 : 1);
+  const [activeStoryMedia, setActiveStoryMedia] = useState(null);
 
   useEffect(() => {
     if (storyParam) {
-      setSelectedStoryId(storyParam === '2' ? 2 : 1);
+      const parsed = parseInt(storyParam, 10);
+      setSelectedStoryId(parsed || 1);
       const element = document.getElementById('campaign-story');
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
@@ -421,6 +423,16 @@ export default function About() {
                   >
                     Story 2: School Initiative
                   </button>
+                  <button
+                    onClick={() => setSelectedStoryId(3)}
+                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition cursor-pointer ${
+                      selectedStoryId === 3
+                        ? 'bg-emerald-600 text-white shadow-md'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    }`}
+                  >
+                    Story 3: School Camps
+                  </button>
                 </div>
               </div>
 
@@ -480,13 +492,22 @@ export default function About() {
               {/* Story 2 Details */}
               {selectedStoryId === 2 && (
                 <div className="grid md:grid-cols-12 gap-6 lg:gap-8 items-center animate-in fade-in duration-300">
-                  <div className="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 aspect-[4/3]">
+                  <div 
+                    onClick={() => setActiveStoryMedia({ type: 'image', src: '/9ocotober.jpeg', title: 'Press Conference | IMA Bhawan' })}
+                    className="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 aspect-[4/3] cursor-pointer group/mainimg"
+                    title="Click to view full image"
+                  >
                     <img 
                       src="/9ocotober.jpeg" 
                       alt="IMA Moradabad Press Conference"
-                      className="w-full h-full object-cover" 
+                      className="w-full h-full object-cover group-hover/mainimg:scale-105 transition-transform duration-500" 
                     />
-                    <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-xs">
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/mainimg:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="text-white text-xs bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                        🔍 Click to view full image
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-xs pointer-events-none">
                       Press Conference | 9 October 2026 | IMA Bhawan
                     </div>
                   </div>
@@ -512,6 +533,116 @@ export default function About() {
                       </p>
                     </div>
 
+                    <div className="pt-2">
+                      <p className="text-xs font-semibold text-slate-500 mb-2 flex items-center justify-between">
+                        <span className="flex items-center gap-1.5">🎥 Campaign Media & Video Highlights:</span>
+                        <span className="text-[10px] text-blue-600 font-medium">Click to play / view</span>
+                      </p>
+                      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+                        {/* Image: mentalhealth2.jpeg */}
+                        <div
+                          onClick={() => setActiveStoryMedia({ type: 'image', src: '/mentalhealth2.jpeg', title: 'Mental Health Session Photo' })}
+                          className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
+                        >
+                          <img
+                            src="/mentalhealth2.jpeg"
+                            alt="Mental health campaign"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+
+                        {/* Video 1: mentalhealth2.mp4 */}
+                        <div
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth2.mp4', title: 'Campaign Video - Session 2' })}
+                          className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
+                        >
+                          <video
+                            src="/mentalhealth2.mp4"
+                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
+                            preload="metadata"
+                            muted
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 flex items-center justify-center transition-colors">
+                            <div className="w-6 h-6 rounded-full bg-blue-600/90 text-white flex items-center justify-center shadow-xs">
+                              <Play className="w-3 h-3 fill-current ml-0.5" />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Video 2: mentalhealth1.mp4 */}
+                        <div
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth1.mp4', title: 'Campaign Video - Session 1' })}
+                          className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
+                        >
+                          <video
+                            src="/mentalhealth1.mp4"
+                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
+                            preload="metadata"
+                            muted
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 flex items-center justify-center transition-colors">
+                            <div className="w-6 h-6 rounded-full bg-blue-600/90 text-white flex items-center justify-center shadow-xs">
+                              <Play className="w-3 h-3 fill-current ml-0.5" />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Video 3: mentalhealth3.mp4 */}
+                        <div
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth3.mp4', title: 'Campaign Video - Session 3' })}
+                          className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
+                        >
+                          <video
+                            src="/mentalhealth3.mp4"
+                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
+                            preload="metadata"
+                            muted
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 flex items-center justify-center transition-colors">
+                            <div className="w-6 h-6 rounded-full bg-blue-600/90 text-white flex items-center justify-center shadow-xs">
+                              <Play className="w-3 h-3 fill-current ml-0.5" />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Video 4: mentalhealth4.mp4 */}
+                        <div
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth4.mp4', title: 'Campaign Video - Session 4' })}
+                          className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
+                        >
+                          <video
+                            src="/mentalhealth4.mp4"
+                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
+                            preload="metadata"
+                            muted
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 flex items-center justify-center transition-colors">
+                            <div className="w-6 h-6 rounded-full bg-blue-600/90 text-white flex items-center justify-center shadow-xs">
+                              <Play className="w-3 h-3 fill-current ml-0.5" />
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Video 5: mentalhealth5.mp4 */}
+                        <div
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth5.mp4', title: 'Campaign Video - Session 5' })}
+                          className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
+                        >
+                          <video
+                            src="/mentalhealth5.mp4"
+                            className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
+                            preload="metadata"
+                            muted
+                          />
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 flex items-center justify-center transition-colors">
+                            <div className="w-6 h-6 rounded-full bg-blue-600/90 text-white flex items-center justify-center shadow-xs">
+                              <Play className="w-3 h-3 fill-current ml-0.5" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="pt-2 flex flex-wrap gap-3">
                       <Link
                         to="/imagegallery?year=2026%2F27"
@@ -525,6 +656,162 @@ export default function About() {
                       >
                         Watch Press Coverage <Video className="w-3.5 h-3.5 text-emerald-600" />
                       </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Story 3 Details */}
+              {selectedStoryId === 3 && (
+                <div className="grid md:grid-cols-12 gap-6 lg:gap-8 items-center animate-in fade-in duration-300">
+                  <div 
+                    onClick={() => setActiveStoryMedia({ type: 'image', src: '/561ff335-03db-4316-8247-2814caa5a806.jpg', title: 'Mental Health Awareness Camps in Schools (CL Gupta World School)' })}
+                    className="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 aspect-[4/3] cursor-pointer group/mainimg"
+                    title="Click to view full image"
+                  >
+                    <img 
+                      src="/561ff335-03db-4316-8247-2814caa5a806.jpg" 
+                      alt="Mental Health Awareness Camps in Schools"
+                      className="w-full h-full object-cover group-hover/mainimg:scale-105 transition-transform duration-500" 
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/mainimg:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="text-white text-xs bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                        🔍 Click to view full image
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-xs pointer-events-none">
+                      World Mental Health Day | 10 October 2026 | School Sessions
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-7 space-y-4">
+                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-purple-700 bg-purple-50 px-3 py-1 rounded-full">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      World Mental Health Day Observance
+                    </div>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 font-libre leading-snug">
+                      IMA Moradabad Conducts Mental Health Awareness Camps in Schools
+                    </h2>
+
+                    <div className="text-slate-600 text-sm sm:text-[15px] space-y-3 leading-relaxed">
+                      <p>
+                        On October 10, 2026, in observance of World Mental Health Day, IMA Moradabad organized mental health awareness camps at three schools in Moradabad. <strong className="text-slate-900 font-semibold">Dr. Dishanter Goel as Secretary of IMA Moradabad (2026–27)</strong>, conducted the session at CL Gupta World School, <strong className="text-slate-900 font-semibold">Dr. Nimish Gupta</strong> conducted the session at PMS School and<strong className="text-slate-900 font-semibold">Dr. Kartikaya Gupta</strong>, led the session at SS Children’s Academy. 
+                      </p>
+                      <p>
+                        During these sessions, students were educated about the importance of mental health, emotional well-being, and the need to discuss mental health concerns openly.
+                      </p>
+                      <p>
+                        The initiative aimed to raise awareness among children, dispel misconceptions about mental health, and encourage them to seek guidance and support whenever needed.
+                      </p>
+                    </div>
+
+                    <div className="pt-2">
+                      <p className="text-xs font-semibold text-slate-500 mb-2 flex items-center justify-between">
+                        <span className="flex items-center gap-1.5">📸 Glimpses from the Sessions:</span>
+                        <span className="text-[10px] text-blue-600 font-medium">Click to view</span>
+                      </p>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                        <div 
+                          onClick={() => setActiveStoryMedia({ type: 'image', src: '/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg', title: 'School Camp Session Glimpse 1' })}
+                          className="aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:border-purple-500 transition-all cursor-pointer"
+                          title="Click to view full image"
+                        >
+                          <img
+                            src="/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg"
+                            alt="School camp session 1"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <div 
+                          onClick={() => setActiveStoryMedia({ type: 'image', src: '/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg', title: 'School Camp Session Glimpse 2' })}
+                          className="aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:border-purple-500 transition-all cursor-pointer"
+                          title="Click to view full image"
+                        >
+                          <img
+                            src="/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg"
+                            alt="School camp session 2"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <div 
+                          onClick={() => setActiveStoryMedia({ type: 'image', src: '/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg', title: 'School Camp Session Glimpse 3' })}
+                          className="aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:border-purple-500 transition-all cursor-pointer"
+                          title="Click to view full image"
+                        >
+                          <img
+                            src="/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg"
+                            alt="School camp session 3"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                        <div 
+                          onClick={() => setActiveStoryMedia({ type: 'image', src: '/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg', title: 'School Camp Session Glimpse 4' })}
+                          className="aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:border-purple-500 transition-all cursor-pointer"
+                          title="Click to view full image"
+                        >
+                          <img
+                            src="/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg"
+                            alt="School camp session 4"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap gap-3">
+                      <Link
+                        to="/imagegallery?year=2026%2F27"
+                        className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-sm"
+                      >
+                        View Camps Gallery <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                      <Link
+                        to="/videogallery?year=2026%2F27"
+                        className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition"
+                      >
+                        Watch Session Videos <Video className="w-3.5 h-3.5 text-emerald-600" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Video / Image Modal for Story Media */}
+              {activeStoryMedia && (
+                <div
+                  className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-200"
+                  onClick={() => setActiveStoryMedia(null)}
+                >
+                  <div
+                    className="relative max-w-3xl w-full bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <div className="flex items-center justify-between px-4 py-3 bg-slate-800 border-b border-white/10">
+                      <span className="text-white text-sm font-semibold truncate">
+                        {activeStoryMedia.title || "Mental Health Campaign"}
+                      </span>
+                      <button
+                        onClick={() => setActiveStoryMedia(null)}
+                        className="p-1 rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition cursor-pointer"
+                      >
+                        <X className="w-5 h-5" />
+                      </button>
+                    </div>
+                    <div className="p-2 bg-black flex items-center justify-center min-h-[300px] max-h-[75vh]">
+                      {activeStoryMedia.type === 'video' ? (
+                        <video
+                          src={activeStoryMedia.src}
+                          controls
+                          autoPlay
+                          className="max-h-[70vh] w-auto max-w-full rounded-lg"
+                        />
+                      ) : (
+                        <img
+                          src={activeStoryMedia.src}
+                          alt={activeStoryMedia.title}
+                          className="max-h-[70vh] w-auto max-w-full rounded-lg object-contain"
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

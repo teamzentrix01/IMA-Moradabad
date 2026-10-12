@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { 
-    X, 
-    ZoomIn, 
-    ChevronLeft, 
-    ChevronRight, 
-    Calendar, 
-    Tag, 
-    Download, 
+import {
+    X,
+    ZoomIn,
+    ChevronLeft,
+    ChevronRight,
+    Calendar,
+    Tag,
+    Download,
     Maximize2,
     Sparkles,
     Eye
@@ -69,11 +69,58 @@ export default function Image_Gallery() {
             aspect: 'aspect-[3/2]'
         },
         {
+            id: 17,
+            image: '/561ff335-03db-4316-8247-2814caa5a806.jpg',
+            category: 'EDUCATION',
+            title: 'Mental Health Session by Dr. Dishanter Goel – CL Gupta World School',
+            description: 'On World Mental Health Day (10 Oct 2026), Dr. Dishanter Goel, Hon. Secretary of IMA Moradabad (2026–27), conducted an insightful session on mental health and emotional well-being for students at CL Gupta World School.',
+            date: '10 Oct 2026',
+            featured: true,
+            aspect: 'aspect-[3/4]'
+        },
+        {
+            id: 18,
+            image: '/8c19a607-7d5a-4ae1-9d11-31d9fecd3493.jpg',
+            category: 'EVENTS',
+            title: 'Green Felicitation of Dr. Dishanter Goel – CL Gupta World School',
+            description: 'School management felicitating Dr. Dishanter Goel, Secretary of IMA Moradabad, with a green welcome plant following his impactful mental health awareness session at CL Gupta World School on World Mental Health Day.',
+            date: '10 Oct 2026',
+            aspect: 'aspect-[3/4]'
+        },
+       
+        {
+            id: 14,
+            image: '/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg',
+            category: 'EVENTS',
+            title: 'PMS School Mental Health Camp Highlights',
+            description: 'Practical guidance and interactive counseling during the World Mental Health Day awareness camp conducted by Dr. Nimish Gupta at PMS School.',
+            date: '10 Oct 2026',
+            aspect: 'aspect-[3/4]'
+        },
+        {
+            id: 15,
+            image: '/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg',
+            category: 'COMMUNITY',
+            title: 'Interactive Student Session – PMS School',
+            description: 'Large gathering of students actively participating in Dr. Nimish Gupta’s mental health and emotional well-being camp at PMS School campus.',
+            date: '10 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 16,
+            image: '/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg',
+            category: 'EVENTS',
+            title: 'School Health Awareness Gathering – PMS School',
+            description: 'Students and teachers gathered at PMS School for the World Mental Health Day session led by Dr. Nimish Gupta under IMA Moradabad’s outreach initiative.',
+            date: '10 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+         {
             id: 11,
             image: '/WhatsApp Image 2026-10-10 at 5.03.52 PM.jpeg',
             category: 'EDUCATION',
-            title: 'Mental Health Awareness Session',
-            description: 'An interactive awareness session helping students understand mental health, wellbeing, and the importance of seeking support.',
+            title: 'World Mental Health Day Camp – PMS School',
+            description: 'On World Mental Health Day (10 Oct 2026), Dr. Kartikaya Gupta conducted a mental health awareness camp at SS Childern School, Moradabad, guiding students on emotional well-being and open discussions.',
             date: '10 Oct 2026',
             featured: true,
             aspect: 'aspect-video'
@@ -82,8 +129,8 @@ export default function Image_Gallery() {
             id: 12,
             image: '/WhatsApp Image 2026-10-10 at 5.03.53 PM.jpeg',
             category: 'EDUCATION',
-            title: 'Student Awareness Programme',
-            description: 'Students participate in an informative programme focused on healthy habits, emotional wellbeing, and community awareness.',
+            title: 'Student Awareness Session',
+            description: 'SS Children School students participating in an interactive World Mental Health Day session conducted by Dr. Kartikaya Gupta on stress management and healthy mind habits.',
             date: '10 Oct 2026',
             aspect: 'aspect-video'
         },
@@ -91,63 +138,18 @@ export default function Image_Gallery() {
             id: 13,
             image: '/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg',
             category: 'COMMUNITY',
-            title: 'Community Outreach Address',
-            description: 'A community address bringing students, educators, and healthcare professionals together for a healthier future.',
+            title: 'Mental Health Address at SS Children School',
+            description: 'Dr. Nimish Gupta addressing SS Children School students and faculty on breaking mental health taboos and seeking guidance on World Mental Health Day.',
             date: '10 Oct 2026',
             aspect: 'aspect-video'
         },
-        {
-            id: 14,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg',
-            category: 'EVENTS',
-            title: 'Community Health Programme',
-            description: 'Healthcare professionals share practical guidance with students during the 2026–27 outreach programme.',
-            date: '10 Oct 2026',
-            aspect: 'aspect-[3/4]'
-        },
-        {
-            id: 15,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg',
-            category: 'COMMUNITY',
-            title: 'Addressing the Student Community',
-            description: 'A large student gathering takes part in an engaging community awareness event held on the school campus.',
-            date: '10 Oct 2026',
-            aspect: 'aspect-[4/3]'
-        },
-        {
-            id: 16,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg',
-            category: 'EVENTS',
-            title: 'Health Awareness Gathering',
-            description: 'Students and faculty come together for an outdoor health awareness gathering during the 2026–27 session.',
-            date: '10 Oct 2026',
-            aspect: 'aspect-[4/3]'
-        },
-        {
-            id: 17,
-            image: '/561ff335-03db-4316-8247-2814caa5a806.jpg',
-            category: 'EDUCATION',
-            title: 'Mental Health Lecture & Keynote',
-            description: 'Keynote address by expert speaker on holistic health and mental well-being during the session.',
-            date: '11 Oct 2026',
-            featured: true,
-            aspect: 'aspect-[3/4]'
-        },
-        {
-            id: 18,
-            image: '/8c19a607-7d5a-4ae1-9d11-31d9fecd3493.jpg',
-            category: 'EVENTS',
-            title: 'Felicitation & Green Welcome',
-            description: 'Presenting a token of appreciation and felicitating guest speakers during the institutional program.',
-            date: '11 Oct 2026',
-            aspect: 'aspect-[3/4]'
-        },
+        
         {
             id: 19,
             image: '/mentalhealth1.jpeg',
             category: 'AWARENESS',
-            title: 'Mental Health Initiative - Press & Outreach Launch',
-            description: 'Public Outreach Programme 2026-27 "Nurture The Mind Shape The Future" launched by President Dr. Anant Rana, Hon. Secretary Dr. Dishanter Goel, and Hon. Treasurer Dr. Anurag Dubey.',
+            title: 'IMA Moradabad Press Conference – School Camps Announcement',
+            description: 'IMA Moradabad office bearers addressed the press conference at IMA Bhawan, announcing the school-based mental health awareness camps starting the next day across Moradabad.',
             date: '11 Oct 2026',
             featured: true,
             aspect: 'aspect-[4/3]'
@@ -156,8 +158,8 @@ export default function Image_Gallery() {
             id: 20,
             image: '/mentalhealth2.jpeg',
             category: 'COMMUNITY',
-            title: 'Mental Health Initiative - Executive Address',
-            description: 'President, Secretary, and Treasurer addressing the community during the IMA Moradabad Mental Health Initiative programme.',
+            title: 'Press Conference Address – President & Secretary',
+            description: 'President Dr. Anant Rana and Secretary Dr. Dishanter Goel briefing the media regarding the mental health awareness camps to be organized in schools the following day.',
             date: '11 Oct 2026',
             aspect: 'aspect-[4/3]'
         }
@@ -224,7 +226,7 @@ export default function Image_Gallery() {
             <Banner title="IMAGE GALLERY" />
             <div className="min-h-screen bg-slate-50/70 py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    
+
                     {/* Header */}
                     <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
                         <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-50 border border-teal-200/60 px-3.5 py-1 rounded-full inline-flex items-center gap-1.5 shadow-xs">
@@ -245,11 +247,10 @@ export default function Image_Gallery() {
                                 <button
                                     key={yr}
                                     onClick={() => setSelectedYear(yr)}
-                                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs ${
-                                        selectedYear === yr
+                                    className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs ${selectedYear === yr
                                             ? 'bg-teal-700 text-white shadow-md scale-105 ring-2 ring-teal-700/30'
                                             : 'bg-white text-slate-700 hover:bg-teal-50 border border-slate-200 hover:border-teal-300'
-                                    }`}
+                                        }`}
                                 >
                                     {yr === 'ALL' ? 'All Years' : yr}
                                 </button>
@@ -262,11 +263,10 @@ export default function Image_Gallery() {
                                 <button
                                     key={cat}
                                     onClick={() => setSelectedCategory(cat)}
-                                    className={`px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold transition-all duration-200 cursor-pointer ${
-                                        selectedCategory === cat
+                                    className={`px-3.5 py-1 rounded-full text-[11px] sm:text-xs font-semibold transition-all duration-200 cursor-pointer ${selectedCategory === cat
                                             ? 'bg-slate-900 text-white shadow-sm'
                                             : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200/80 hover:text-slate-900'
-                                    }`}
+                                        }`}
                                 >
                                     {cat}
                                 </button>
@@ -283,7 +283,7 @@ export default function Image_Gallery() {
                                 onClick={() => openLightbox(index)}
                             >
                                 <div className="relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200/70 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
-                                    
+
                                     {/* Image with compact sizing & zoom on hover */}
                                     <div className="relative overflow-hidden bg-slate-100">
                                         <img
@@ -344,7 +344,7 @@ export default function Image_Gallery() {
                 POPUP LIGHTBOX MODAL (Full View & Navigation)
             ========================================================= */}
             {activeItem && (
-                <div 
+                <div
                     className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 transition-all duration-300 animate-in fade-in"
                     onClick={closeLightbox}
                 >
@@ -376,7 +376,7 @@ export default function Image_Gallery() {
                     </button>
 
                     {/* Modal Content Box */}
-                    <div 
+                    <div
                         className="relative max-w-4xl w-full max-h-[90vh] bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col md:flex-row"
                         onClick={(e) => e.stopPropagation()}
                     >

@@ -48,80 +48,24 @@ const Video_Gallery = () => {
             year: "2025",
             description: "Successful voluntary blood donation camp conducted by IMA Moradabad saving multiple critical lives across the community."
         },
-
-        {
-            id: 9,
-            title: "Mental Health Initiative - Opening Session",
-            videoSrc: "/mentalhealth1.mp4",
-            category: "INITIATIVE",
-            date: "11 Oct 2026",
-            year: "2026",
-            description: "Mental Health Initiative Programme conducted under the leadership of President, Secretary, and Treasurer of IMA Moradabad."
-        },
-        {
-            id: 10,
-            title: "Mental Health Initiative - Keynote Address",
-            videoSrc: "/mentalhealth2.mp4",
-            category: "AWARENESS",
-            date: "11 Oct 2026",
-            year: "2026",
-            description: "Specialist address discussing psychological well-being, early support, and youth mental health guidance."
-        },
-        {
-            id: 11,
-            title: "Mental Health Initiative - Interactive Session",
-            videoSrc: "/mentalhealth3.mp4",
-            category: "COMMUNITY",
-            date: "11 Oct 2026",
-            year: "2026",
-            description: "Interactive discussions and Q&A during the IMA Moradabad Mental Health Initiative."
-        },
-        {
-            id: 12,
-            title: "Mental Health Initiative - Leadership Remarks",
-            videoSrc: "/mentalhealth4.mp4",
-            category: "LEADERSHIP",
-            date: "11 Oct 2026",
-            year: "2026",
-            description: "President, Secretary & Treasurer inspiring participants on community health advocacy and social responsibility."
-        },
-        {
-            id: 13,
-            title: "Mental Health Initiative - Awareness Talk Part 1",
-            videoSrc: "/mentalhealth5.mp4",
-            category: "EDUCATION",
-            date: "11 Oct 2026",
-            year: "2026",
-            description: "Essential life skills, stress reduction techniques, and emotional wellness strategies presented by doctors."
-        },
-        {
-            id: 14,
-            title: "Mental Health Initiative - Awareness Talk Part 2",
-            videoSrc: "/mentalhealth6.mp4",
-            category: "EDUCATION",
-            date: "11 Oct 2026",
-            year: "2026",
-            description: "Comprehensive guidance session highlighting mental health stigma eradication and institutional counseling."
-        },
-       
         {
             id: 4,
             title: "COVID-19 Vaccination & Flu Awareness",
             embedUrl: "https://www.youtube.com/embed/d5dp03lniB0",
             videoId: "d5dp03lniB0",
             category: "AWARENESS",
-            date: "2026",
-            year: "2026",
+            date: "2025",
+            year: "2025",
             description: "IMA Moradabad's vaccination drive and comprehensive public health awareness campaign across Moradabad and Western UP."
         },
         {
             id: 5,
-            title: "World Health Day 2026 Celebration",
+            title: "World Health Day 2025 Celebration",
             embedUrl: "https://www.youtube.com/embed/F3FUBrhgvLI",
             videoId: "F3FUBrhgvLI",
             category: "CELEBRATION",
-            date: "2026",
-            year: "2026",
+            date: "2025",
+            year: "2025",
             description: "World Health Day celebrations with free medical consultations, walkathons, and public health screening programs."
         },
         {
@@ -130,8 +74,8 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
             videoId: "-nz179qIZJI",
             category: "CME WORKSHOP",
-            date: "2026",
-            year: "2026",
+            date: "2025",
+            year: "2025",
             description: "Continuing Medical Education workshop on latest medical technologies, emergency trauma protocols, and surgical advancements."
         },
         {
@@ -140,8 +84,8 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
             videoId: "-nz179qIZJI",
             category: "OUTREACH",
-            date: "2026",
-            year: "2026",
+            date: "2025",
+            year: "2025",
             description: "IMA Moradabad's mobile healthcare mission providing specialist consultations and diagnostics in rural Uttar Pradesh villages."
         },
         {
@@ -150,9 +94,64 @@ const Video_Gallery = () => {
             embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
             videoId: "NUobEk-aV9I",
             category: "SEMINAR",
-            date: "2026",
-            year: "2026",
+            date: "2025",
+            year: "2025",
             description: "Symposium on medical jurisprudence, ethical patient care standards, and doctor-patient trust building for Moradabad physicians."
+        },
+
+        {
+            id: 9,
+            title: "IMA Moradabad Press Conference – Opening Address",
+            videoSrc: "/mentalhealth1.mp4",
+            category: "PRESS CONFERENCE",
+            date: "9 Oct 2026",
+            year: "2026",
+            description: "Press conference at IMA Bhawan where office bearers briefed media persons regarding the upcoming mental health awareness camps scheduled in schools tomorrow."
+        },
+        {
+            id: 10,
+            title: "Press Conference – Keynote & Camp Objectives",
+            videoSrc: "/mentalhealth2.mp4",
+            category: "AWARENESS",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "IMA Moradabad leadership briefing journalists on the objectives of the school mental health campaign and the sessions to be held next day."
+        },
+        {
+            id: 11,
+            title: "Press Conference – Media Q&A Session",
+            videoSrc: "/mentalhealth3.mp4",
+            category: "PRESS CONFERENCE",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "Interactive media question-and-answer session detailing the school outreach plan and tomorrow's upcoming camps across Moradabad."
+        },
+        {
+            id: 12,
+            title: "Press Conference – President & Secretary Remarks",
+            videoSrc: "/mentalhealth4.mp4",
+            category: "LEADERSHIP",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "President Dr. Anant Rana and Secretary Dr. Dishanter Goel speaking at the press meet about organizing mental health awareness camps in schools tomorrow."
+        },
+        {
+            id: 13,
+            title: "Press Conference – Outreach Strategy Briefing",
+            videoSrc: "/mentalhealth5.mp4",
+            category: "EDUCATION",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "Discussion on school student counseling, mobile phone addiction, and tomorrow's scheduled camps during the press conference."
+        },
+        {
+            id: 14,
+            title: "Press Conference – Concluding Statement",
+            videoSrc: "/mentalhealth6.mp4",
+            category: "PRESS CONFERENCE",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "Concluding briefing by IMA Moradabad office bearers announcing the launch of school-level mental health camps starting next day."
         },
     ];
 
@@ -222,8 +221,8 @@ const Video_Gallery = () => {
                                     key={yr}
                                     onClick={() => setSelectedYear(yr)}
                                     className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer shadow-xs ${selectedYear === yr
-                                            ? 'bg-rose-600 text-white shadow-md scale-105 ring-2 ring-rose-500/30'
-                                            : 'bg-white text-slate-700 hover:bg-rose-50 border border-slate-200 hover:border-rose-300'
+                                        ? 'bg-rose-600 text-white shadow-md scale-105 ring-2 ring-rose-500/30'
+                                        : 'bg-white text-slate-700 hover:bg-rose-50 border border-slate-200 hover:border-rose-300'
                                         }`}
                                 >
                                     {yr === 'ALL' ? 'All Years' : yr}
