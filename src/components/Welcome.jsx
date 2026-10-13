@@ -63,6 +63,22 @@ export default function Welcome() {
   ];
 
   useEffect(() => {
+    // Preload all story images in background so story transitions (especially story 3) are instantaneous
+    stories.forEach((s) => {
+      if (s.image) {
+        const img = new Image();
+        img.src = s.image;
+      }
+      if (s.galleryImages) {
+        s.galleryImages.forEach((src) => {
+          const gImg = new Image();
+          gImg.src = src;
+        });
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     if (isPaused || activeMediaModal) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % stories.length);
@@ -112,6 +128,8 @@ export default function Welcome() {
                 key={current.image}
                 src={current.image}
                 alt={current.title}
+                loading="eager"
+                decoding="async"
                 className="w-full h-full object-cover object-center transition-all duration-700 group-hover/mainimg:scale-105 animate-in fade-in"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover/mainimg:opacity-100 transition-opacity flex items-end p-3">
@@ -185,6 +203,7 @@ export default function Welcome() {
                                 src={item.src}
                                 className="w-full h-full object-cover opacity-80 group-hover/media:opacity-100 group-hover/media:scale-105 transition-all duration-300 pointer-events-none"
                                 preload="metadata"
+                                playsInline
                                 muted
                               />
                               <div className="absolute inset-0 bg-black/30 group-hover/media:bg-black/10 flex items-center justify-center transition-colors">
@@ -197,6 +216,8 @@ export default function Welcome() {
                             <img
                               src={item.src}
                               alt={item.title}
+                              loading="eager"
+                              decoding="async"
                               className="w-full h-full object-cover group-hover/media:scale-110 transition-transform duration-300"
                             />
                           )}
@@ -224,6 +245,8 @@ export default function Welcome() {
                           <img
                             src={imgSrc}
                             alt={`Camp glimpse ${imgIdx + 1}`}
+                            loading="eager"
+                            decoding="async"
                             className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
                           />
                         </div>
@@ -287,18 +310,28 @@ export default function Welcome() {
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <div className="p-2 bg-black flex items-center justify-center min-h-[300px] max-h-[75vh]">
+              <div className="relative p-2 bg-black flex items-center justify-center min-h-[300px] max-h-[75vh]">
                 {activeMediaModal.type === 'video' ? (
                   <video
+                    key={activeMediaModal.src}
                     src={activeMediaModal.src}
                     controls
                     autoPlay
+                    playsInline
+                    preload="auto"
                     className="max-h-[70vh] w-auto max-w-full rounded-lg"
-                  />
+                    onCanPlay={(e) => {
+                      e.currentTarget.play().catch(() => {});
+                    }}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 ) : (
                   <img
                     src={activeMediaModal.src}
                     alt={activeMediaModal.title}
+                    loading="eager"
+                    decoding="async"
                     className="max-h-[70vh] w-auto max-w-full rounded-lg object-contain"
                   />
                 )}
