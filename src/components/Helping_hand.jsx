@@ -1,8 +1,10 @@
+"use client";
+
 import { Heart, AlertOctagon, Users, Shield, Globe, Sparkles, Stethoscope } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 export default function Helping_hand() {
-    const navigate = useNavigate();
+    const router = useRouter();
     const services = [
         {
             icon: Heart,
@@ -118,7 +120,7 @@ export default function Helping_hand() {
                 {/* Bottom CTA */}
                 <div className="text-center mt-6 sm:mt-8">
                     <button 
-                        onClick={() => navigate('/upComingevents')}
+                        onClick={() => router.push('/upcomingevents')}
                         className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm rounded-full hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 cursor-pointer"
                     >
                         <Heart className="w-4 h-4" />

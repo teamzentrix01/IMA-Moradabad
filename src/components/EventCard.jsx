@@ -1,6 +1,8 @@
+"use client";
+
 import { useState } from 'react';
 import { Calendar, MapPin, Users, ArrowRight, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { formatEventDate } from '../data/events';
 
 export default function EventCard({ event }) {
@@ -167,7 +169,7 @@ export default function EventCard({ event }) {
               {/* Action Buttons */}
               <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
                 <Link
-                  to={event.registrationLink}
+                  href={event.registrationLink}
                   onClick={() => setIsOpen(false)}
                   className="flex-1 py-3 px-5 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-semibold text-sm transition-all text-center shadow-md shadow-teal-700/20"
                 >

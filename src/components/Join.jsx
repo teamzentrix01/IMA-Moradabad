@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { UserPlus, Heart, Award, Users, BookOpen, Calendar, CheckCircle, ArrowRight, Stethoscope, Shield, TrendingUp } from 'lucide-react';
 

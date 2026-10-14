@@ -1,6 +1,9 @@
+"use client";
+
 import { useState } from 'react';
 import Banner from '../components/ui/Banner';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function Treasurer_Message() {
     const [selectedSection, setSelectedSection] = useState('vision');
@@ -40,7 +43,7 @@ export default function Treasurer_Message() {
                                 onMouseLeave={() => setImageHover(false)}
                             >
                                 <img
-                                    src="/file_0000000063b08208b822b0557b714332.png"
+ src={cloudinaryAsset("/file_0000000063b08208b822b0557b714332.png")}
                                     alt="Treasurer  of IMA Moradabad"
                                     className="w-full h-full object-cover"
                                 />

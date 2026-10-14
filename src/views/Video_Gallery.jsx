@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import {
     X,
@@ -10,11 +12,12 @@ import {
     ExternalLink
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 const Video_Gallery = () => {
     const [selectedYear, setSelectedYear] = useState('ALL');
-    const [searchParams] = useSearchParams();
+    const searchParams = useSearchParams();
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const videos = [
@@ -102,7 +105,7 @@ const Video_Gallery = () => {
         {
             id: 9,
             title: "IMA Moradabad Press Conference – Opening Address",
-            videoSrc: "/mentalhealth1.mp4",
+            videoSrc: cloudinaryAsset("/mentalhealth1.mp4"),
             category: "PRESS CONFERENCE",
             date: "9 Oct 2026",
             year: "2026",
@@ -111,7 +114,7 @@ const Video_Gallery = () => {
         {
             id: 10,
             title: "Press Conference – Keynote & Camp Objectives",
-            videoSrc: "/mentalhealth2.mp4",
+            videoSrc: cloudinaryAsset("/mentalhealth2.mp4"),
             category: "AWARENESS",
             date: "09 Oct 2026",
             year: "2026",
@@ -120,7 +123,7 @@ const Video_Gallery = () => {
         {
             id: 11,
             title: "Press Conference – Media Q&A Session",
-            videoSrc: "/mentalhealth3.mp4",
+            videoSrc: cloudinaryAsset("/mentalhealth3.mp4"),
             category: "PRESS CONFERENCE",
             date: "09 Oct 2026",
             year: "2026",
@@ -129,7 +132,7 @@ const Video_Gallery = () => {
         {
             id: 12,
             title: "Press Conference – President & Secretary Remarks",
-            videoSrc: "/mentalhealth4.mp4",
+            videoSrc: cloudinaryAsset("/mentalhealth4.mp4"),
             category: "LEADERSHIP",
             date: "09 Oct 2026",
             year: "2026",
@@ -138,7 +141,7 @@ const Video_Gallery = () => {
         {
             id: 13,
             title: "Press Conference – Outreach Strategy Briefing",
-            videoSrc: "/mentalhealth5.mp4",
+            videoSrc: cloudinaryAsset("/mentalhealth5.mp4"),
             category: "EDUCATION",
             date: "09 Oct 2026",
             year: "2026",
@@ -147,7 +150,7 @@ const Video_Gallery = () => {
         {
             id: 14,
             title: "Press Conference – Concluding Statement",
-            videoSrc: "/mentalhealth6.mp4",
+            videoSrc: cloudinaryAsset("/mentalhealth6.mp4"),
             category: "PRESS CONFERENCE",
             date: "09 Oct 2026",
             year: "2026",
@@ -248,7 +251,7 @@ const Video_Gallery = () => {
                                             src={video.videoSrc}
                                             muted
                                             playsInline
-                                            preload="metadata"
+                                            preload="none"
                                             className="w-full h-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
                                         />
                                     ) : (

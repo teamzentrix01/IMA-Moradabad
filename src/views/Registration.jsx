@@ -1,10 +1,10 @@
+"use client";
+
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Heart, User, Calendar, MapPin, Droplet, Trophy, CheckCircle, AlertCircle } from 'lucide-react';
 import Banner from '../components/ui/Banner';
 
 export default function Registration() {
-    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',

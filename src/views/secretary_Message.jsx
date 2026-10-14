@@ -1,6 +1,9 @@
+"use client";
+
 import { useState } from 'react';
 import Banner from '../components/ui/Banner';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function Secretary_Message() {
   const [selectedSection, setSelectedSection] = useState('vision');
@@ -40,7 +43,7 @@ export default function Secretary_Message() {
                 onMouseLeave={() => setImageHover(false)}
               >
                 <img
-                  src="/Pi7_dr-dishantar-goel-moradabad-ho-moradabad-psychiatrists-8ivtob85g6.jpeg"
+ src={cloudinaryAsset("/Pi7_dr-dishantar-goel-moradabad-ho-moradabad-psychiatrists-8ivtob85g6.jpeg")}
                   alt="Secretary of IMA Moradabad"
                   className="w-full h-full object-cover"
                 />

@@ -1,4 +1,7 @@
+"use client";
+
 import { useState, useRef } from "react";
+import Link from "next/link";
 import { 
   Check, 
   UploadCloud, 
@@ -11,7 +14,6 @@ import {
   Award,
   RefreshCw
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export const AWARD_CATEGORIES = [
   {
@@ -355,7 +357,7 @@ export default function NominateForm({ submitHandler }) {
         </div>
 
         <div className="nom-success-actions">
-          <Link to="/" className="nom-btn nom-btn-secondary">
+          <Link href="/" className="nom-btn nom-btn-secondary">
             Back to Home
           </Link>
           <button onClick={handleReset} className="nom-btn nom-btn-primary">

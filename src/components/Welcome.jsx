@@ -1,12 +1,13 @@
 
 
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { ClipboardPen, ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
 import AnimatedCounter from './ui/AnimatedCounter';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function Welcome() {
-  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeMediaModal, setActiveMediaModal] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -16,7 +17,7 @@ export default function Welcome() {
       id: 1,
       tag: "Our Story",
       title: "Mental Health Awareness Campaign | IMA Moradabad",
-      image: "/welcome-ima.jpg",
+      image: cloudinaryAsset("/welcome-ima.jpg"),
       paragraphs: [
         <>Led by <strong className="text-slate-800 font-semibold">elected office bearers- with Dr. Anant Rana as President and Dr. Dishanter Goel as Secretary for the year 2026-27</strong>, IMA Moradabad continues to champion physician rights and community wellness through meaningful public outreach initiatives.</>,
         <>As part of its <strong className="text-slate-800 font-semibold">15-day Mental Health Awareness Campaign</strong>, launched around World Mental Health Day on October 10, 2026, IMA Moradabad, in collaboration with the Moradabad Neurosciences Association and Mind Body Foundation, is committed to promoting mental well-being among schoolchildren and the wider community.</>,
@@ -27,14 +28,14 @@ export default function Welcome() {
       id: 2,
       tag: "Press & Media Announcement",
       title: "IMA Moradabad Announces School-Based Mental Health Awareness Campaign",
-      image: "/9ocotober.jpeg",
+      image: cloudinaryAsset("/9ocotober.jpeg"),
       mediaItems: [
-        { type: "image", src: "/mentalhealth2.jpeg", title: "Awareness Session" },
-        { type: "video", src: "/mentalhealth2.mp4", title: "Session Video 2" },
-        { type: "video", src: "/mentalhealth1.mp4", title: "Session Video 1" },
-        { type: "video", src: "/mentalhealth3.mp4", title: "Session Video 3" },
-        { type: "video", src: "/mentalhealth4.mp4", title: "Session Video 4" },
-        { type: "video", src: "/mentalhealth5.mp4", title: "Session Video 5" }
+        { type: "image", src: cloudinaryAsset("/mentalhealth2.jpeg"), title: "Awareness Session" },
+        { type: "video", src: cloudinaryAsset("/mentalhealth2.mp4"), title: "Session Video 2" },
+        { type: "video", src: cloudinaryAsset("/mentalhealth1.mp4"), title: "Session Video 1" },
+        { type: "video", src: cloudinaryAsset("/mentalhealth3.mp4"), title: "Session Video 3" },
+        { type: "video", src: cloudinaryAsset("/mentalhealth4.mp4"), title: "Session Video 4" },
+        { type: "video", src: cloudinaryAsset("/mentalhealth5.mp4"), title: "Session Video 5" }
       ],
       paragraphs: [
         <>On October 9, 2026, during a press conference held at IMA Bhawan, Moradabad,<strong className="text-slate-800 font-semibold"> the elected office bearers of IMA Moradabad for the year 2026–27— Dr. Anant Rana as President, and Dr. Dishanter Goel as Secretary</strong>, announced that the association would conduct mental health awareness sessions in schools as part of its public outreach initiative.</>,
@@ -46,13 +47,13 @@ export default function Welcome() {
       id: 3,
       tag: "World Mental Health Day",
       title: "IMA Moradabad Conducts Mental Health Awareness Camps in Schools",
-      image: "/561ff335-03db-4316-8247-2814caa5a806.jpg",
+      image: cloudinaryAsset("/561ff335-03db-4316-8247-2814caa5a806.jpg"),
       galleryImages: [
-        "/pmsschool.jpeg",
-        "/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg",
-        "/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg",
-        "/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg",
-        "/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg"
+        cloudinaryAsset("/pmsschool.jpeg"),
+        cloudinaryAsset("/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg"),
+        cloudinaryAsset("/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg"),
+        cloudinaryAsset("/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg"),
+        cloudinaryAsset("/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg")
       ],
       paragraphs: [
         <>On October 10, 2026, in observance of World Mental Health Day, IMA Moradabad organized mental health awareness camps at three schools in Moradabad. <strong className="text-slate-800 font-semibold">Dr. Dishanter Goel as Secretary of IMA Moradabad (2026–27)</strong>, conducted the session at CL Gupta World School, <strong className="text-slate-800 font-semibold">Dr. Nimish Gupta</strong> conducted the session at PMS School and<strong className="text-slate-800 font-semibold">Dr. Kartikaya Gupta</strong>, led the session at SS Children’s Academy. </>,
@@ -63,20 +64,13 @@ export default function Welcome() {
   ];
 
   useEffect(() => {
-    // Preload all story images in background so story transitions (especially story 3) are instantaneous
-    stories.forEach((s) => {
-      if (s.image) {
-        const img = new Image();
-        img.src = s.image;
-      }
-      if (s.galleryImages) {
-        s.galleryImages.forEach((src) => {
-          const gImg = new Image();
-          gImg.src = src;
-        });
-      }
-    });
-  }, []);
+    // Preload only the next story cover; defer gallery media until it is visible.
+    const next = stories[(currentSlide + 1) % stories.length];
+    if (next?.image) {
+      const img = new Image();
+      img.src = next.image;
+    }
+  }, [currentSlide]);
 
   useEffect(() => {
     if (isPaused || activeMediaModal) return;
@@ -202,7 +196,7 @@ export default function Welcome() {
                               <video
                                 src={item.src}
                                 className="w-full h-full object-cover opacity-80 group-hover/media:opacity-100 group-hover/media:scale-105 transition-all duration-300 pointer-events-none"
-                                preload="metadata"
+                                preload="none"
                                 playsInline
                                 muted
                               />
@@ -216,7 +210,7 @@ export default function Welcome() {
                             <img
                               src={item.src}
                               alt={item.title}
-                              loading="eager"
+                              loading="lazy"
                               decoding="async"
                               className="w-full h-full object-cover group-hover/media:scale-110 transition-transform duration-300"
                             />
@@ -245,7 +239,7 @@ export default function Welcome() {
                           <img
                             src={imgSrc}
                             alt={`Camp glimpse ${imgIdx + 1}`}
-                            loading="eager"
+                            loading="lazy"
                             decoding="async"
                             className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
                           />

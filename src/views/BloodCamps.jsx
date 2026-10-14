@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import {
     Calendar,
@@ -10,7 +12,7 @@ import {
     Search,
     Filter
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const AnimatedCounter = ({ value }) => {
     const [count, setCount] = useState(0);
@@ -41,14 +43,14 @@ export default function BloodCamps() {
     const [selectedFilter, setSelectedFilter] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
 
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const handleNavigate = () => {
-        navigate('/contactus');
+        router.push('/contactus');
     };
 
     const handleNavigateRegistration = () => {
-        navigate('/registration');
+        router.push('/registration');
     };
 
     const upcomingCamps = [

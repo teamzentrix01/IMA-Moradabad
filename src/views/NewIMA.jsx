@@ -1,6 +1,6 @@
 import React from 'react';
 import { Building2, Sparkles, Clock, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Banner from '../components/ui/Banner';
 
 export default function NewIMA() {
@@ -54,14 +54,14 @@ export default function NewIMA() {
               {/* Action buttons */}
               <div className="flex flex-wrap items-center justify-center gap-2.5">
                 <Link
-                  to="/"
+                  href="/"
                   className="px-5 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold text-xs rounded-full shadow-sm hover:shadow-md hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 inline-flex items-center gap-1.5 cursor-pointer"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Back to Home</span>
                 </Link>
                 <Link
-                  to="/contactus"
+                  href="/contactus"
                   className="px-5 py-2 bg-white border border-slate-200 text-slate-700 hover:text-emerald-700 hover:border-emerald-300 font-semibold text-xs rounded-full transition-all duration-300 shadow-xs hover:shadow-sm"
                 >
                   <span>Contact Office</span>

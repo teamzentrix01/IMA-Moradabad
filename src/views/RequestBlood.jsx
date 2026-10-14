@@ -1,4 +1,7 @@
+"use client";
+
 import { useState } from 'react';
+import Link from 'next/link';
 import { 
     Heart, 
     AlertCircle, 
@@ -15,7 +18,6 @@ import {
     Hospital,
     FileText
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function RequestBlood() {
     const [formData, setFormData] = useState({
@@ -529,7 +531,7 @@ export default function RequestBlood() {
                 <div className="mt-6 text-center">
                     <p className="text-xs text-slate-600">
                         Want to volunteer and save lives as a donor instead?{' '}
-                        <Link to="/donateblood" className="text-red-600 font-semibold hover:underline">
+                        <Link href="/donateblood" className="text-red-600 font-semibold hover:underline">
                             Register as a Blood Donor here →
                         </Link>
                     </p>

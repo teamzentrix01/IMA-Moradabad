@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   Users,
   ShieldCheck,
@@ -18,12 +21,10 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
 import Banner from '../components/ui/Banner';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 
 export default function JoinIMA() {
-  const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState(0);
 
   // Simple quick inquiry state
@@ -497,7 +498,7 @@ export default function JoinIMA() {
                   <span className="text-xs font-bold text-emerald-900 block">Want offline submission?</span>
                   <span className="text-[11px] text-emerald-700">Visit IMA Bhawan (Opp. SSP Office, Kachehri Parisar, Moradabad).</span>
                 </div>
-                <Link to="/contactus" className="text-xs font-bold text-emerald-700 hover:text-emerald-900 underline flex items-center gap-1">
+                <Link href="/contactus" className="text-xs font-bold text-emerald-700 hover:text-emerald-900 underline flex items-center gap-1">
                   <span>View Contact Details</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>

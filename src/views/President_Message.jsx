@@ -1,6 +1,9 @@
+"use client";
+
 import { useState } from 'react';
 import Banner from '../components/ui/Banner';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function President_Message() {
   const [selectedSection, setSelectedSection] = useState('vision');
@@ -40,7 +43,7 @@ export default function President_Message() {
                 onMouseLeave={() => setImageHover(false)}
               >
                 <img
-                  src="/file_0000000014848208836ddf30894e8069 (1).png"
+ src={cloudinaryAsset("/file_0000000014848208836ddf30894e8069 (1).png")}
                   alt="President of IMA Moradabad"
                   className="w-full h-full object-cover"
                 />

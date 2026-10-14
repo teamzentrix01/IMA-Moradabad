@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Search, X, Droplets } from 'lucide-react';
 import Banner from '../components/ui/Banner';

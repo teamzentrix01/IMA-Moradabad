@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import {
   Menu,
@@ -12,19 +14,20 @@ import {
   Home,
   Sparkles
 } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { cloudinaryAsset } from '../lib/cloudinary';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const isActiveItem = (item) => item.children
-    ? item.children.some((child) => location.pathname === child.path)
-    : location.pathname === item.path;
+    ? item.children.some((child) => pathname === child.path)
+    : pathname === item.path;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -32,7 +35,7 @@ export default function Navbar() {
   };
 
   const handleNavigation = (path) => {
-    navigate(path);
+    router.push(path);
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
@@ -195,7 +198,7 @@ export default function Navbar() {
           {/* Logo */}
           <button onClick={() => handleNavigation('/')}>
             <img
-              src="/IMA_LOGO.png"
+              src={cloudinaryAsset("/IMA_LOGO.png")}
               alt="IMA Logo"
               className="size-20 object-contain"
             />

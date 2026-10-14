@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube, Heart, ArrowRight } from 'lucide-react';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function Footer() {
   const quickLinks = [
@@ -40,7 +41,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
               <div className="w-11 h-11 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center p-1.5 shadow-md flex-shrink-0">
                 <img
-                  src="/IMA_LOGO.png"
+                  src={cloudinaryAsset("/IMA_LOGO.png")}
                   alt="IMA Moradabad Logo"
                   className="w-full h-full object-contain"
                 />

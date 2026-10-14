@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { 
     X, 
@@ -12,12 +14,13 @@ import {
     ArrowUpRight
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 const News_Gallery = () => {
     const [selectedCategory, setSelectedCategory] = useState('ALL');
     const [selectedYear, setSelectedYear] = useState('ALL');
-    const [searchParams] = useSearchParams();
+    const searchParams = useSearchParams();
     const [activeNewsIndex, setActiveNewsIndex] = useState(null);
 
     const newsArticles = [
@@ -31,7 +34,7 @@ const News_Gallery = () => {
             date: "20 Oct 2025",
             year: "2025",
             category: "HEALTHCARE",
-            image: "/news-1.jpg",
+            image: cloudinaryAsset("/news-1.jpg"),
             views: "2.4K",
             featured: true
         },
@@ -45,7 +48,7 @@ const News_Gallery = () => {
             date: "18 Oct 2025",
             year: "2025",
             category: "COMMUNITY",
-            image: "/news-2.jpg",
+            image: cloudinaryAsset("/news-2.jpg"),
             views: "1.8K"
         },
         {
@@ -58,7 +61,7 @@ const News_Gallery = () => {
             date: "12 Oct 2025",
             year: "2025",
             category: "EDITORIAL",
-            image: "/news-3.jpg",
+            image: cloudinaryAsset("/news-3.jpg"),
             views: "980"
         },
         {
@@ -71,7 +74,7 @@ const News_Gallery = () => {
             date: "05 Feb 2026",
             year: "2026",
             category: "CONFERENCE",
-            image: "/news-4.jpg",
+            image: cloudinaryAsset("/news-4.jpg"),
             views: "3.1K",
             featured: true
         },
@@ -85,7 +88,7 @@ const News_Gallery = () => {
             date: "18 Mar 2026",
             year: "2026",
             category: "COMMUNITY",
-            image: "/news-5.jpg",
+            image: cloudinaryAsset("/news-5.jpg"),
             views: "1.5K"
         },
         {
@@ -98,7 +101,7 @@ const News_Gallery = () => {
             date: "22 Apr 2026",
             year: "2026",
             category: "PUBLIC HEALTH",
-            image: "/news-6.jpg",
+            image: cloudinaryAsset("/news-6.jpg"),
             views: "1.2K"
         },
         {
@@ -111,7 +114,7 @@ const News_Gallery = () => {
             date: "15 May 2026",
             year: "2026",
             category: "SOCIAL SERVICE",
-            image: "/news-7.jpg",
+            image: cloudinaryAsset("/news-7.jpg"),
             views: "2.1K"
         },
         {
@@ -124,7 +127,7 @@ const News_Gallery = () => {
             date: "10 Jun 2026",
             year: "2026",
             category: "EDUCATION",
-            image: "/news-8.jpg",
+            image: cloudinaryAsset("/news-8.jpg"),
             views: "1.7K"
         }
     ];

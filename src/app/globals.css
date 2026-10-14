@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-libre: 'Libre Baskerville', Georgia, serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+}
+
+@layer utilities {
+  .font-libre {
+    font-family: 'Libre Baskerville', Georgia, serif;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer base {
+  p {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Smooth Scrollbar for desktop */
+  @media (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+      border: 2px solid #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  }
+}
+
+/* Fix mobile responsive container behavior */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+}
+
+/* Glassmorphism helpers for premium mobile elements */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Pinterest Masonry layout utilities */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .masonry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+.masonry-item {
+  min-width: 0;
+}
+
+/* Keep media cards visually even when source photos have different dimensions. */
+.masonry-item > div > div:first-child {
+  aspect-ratio: 4 / 3;
+}
+
+.masonry-item > div > div:first-child img {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+}

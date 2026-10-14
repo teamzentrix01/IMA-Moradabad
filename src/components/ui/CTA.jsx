@@ -1,14 +1,14 @@
+"use client";
+
 import React from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 export default function CTA() {
-
-    const navigate = useNavigate();
+    const router = useRouter();
 
     const handleNavigation = () => {
-        navigate('/contactus');
-
-    }
+        router.push('/contactus');
+    };
     return (
         <div className="bg-gray-100 flex items-center justify-center px-4 py-6 sm:py-8 overflow-hidden">
             <div 

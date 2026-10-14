@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useEffect, useMemo, useState } from 'react';
 import { Search, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import membersData from '../data/membersData';
 import { matchesMember } from '../utils/searchUtils';
-import '../pages/MembersDirectory.css';
+import '../views/MembersDirectory.css';
 
 const MEMBERS_PER_PAGE = 24;
 

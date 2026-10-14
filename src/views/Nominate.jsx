@@ -1,5 +1,5 @@
 import { Check, Award, Calendar, HelpCircle, ChevronRight, PhoneCall, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import NominateForm from "../components/NominateForm";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 import { submitNominationAction } from "../services/nominationService";
@@ -13,9 +13,9 @@ export default function NominatePage() {
         <div className="nom-hero-inner">
           {/* Breadcrumb */}
           <nav className="nom-breadcrumb" aria-label="Breadcrumb">
-            <Link to="/">Home</Link>
+            <Link href="/">Home</Link>
             <span className="nom-breadcrumb-separator">/</span>
-            <Link to="/achievements">Awards & Recognition</Link>
+            <Link href="/achievements">Awards & Recognition</Link>
             <span className="nom-breadcrumb-separator">/</span>
             <span className="nom-breadcrumb-current" aria-current="page">Nominate</span>
           </nav>
@@ -144,7 +144,7 @@ export default function NominatePage() {
               </div>
             </div>
             <div className="nom-help-horizontal-actions">
-              <Link to="/contactus" className="nom-help-link">
+              <Link href="/contactus" className="nom-help-link">
                 <span>Contact Secretariat</span>
                 <ChevronRight size={16} />
               </Link>

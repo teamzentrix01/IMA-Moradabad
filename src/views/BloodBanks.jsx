@@ -1,6 +1,8 @@
+"use client";
+
 import { useEffect, useMemo, useState } from 'react';
 import { Phone, Search, X, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import Banner from '../components/ui/Banner';
 import { bloodBanks } from '../data/bloodBanks';
 

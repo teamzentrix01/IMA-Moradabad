@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useMemo, useState } from 'react';
 import membersData from '../data/membersData';
 import './MembersDirectory.css';

@@ -1,3 +1,5 @@
+import { cloudinaryAsset } from '../lib/cloudinary';
+
 export const events = [
   {
     id: 'mental-health-2026',
@@ -7,7 +9,7 @@ export const events = [
     venue: 'Schools across Moradabad',
     audience: 'Students of Classes 9–12',
     shortDescription: '“Nurture the Mind – Shape the Future”. IMA Moradabad members will address students of classes 9th to 12th about teenage mental health.',
-    image: '/PUBLIC OUTREACH PROGRAM UPDATED.png',
+    image: cloudinaryAsset('/PUBLIC OUTREACH PROGRAM UPDATED.png'),
     category: 'Public Outreach',
     status: 'Programme Announced',
     registrationLink: '/contactus'

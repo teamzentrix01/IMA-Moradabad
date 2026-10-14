@@ -1,5 +1,6 @@
+"use client";
+
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
   ChevronLeft,
   ChevronRight,
@@ -11,11 +12,11 @@ import {
   Sparkles
 } from 'lucide-react';
 import { getUpcomingEvents, formatEventDate } from '../data/events';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const navigate = useNavigate();
 
   const campaignSlides = [
     {
@@ -29,7 +30,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/videogallery?year=2026%2F27",
       gradient: "from-teal-700 to-emerald-700",
       icon: Sparkles,
-      image: "/welcome-ima.jpg"
+      image: cloudinaryAsset("/welcome-ima.jpg")
     },
     {
       title: "School-Based Mental Health Initiative",
@@ -42,7 +43,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/about",
       gradient: "from-teal-700 to-emerald-700",
       icon: Sparkles,
-      image: "/9ocotober.jpeg"
+      image: cloudinaryAsset("/9ocotober.jpeg")
     }
   ];
 
@@ -58,7 +59,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/join-ima",
       gradient: "from-emerald-600 to-teal-600",
       icon: Heart,
-      image: "/ima-hero-image-1.jpg"
+      image: cloudinaryAsset("/ima-hero-image-1.jpg")
     },
     {
       title: "Blood Donation Drives",
@@ -71,7 +72,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/upcomingevents",
       gradient: "from-rose-600 to-red-600",
       icon: Heart,
-      image: "/ima-hero-image-1.jpg"
+      image: cloudinaryAsset("/ima-hero-image-1.jpg")
     },
     {
       title: "CME Programs & Events",
@@ -84,7 +85,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/contactus",
       gradient: "from-blue-600 to-indigo-600",
       icon: Calendar,
-      image: "/ima-hero-image-1.jpg"
+      image: cloudinaryAsset("/ima-hero-image-1.jpg")
     },
     {
       title: "Young Doctors Forum",
@@ -97,7 +98,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/newsgallery",
       gradient: "from-purple-600 to-pink-600",
       icon: Users,
-      image: "/ima-hero-image-1.jpg"
+      image: cloudinaryAsset("/ima-hero-image-1.jpg")
     },
     {
       title: "Awards & Recognition",
@@ -110,7 +111,7 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/nominate",
       gradient: "from-amber-600 to-orange-600",
       icon: Award,
-      image: "/ima-hero-image-1.jpg"
+      image: cloudinaryAsset("/ima-hero-image-1.jpg")
     }
   ];
 

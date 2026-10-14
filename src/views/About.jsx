@@ -1,12 +1,16 @@
+"use client";
+
 import { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { Award, Users, BookOpen, Shield, TrendingUp, CheckCircle, ArrowRight, Stethoscope, Heart, Calendar, Video, FileText, Briefcase, Globe, Target, Sparkles, Building2, ChevronRight, CheckCircle2, ClipboardPen, Play, X } from 'lucide-react';
 import AnimatedCounter from '../components/ui/AnimatedCounter';
 import MembersDirectorySection from '../components/MembersDirectorySection';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('overview');
-  const [searchParams] = useSearchParams();
+  const searchParams = useSearchParams();
   const storyParam = searchParams.get('story');
   const [selectedStoryId, setSelectedStoryId] = useState(storyParam ? parseInt(storyParam, 10) || 1 : 1);
   const [activeStoryMedia, setActiveStoryMedia] = useState(null);
@@ -441,7 +445,7 @@ export default function About() {
                 <div className="grid md:grid-cols-12 gap-6 lg:gap-8 items-center animate-in fade-in duration-300">
                   <div className="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 aspect-[4/3]">
                     <img 
-                      src="/welcome-ima.jpg" 
+ src={cloudinaryAsset("/welcome-ima.jpg")}
                       alt="Mental Health Awareness Campaign"
                       className="w-full h-full object-cover" 
                     />
@@ -473,13 +477,13 @@ export default function About() {
 
                     <div className="pt-2 flex flex-wrap gap-3">
                       <Link
-                        to="/imagegallery?year=2026%2F27"
+                        href="/imagegallery?year=2026%2F27"
                         className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-sm"
                       >
                         View Campaign Gallery <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <Link
-                        to="/videogallery?year=2026%2F27"
+                        href="/videogallery?year=2026%2F27"
                         className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition"
                       >
                         Watch Campaign Videos <Video className="w-3.5 h-3.5 text-emerald-600" />
@@ -493,12 +497,12 @@ export default function About() {
               {selectedStoryId === 2 && (
                 <div className="grid md:grid-cols-12 gap-6 lg:gap-8 items-center animate-in fade-in duration-300">
                   <div 
-                    onClick={() => setActiveStoryMedia({ type: 'image', src: '/9ocotober.jpeg', title: 'Press Conference | IMA Bhawan' })}
+                    onClick={() => setActiveStoryMedia({ type: 'image', src: cloudinaryAsset('/9ocotober.jpeg'), title: 'Press Conference | IMA Bhawan' })}
                     className="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 aspect-[4/3] cursor-pointer group/mainimg"
                     title="Click to view full image"
                   >
                     <img 
-                      src="/9ocotober.jpeg" 
+ src={cloudinaryAsset("/9ocotober.jpeg")}
                       alt="IMA Moradabad Press Conference"
                       className="w-full h-full object-cover group-hover/mainimg:scale-105 transition-transform duration-500" 
                     />
@@ -541,11 +545,11 @@ export default function About() {
                       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
                         {/* Image: mentalhealth2.jpeg */}
                         <div
-                          onClick={() => setActiveStoryMedia({ type: 'image', src: '/mentalhealth2.jpeg', title: 'Mental Health Session Photo' })}
+                          onClick={() => setActiveStoryMedia({ type: 'image', src: cloudinaryAsset('/mentalhealth2.jpeg'), title: 'Mental Health Session Photo' })}
                           className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
                         >
                           <img
-                            src="/mentalhealth2.jpeg"
+ src={cloudinaryAsset("/mentalhealth2.jpeg")}
                             alt="Mental health campaign"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -553,11 +557,11 @@ export default function About() {
 
                         {/* Video 1: mentalhealth2.mp4 */}
                         <div
-                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth2.mp4', title: 'Campaign Video - Session 2' })}
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: cloudinaryAsset('/mentalhealth2.mp4'), title: 'Campaign Video - Session 2' })}
                           className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
                         >
                           <video
-                            src="/mentalhealth2.mp4"
+ src={cloudinaryAsset("/mentalhealth2.mp4")}
                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
                             preload="metadata"
                             muted
@@ -571,11 +575,11 @@ export default function About() {
 
                         {/* Video 2: mentalhealth1.mp4 */}
                         <div
-                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth1.mp4', title: 'Campaign Video - Session 1' })}
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: cloudinaryAsset('/mentalhealth1.mp4'), title: 'Campaign Video - Session 1' })}
                           className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
                         >
                           <video
-                            src="/mentalhealth1.mp4"
+ src={cloudinaryAsset("/mentalhealth1.mp4")}
                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
                             preload="metadata"
                             muted
@@ -589,11 +593,11 @@ export default function About() {
 
                         {/* Video 3: mentalhealth3.mp4 */}
                         <div
-                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth3.mp4', title: 'Campaign Video - Session 3' })}
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: cloudinaryAsset('/mentalhealth3.mp4'), title: 'Campaign Video - Session 3' })}
                           className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
                         >
                           <video
-                            src="/mentalhealth3.mp4"
+ src={cloudinaryAsset("/mentalhealth3.mp4")}
                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
                             preload="metadata"
                             muted
@@ -607,11 +611,11 @@ export default function About() {
 
                         {/* Video 4: mentalhealth4.mp4 */}
                         <div
-                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth4.mp4', title: 'Campaign Video - Session 4' })}
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: cloudinaryAsset('/mentalhealth4.mp4'), title: 'Campaign Video - Session 4' })}
                           className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
                         >
                           <video
-                            src="/mentalhealth4.mp4"
+ src={cloudinaryAsset("/mentalhealth4.mp4")}
                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
                             preload="metadata"
                             muted
@@ -625,11 +629,11 @@ export default function About() {
 
                         {/* Video 5: mentalhealth5.mp4 */}
                         <div
-                          onClick={() => setActiveStoryMedia({ type: 'video', src: '/mentalhealth5.mp4', title: 'Campaign Video - Session 5' })}
+                          onClick={() => setActiveStoryMedia({ type: 'video', src: cloudinaryAsset('/mentalhealth5.mp4'), title: 'Campaign Video - Session 5' })}
                           className="relative aspect-video rounded-xl overflow-hidden border border-slate-200 shadow-xs hover:border-blue-500 hover:shadow-md transition-all cursor-pointer group bg-slate-900"
                         >
                           <video
-                            src="/mentalhealth5.mp4"
+ src={cloudinaryAsset("/mentalhealth5.mp4")}
                             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all pointer-events-none"
                             preload="metadata"
                             muted
@@ -645,13 +649,13 @@ export default function About() {
 
                     <div className="pt-2 flex flex-wrap gap-3">
                       <Link
-                        to="/imagegallery?year=2026%2F27"
+                        href="/imagegallery?year=2026%2F27"
                         className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-sm"
                       >
                         View Press Gallery <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
                       <Link
-                        to="/videogallery?year=2026%2F27"
+                        href="/videogallery?year=2026%2F27"
                         className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition"
                       >
                         Watch Press Coverage <Video className="w-3.5 h-3.5 text-emerald-600" />
@@ -669,7 +673,7 @@ export default function About() {
                     title="Click to view full image"
                   >
                     <img 
-                      src="/561ff335-03db-4316-8247-2814caa5a806.jpg" 
+ src={cloudinaryAsset("/561ff335-03db-4316-8247-2814caa5a806.jpg")}
                       alt="Mental Health Awareness Camps in Schools"
                       className="w-full h-full object-cover group-hover/mainimg:scale-105 transition-transform duration-500" 
                     />
@@ -716,7 +720,7 @@ export default function About() {
                           title="Click to view full image"
                         >
                           <img
-                            src="/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg"
+                          src={cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg')}
                             alt="School camp session 1"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -727,7 +731,7 @@ export default function About() {
                           title="Click to view full image"
                         >
                           <img
-                            src="/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg"
+                            src={cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg')}
                             alt="School camp session 2"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -738,7 +742,7 @@ export default function About() {
                           title="Click to view full image"
                         >
                           <img
-                            src="/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg"
+                            src={cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg')}
                             alt="School camp session 3"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -749,7 +753,7 @@ export default function About() {
                           title="Click to view full image"
                         >
                           <img
-                            src="/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg"
+                            src={cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg')}
                             alt="School camp session 4"
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
@@ -960,7 +964,7 @@ export default function About() {
                     <div className="flex items-center space-x-3.5 mb-3.5 pb-3.5 border-b border-slate-100">
                       <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-emerald-200 group-hover:ring-emerald-500 transition-all flex-shrink-0 shadow-sm">
                         <img 
-                          src="/file_0000000014848208836ddf30894e8069 (1).png" 
+                          src={cloudinaryAsset('/file_0000000014848208836ddf30894e8069 (1).png')} 
                           alt="Dr. Anant Rana - President IMA Moradabad" 
                           className="w-full h-full object-cover"
                         />
@@ -990,7 +994,7 @@ export default function About() {
 
                   {/* Read More Link (Router Link) */}
                   <Link 
-                    to="/presidentmessage" 
+                    href="/presidentmessage" 
                     className="inline-flex items-center justify-between w-full pt-3 text-xs font-bold text-emerald-600 hover:text-emerald-700 border-t border-slate-100 transition-colors"
                   >
                     <span>Read Full Message</span>
@@ -1009,7 +1013,7 @@ export default function About() {
                     <div className="flex items-center space-x-3.5 mb-3.5 pb-3.5 border-b border-slate-100">
                       <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-teal-200 group-hover:ring-teal-500 transition-all flex-shrink-0 shadow-sm">
                         <img 
-                          src="/Pi7_dr-dishantar-goel-moradabad-ho-moradabad-psychiatrists-8ivtob85g6.jpeg" 
+                          src={cloudinaryAsset('/Pi7_dr-dishantar-goel-moradabad-ho-moradabad-psychiatrists-8ivtob85g6.jpeg')} 
                           alt="Dr. Dishanter Goel - Secretary IMA Moradabad" 
                           className="w-full h-full object-cover"
                         />
@@ -1039,7 +1043,7 @@ export default function About() {
 
                   {/* Read More Link (Router Link) */}
                   <Link 
-                    to="/secretarymessage" 
+                    href="/secretarymessage" 
                     className="inline-flex items-center justify-between w-full pt-3 text-xs font-bold text-teal-600 hover:text-teal-700 border-t border-slate-100 transition-colors"
                   >
                     <span>Read Full Message</span>
@@ -1058,7 +1062,7 @@ export default function About() {
                     <div className="flex items-center space-x-3.5 mb-3.5 pb-3.5 border-b border-slate-100">
                       <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-cyan-200 group-hover:ring-cyan-500 transition-all flex-shrink-0 shadow-sm">
                         <img 
-                          src="/file_0000000063b08208b822b0557b714332.png" 
+                          src={cloudinaryAsset('/file_0000000063b08208b822b0557b714332.png')} 
                           alt="Dr. Anurag Dubey - Treasurer IMA Moradabad" 
                           className="w-full h-full object-cover"
                         />
@@ -1088,7 +1092,7 @@ export default function About() {
 
                   {/* Read More Link (Router Link) */}
                   <Link 
-                    to="/treasurer-message" 
+                    href="/treasurer-message" 
                     className="inline-flex items-center justify-between w-full pt-3 text-xs font-bold text-cyan-600 hover:text-cyan-700 border-t border-slate-100 transition-colors"
                   >
                     <span>Read Full Message</span>
@@ -1352,7 +1356,7 @@ export default function About() {
                 </p>
                 <div>
                   <Link
-                    to="/contactus"
+                    href="/contactus"
                     className="px-5 py-2 bg-white text-rose-700 font-bold text-xs rounded-full shadow-md hover:bg-rose-50 transition-all inline-flex items-center gap-1.5"
                   >
                     <span>Contact Hospital Board Desk</span>

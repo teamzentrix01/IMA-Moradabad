@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { 
     Mail, 
     Phone, 
@@ -17,7 +18,6 @@ import {
     ShieldCheck,
     Stethoscope
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import './BloodDonate.css';
 
 // Eligibility criteria data
@@ -228,7 +228,7 @@ const BloodDonate = () => {
                                 </p>
                             </div>
                             <Link 
-                                to="/requestblood"
+                                href="/requestblood"
                                 className="inline-flex items-center gap-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs hover:shadow-sm whitespace-nowrap transition-all"
                             >
                                 Request Blood <ArrowRight className="w-3 h-3" />
@@ -511,7 +511,7 @@ const BloodDonate = () => {
                                 </p>
                             </div>
                             <Link 
-                                to="/requestblood"
+                                href="/requestblood"
                                 className="inline-flex items-center gap-1 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-xs hover:shadow-sm whitespace-nowrap transition-all"
                             >
                                 Request Blood <ArrowRight className="w-3 h-3" />

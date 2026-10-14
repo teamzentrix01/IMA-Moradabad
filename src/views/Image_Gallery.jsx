@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import {
     X,
@@ -12,18 +14,19 @@ import {
     Eye
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'next/navigation';
+import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function Image_Gallery() {
     const [selectedCategory, setSelectedCategory] = useState('ALL');
     const [selectedYear, setSelectedYear] = useState('ALL');
-    const [searchParams] = useSearchParams();
+    const searchParams = useSearchParams();
     const [activeImageIndex, setActiveImageIndex] = useState(null);
 
     const galleryItems = [
         {
             id: 1,
-            image: '/gallery-3.jpg',
+            image: cloudinaryAsset('/gallery-3.jpg'),
             category: 'MEDICAL CAMP',
             title: 'Free Health Checkup Camp',
             description: 'Over 1500 patients benefited from our comprehensive health screening, blood testing, and specialized consultation program.',
@@ -43,7 +46,7 @@ export default function Image_Gallery() {
         },
         {
             id: 3,
-            image: '/gallery-1.jpg',
+            image: cloudinaryAsset('/gallery-1.jpg'),
             category: 'COMMUNITY',
             title: 'Vaccination Drive 2025',
             description: 'Protecting the local community and underprivileged families through timely immunization and booster doses.',
@@ -52,7 +55,7 @@ export default function Image_Gallery() {
         },
         {
             id: 4,
-            image: '/gallery-5.jpg',
+            image: cloudinaryAsset('/gallery-5.jpg'),
             category: 'EVENTS',
             title: 'Doctors Day Celebration',
             description: 'Honoring senior medical practitioners and healthcare pioneers with awards, cultural events, and dinner.',
@@ -61,7 +64,7 @@ export default function Image_Gallery() {
         },
         {
             id: 5,
-            image: '/gallery-6.jpg',
+            image: cloudinaryAsset('/gallery-6.jpg'),
             category: 'INSPIRATION',
             title: 'Serving With Compassion',
             description: 'Dedicated healthcare teams visiting remote clusters of Moradabad to ensure healthcare access for every family.',
@@ -70,7 +73,7 @@ export default function Image_Gallery() {
         },
         {
             id: 17,
-            image: '/561ff335-03db-4316-8247-2814caa5a806.jpg',
+            image: cloudinaryAsset('/561ff335-03db-4316-8247-2814caa5a806.jpg'),
             category: 'EDUCATION',
             title: 'Mental Health Session by Dr. Dishanter Goel – CL Gupta World School',
             description: 'On World Mental Health Day (10 Oct 2026), Dr. Dishanter Goel, Hon. Secretary of IMA Moradabad (2026–27), conducted an insightful session on mental health and emotional well-being for students at CL Gupta World School.',
@@ -90,7 +93,7 @@ export default function Image_Gallery() {
        
         {
             id: 14,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg',
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg'),
             category: 'EVENTS',
             title: 'PMS School Mental Health Camp Highlights',
             description: 'Practical guidance and interactive counseling during the World Mental Health Day awareness camp conducted by Dr. Nimish Gupta at PMS School.',
@@ -99,7 +102,7 @@ export default function Image_Gallery() {
         },
         {
             id: 15,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg',
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.57 PM.jpeg'),
             category: 'COMMUNITY',
             title: 'Interactive Student Session – PMS School',
             description: 'Large gathering of students actively participating in Dr. Nimish Gupta’s mental health and emotional well-being camp at PMS School campus.',
@@ -108,7 +111,7 @@ export default function Image_Gallery() {
         },
         {
             id: 16,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg',
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg'),
             category: 'EVENTS',
             title: 'School Health Awareness Gathering – PMS School',
             description: 'Students and teachers gathered at PMS School for the World Mental Health Day session led by Dr. Nimish Gupta under IMA Moradabad’s outreach initiative.',
@@ -117,7 +120,7 @@ export default function Image_Gallery() {
         },
          {
             id: 11,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.52 PM.jpeg',
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.52 PM.jpeg'),
             category: 'EDUCATION',
             title: 'World Mental Health Day Camp – PMS School',
             description: 'On World Mental Health Day (10 Oct 2026), Dr. Kartikaya Gupta conducted a mental health awareness camp at SS Childern School, Moradabad, guiding students on emotional well-being and open discussions.',
@@ -127,7 +130,7 @@ export default function Image_Gallery() {
         },
         {
             id: 12,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.53 PM.jpeg',
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.53 PM.jpeg'),
             category: 'EDUCATION',
             title: 'Student Awareness Session',
             description: 'SS Children School students participating in an interactive World Mental Health Day session conducted by Dr. Kartikaya Gupta on stress management and healthy mind habits.',
@@ -136,7 +139,7 @@ export default function Image_Gallery() {
         },
         {
             id: 13,
-            image: '/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg',
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg'),
             category: 'COMMUNITY',
             title: 'Mental Health Address at SS Children School',
             description: 'Dr. Nimish Gupta addressing SS Children School students and faculty on breaking mental health taboos and seeking guidance on World Mental Health Day.',
@@ -146,7 +149,7 @@ export default function Image_Gallery() {
         
         {
             id: 19,
-            image: '/mentalhealth1.jpeg',
+            image: cloudinaryAsset('/mentalhealth1.jpeg'),
             category: 'AWARENESS',
             title: 'IMA Moradabad Press Conference – School Camps Announcement',
             description: 'IMA Moradabad office bearers addressed the press conference at IMA Bhawan, announcing the school-based mental health awareness camps starting the next day across Moradabad.',
@@ -156,7 +159,7 @@ export default function Image_Gallery() {
         },
         {
             id: 20,
-            image: '/mentalhealth2.jpeg',
+            image: cloudinaryAsset('/mentalhealth2.jpeg'),
             category: 'COMMUNITY',
             title: 'Press Conference Address – President & Secretary',
             description: 'President Dr. Anant Rana and Secretary Dr. Dishanter Goel briefing the media regarding the mental health awareness camps to be organized in schools the following day.',
