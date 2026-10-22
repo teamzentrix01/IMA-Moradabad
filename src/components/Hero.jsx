@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   ChevronLeft,
   ChevronRight,
@@ -15,6 +16,7 @@ import { getUpcomingEvents, formatEventDate } from '../data/events';
 import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function HeroSlider() {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -159,11 +161,11 @@ export default function HeroSlider() {
   };
 
   const handlePrimaryCta = (link) => {
-    navigate(link);
+    router.push(link);
   };
 
   const handleSecondaryCta = (secondaryLink) => {
-    navigate(secondaryLink);
+    router.push(secondaryLink);
   };
 
   return (

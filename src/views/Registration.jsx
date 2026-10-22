@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Heart, User, Calendar, MapPin, Droplet, Trophy, CheckCircle, AlertCircle } from 'lucide-react';
 import Banner from '../components/ui/Banner';
 
 export default function Registration() {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
@@ -511,7 +513,7 @@ export default function Registration() {
                                 </button>
                                 <button
                                     type="button"
-                                    onClick={() => navigate('/bloodcamps')}
+                                    onClick={() => router.push('/bloodcamps')}
                                     className="sm:w-auto bg-white text-gray-700 border-2 border-gray-300 font-semibold px-8 py-4 rounded-xl hover:bg-gray-50 transition-all duration-300"
                                 >
                                     Cancel

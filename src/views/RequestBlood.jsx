@@ -531,7 +531,7 @@ export default function RequestBlood() {
                 <div className="mt-6 text-center">
                     <p className="text-xs text-slate-600">
                         Want to volunteer and save lives as a donor instead?{' '}
-                        <Link href="/donateblood" className="text-red-600 font-semibold hover:underline">
+                        <Link href="/blooddonate" className="text-red-600 font-semibold hover:underline">
                             Register as a Blood Donor here →
                         </Link>
                     </p>

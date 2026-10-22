@@ -83,12 +83,67 @@ export default function Image_Gallery() {
         },
         {
             id: 18,
-            image: '/8c19a607-7d5a-4ae1-9d11-31d9fecd3493.jpg',
+            image: cloudinaryAsset('/8c19a607-7d5a-4ae1-9d11-31d9fecd3493.jpg'),
             category: 'EVENTS',
             title: 'Green Felicitation of Dr. Dishanter Goel – CL Gupta World School',
             description: 'School management felicitating Dr. Dishanter Goel, Secretary of IMA Moradabad, with a green welcome plant following his impactful mental health awareness session at CL Gupta World School on World Mental Health Day.',
             date: '10 Oct 2026',
             aspect: 'aspect-[3/4]'
+        },
+        {
+            id: 21,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792669593/WhatsApp_Image_2026-10-22_at_5.13.20_PM.jpg',
+            category: 'EDUCATION',
+            title: 'Mental Health Workshop at ChitraGupta Inter College, Moradabad',
+            description: 'IMA Moradabad President Dr. Anant Rana (MD Psychiatry) conducted a student-focused mental health workshop at ChitraGupta Inter College, Moradabad.',
+            date: '22 Oct 2026',
+            featured: true,
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 22,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683472/WhatsApp_Image_2026-10-22_at_1.38.05_PM.jpg',
+            category: 'EDUCATION',
+            title: 'ChitraGupta College Mental Health Workshop',
+            description: 'Students participating in the mental health awareness workshop conducted by IMA Moradabad at ChitraGupta Inter College.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 23,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683470/WhatsApp_Image_2026-10-22_at_1.38.04_PM.jpg',
+            category: 'EDUCATION',
+            title: 'ChitraGupta College Mental Health Workshop',
+            description: 'A glimpse from IMA Moradabad’s student wellness outreach programme at ChitraGupta Inter College.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 24,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683409/WhatsApp_Image_2026-10-22_at_1.38.00_PM.jpg',
+            category: 'AWARENESS',
+            title: 'Student Wellness Workshop – ChitraGupta Inter College',
+            description: 'Mental health awareness and emotional well-being session for students in Moradabad.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 25,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683442/WhatsApp_Image_2026-10-22_at_1.38.01_PM.jpg',
+            category: 'AWARENESS',
+            title: 'Mental Health Awareness Outreach at ChitraGupta College',
+            description: 'Students and faculty during the IMA Moradabad mental health workshop.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 26,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683497/WhatsApp_Image_2026-10-22_at_1.38.02_PM.jpg',
+            category: 'COMMUNITY',
+            title: 'ChitraGupta Inter College Workshop Glimpse',
+            description: 'Community outreach by IMA Moradabad promoting open conversations about student mental health.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
         },
        
         {

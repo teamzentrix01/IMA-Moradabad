@@ -3,11 +3,13 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { ClipboardPen, ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
 import AnimatedCounter from './ui/AnimatedCounter';
 import { cloudinaryAsset } from '../lib/cloudinary';
 
 export default function Welcome() {
+  const router = useRouter();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeMediaModal, setActiveMediaModal] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
@@ -45,6 +47,24 @@ export default function Welcome() {
     },
     {
       id: 3,
+      tag: "Student Wellness Initiative",
+      title: "Mental Health Workshop at ChitraGupta Inter College, Moradabad by IMA President Dr Anant Rana (MD Psychiatry)",
+      image: cloudinaryAsset("https://res.cloudinary.com/dbja22ql/image/upload/v1792669593/WhatsApp_Image_2026-10-22_at_5.13.20_PM.jpg"),
+      galleryImages: [
+        "https://res.cloudinary.com/dbja22ql/image/upload/v1792683472/WhatsApp_Image_2026-10-22_at_1.38.05_PM.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/v1792683470/WhatsApp_Image_2026-10-22_at_1.38.04_PM.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/v1792683409/WhatsApp_Image_2026-10-22_at_1.38.00_PM.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/v1792683442/WhatsApp_Image_2026-10-22_at_1.38.01_PM.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/v1792683497/WhatsApp_Image_2026-10-22_at_1.38.02_PM.jpg"
+      ],
+      paragraphs: [
+        <>IMA Moradabad President <strong className="text-slate-800 font-semibold">Dr. Anant Rana (MD Psychiatry)</strong> conducted an engaging mental health workshop for students at ChitraGupta Inter College, Moradabad.</>,
+        <>The session focused on understanding emotional and psychological changes during adolescence, building healthy coping habits, and creating a safe environment where students can speak openly about stress, anxiety, and other mental health concerns.</>,
+        <>Through this school outreach initiative, IMA Moradabad encouraged students to care for their mental well-being, use technology responsibly, and seek timely guidance from parents, teachers, and qualified professionals whenever needed.</>
+      ]
+    },
+    {
+      id: 4,
       tag: "World Mental Health Day",
       title: "IMA Moradabad Conducts Mental Health Awareness Camps in Schools",
       image: cloudinaryAsset("/561ff335-03db-4316-8247-2814caa5a806.jpg"),
@@ -89,7 +109,7 @@ export default function Welcome() {
   };
 
   const handleNavigation = (storyId) => {
-    navigate(`/About?story=${storyId || current.id}#campaign-story`);
+    router.push(`/about?story=${storyId || current.id}#campaign-story`);
   };
 
   const current = stories[currentSlide];
@@ -222,8 +242,8 @@ export default function Welcome() {
                 )}
 
                 {/* Right-side gallery thumbnails for Story 3 */}
-                {current.galleryImages && (
-                  <div className="mt-4 pt-3 border-t border-slate-100">
+                {current.id === 3 && current.galleryImages?.length > 0 && (
+                  <div className="mt-4 pt-3 border-t border-slate-100 block">
                     <p className="text-xs font-semibold text-slate-500 mb-2 flex items-center justify-between">
                       <span className="flex items-center gap-1.5">📸 Glimpses from the Sessions:</span>
                       <span className="text-[10px] text-blue-600 font-medium">Click to view</span>
@@ -238,7 +258,7 @@ export default function Welcome() {
                         >
                           <img
                             src={imgSrc}
-                            alt={`Camp glimpse ${imgIdx + 1}`}
+                            alt={`ChitraGupta workshop glimpse ${imgIdx + 1}`}
                             loading="lazy"
                             decoding="async"
                             className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"

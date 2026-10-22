@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function ThankYou() {
+    const router = useRouter();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -116,7 +118,7 @@ export default function ThankYou() {
                     {/* Action Buttons */}
                     <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-700 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
                         <button
-                            onClick={() => navigate('/')}
+                            onClick={() => router.push('/')}
                             className="w-full cursor-pointer sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200"
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
