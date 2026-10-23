@@ -46,7 +46,7 @@ const BloodBanks = lazy(() => import('./pages/BloodBanks'));
 // Helper to wrap lazy components in Suspense
 const withSuspense = (Component) => (
   <Suspense fallback={<PageLoader />}>
-    <Component />
+    {React.createElement(Component)}
   </Suspense>
 );
 

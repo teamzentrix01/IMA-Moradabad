@@ -87,9 +87,8 @@ export default function RequestBlood() {
 
     const handlePhoneBlur = (e) => {
         const val = e.target.value;
-        if (val && val.length < 10) {
-            alert('Phone number must be exactly 10 digits!');
-        }
+        validatePhoneNumber(val);
+        if (val && val.length < 10) alert('Phone number must be exactly 10 digits!');
     };
 
     const handleChange = (e) => {
@@ -101,7 +100,7 @@ export default function RequestBlood() {
 
     const handleSubmit = (e) => {
         const phone = formData.phone;
-        if (!phone || phone.length < 10) {
+        if (!validatePhoneNumber(phone) || phone.length < 10) {
             e.preventDefault();
             alert('Please enter a valid 10-digit phone number!');
             return;

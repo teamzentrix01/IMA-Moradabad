@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { ClipboardPen, ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
 import AnimatedCounter from './ui/AnimatedCounter';
@@ -14,7 +14,7 @@ export default function Welcome() {
   const [activeMediaModal, setActiveMediaModal] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  const stories = [
+  const stories = useMemo(() => [
     {
       id: 1,
       tag: "Our Story",
@@ -81,7 +81,7 @@ export default function Welcome() {
         <>The initiative aimed to raise awareness among children, dispel misconceptions about mental health, and encourage them to seek guidance and support whenever needed.</>
       ]
     }
-  ];
+  ], []);
 
   useEffect(() => {
     // Preload only the next story cover; defer gallery media until it is visible.
@@ -90,7 +90,7 @@ export default function Welcome() {
       const img = new Image();
       img.src = next.image;
     }
-  }, [currentSlide]);
+  }, [currentSlide, stories]);
 
   useEffect(() => {
     if (isPaused || activeMediaModal) return;

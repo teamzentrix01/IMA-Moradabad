@@ -15,7 +15,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { cloudinaryAsset } from '../lib/cloudinary';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,12 +23,6 @@ export default function Navbar() {
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
 
   const router = useRouter();
-  const pathname = usePathname();
-
-  const isActiveItem = (item) => item.children
-    ? item.children.some((child) => pathname === child.path)
-    : pathname === item.path;
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveDropdown(null);
@@ -223,7 +217,6 @@ export default function Navbar() {
                     text-black
                     bg-white
                     hover:text-blue-600
-                    ${isActiveItem(item) ? 'text-blue-600' : ''}
                     font-medium
                     cursor-pointer
                     duration-200

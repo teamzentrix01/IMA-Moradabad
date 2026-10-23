@@ -255,8 +255,8 @@ export default function Image_Gallery() {
         const handleKeyDown = (e) => {
             if (activeImageIndex === null) return;
             if (e.key === 'Escape') setActiveImageIndex(null);
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
+            if (e.key === 'ArrowRight') setActiveImageIndex((prev) => (prev + 1) % filteredItems.length);
+            if (e.key === 'ArrowLeft') setActiveImageIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);

@@ -21,16 +21,6 @@ export default function Footer() {
     { name: "Blood Camps", url: '/bloodcamps' },
     { name: "Contact Us", url: '/contactus' }
   ];
-  const policies = [
-    { name: "Privacy Policy", url: '/Privacy_Policy' },
-    { name: "Refund Policy", url: '/Refund_Policy' },
-    { name: "Terms and Conditions", url: '/Terms_And_Conditions' },
-    { name: "Cookie Policy", url: '/Cookie_Policy' },
-    //   'Refund Policy',
-    //   'Terms and Conditions',
-    //   'Cookie Policy'
-  ];
-
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-900 text-gray-300 overflow-hidden">
       {/* Main Footer Content */}

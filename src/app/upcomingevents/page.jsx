@@ -1,7 +1,6 @@
-import UpcomingEventsPage, { metadata } from "../upcomingevents/page";
 
-export { metadata };
+import UpComing_Events from "../../views/UpComing_Events";
 
 export default function UpComingEventsAliasPage() {
-  return <UpcomingEventsPage />;
+  return <UpComing_Events />;
 }

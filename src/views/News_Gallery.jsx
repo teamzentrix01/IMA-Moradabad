@@ -163,8 +163,8 @@ const News_Gallery = () => {
         const handleKeyDown = (e) => {
             if (activeNewsIndex === null) return;
             if (e.key === 'Escape') setActiveNewsIndex(null);
-            if (e.key === 'ArrowRight') nextNews();
-            if (e.key === 'ArrowLeft') prevNews();
+            if (e.key === 'ArrowRight') setActiveNewsIndex((prev) => (prev + 1) % filteredNews.length);
+            if (e.key === 'ArrowLeft') setActiveNewsIndex((prev) => (prev - 1 + filteredNews.length) % filteredNews.length);
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);

@@ -1,11 +1,8 @@
 "use client";
 
-import { useState } from 'react';
 import { UserPlus, Heart, Award, Users, BookOpen, Calendar, CheckCircle, ArrowRight, Stethoscope, Shield, TrendingUp } from 'lucide-react';
 
 export default function Join() {
-  const [selectedMembership, setSelectedMembership] = useState('regular');
-
   const benefits = [
     {
       icon: Stethoscope,
@@ -37,62 +34,6 @@ export default function Join() {
       title: 'Career Growth',
       description: 'Mentorship programs and career advancement opportunities'
     }
-  ];
-
-  const membershipTypes = [
-    {
-      id: 'regular',
-      title: 'Regular Membership',
-      price: '₹2,500',
-      period: 'per year',
-      features: [
-        'All IMA benefits',
-        'Voting rights',
-        'CME access',
-        'Medical journals',
-        'Legal support',
-        'Networking events'
-      ],
-      popular: false
-    },
-    {
-      id: 'life',
-      title: 'Life Membership',
-      price: '₹25,000',
-      period: 'one-time',
-      features: [
-        'Lifetime benefits',
-        'Permanent voting rights',
-        'Priority CME access',
-        'All journals & publications',
-        'Complete legal coverage',
-        'Exclusive events',
-        'Senior member privileges'
-      ],
-      popular: true
-    },
-    {
-      id: 'student',
-      title: 'Student Membership',
-      price: '₹500',
-      period: 'per year',
-      features: [
-        'Student benefits',
-        'CME access',
-        'Study resources',
-        'Mentorship program',
-        'Career guidance',
-        'Networking opportunities'
-      ],
-      popular: false
-    }
-  ];
-
-  const steps = [
-    { number: '1', title: 'Choose Plan', description: 'Select your membership type' },
-    { number: '2', title: 'Fill Details', description: 'Complete application form' },
-    { number: '3', title: 'Payment', description: 'Secure online payment' },
-    { number: '4', title: 'Welcome', description: 'Start your journey' }
   ];
 
   return (

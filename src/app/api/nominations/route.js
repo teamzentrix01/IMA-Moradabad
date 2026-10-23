@@ -69,6 +69,13 @@ export async function POST(request) {
       );
     }
 
+    if (nomineeRegNo && nomineeRegNo.length > 100) {
+      return NextResponse.json(
+        { error: "Medical registration number cannot exceed 100 characters." },
+        { status: 400 }
+      );
+    }
+
     const validCategories = [
       "lifetime-achievement",
       "clinical-excellence",

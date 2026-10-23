@@ -50,6 +50,10 @@ export async function submitNominationAction(formData) {
     throw new Error("Hospital or clinic is required.");
   }
 
+  if (nomineeRegNo && nomineeRegNo.length > 100) {
+    throw new Error("Medical registration number cannot exceed 100 characters.");
+  }
+
   if (!awardCategory) {
     throw new Error("Award category is required.");
   }

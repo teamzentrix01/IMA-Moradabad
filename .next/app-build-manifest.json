@@ -6,21 +6,21 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/home/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/home/page.js"
+      "static/chunks/app/page.js"
     ],
-    "/about/page": [
+    "/nominate/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/about/page.css",
-      "static/chunks/app/about/page.js"
+      "static/css/app/nominate/page.css",
+      "static/chunks/app/nominate/page.js"
     ],
-    "/imagegallery/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/imagegallery/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

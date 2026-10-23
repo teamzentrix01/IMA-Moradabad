@@ -2,7 +2,6 @@ import { Check, Award, Calendar, HelpCircle, ChevronRight, PhoneCall, Mail } fro
 import Link from "next/link";
 import NominateForm from "../components/NominateForm";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
-import { submitNominationAction } from "../services/nominationService";
 import "../styles/nominate.css";
 
 export default function NominatePage() {
@@ -63,7 +62,7 @@ export default function NominatePage() {
         <div className="nom-main-grid">
           {/* Form Column (1.7fr on Desktop) */}
           <div className="w-full">
-            <NominateForm submitHandler={submitNominationAction} />
+          <NominateForm />
           </div>
 
           {/* Sidebar Column (1fr on Desktop) */}
