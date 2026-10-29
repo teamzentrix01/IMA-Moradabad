@@ -372,7 +372,7 @@ export default function HeroSlider() {
 
                     <div className="text-white text-center lg:text-left">
                       <div className="text-xl sm:text-2xl md:text-3xl font-bold">
-                        5000+
+                        600+
                       </div>
 
                       <div className="text-white/80 text-[10px] sm:text-xs">
@@ -394,7 +394,7 @@ export default function HeroSlider() {
 
                     <div className="text-white text-center lg:text-left">
                       <div className="text-xl sm:text-2xl md:text-3xl font-bold">
-                        500+
+                        100+
                       </div>
 
                       <div className="text-white/80 text-[10px] sm:text-xs">
