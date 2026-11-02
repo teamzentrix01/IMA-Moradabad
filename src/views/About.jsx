@@ -842,6 +842,93 @@ export default function About() {
                 </div>
               )}
 
+              
+              {/* Story 5 Details - Diwali Celebration */}
+              {selectedStoryId === 5 && (
+                <div className="grid md:grid-cols-12 gap-6 lg:gap-8 items-center animate-in fade-in duration-300">
+                  <div
+                    onClick={() => setActiveStoryMedia({ type: 'image', src: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg', title: 'Grand Diwali Celebration | Prem Wonderland, Clarks Inn' })}
+                    className="md:col-span-5 relative rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-50 aspect-[4/3] cursor-pointer group/mainimg"
+                    title="Click to view full image"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg"
+                      alt="Diwali Meet at Prem Wonderland Clarks Inn Moradabad"
+                      className="w-full h-full object-cover group-hover/mainimg:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/mainimg:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="text-white text-xs bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                        🔍 Click to view full image
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-lg text-white text-xs pointer-events-none">
+                      Prem Wonderland, Clarks Inn | 31 October 2026 | Diwali Celebration
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-7 space-y-4">
+                    <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 bg-amber-50 px-3 py-1 rounded-full border border-amber-200/50">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      Festive Fellowship & Get-Together
+                    </div>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 font-libre leading-snug">
+                      Grand Diwali Celebration & Family Get-Together | IMA Moradabad
+                    </h2>
+
+                    <div className="text-slate-600 text-sm sm:text-[15px] space-y-3 leading-relaxed">
+                      <p>
+                        On <strong className="text-slate-900 font-semibold">31 October 2026</strong>, Indian Medical Association (IMA) Moradabad organized a grand <strong className="text-slate-900 font-semibold">Diwali Meet & Family Get-Together</strong> at <strong className="text-slate-900 font-semibold">Prem Wonderland, Clarks Inn, Moradabad</strong>, celebrating the auspicious festival of lights with warmth, camaraderie, and festive cheer.
+                      </p>
+                      <p>
+                        The prestigious evening was graced by <strong className="text-slate-900 font-semibold">President Dr. Anant Rana</strong>, <strong className="text-slate-900 font-semibold">Honorary Secretary Dr. Dishanter Goel</strong>, and <strong className="text-slate-900 font-semibold">Honorary Treasurer Dr. Anurag Dubey</strong>, alongside esteemed executive committee members, senior doctors, and their families.
+                      </p>
+                      <p>
+                        The get-together brought all doctor members of the fraternity under one roof to celebrate the auspicious festival, exchange greetings, and strengthen fellowship, marking another memorable milestone for IMA Moradabad.
+                      </p>
+                    </div>
+
+                    <div className="pt-2">
+                      <p className="text-xs font-semibold text-slate-500 mb-2 flex items-center justify-between">
+                        <span className="flex items-center gap-1.5">📸 Diwali Meet Moments:</span>
+                        <span className="text-[10px] text-blue-600 font-medium">Click to view</span>
+                      </p>
+                      <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                        {[
+                          'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09369-3333x5000.jpg',
+                          'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09210-100kb.jpg',
+                          'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09381-5000x3333.jpg',
+                          'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09212-5000x3333.jpg',
+                          'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09229-5000x3333.jpg'
+                        ].map((src, index) => (
+                          <button
+                            key={src}
+                            type="button"
+                            onClick={() => setActiveStoryMedia({ type: 'image', src, title: `Diwali Celebration Glimpse ${index + 1}` })}
+                            className="aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 shadow-sm group hover:border-amber-500 transition-all cursor-pointer"
+                            title={`View celebration photo ${index + 1}`}
+                          >
+                            <img
+                              src={src}
+                              alt={`Diwali celebration photo ${index + 1}`}
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex flex-wrap gap-3">
+                      <Link
+                        href="/imagegallery?year=2026%2F27"
+                        className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-xl transition shadow-sm"
+                      >
+                        View Photo Gallery <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Video / Image Modal for Story Media */}
               {activeStoryMedia && (
                 <div

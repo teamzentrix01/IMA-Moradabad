@@ -25,6 +25,97 @@ export default function Image_Gallery() {
 
     const galleryItems = [
         {
+            id: 27,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'IMA Moradabad Grand Diwali Celebration 2026',
+            description: 'President Dr. Anant Rana, Secretary Dr. Dishanter Goel, Treasurer Dr. Anurag Dubey and doctor members celebrating Diwali Meet at Prem Wonderland, Clarks Inn, Moradabad.',
+            date: '31 Oct 2026',
+            featured: true,
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 28,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09241-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Meet Gathering – Prem Wonderland, Clarks Inn',
+            description: 'IMA Moradabad members and esteemed medical fraternity celebrating fellowship and festivities at Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 29,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09273-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Festive Interaction & Fellowship',
+            description: 'Doctors and dignitaries sharing greetings and discussions during the grand Diwali celebration.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 30,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09369-3333x5000.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Dignitaries & Members Group Photo',
+            description: 'Distinguished office bearers and members of IMA Moradabad captured during the auspicious Diwali celebration.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[2/3]'
+        },
+        {
+            id: 31,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09348-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Celebration Moments – Clarks Inn Moradabad',
+            description: 'Vibrant festive moments of fraternity members and families at Prem Wonderland, Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 32,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09381-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'IMA Office Bearers & Members at Diwali Meet',
+            description: 'Leadership team and doctor colleagues commemorating the festival of lights with unity and joy.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 33,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09210-100kb.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Fellowship & Welcome',
+            description: 'Festive welcome and cheerful moments at the annual IMA Moradabad Diwali Get-Together.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 34,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09212-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Evening Festivities & Gathering',
+            description: 'Doctors enjoying the celebratory evening and family fellowship at Prem Wonderland, Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 35,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09221-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Meet Joyful Moments',
+            description: 'Warm camaraderie, conversations, and festive vibes amongst doctors at the Diwali meet.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 36,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09229-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'IMA Moradabad Family at Diwali Get-Together',
+            description: 'Senior physicians, executive members, and families celebrating the festival of lights in Moradabad.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
             id: 1,
             image: cloudinaryAsset('/gallery-3.jpg'),
             category: 'MEDICAL CAMP',
@@ -237,7 +328,7 @@ export default function Image_Gallery() {
     ).sort();
 
     const years = ['ALL', ...Array.from(new Set([...distinctYears, '2025/26', '2026/27']))].sort((a, b) => a === 'ALL' ? -1 : b === 'ALL' ? 1 : a.localeCompare(b));
-    const categories = ['ALL', 'MEDICAL CAMP', 'COMMUNITY', 'EVENTS', 'EDUCATION', 'AWARENESS'];
+    const categories = ['ALL', 'DIWALI CELEBRATION', 'MEDICAL CAMP', 'COMMUNITY', 'EVENTS', 'EDUCATION', 'AWARENESS'];
 
     useEffect(() => {
         setSelectedYear(searchParams.get('year') || 'ALL');

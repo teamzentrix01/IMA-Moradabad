@@ -80,6 +80,24 @@ export default function Welcome() {
         <>During these sessions, students were educated about the importance of mental health, emotional well-being, and the need to discuss mental health concerns openly.</>,
         <>The initiative aimed to raise awareness among children, dispel misconceptions about mental health, and encourage them to seek guidance and support whenever needed.</>
       ]
+    },
+    {
+      id: 5,
+      tag: "Celebration & Fellowship",
+      title: "Grand Diwali Celebration & Family Get-Together | IMA Moradabad",
+      image: "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg",
+      galleryImages: [
+        "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09369-3333x5000.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09210-100kb.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09381-5000x3333.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09212-5000x3333.jpg",
+        "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09229-5000x3333.jpg"
+      ],
+      paragraphs: [
+        <>On <strong className="text-slate-800 font-semibold">31 October 2026</strong>, Indian Medical Association (IMA) Moradabad organized a grand <strong className="text-slate-800 font-semibold">Diwali Meet & Family Get-Together</strong> at <strong className="text-slate-800 font-semibold">Prem Wonderland, Clarks Inn, Moradabad</strong>, celebrating the festival of lights with fellowship, joy, and festive warmth.</>,
+        <>The auspicious occasion was graced by <strong className="text-slate-800 font-semibold">President Dr. Anant Rana</strong>, <strong className="text-slate-800 font-semibold">Secretary Dr. Dishanter Goel</strong>, and <strong className="text-slate-800 font-semibold">Treasurer Dr. Anurag Dubey</strong>, alongside office bearers and distinguished members of IMA Moradabad.</>,
+        <>The get-together brought all doctors and their families together to celebrate Diwali, exchange warm festive greetings, strengthen professional and personal bonds, and commemorate the vibrant spirit of the medical fraternity.</>
+      ]
     }
   ], []);
 
@@ -242,7 +260,7 @@ export default function Welcome() {
                 )}
 
                 {/* Right-side gallery thumbnails for Story 3 */}
-                {current.id === 3 && current.galleryImages?.length > 0 && (
+                {(current.id === 3 || current.id === 5) && current.galleryImages?.length > 0 && (
                   <div className="mt-4 pt-3 border-t border-slate-100 block">
                     <p className="text-xs font-semibold text-slate-500 mb-2 flex items-center justify-between">
                       <span className="flex items-center gap-1.5">📸 Glimpses from the Sessions:</span>
