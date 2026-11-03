@@ -230,9 +230,22 @@ const Video_Gallery = () => {
         setSelectedYear(searchParams.get('year') || 'ALL');
     }, [searchParams]);
 
-    const filteredVideos = selectedYear === 'ALL'
+        const parseItemDate = (dateStr) => {
+        if (!dateStr) return 0;
+        const parsed = Date.parse(dateStr);
+        if (!isNaN(parsed)) return parsed;
+        const yearMatch = dateStr.match(/\b(20\d{2})\b/);
+        return yearMatch ? new Date(yearMatch[1]).getTime() : 0;
+    };
+
+    const filteredVideos = (selectedYear === 'ALL'
         ? videos
-        : videos.filter(video => getYearFromDate(video.date) === selectedYear);
+        : videos.filter(video => getYearFromDate(video.date) === selectedYear)
+    ).slice().sort((a, b) => {
+        const timeDiff = parseItemDate(b.date) - parseItemDate(a.date);
+        if (timeDiff !== 0) return timeDiff;
+        return (b.id || 0) - (a.id || 0);
+    });
 
     // Close on Escape key
     useEffect(() => {

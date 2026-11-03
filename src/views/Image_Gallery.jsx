@@ -380,11 +380,23 @@ export default function Image_Gallery() {
         setSelectedYear(searchParams.get('year') || 'ALL');
     }, [searchParams]);
 
+        const parseItemDate = (dateStr) => {
+        if (!dateStr) return 0;
+        const parsed = Date.parse(dateStr);
+        if (!isNaN(parsed)) return parsed;
+        const yearMatch = dateStr.match(/\b(20\d{2})\b/);
+        return yearMatch ? new Date(yearMatch[1]).getTime() : 0;
+    };
+
     const filteredItems = galleryItems.filter(item => {
         const itemYear = getYearFromDate(item.date);
         const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;
         const matchesYear = selectedYear === 'ALL' || itemYear === selectedYear;
         return matchesCategory && matchesYear;
+    }).slice().sort((a, b) => {
+        const timeDiff = parseItemDate(b.date) - parseItemDate(a.date);
+        if (timeDiff !== 0) return timeDiff;
+        return (b.id || 0) - (a.id || 0);
     });
 
     // Keyboard navigation in lightbox modal
