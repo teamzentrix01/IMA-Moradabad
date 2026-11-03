@@ -377,14 +377,6 @@ export default function Image_Gallery() {
         setSelectedYear(searchParams.get('year') || 'ALL');
     }, [searchParams]);
 
-        const parseItemDate = (dateStr) => {
-        if (!dateStr) return 0;
-        const parsed = Date.parse(dateStr);
-        if (!isNaN(parsed)) return parsed;
-        const yearMatch = dateStr.match(/\b(20\d{2})\b/);
-        return yearMatch ? new Date(yearMatch[1]).getTime() : 0;
-    };
-
     const filteredItems = galleryItems.filter(item => {
         const itemYear = getYearFromDate(item.date);
         const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;

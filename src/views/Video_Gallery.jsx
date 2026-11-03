@@ -229,14 +229,6 @@ const Video_Gallery = () => {
         setSelectedYear(searchParams.get('year') || 'ALL');
     }, [searchParams]);
 
-        const parseItemDate = (dateStr) => {
-        if (!dateStr) return 0;
-        const parsed = Date.parse(dateStr);
-        if (!isNaN(parsed)) return parsed;
-        const yearMatch = dateStr.match(/\b(20\d{2})\b/);
-        return yearMatch ? new Date(yearMatch[1]).getTime() : 0;
-    };
-
     const filteredVideos = selectedYear === 'ALL'
         ? videos
         : videos.filter(video => getYearFromDate(video.date) === selectedYear);
