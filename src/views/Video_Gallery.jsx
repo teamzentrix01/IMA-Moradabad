@@ -22,64 +22,122 @@ const Video_Gallery = () => {
 
     const videos = [
         {
-            id: 1,
-            title: "IMA Moradabad Health Camp 2025",
-            embedUrl: "https://www.youtube.com/embed/4SwOZwuNtEw",
-            videoId: "4SwOZwuNtEw",
-            category: "HEALTH CAMP",
-            date: "2025",
-            year: "2025",
-            description: "Community health camp organized by IMA Moradabad for preventive healthcare, free vital check-ups, and medicine distribution."
+            id: 20,
+            title: "Diwali Celebration 2026 – Evening Celebrations",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690783/WhatsApp_Video_2026-11-03_at_12.42.37_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Memorable evening celebration moments and greetings exchange at Prem Wonderland Clarks Inn."
         },
         {
-            id: 2,
-            title: "Annual Medical Conference Highlights",
+            id: 19,
+            title: "Diwali Celebration – Fraternal Bonding & Greetings",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690773/WhatsApp_Video_2026-11-03_at_12.42.36_PM_1.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Festive interactions highlighting the spirit of unity and dedication among IMA Moradabad doctor members."
+        },
+        {
+            id: 18,
+            title: "Diwali Meet – Joyful Cultural & Social Glimpses",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690768/WhatsApp_Video_2026-11-03_at_12.41.31_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Joyful celebratory clips of doctor fraternity members and families at Prem Wonderland, Clarks Inn Moradabad."
+        },
+        {
+            id: 17,
+            title: "Diwali Celebration – Special Moments & Interaction",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690766/WhatsApp_Video_2026-11-03_at_12.41.29_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Dignitaries and members sharing warm Diwali wishes and celebrating fellowship under one roof."
+        },
+        {
+            id: 16,
+            title: "Diwali Meet Highlights – Fellowship & Fellowship",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690763/WhatsApp_Video_2026-11-03_at_12.40.54_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Doctors and leadership interacting and enjoying the celebratory festivities at the annual IMA Moradabad Diwali Meet."
+        },
+        {
+            id: 15,
+            title: "Diwali Celebration 2026 – Gathering & Welcome Moments",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690689/WhatsApp_Video_2026-11-03_at_12.43.55_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Festive welcome and vibrant get-together moments at Prem Wonderland, Clarks Inn Moradabad during the grand Diwali celebration."
+        },
+        {
+            id: 14,
+            title: "Press Conference – Concluding Statement",
+            videoSrc: cloudinaryAsset("/mentalhealth6.mp4"),
+            category: "PRESS CONFERENCE",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "Concluding briefing by IMA Moradabad office bearers announcing the launch of school-level mental health camps starting next day."
+        },
+        {
+            id: 13,
+            title: "Press Conference – Outreach Strategy Briefing",
+            videoSrc: cloudinaryAsset("/mentalhealth5.mp4"),
+            category: "EDUCATION",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "Discussion on school student counseling, mobile phone addiction, and tomorrow's scheduled camps during the press conference."
+        },
+        {
+            id: 12,
+            title: "Press Conference – President & Secretary Remarks",
+            videoSrc: cloudinaryAsset("/mentalhealth4.mp4"),
+            category: "LEADERSHIP",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "President Dr. Anant Rana and Secretary Dr. Dishanter Goel speaking at the press meet about organizing mental health awareness camps in schools tomorrow."
+        },
+        {
+            id: 11,
+            title: "Press Conference – Media Q&A Session",
+            videoSrc: cloudinaryAsset("/mentalhealth3.mp4"),
+            category: "PRESS CONFERENCE",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "Interactive media question-and-answer session detailing the school outreach plan and tomorrow's upcoming camps across Moradabad."
+        },
+        {
+            id: 10,
+            title: "Press Conference – Keynote & Camp Objectives",
+            videoSrc: cloudinaryAsset("/mentalhealth2.mp4"),
+            category: "AWARENESS",
+            date: "09 Oct 2026",
+            year: "2026",
+            description: "IMA Moradabad leadership briefing journalists on the objectives of the school mental health campaign and the sessions to be held next day."
+        },
+        {
+            id: 9,
+            title: "IMA Moradabad Press Conference – Opening Address",
+            videoSrc: cloudinaryAsset("/mentalhealth1.mp4"),
+            category: "PRESS CONFERENCE",
+            date: "9 Oct 2026",
+            year: "2026",
+            description: "Press conference at IMA Bhawan where office bearers briefed media persons regarding the upcoming mental health awareness camps scheduled in schools tomorrow."
+        },
+        {
+            id: 8,
+            title: "Medical Ethics & Jurisprudence Conference",
             embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
             videoId: "NUobEk-aV9I",
-            category: "CONFERENCE",
+            category: "SEMINAR",
             date: "2025",
             year: "2025",
-            description: "Key highlights from IMA Moradabad's annual medical conference featuring renowned healthcare professionals and keynote addresses."
-        },
-        {
-            id: 3,
-            title: "Blood Donation Drive Success",
-            embedUrl: "https://www.youtube.com/embed/xq6UEqixQFo",
-            videoId: "xq6UEqixQFo",
-            category: "BLOOD DRIVE",
-            date: "2025",
-            year: "2025",
-            description: "Successful voluntary blood donation camp conducted by IMA Moradabad saving multiple critical lives across the community."
-        },
-        {
-            id: 4,
-            title: "COVID-19 Vaccination & Flu Awareness",
-            embedUrl: "https://www.youtube.com/embed/d5dp03lniB0",
-            videoId: "d5dp03lniB0",
-            category: "AWARENESS",
-            date: "2025",
-            year: "2025",
-            description: "IMA Moradabad's vaccination drive and comprehensive public health awareness campaign across Moradabad and Western UP."
-        },
-        {
-            id: 5,
-            title: "World Health Day 2025 Celebration",
-            embedUrl: "https://www.youtube.com/embed/F3FUBrhgvLI",
-            videoId: "F3FUBrhgvLI",
-            category: "CELEBRATION",
-            date: "2025",
-            year: "2025",
-            description: "World Health Day celebrations with free medical consultations, walkathons, and public health screening programs."
-        },
-        {
-            id: 6,
-            title: "CME Workshop for Doctors",
-            embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
-            videoId: "-nz179qIZJI",
-            category: "CME WORKSHOP",
-            date: "2025",
-            year: "2025",
-            description: "Continuing Medical Education workshop on latest medical technologies, emergency trauma protocols, and surgical advancements."
+            description: "Symposium on medical jurisprudence, ethical patient care standards, and doctor-patient trust building for Moradabad physicians."
         },
         {
             id: 7,
@@ -92,124 +150,65 @@ const Video_Gallery = () => {
             description: "IMA Moradabad's mobile healthcare mission providing specialist consultations and diagnostics in rural Uttar Pradesh villages."
         },
         {
-            id: 8,
-            title: "Medical Ethics & Jurisprudence Conference",
-            embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
-            videoId: "NUobEk-aV9I",
-            category: "SEMINAR",
+            id: 6,
+            title: "CME Workshop for Doctors",
+            embedUrl: "https://www.youtube.com/embed/-nz179qIZJI",
+            videoId: "-nz179qIZJI",
+            category: "CME WORKSHOP",
             date: "2025",
             year: "2025",
-            description: "Symposium on medical jurisprudence, ethical patient care standards, and doctor-patient trust building for Moradabad physicians."
-        },
-
-        {
-            id: 9,
-            title: "IMA Moradabad Press Conference – Opening Address",
-            videoSrc: cloudinaryAsset("/mentalhealth1.mp4"),
-            category: "PRESS CONFERENCE",
-            date: "9 Oct 2026",
-            year: "2026",
-            description: "Press conference at IMA Bhawan where office bearers briefed media persons regarding the upcoming mental health awareness camps scheduled in schools tomorrow."
+            description: "Continuing Medical Education workshop on latest medical technologies, emergency trauma protocols, and surgical advancements."
         },
         {
-            id: 10,
-            title: "Press Conference – Keynote & Camp Objectives",
-            videoSrc: cloudinaryAsset("/mentalhealth2.mp4"),
+            id: 5,
+            title: "World Health Day 2025 Celebration",
+            embedUrl: "https://www.youtube.com/embed/F3FUBrhgvLI",
+            videoId: "F3FUBrhgvLI",
+            category: "CELEBRATION",
+            date: "2025",
+            year: "2025",
+            description: "World Health Day celebrations with free medical consultations, walkathons, and public health screening programs."
+        },
+        {
+            id: 4,
+            title: "COVID-19 Vaccination & Flu Awareness",
+            embedUrl: "https://www.youtube.com/embed/d5dp03lniB0",
+            videoId: "d5dp03lniB0",
             category: "AWARENESS",
-            date: "09 Oct 2026",
-            year: "2026",
-            description: "IMA Moradabad leadership briefing journalists on the objectives of the school mental health campaign and the sessions to be held next day."
+            date: "2025",
+            year: "2025",
+            description: "IMA Moradabad's vaccination drive and comprehensive public health awareness campaign across Moradabad and Western UP."
         },
         {
-            id: 11,
-            title: "Press Conference – Media Q&A Session",
-            videoSrc: cloudinaryAsset("/mentalhealth3.mp4"),
-            category: "PRESS CONFERENCE",
-            date: "09 Oct 2026",
-            year: "2026",
-            description: "Interactive media question-and-answer session detailing the school outreach plan and tomorrow's upcoming camps across Moradabad."
+            id: 3,
+            title: "Blood Donation Drive Success",
+            embedUrl: "https://www.youtube.com/embed/xq6UEqixQFo",
+            videoId: "xq6UEqixQFo",
+            category: "BLOOD DRIVE",
+            date: "2025",
+            year: "2025",
+            description: "Successful voluntary blood donation camp conducted by IMA Moradabad saving multiple critical lives across the community."
         },
         {
-            id: 12,
-            title: "Press Conference – President & Secretary Remarks",
-            videoSrc: cloudinaryAsset("/mentalhealth4.mp4"),
-            category: "LEADERSHIP",
-            date: "09 Oct 2026",
-            year: "2026",
-            description: "President Dr. Anant Rana and Secretary Dr. Dishanter Goel speaking at the press meet about organizing mental health awareness camps in schools tomorrow."
+            id: 2,
+            title: "Annual Medical Conference Highlights",
+            embedUrl: "https://www.youtube.com/embed/NUobEk-aV9I",
+            videoId: "NUobEk-aV9I",
+            category: "CONFERENCE",
+            date: "2025",
+            year: "2025",
+            description: "Key highlights from IMA Moradabad's annual medical conference featuring renowned healthcare professionals and keynote addresses."
         },
         {
-            id: 13,
-            title: "Press Conference – Outreach Strategy Briefing",
-            videoSrc: cloudinaryAsset("/mentalhealth5.mp4"),
-            category: "EDUCATION",
-            date: "09 Oct 2026",
-            year: "2026",
-            description: "Discussion on school student counseling, mobile phone addiction, and tomorrow's scheduled camps during the press conference."
-        },
-        {
-            id: 14,
-            title: "Press Conference – Concluding Statement",
-            videoSrc: cloudinaryAsset("/mentalhealth6.mp4"),
-            category: "PRESS CONFERENCE",
-            date: "09 Oct 2026",
-            year: "2026",
-            description: "Concluding briefing by IMA Moradabad office bearers announcing the launch of school-level mental health camps starting next day."
-        },
-        {
-            id: 15,
-            title: "Diwali Celebration 2026 – Gathering & Welcome Moments",
-            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690689/WhatsApp_Video_2026-11-03_at_12.43.55_PM.mp4",
-            category: "CELEBRATION",
-            date: "31 Oct 2026",
-            year: "2026",
-            description: "Festive welcome and vibrant get-together moments at Prem Wonderland, Clarks Inn Moradabad during the grand Diwali celebration."
-        },
-        {
-            id: 16,
-            title: "Diwali Meet Highlights – Fellowship & Fellowship",
-            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690763/WhatsApp_Video_2026-11-03_at_12.40.54_PM.mp4",
-            category: "CELEBRATION",
-            date: "31 Oct 2026",
-            year: "2026",
-            description: "Doctors and leadership interacting and enjoying the celebratory festivities at the annual IMA Moradabad Diwali Meet."
-        },
-        {
-            id: 17,
-            title: "Diwali Celebration – Special Moments & Interaction",
-            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690766/WhatsApp_Video_2026-11-03_at_12.41.29_PM.mp4",
-            category: "CELEBRATION",
-            date: "31 Oct 2026",
-            year: "2026",
-            description: "Dignitaries and members sharing warm Diwali wishes and celebrating fellowship under one roof."
-        },
-        {
-            id: 18,
-            title: "Diwali Meet – Joyful Cultural & Social Glimpses",
-            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690768/WhatsApp_Video_2026-11-03_at_12.41.31_PM.mp4",
-            category: "CELEBRATION",
-            date: "31 Oct 2026",
-            year: "2026",
-            description: "Joyful celebratory clips of doctor fraternity members and families at Prem Wonderland, Clarks Inn Moradabad."
-        },
-        {
-            id: 19,
-            title: "Diwali Celebration – Fraternal Bonding & Greetings",
-            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690773/WhatsApp_Video_2026-11-03_at_12.42.36_PM_1.mp4",
-            category: "CELEBRATION",
-            date: "31 Oct 2026",
-            year: "2026",
-            description: "Festive interactions highlighting the spirit of unity and dedication among IMA Moradabad doctor members."
-        },
-        {
-            id: 20,
-            title: "Diwali Celebration 2026 – Evening Celebrations",
-            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690783/WhatsApp_Video_2026-11-03_at_12.42.37_PM.mp4",
-            category: "CELEBRATION",
-            date: "31 Oct 2026",
-            year: "2026",
-            description: "Memorable evening celebration moments and greetings exchange at Prem Wonderland Clarks Inn."
-        },
+            id: 1,
+            title: "IMA Moradabad Health Camp 2025",
+            embedUrl: "https://www.youtube.com/embed/4SwOZwuNtEw",
+            videoId: "4SwOZwuNtEw",
+            category: "HEALTH CAMP",
+            date: "2025",
+            year: "2025",
+            description: "Community health camp organized by IMA Moradabad for preventive healthcare, free vital check-ups, and medicine distribution."
+        }
     ];
 
     // Map calendar years in the archive to IMA session labels.
@@ -238,14 +237,9 @@ const Video_Gallery = () => {
         return yearMatch ? new Date(yearMatch[1]).getTime() : 0;
     };
 
-    const filteredVideos = (selectedYear === 'ALL'
+    const filteredVideos = selectedYear === 'ALL'
         ? videos
-        : videos.filter(video => getYearFromDate(video.date) === selectedYear)
-    ).slice().sort((a, b) => {
-        const timeDiff = parseItemDate(b.date) - parseItemDate(a.date);
-        if (timeDiff !== 0) return timeDiff;
-        return (b.id || 0) - (a.id || 0);
-    });
+        : videos.filter(video => getYearFromDate(video.date) === selectedYear);
 
     // Close on Escape key
     useEffect(() => {

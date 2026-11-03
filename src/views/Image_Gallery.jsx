@@ -25,111 +25,20 @@ export default function Image_Gallery() {
 
     const galleryItems = [
         {
-            id: 27,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg',
+            id: 41,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685782/DSC09301-3333x5000.jpg',
             category: 'DIWALI CELEBRATION',
-            title: 'IMA Moradabad Grand Diwali Celebration 2026',
-            description: 'President Dr. Anant Rana, Secretary Dr. Dishanter Goel, Treasurer Dr. Anurag Dubey and doctor members celebrating Diwali Meet at Prem Wonderland, Clarks Inn, Moradabad.',
-            date: '31 Oct 2026',
-            featured: true,
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 28,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09241-5000x3333.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Diwali Meet Gathering – Prem Wonderland, Clarks Inn',
-            description: 'IMA Moradabad members and esteemed medical fraternity celebrating fellowship and festivities at Clarks Inn.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 29,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09273-5000x3333.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Festive Interaction & Fellowship',
-            description: 'Doctors and dignitaries sharing greetings and discussions during the grand Diwali celebration.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 30,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09369-3333x5000.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Dignitaries & Members Group Photo',
-            description: 'Distinguished office bearers and members of IMA Moradabad captured during the auspicious Diwali celebration.',
+            title: 'Fellowship Portrait – Diwali Meet 2026',
+            description: 'Memorable moments captured at the grand Diwali celebration at Prem Wonderland, Clarks Inn.',
             date: '31 Oct 2026',
             aspect: 'aspect-[2/3]'
         },
         {
-            id: 31,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09348-5000x3333.jpg',
+            id: 40,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685781/DSC09214-100kb.jpg',
             category: 'DIWALI CELEBRATION',
-            title: 'Celebration Moments – Clarks Inn Moradabad',
-            description: 'Vibrant festive moments of fraternity members and families at Prem Wonderland, Clarks Inn.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 32,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09381-5000x3333.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'IMA Office Bearers & Members at Diwali Meet',
-            description: 'Leadership team and doctor colleagues commemorating the festival of lights with unity and joy.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 33,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09210-100kb.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Diwali Fellowship & Welcome',
-            description: 'Festive welcome and cheerful moments at the annual IMA Moradabad Diwali Get-Together.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 34,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09212-5000x3333.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Evening Festivities & Gathering',
-            description: 'Doctors enjoying the celebratory evening and family fellowship at Prem Wonderland, Clarks Inn.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 35,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09221-5000x3333.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Diwali Meet Joyful Moments',
-            description: 'Warm camaraderie, conversations, and festive vibes amongst doctors at the Diwali meet.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 36,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09229-5000x3333.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'IMA Moradabad Family at Diwali Get-Together',
-            description: 'Senior physicians, executive members, and families celebrating the festival of lights in Moradabad.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 37,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09277-100kb.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Diwali Festivities & Camaraderie',
-            description: 'Members enjoying the vibrant celebration and exchanging Diwali greetings at Clarks Inn Moradabad.',
-            date: '31 Oct 2026',
-            aspect: 'aspect-[3/2]'
-        },
-        {
-            id: 38,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09328-100kb.jpg',
-            category: 'DIWALI CELEBRATION',
-            title: 'Dignitaries Gathering at Diwali Meet',
-            description: 'Leadership and distinguished members commemorating the auspicious festival of lights together.',
+            title: 'Warm Welcome & Gathering',
+            description: 'Reception and joyful interactions during the annual IMA Moradabad Diwali Get-Together.',
             date: '31 Oct 2026',
             aspect: 'aspect-[3/2]'
         },
@@ -143,124 +52,120 @@ export default function Image_Gallery() {
             aspect: 'aspect-[3/2]'
         },
         {
-            id: 40,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685781/DSC09214-100kb.jpg',
+            id: 38,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09328-100kb.jpg',
             category: 'DIWALI CELEBRATION',
-            title: 'Warm Welcome & Gathering',
-            description: 'Reception and joyful interactions during the annual IMA Moradabad Diwali Get-Together.',
+            title: 'Dignitaries Gathering at Diwali Meet',
+            description: 'Leadership and distinguished members commemorating the auspicious festival of lights together.',
             date: '31 Oct 2026',
             aspect: 'aspect-[3/2]'
         },
         {
-            id: 41,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685782/DSC09301-3333x5000.jpg',
+            id: 37,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09277-100kb.jpg',
             category: 'DIWALI CELEBRATION',
-            title: 'Fellowship Portrait – Diwali Meet 2026',
-            description: 'Memorable moments captured at the grand Diwali celebration at Prem Wonderland, Clarks Inn.',
+            title: 'Diwali Festivities & Camaraderie',
+            description: 'Members enjoying the vibrant celebration and exchanging Diwali greetings at Clarks Inn Moradabad.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 36,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09229-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'IMA Moradabad Family at Diwali Get-Together',
+            description: 'Senior physicians, executive members, and families celebrating the festival of lights in Moradabad.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 35,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09221-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Meet Joyful Moments',
+            description: 'Warm camaraderie, conversations, and festive vibes amongst doctors at the Diwali meet.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 34,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09212-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Evening Festivities & Gathering',
+            description: 'Doctors enjoying the celebratory evening and family fellowship at Prem Wonderland, Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 33,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09210-100kb.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Fellowship & Welcome',
+            description: 'Festive welcome and cheerful moments at the annual IMA Moradabad Diwali Get-Together.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 32,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09381-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'IMA Office Bearers & Members at Diwali Meet',
+            description: 'Leadership team and doctor colleagues commemorating the festival of lights with unity and joy.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 31,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09348-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Celebration Moments – Clarks Inn Moradabad',
+            description: 'Vibrant festive moments of fraternity members and families at Prem Wonderland, Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 30,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09369-3333x5000.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Dignitaries & Members Group Photo',
+            description: 'Distinguished office bearers and members of IMA Moradabad captured during the auspicious Diwali celebration.',
             date: '31 Oct 2026',
             aspect: 'aspect-[2/3]'
         },
-
         {
-            id: 1,
-            image: cloudinaryAsset('/gallery-3.jpg'),
-            category: 'MEDICAL CAMP',
-            title: 'Free Health Checkup Camp',
-            description: 'Over 1500 patients benefited from our comprehensive health screening, blood testing, and specialized consultation program.',
-            date: '15 Jan 2025',
-            featured: true,
-            aspect: 'aspect-[4/3]'
-        },
-        {
-            id: 2,
-            image: '/gallery-2.jpg',
-            category: 'AWARENESS',
-            title: 'Cancer Awareness Campaign',
-            description: 'Specialists imparting critical knowledge regarding early cancer detection, self-examination, and preventive steps.',
-            date: '04 Feb 2025',
-            hasVideo: true,
-            aspect: 'aspect-[3/4]'
-        },
-        {
-            id: 3,
-            image: cloudinaryAsset('/gallery-1.jpg'),
-            category: 'COMMUNITY',
-            title: 'Vaccination Drive 2025',
-            description: 'Protecting the local community and underprivileged families through timely immunization and booster doses.',
-            date: '12 Apr 2025',
-            aspect: 'aspect-[4/5]'
-        },
-        {
-            id: 4,
-            image: cloudinaryAsset('/gallery-5.jpg'),
-            category: 'EVENTS',
-            title: 'Doctors Day Celebration',
-            description: 'Honoring senior medical practitioners and healthcare pioneers with awards, cultural events, and dinner.',
-            date: '01 Jul 2025',
-            aspect: 'aspect-square'
-        },
-        {
-            id: 5,
-            image: cloudinaryAsset('/gallery-6.jpg'),
-            category: 'INSPIRATION',
-            title: 'Serving With Compassion',
-            description: 'Dedicated healthcare teams visiting remote clusters of Moradabad to ensure healthcare access for every family.',
-            date: '19 Aug 2025',
+            id: 29,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09273-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Festive Interaction & Fellowship',
+            description: 'Doctors and dignitaries sharing greetings and discussions during the grand Diwali celebration.',
+            date: '31 Oct 2026',
             aspect: 'aspect-[3/2]'
         },
         {
-            id: 17,
-            image: cloudinaryAsset('/561ff335-03db-4316-8247-2814caa5a806.jpg'),
-            category: 'EDUCATION',
-            title: 'Mental Health Session by Dr. Dishanter Goel – CL Gupta World School',
-            description: 'On World Mental Health Day (10 Oct 2026), Dr. Dishanter Goel, Hon. Secretary of IMA Moradabad (2026–27), conducted an insightful session on mental health and emotional well-being for students at CL Gupta World School.',
-            date: '10 Oct 2026',
+            id: 28,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09241-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Meet Gathering – Prem Wonderland, Clarks Inn',
+            description: 'IMA Moradabad members and esteemed medical fraternity celebrating fellowship and festivities at Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 27,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'IMA Moradabad Grand Diwali Celebration 2026',
+            description: 'President Dr. Anant Rana, Secretary Dr. Dishanter Goel, Treasurer Dr. Anurag Dubey and doctor members celebrating Diwali Meet at Prem Wonderland, Clarks Inn, Moradabad.',
+            date: '31 Oct 2026',
             featured: true,
-            aspect: 'aspect-[3/4]'
+            aspect: 'aspect-[3/2]'
         },
         {
-            id: 18,
-            image: cloudinaryAsset('/8c19a607-7d5a-4ae1-9d11-31d9fecd3493.jpg'),
-            category: 'EVENTS',
-            title: 'Green Felicitation of Dr. Dishanter Goel – CL Gupta World School',
-            description: 'School management felicitating Dr. Dishanter Goel, Secretary of IMA Moradabad, with a green welcome plant following his impactful mental health awareness session at CL Gupta World School on World Mental Health Day.',
-            date: '10 Oct 2026',
-            aspect: 'aspect-[3/4]'
-        },
-        {
-            id: 21,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792669593/WhatsApp_Image_2026-10-22_at_5.13.20_PM.jpg',
-            category: 'EDUCATION',
-            title: 'Mental Health Workshop at ChitraGupta Inter College, Moradabad',
-            description: 'IMA Moradabad President Dr. Anant Rana (MD Psychiatry) conducted a student-focused mental health workshop at ChitraGupta Inter College, Moradabad.',
-            date: '22 Oct 2026',
-            featured: true,
-            aspect: 'aspect-[4/3]'
-        },
-        {
-            id: 22,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683472/WhatsApp_Image_2026-10-22_at_1.38.05_PM.jpg',
-            category: 'EDUCATION',
-            title: 'ChitraGupta College Mental Health Workshop',
-            description: 'Students participating in the mental health awareness workshop conducted by IMA Moradabad at ChitraGupta Inter College.',
-            date: '22 Oct 2026',
-            aspect: 'aspect-[4/3]'
-        },
-        {
-            id: 23,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683470/WhatsApp_Image_2026-10-22_at_1.38.04_PM.jpg',
-            category: 'EDUCATION',
-            title: 'ChitraGupta College Mental Health Workshop',
-            description: 'A glimpse from IMA Moradabad’s student wellness outreach programme at ChitraGupta Inter College.',
-            date: '22 Oct 2026',
-            aspect: 'aspect-[4/3]'
-        },
-        {
-            id: 24,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683409/WhatsApp_Image_2026-10-22_at_1.38.00_PM.jpg',
-            category: 'AWARENESS',
-            title: 'Student Wellness Workshop – ChitraGupta Inter College',
-            description: 'Mental health awareness and emotional well-being session for students in Moradabad.',
+            id: 26,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683497/WhatsApp_Image_2026-10-22_at_1.38.02_PM.jpg',
+            category: 'COMMUNITY',
+            title: 'ChitraGupta Inter College Workshop Glimpse',
+            description: 'Community outreach by IMA Moradabad promoting open conversations about student mental health.',
             date: '22 Oct 2026',
             aspect: 'aspect-[4/3]'
         },
@@ -274,23 +179,88 @@ export default function Image_Gallery() {
             aspect: 'aspect-[4/3]'
         },
         {
-            id: 26,
-            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683497/WhatsApp_Image_2026-10-22_at_1.38.02_PM.jpg',
-            category: 'COMMUNITY',
-            title: 'ChitraGupta Inter College Workshop Glimpse',
-            description: 'Community outreach by IMA Moradabad promoting open conversations about student mental health.',
+            id: 24,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683409/WhatsApp_Image_2026-10-22_at_1.38.00_PM.jpg',
+            category: 'AWARENESS',
+            title: 'Student Wellness Workshop – ChitraGupta Inter College',
+            description: 'Mental health awareness and emotional well-being session for students in Moradabad.',
             date: '22 Oct 2026',
             aspect: 'aspect-[4/3]'
         },
-       
         {
-            id: 14,
-            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg'),
+            id: 23,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683470/WhatsApp_Image_2026-10-22_at_1.38.04_PM.jpg',
+            category: 'EDUCATION',
+            title: 'ChitraGupta College Mental Health Workshop',
+            description: 'A glimpse from IMA Moradabad’s student wellness outreach programme at ChitraGupta Inter College.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 22,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792683472/WhatsApp_Image_2026-10-22_at_1.38.05_PM.jpg',
+            category: 'EDUCATION',
+            title: 'ChitraGupta College Mental Health Workshop',
+            description: 'Students participating in the mental health awareness workshop conducted by IMA Moradabad at ChitraGupta Inter College.',
+            date: '22 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 21,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/v1792669593/WhatsApp_Image_2026-10-22_at_5.13.20_PM.jpg',
+            category: 'EDUCATION',
+            title: 'Mental Health Workshop at ChitraGupta Inter College, Moradabad',
+            description: 'IMA Moradabad President Dr. Anant Rana (MD Psychiatry) conducted a student-focused mental health workshop at ChitraGupta Inter College, Moradabad.',
+            date: '22 Oct 2026',
+            featured: true,
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 20,
+            image: cloudinaryAsset('/mentalhealth2.jpeg'),
+            category: 'COMMUNITY',
+            title: 'Press Conference Address – President & Secretary',
+            description: 'President Dr. Anant Rana and Secretary Dr. Dishanter Goel briefing the media regarding the mental health awareness camps to be organized in schools the following day.',
+            date: '11 Oct 2026',
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 19,
+            image: cloudinaryAsset('/mentalhealth1.jpeg'),
+            category: 'AWARENESS',
+            title: 'IMA Moradabad Press Conference – School Camps Announcement',
+            description: 'IMA Moradabad office bearers addressed the press conference at IMA Bhawan, announcing the school-based mental health awareness camps starting the next day across Moradabad.',
+            date: '11 Oct 2026',
+            featured: true,
+            aspect: 'aspect-[4/3]'
+        },
+        {
+            id: 18,
+            image: cloudinaryAsset('/8c19a607-7d5a-4ae1-9d11-31d9fecd3493.jpg'),
             category: 'EVENTS',
-            title: 'PMS School Mental Health Camp Highlights',
-            description: 'Practical guidance and interactive counseling during the World Mental Health Day awareness camp conducted by Dr. Nimish Gupta at PMS School.',
+            title: 'Green Felicitation of Dr. Dishanter Goel – CL Gupta World School',
+            description: 'School management felicitating Dr. Dishanter Goel, Secretary of IMA Moradabad, with a green welcome plant following his impactful mental health awareness session at CL Gupta World School on World Mental Health Day.',
             date: '10 Oct 2026',
             aspect: 'aspect-[3/4]'
+        },
+        {
+            id: 17,
+            image: cloudinaryAsset('/561ff335-03db-4316-8247-2814caa5a806.jpg'),
+            category: 'EDUCATION',
+            title: 'Mental Health Session by Dr. Dishanter Goel – CL Gupta World School',
+            description: 'On World Mental Health Day (10 Oct 2026), Dr. Dishanter Goel, Hon. Secretary of IMA Moradabad (2026–27), conducted an insightful session on mental health and emotional well-being for students at CL Gupta World School.',
+            date: '10 Oct 2026',
+            featured: true,
+            aspect: 'aspect-[3/4]'
+        },
+        {
+            id: 16,
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg'),
+            category: 'EVENTS',
+            title: 'School Health Awareness Gathering – PMS School',
+            description: 'Students and teachers gathered at PMS School for the World Mental Health Day session led by Dr. Nimish Gupta under IMA Moradabad’s outreach initiative.',
+            date: '10 Oct 2026',
+            aspect: 'aspect-[4/3]'
         },
         {
             id: 15,
@@ -302,22 +272,21 @@ export default function Image_Gallery() {
             aspect: 'aspect-[4/3]'
         },
         {
-            id: 16,
-            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.59 PM.jpeg'),
+            id: 14,
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.57 PM (1).jpeg'),
             category: 'EVENTS',
-            title: 'School Health Awareness Gathering – PMS School',
-            description: 'Students and teachers gathered at PMS School for the World Mental Health Day session led by Dr. Nimish Gupta under IMA Moradabad’s outreach initiative.',
+            title: 'PMS School Mental Health Camp Highlights',
+            description: 'Practical guidance and interactive counseling during the World Mental Health Day awareness camp conducted by Dr. Nimish Gupta at PMS School.',
             date: '10 Oct 2026',
-            aspect: 'aspect-[4/3]'
+            aspect: 'aspect-[3/4]'
         },
-         {
-            id: 11,
-            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.52 PM.jpeg'),
-            category: 'EDUCATION',
-            title: 'World Mental Health Day Camp – PMS School',
-            description: 'On World Mental Health Day (10 Oct 2026), Dr. Kartikaya Gupta conducted a mental health awareness camp at SS Childern School, Moradabad, guiding students on emotional well-being and open discussions.',
+        {
+            id: 13,
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg'),
+            category: 'COMMUNITY',
+            title: 'Mental Health Address at SS Children School',
+            description: 'Dr. Nimish Gupta addressing SS Children School students and faculty on breaking mental health taboos and seeking guidance on World Mental Health Day.',
             date: '10 Oct 2026',
-            featured: true,
             aspect: 'aspect-video'
         },
         {
@@ -330,32 +299,60 @@ export default function Image_Gallery() {
             aspect: 'aspect-video'
         },
         {
-            id: 13,
-            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.54 PM.jpeg'),
-            category: 'COMMUNITY',
-            title: 'Mental Health Address at SS Children School',
-            description: 'Dr. Nimish Gupta addressing SS Children School students and faculty on breaking mental health taboos and seeking guidance on World Mental Health Day.',
+            id: 11,
+            image: cloudinaryAsset('/WhatsApp Image 2026-10-10 at 5.03.52 PM.jpeg'),
+            category: 'EDUCATION',
+            title: 'World Mental Health Day Camp – PMS School',
+            description: 'On World Mental Health Day (10 Oct 2026), Dr. Kartikaya Gupta conducted a mental health awareness camp at SS Childern School, Moradabad, guiding students on emotional well-being and open discussions.',
             date: '10 Oct 2026',
+            featured: true,
             aspect: 'aspect-video'
         },
-        
         {
-            id: 19,
-            image: cloudinaryAsset('/mentalhealth1.jpeg'),
-            category: 'AWARENESS',
-            title: 'IMA Moradabad Press Conference – School Camps Announcement',
-            description: 'IMA Moradabad office bearers addressed the press conference at IMA Bhawan, announcing the school-based mental health awareness camps starting the next day across Moradabad.',
-            date: '11 Oct 2026',
-            featured: true,
-            aspect: 'aspect-[4/3]'
+            id: 5,
+            image: cloudinaryAsset('/gallery-6.jpg'),
+            category: 'INSPIRATION',
+            title: 'Serving With Compassion',
+            description: 'Dedicated healthcare teams visiting remote clusters of Moradabad to ensure healthcare access for every family.',
+            date: '19 Aug 2025',
+            aspect: 'aspect-[3/2]'
         },
         {
-            id: 20,
-            image: cloudinaryAsset('/mentalhealth2.jpeg'),
+            id: 4,
+            image: cloudinaryAsset('/gallery-5.jpg'),
+            category: 'EVENTS',
+            title: 'Doctors Day Celebration',
+            description: 'Honoring senior medical practitioners and healthcare pioneers with awards, cultural events, and dinner.',
+            date: '01 Jul 2025',
+            aspect: 'aspect-square'
+        },
+        {
+            id: 3,
+            image: cloudinaryAsset('/gallery-1.jpg'),
             category: 'COMMUNITY',
-            title: 'Press Conference Address – President & Secretary',
-            description: 'President Dr. Anant Rana and Secretary Dr. Dishanter Goel briefing the media regarding the mental health awareness camps to be organized in schools the following day.',
-            date: '11 Oct 2026',
+            title: 'Vaccination Drive 2025',
+            description: 'Protecting the local community and underprivileged families through timely immunization and booster doses.',
+            date: '12 Apr 2025',
+            aspect: 'aspect-[4/5]'
+        },
+        {
+            id: 2,
+            image: '/gallery-2.jpg',
+            category: 'AWARENESS',
+            title: 'Cancer Awareness Campaign',
+            description: 'Specialists imparting critical knowledge regarding early cancer detection, self-examination, and preventive steps.',
+            date: '04 Feb 2025',
+            hasVideo: true,
+            aspect: 'aspect-[3/4]'
+        },
+        {
+            id: 1,
+            image: cloudinaryAsset('/gallery-3.jpg'),
+            category: 'MEDICAL CAMP',
+            title: 'Free Health Checkup Camp',
+            description: 'Over 1500 patients benefited from our comprehensive health screening, blood testing, and specialized consultation program.',
+            date: '15 Jan 2025',
+            featured: true,
             aspect: 'aspect-[4/3]'
         }
     ];
@@ -393,10 +390,6 @@ export default function Image_Gallery() {
         const matchesCategory = selectedCategory === 'ALL' || item.category === selectedCategory;
         const matchesYear = selectedYear === 'ALL' || itemYear === selectedYear;
         return matchesCategory && matchesYear;
-    }).slice().sort((a, b) => {
-        const timeDiff = parseItemDate(b.date) - parseItemDate(a.date);
-        if (timeDiff !== 0) return timeDiff;
-        return (b.id || 0) - (a.id || 0);
     });
 
     // Keyboard navigation in lightbox modal
