@@ -116,6 +116,52 @@ export default function Image_Gallery() {
             aspect: 'aspect-[3/2]'
         },
         {
+            id: 37,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09277-100kb.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Festivities & Camaraderie',
+            description: 'Members enjoying the vibrant celebration and exchanging Diwali greetings at Clarks Inn Moradabad.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 38,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09328-100kb.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Dignitaries Gathering at Diwali Meet',
+            description: 'Leadership and distinguished members commemorating the auspicious festival of lights together.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 39,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685780/DSC09305-100kb.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Diwali Celebration Moments',
+            description: 'Doctor fraternity members celebrating Diwali with joy and fellowship at Prem Wonderland, Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 40,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685781/DSC09214-100kb.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Warm Welcome & Gathering',
+            description: 'Reception and joyful interactions during the annual IMA Moradabad Diwali Get-Together.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[3/2]'
+        },
+        {
+            id: 41,
+            image: 'https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793685782/DSC09301-3333x5000.jpg',
+            category: 'DIWALI CELEBRATION',
+            title: 'Fellowship Portrait – Diwali Meet 2026',
+            description: 'Memorable moments captured at the grand Diwali celebration at Prem Wonderland, Clarks Inn.',
+            date: '31 Oct 2026',
+            aspect: 'aspect-[2/3]'
+        },
+
+        {
             id: 1,
             image: cloudinaryAsset('/gallery-3.jpg'),
             category: 'MEDICAL CAMP',
