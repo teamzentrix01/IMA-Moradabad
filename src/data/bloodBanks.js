@@ -13,3 +13,4 @@ export const bloodBanks = [
   { name: 'Siddh Multispeciality Hospital', phones: ['06396852220', '0591-2971111'] },
   { name: 'Janta Blood Bank', phones: ['0591-2490640'] }
 ];
+
