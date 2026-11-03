@@ -156,6 +156,60 @@ const Video_Gallery = () => {
             year: "2026",
             description: "Concluding briefing by IMA Moradabad office bearers announcing the launch of school-level mental health camps starting next day."
         },
+        {
+            id: 15,
+            title: "Diwali Celebration 2026 – Gathering & Welcome Moments",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690689/WhatsApp_Video_2026-11-03_at_12.43.55_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Festive welcome and vibrant get-together moments at Prem Wonderland, Clarks Inn Moradabad during the grand Diwali celebration."
+        },
+        {
+            id: 16,
+            title: "Diwali Meet Highlights – Fellowship & Fellowship",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690763/WhatsApp_Video_2026-11-03_at_12.40.54_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Doctors and leadership interacting and enjoying the celebratory festivities at the annual IMA Moradabad Diwali Meet."
+        },
+        {
+            id: 17,
+            title: "Diwali Celebration – Special Moments & Interaction",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690766/WhatsApp_Video_2026-11-03_at_12.41.29_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Dignitaries and members sharing warm Diwali wishes and celebrating fellowship under one roof."
+        },
+        {
+            id: 18,
+            title: "Diwali Meet – Joyful Cultural & Social Glimpses",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690768/WhatsApp_Video_2026-11-03_at_12.41.31_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Joyful celebratory clips of doctor fraternity members and families at Prem Wonderland, Clarks Inn Moradabad."
+        },
+        {
+            id: 19,
+            title: "Diwali Celebration – Fraternal Bonding & Greetings",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690773/WhatsApp_Video_2026-11-03_at_12.42.36_PM_1.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Festive interactions highlighting the spirit of unity and dedication among IMA Moradabad doctor members."
+        },
+        {
+            id: 20,
+            title: "Diwali Celebration 2026 – Evening Celebrations",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690783/WhatsApp_Video_2026-11-03_at_12.42.37_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Memorable evening celebration moments and greetings exchange at Prem Wonderland Clarks Inn."
+        },
     ];
 
     // Map calendar years in the archive to IMA session labels.
