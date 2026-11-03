@@ -33,3 +33,28 @@ export function cloudinaryAsset(src) {
   const transform = isVideo ? "f_auto,q_auto,vc_auto,w_1280,c_limit" : "f_auto,q_auto,w_1600,c_limit";
   return `https://res.cloudinary.com/${CLOUD_NAME}/${folder}/upload/${transform}/${publicId}`;
 }
+
+export function getVideoPoster(videoUrl, videoId) {
+  if (videoId) {
+    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  }
+  if (!videoUrl) return null;
+  if (videoUrl.includes('res.cloudinary.com')) {
+    const match = videoUrl.match(/(https:\/\/res\.cloudinary\.com\/[^/]+\/video\/upload\/)(.*)/);
+    if (match) {
+      let rest = match[2];
+      // strip query/hash
+      rest = rest.split('?')[0].split('#')[0];
+      // replace extension with .jpg or append .jpg
+      if (/\.[a-zA-Z0-9]+$/.test(rest)) {
+        rest = rest.replace(/\.[^.]+$/, '.jpg');
+      } else {
+        rest = rest + '.jpg';
+      }
+      // Remove any preceding transformation tokens like f_auto,q_auto...
+      const cleanRest = rest.replace(/^(?:[a-zA-Z0-9_,]+(?:\/[a-zA-Z0-9_,]+)*\/)?(v\d+\/.*|[a-zA-Z0-9_.-]+)$/, '$1');
+      return `${match[1]}so_1,w_600,h_900,c_fill,q_auto,f_jpg/${cleanRest}`;
+    }
+  }
+  return null;
+}

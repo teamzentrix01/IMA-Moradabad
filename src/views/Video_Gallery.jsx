@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import Banner from '../components/ui/Banner';
 import { useSearchParams } from 'next/navigation';
-import { cloudinaryAsset } from '../lib/cloudinary';
+import { cloudinaryAsset, getVideoPoster } from '../lib/cloudinary';
 
 const Video_Gallery = () => {
     const [selectedYear, setSelectedYear] = useState('ALL');
@@ -313,22 +313,14 @@ const Video_Gallery = () => {
                             >
                                 {/* Thumbnail Container with Play Overlay */}
                                 <div className="relative aspect-[9/14] bg-slate-950 overflow-hidden">
-                                    {video.videoSrc ? (
-                                        <video
-                                            src={video.videoSrc}
-                                            muted
-                                            playsInline
-                                            preload="none"
-                                            className="w-full h-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
-                                        />
-                                    ) : (
-                                        <img
-                                            src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
-                                            alt={video.title}
-                                            loading="lazy"
-                                            className="w-full h-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
-                                        />
-                                    )}
+                                    {/* Video Banner / Poster Image */}
+                                    <img
+                                        src={getVideoPoster(video.videoSrc, video.videoId) || `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
+                                        alt={video.title}
+                                        loading="lazy"
+                                        decoding="async"
+                                        className="w-full h-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-105 group-hover:opacity-100"
+                                    />
 
                                     {/* Gradient overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
