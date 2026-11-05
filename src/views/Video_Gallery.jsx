@@ -22,6 +22,15 @@ const Video_Gallery = () => {
 
     const videos = [
         {
+            id: 21,
+            title: "Diwali Celebration 2026 – Special Festive Highlights",
+            videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793885114/WhatsApp_Video_2026-11-05_at_5.24.53_PM.mp4",
+            category: "CELEBRATION",
+            date: "31 Oct 2026",
+            year: "2026",
+            description: "Exclusive festive highlights and interactions from the grand IMA Moradabad Diwali Meet at Prem Wonderland, Clarks Inn Moradabad."
+        },
+        {
             id: 20,
             title: "Diwali Celebration 2026 – Evening Celebrations",
             videoSrc: "https://res.cloudinary.com/dbja22ql/video/upload/f_auto,q_auto,vc_auto,w_1280,c_limit/v1793690783/WhatsApp_Video_2026-11-03_at_12.42.37_PM.mp4",

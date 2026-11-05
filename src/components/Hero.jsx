@@ -22,6 +22,19 @@ export default function HeroSlider() {
 
   const campaignSlides = [
     {
+      title: "Grand Diwali Celebration & Family Get-Together",
+      subtitle: "Prem Wonderland, Clarks Inn | 31 October 2026",
+      description:
+        "IMA Moradabad celebrated the auspicious festival of lights with warmth and fellowship, graced by President Dr. Anant Rana, Secretary Dr. Dishanter Goel, Treasurer Dr. Anurag Dubey, and doctor members with their families.",
+      cta: "Explore Story",
+      ctaLink: "/about?story=5#campaign-story",
+      ctaSecondary: "View Photos",
+      ctaSecondaryLink: "/imagegallery?year=2026%2F27",
+      gradient: "from-amber-600 via-orange-600 to-rose-700",
+      icon: Sparkles,
+      image: "https://res.cloudinary.com/dbja22ql/image/upload/f_auto,q_auto,w_1600/v1793614188/DSC09321-5000x3333.jpg"
+    },
+    {
       title: "Mental Health Awareness Campaign",
       subtitle: "15-Day Public Outreach | 2026–27",
       description:
@@ -51,6 +64,7 @@ export default function HeroSlider() {
 
   const standardSlides = [
     {
+
       title: `Our Journey In Care`,
       subtitle: "Since 1928",
       description:
@@ -61,32 +75,6 @@ export default function HeroSlider() {
       ctaSecondaryLink: "/join-ima",
       gradient: "from-emerald-600 to-teal-600",
       icon: Heart,
-      image: cloudinaryAsset("/ima-hero-image-1.jpg")
-    },
-    {
-      title: "Blood Donation Drives",
-      subtitle: "Save Lives Today",
-      description:
-        "Join our regular blood donation camps and be a hero. Every donation can save up to three lives",
-      cta: "Donate Now",
-      ctaLink: "/blooddonate",
-      ctaSecondary: "Find Camps",
-      ctaSecondaryLink: "/upcomingevents",
-      gradient: "from-rose-600 to-red-600",
-      icon: Heart,
-      image: cloudinaryAsset("/ima-hero-image-1.jpg")
-    },
-    {
-      title: "CME Programs & Events",
-      subtitle: "Continuous Learning",
-      description:
-        "Participate in our world-class Continuing Medical Education programs and stay updated with latest medical advances",
-      cta: "View Events",
-      ctaLink: "/upcomingevents",
-      ctaSecondary: "Register",
-      ctaSecondaryLink: "/contactus",
-      gradient: "from-blue-600 to-indigo-600",
-      icon: Calendar,
       image: cloudinaryAsset("/ima-hero-image-1.jpg")
     },
     {
