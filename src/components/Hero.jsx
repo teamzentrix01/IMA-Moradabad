@@ -22,6 +22,19 @@ export default function HeroSlider() {
 
   const campaignSlides = [
     {
+      title: "Happy Diwali Wishes & Warm Greetings",
+      subtitle: "Festival of Lights | IMA Moradabad",
+      description:
+        "Indian Medical Association Moradabad extends heartfelt wishes of peace, prosperity, and good health to all doctors, their families, and the citizens of Moradabad on the joyous occasion of Diwali.",
+      cta: "Diwali Celebration",
+      ctaLink: "/about?story=5#campaign-story",
+      ctaSecondary: "View Gallery",
+      ctaSecondaryLink: "/imagegallery?year=2026%2F27",
+      gradient: "from-amber-600 via-orange-600 to-rose-700",
+      icon: Sparkles,
+      image: "/IMA%20Moradabad%20Diwali%20Greeting%20Poster.png"
+    },
+    {
       title: "Grand Diwali Celebration & Family Get-Together",
       subtitle: "Prem Wonderland, Clarks Inn | 31 October 2026",
       description:
